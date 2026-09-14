@@ -1,0 +1,5 @@
+# Preserve the Frozen protocol byte-for-byte across Git checkouts.
+protocol/current/** -text
+
+# Archived source packages are immutable binary inputs.
+archive/source-packages/** -text
