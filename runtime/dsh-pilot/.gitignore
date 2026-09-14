@@ -1,0 +1,4 @@
+.env
+.dsh-home/
+node_modules/
+validation/raw/

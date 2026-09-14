@@ -29,12 +29,13 @@ Authoritative Artifact
 - [`inbox/`](inbox/)：尚待 ingest 的正式状态更新或 release packet。
 - [`outbox/`](outbox/)：Manager 生成的 bootstrap packet 等输出。
 - [`archive/`](archive/)：原始输入包和退出活跃流转后的历史材料。
+- [`runtime/dsh-pilot/`](runtime/dsh-pilot/)：固定版本的 DSH Manager MVP 启动与状态说明；运行缓存和密钥不入 Git。
 
 当前协议基线是 `RM_AI_Development_Protocol_v2.3_Frozen`。其展开目录不得在本仓库内修改；原始 ZIP 保存在 [`archive/source-packages/`](archive/source-packages/)，用于完整性核验和恢复。
 
 ## DSH Pilot Boundary
 
-本次初始化不包含 DSH 的安装、配置或开发。未来只有在获得明确授权后，DSH Pilot 才应放在 `runtime/dsh-pilot/`；该目录当前故意不存在，避免把控制仓库初始化误写成 Runtime 已启动。
+DSH Manager MVP 位于 [`runtime/dsh-pilot/`](runtime/dsh-pilot/)，只使用固定版本的官方 headless profile；不修改 DSH 源码，不开发 Plugin / Backend，也不把 DSH Session 当作状态本体。当前验证边界与回退方式见 [`MANAGER_RUNTIME_STATUS.md`](runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md)。
 
 ## Starting Point
 

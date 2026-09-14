@@ -8,7 +8,8 @@
 2. [`MANAGER_CHARTER.md`](MANAGER_CHARTER.md)
 3. [`control/PROJECT_CONTROL_INDEX.md`](control/PROJECT_CONTROL_INDEX.md)
 4. 与当前任务相关的 [`protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/`](protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/) 条目
+5. 操作 DSH Manager 时读取 [`runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md`](runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md)
 
 使用 [`.agents/skills/rm-project-manager/SKILL.md`](.agents/skills/rm-project-manager/SKILL.md) 执行 Manager 的 `status`、`route`、`ingest`、`bootstrap` 或 `protocol-update` 意图。
 
-遵守 `Authoritative Artifact > Manager Control Index > Conversation Summary`。不要修改 `protocol/current/` 中的 Frozen 基线，不要从索引或对话摘要发明项目阶段、学习状态、技术决定或验证结论。任何 DSH Runtime、Plugin、Backend 或业务仓库工作都需要独立且明确的用户授权。
+遵守 `Authoritative Artifact > Manager Control Index > Conversation Summary`。不要修改 `protocol/current/` 中的 Frozen 基线，不要从索引或对话摘要发明项目阶段、学习状态、技术决定或验证结论。DSH Plugin、Backend、Runtime 扩展或业务仓库工作需要独立且明确的用户授权。
