@@ -48,7 +48,7 @@
 | Conversation / Role | Purpose | Status | Latest Authoritative Artifact | Last Updated | Freshness / Note |
 |---|---|---|---|---|---|
 | Guided Dart P0.5 exploration | Same-stage cross-solution foundational learning and note preparation | Unknown | [`../GUIDED_DART_P0_5_CHECKPOINT.md`](../GUIDED_DART_P0_5_CHECKPOINT.md) | 2026-09-14 ingest | Semantic stage is sourced; conversation activity is not registered |
-| Protocol Maintainer / Methodology Supervisor | Maintain protocol from real RM friction without taking the project Main Supervisor role | Unknown | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/archive/Protocol_Maintainer_Checkpoint_v2.3.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/archive/Protocol_Maintainer_Checkpoint_v2.3.md) | 2026-09-14 ingest | Real RM long-term validation remains incomplete |
+| rm-ai-control Maintainer | Maintain Core Protocol and project-level method from real RM friction without taking the project Main Supervisor role | Unknown | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/archive/Protocol_Maintainer_Checkpoint_v2.3.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/archive/Protocol_Maintainer_Checkpoint_v2.3.md) | 2026-09-14 ingest | Current project-layer name; source artifact retains the historical role name. Real RM long-term validation remains incomplete |
 | DSH Manager Runtime Validation | Validate the Manager `ingest` capability with a mechanical-only smoke test | Completed | [`../archive/state-updates/STATE_UPDATE_MANAGER_RUNTIME_SMOKE_TEST.md`](../archive/state-updates/STATE_UPDATE_MANAGER_RUNTIME_SMOKE_TEST.md) | 2026-09-14 ingest | Mechanical-only validation entry; the source asserts no Guided Dart / Protocol semantic change |
 
 ---
@@ -110,5 +110,5 @@ Manager does not resolve semantic conflicts independently; it marks them and req
 - If the user asks about Guided Dart project direction or transition beyond P0.5 → Main Supervisor / Human, using the current Stage Checkpoint.
 - If the user asks about current implementation / repository work → Work / Executor in the relevant business repository, not this control repository.
 - If the user continues a Guided Dart knowledge gap → Specialist + Knowledge Playbook, or a dedicated Knowledge Conversation where appropriate.
-- If the user asks about protocol / workflow → Protocol Maintainer.
+- If the user asks about protocol / project-level workflow → rm-ai-control Maintainer.
 - If the user asks “where should I go?” → Manager uses this Index and the latest authoritative sources to suggest a route.

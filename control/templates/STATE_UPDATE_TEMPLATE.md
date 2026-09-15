@@ -54,6 +54,12 @@
 
 - 
 
+## Capability Impact
+
+仅在本事件影响长期功能时填写；使用 [`CAPABILITY_IMPACT_TEMPLATE.md`](CAPABILITY_IMPACT_TEMPLATE.md)。没有影响写：
+
+`None`
+
 ## Carry Forward
 
 如果下一步需要另一个角色 / 对话，必须带走：

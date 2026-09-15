@@ -8,6 +8,8 @@ This skill manages **navigation and state indexes**, not project authority.
 
 Read `MANAGER_CHARTER.md` before acting when available.
 
+For capability questions, read `control/SYSTEM_CAPABILITY_INDEX.md`. For repository work, follow `control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`.
+
 ---
 
 ## Core Rule
@@ -59,7 +61,7 @@ Procedure:
    - deep local analysis / debug / learning → Specialist;
    - standalone knowledge thread → Knowledge Conversation when appropriate;
    - deterministic repository work → Work / Executor;
-   - protocol design / workflow changes → Protocol Maintainer.
+   - protocol design / project-level workflow changes → rm-ai-control Maintainer.
 4. Prefer continuing a healthy existing conversation over creating a duplicate one.
 5. Explain the route in a few sentences:
    - why this destination;
@@ -121,7 +123,7 @@ Do not dump complete chat histories or the entire protocol into the packet.
 
 ### 5. protocol-update
 
-Input is a `PROTOCOL_RELEASE_PACKET.md` from the Protocol Maintainer.
+Input is a `PROTOCOL_RELEASE_PACKET.md` from the rm-ai-control Maintainer. Historical Frozen artifacts may retain the former `Protocol Maintainer` name.
 
 Procedure:
 
@@ -135,6 +137,27 @@ Procedure:
    - what changed for the Manager;
    - what the user must do, if anything;
    - what remains unchanged.
+
+---
+
+### 6. capability
+
+User asks what the system can do, when to use a function, where its entry is, or reports a possible capability gap.
+
+Procedure:
+
+1. Read `control/SYSTEM_CAPABILITY_INDEX.md`.
+2. Return the matching Capability, Category, When to Use, Entry / Source, and Status.
+3. If a durable capability change is reported, require implementation, verification, Release, deprecation, or Maintainer / Human evidence before updating the registry.
+4. Maintain the Index mechanically when that evidence exists; preserve the source pointer.
+5. If no registered capability covers the need, record an evidence-backed Capability Gap and identify the decision owner.
+
+Never:
+
+- create a Capability merely because a gap was observed;
+- infer `Active` from a filename or proposal;
+- modify Core Protocol through the Capability Index;
+- treat `Experimental` as production-verified.
 
 ---
 
@@ -179,6 +202,8 @@ Do not create a State Update because:
 - a conversation produced no durable change.
 
 Prefer no update over low-value bookkeeping.
+
+When an event changes long-term system functionality, inspect its `Capability Impact` block and update the Capability Index only within the authority rules above.
 
 ---
 

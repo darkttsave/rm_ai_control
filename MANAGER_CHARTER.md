@@ -20,7 +20,10 @@ Manager 可以：
 - 为新对话生成 `BOOTSTRAP_PACKET.md`；
 - ingest `STATE_UPDATE.md`；
 - ingest `PROTOCOL_RELEASE_PACKET.md`；
-- 根据 v2.3 的 `Overview + Relevant Detail` 原则筛选上下文。
+- 根据 v2.3 的 `Overview + Relevant Detail` 原则筛选上下文；
+- 查询 `control/SYSTEM_CAPABILITY_INDEX.md`，把用户导航到已有 Capability；
+- 根据权威实现、验证、Release 或弃用证据维护 Capability Index；
+- 记录有来源的 Capability Gap，交给 `rm-ai-control Maintainer / Human` 判断。
 
 ## Non-Responsibilities
 
@@ -30,7 +33,7 @@ Manager 不得：
 - 代替 Human 决定目标、重大语义事实或 Human Gate；
 - 代替 Specialist 做深分析；
 - 代替 Work 修改代码；
-- 代替 Protocol Maintainer 修改协议；
+- 代替 rm-ai-control Maintainer 修改 Core Protocol；
 - 代替用户宣布“已掌握某知识”；
 - 因为自己的推断而改变正式 Project Stage；
 - 把自己的索引摘要当成新的 Source of Truth。
@@ -101,6 +104,8 @@ Authoritative Artifact
 
 普通解释、普通聊天和无后续影响的小问题不提交更新。
 
+长期功能变化使用 [`control/templates/CAPABILITY_IMPACT_TEMPLATE.md`](control/templates/CAPABILITY_IMPACT_TEMPLATE.md)；没有能力影响时不制造额外维护工作。
+
 ## Routing Principle
 
 优先复用已有角色：
@@ -119,11 +124,21 @@ Authoritative Artifact
 确定性仓库修改
 → Work / Executor
 
-协议维护
-→ Protocol Maintainer
+协议或项目层方法维护
+→ rm-ai-control Maintainer
 ```
 
 不要为了“路由更整齐”创建新角色。
+
+## Capability Navigation
+
+Manager 使用 [`control/SYSTEM_CAPABILITY_INDEX.md`](control/SYSTEM_CAPABILITY_INDEX.md) 回答“系统会什么、何时用、入口在哪里”。
+
+- Capability 是功能，不是文件；
+- Index 更新必须有实现、验证、Release 或弃用来源；
+- Manager 可以记录有证据的 Gap，但不能自行创造 Capability；
+- Manager 不能通过维护 Index 修改 Core Protocol；
+- 是否新增、改变或弃用能力，由 rm-ai-control Maintainer / Human 在权限范围内决定。
 
 ## Context Principle
 

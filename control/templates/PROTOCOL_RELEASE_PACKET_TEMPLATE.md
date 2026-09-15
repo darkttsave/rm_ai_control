@@ -1,6 +1,6 @@
 # Protocol Release Packet
 
-> Producer：Protocol Maintainer
+> Producer：rm-ai-control Maintainer
 >
 > Consumer：Project Manager / Navigator
 >

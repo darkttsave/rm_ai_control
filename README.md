@@ -1,6 +1,6 @@
-# rm-ai-control
+# rm-ai-control_v1.0
 
-`rm-ai-control` 是 RM AI Project Manager / State Coordination Pilot 的持久控制仓库。
+`rm-ai-control_v1.0` 是 RM + AI 项目的持久控制仓库。它把稳定协议、系统能力导航、项目控制状态与可回退 Manager Runtime 放在同一个可维护版本体系中。
 
 它保存协议基线、导航索引、正式状态输入和最小充分交接输出；它不是 RoboMaster 业务代码仓库，也不是 DSH Runtime 开发仓库。Manager 的角色是 **Control Plane / Navigator**，不是 Command Chain。
 
@@ -19,19 +19,38 @@ Authoritative Artifact
 - Manager 可以维护路径、时间、活跃状态和 freshness 等机械状态，但不能用推断填补语义事实。
 - 来源冲突时，只标记冲突并请求或读取最新权威产物，不自行调和。
 
+## Three System Views
+
+```text
+Core Protocol
+= 系统遵守什么
+
+System Capabilities
+= 系统现在会什么
+
+Control State
+= 系统现在正在做什么
+```
+
+- **Core Protocol / Stable Baseline**：[`protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/`](protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/)。Frozen 保持原样；`rm-ai-control_v1.0` 不是 Protocol v2.4。
+- **System Capabilities**：[`control/SYSTEM_CAPABILITY_INDEX.md`](control/SYSTEM_CAPABILITY_INDEX.md)。按能力而非文件提供用途、入口、Owner 和可用状态。
+- **Control State**：[`control/PROJECT_CONTROL_INDEX.md`](control/PROJECT_CONTROL_INDEX.md)。保存当前项目与角色的导航摘要、freshness 和权威来源指针。
+
 ## Repository Map
 
 - [`MANAGER_CHARTER.md`](MANAGER_CHARTER.md)：Manager 的职责与边界。
 - [`.agents/skills/rm-project-manager/SKILL.md`](.agents/skills/rm-project-manager/SKILL.md)：未来 Manager 执行体入口。
 - [`protocol/current/`](protocol/current/)：当前 Frozen 协议的原样展开内容，只读基线。
 - [`protocol/releases/`](protocol/releases/)：Manager 使用的协议 Release Packet。
-- [`control/`](control/)：Control Index 和 Pilot 模板。
+- [`control/`](control/)：Project State、System Capability、Universal Behavior 和控制模板。
+- [`control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md)：通用 AI 行为、事件驱动自维护与 Git Hygiene。
 - [`inbox/`](inbox/)：尚待 ingest 的正式状态更新或 release packet。
 - [`outbox/`](outbox/)：Manager 生成的 bootstrap packet 等输出。
 - [`archive/`](archive/)：原始输入包和退出活跃流转后的历史材料。
 - [`runtime/dsh-pilot/`](runtime/dsh-pilot/)：固定版本的 DSH Manager MVP 启动与状态说明；运行缓存和密钥不入 Git。
+- [`releases/rm-ai-control_v1.0/RELEASE_NOTES.md`](releases/rm-ai-control_v1.0/RELEASE_NOTES.md)：当前项目版本的最小 Release 记录。
 
-当前协议基线是 `RM_AI_Development_Protocol_v2.3_Frozen`。其展开目录不得在本仓库内修改；原始 ZIP 保存在 [`archive/source-packages/`](archive/source-packages/)，用于完整性核验和恢复。
+当前项目版本是 `rm-ai-control_v1.0`；其 Core Protocol 基线是 `RM_AI_Development_Protocol_v2.3_Frozen`。Frozen 展开目录不得在本仓库内修改；原始 ZIP 保存在 [`archive/source-packages/`](archive/source-packages/)，用于完整性核验和恢复。
 
 ## DSH Pilot Boundary
 
