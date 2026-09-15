@@ -7,11 +7,14 @@
 > 原则：**Minimum Sufficient Handoff + Overview + Relevant Detail。**
 >
 > 本包只组装上下文与指针，不产生新的项目事实、学习状态或验证结论。
+>
+> **Bootstrap 轮次**：2026-09-15 **首次真实 Bootstrap**。此前的同名登记为测试操作，未产生真实知识对话；承载旧「电控学习入口」的对话已被用户归档且当前无法定位。本包不依赖任何聊天记录——入口即本文件。
 
 ## Target
 
 - Target Role / Conversation Type: 独立知识对话（Knowledge Conversation），消费 `playbooks/knowledge/` 知识层入口
 - New / Continue Existing: New
+- Bootstrap Round: 1（首次真实交接；2026-09-15 重生成，替代同名测试版本）
 - Suggested Name: `Guided Dart Knowledge — PID / Control 接口基础（P0.5）`
 
 ## Goal
@@ -29,6 +32,7 @@
 - `control/PROJECT_CONTROL_INDEX.md` §8 明确：继续 Guided Dart 知识缺口 → Specialist + Knowledge Playbook，或在合适时使用独立知识对话。
 - `GUIDED_DART_P0_5_CHECKPOINT.md` §4 已把 **`Control 接口基础`** 登记为算法成员当前最值得补的内容之一，因此 PID 主题与 P0.5 同阶段对齐。
 - 用户明确表示不希望由原 P0 阶段对话继续承担这部分讲解，因此另立独立知识对话，而**不是**替换或关闭原 P0.5 对话。
+- 本入口不随聊天记录存亡：Manager 的状态恢复只依赖 `control/PROJECT_CONTROL_INDEX.md` 与权威产物，旧对话被归档不影响本包可用性。因此下游不需要、也无法回读任何既往聊天。
 - 本轮以笔记与疑问为主线，属于知识层内部 `Explanation →（经用户确认）Note Output` 的正常流程；`playbooks/knowledge/README.md` §2 明确两者解耦，因此不需要在开场就承诺产出正式笔记。
 
 ## Current Project Context
@@ -46,7 +50,7 @@
 
 ### Sources
 
-- `control/PROJECT_CONTROL_INDEX.md`（Last Refreshed: 2026-09-14；本次登记后为 2026-09-15）
+- `control/PROJECT_CONTROL_INDEX.md`（Last Refreshed: 2026-09-15）
 - `GUIDED_DART_P0_5_CHECKPOINT.md`（Control Index 登记的 Stage Source 与 Latest Project State；artifact 内未声明日期，文件系统时间戳 2026-09-13）
 
 ## Relevant Decisions / Invariants
@@ -169,9 +173,9 @@ Manager 不能替用户决定，以下保持留空待用户给出：
 
 ## Freshness / Confidence
 
-- Latest source date: `control/PROJECT_CONTROL_INDEX.md` 为 2026-09-14（本次新增对话登记后刷新为 2026-09-15）；`GUIDED_DART_P0_5_CHECKPOINT.md` artifact 内未声明日期（文件系统时间戳 2026-09-13）。
+- Latest source date: `control/PROJECT_CONTROL_INDEX.md` 为 2026-09-15（本次重生成刷新）；`GUIDED_DART_P0_5_CHECKPOINT.md` artifact 内未声明日期（文件系统时间戳 2026-09-13）。
 - Possibly stale items: Control Index §2 记录 Guided Dart P0.5 对话活动状态为 Unknown；上游对话的实际进展可能晚于该索引，若与 Checkpoint 冲突以新权威 Artifact 为准。
-- Missing authoritative source: 无被登记的 Learning State Artifact；无 Knowledge Asset Index；本主题用户笔记与视频材料未提供；Main Supervisor 未登记。
+- Missing authoritative source: 无被登记的 Learning State Artifact；无 Knowledge Asset Index；本主题用户笔记与视频材料未提供；Main Supervisor 未登记。承载旧「电控学习入口」的对话已被用户归档且未定位——该对话从未登记为权威产物，其丢失不影响本包（本包不引用任何聊天记录）。
 
 ## Carry Forward
 
