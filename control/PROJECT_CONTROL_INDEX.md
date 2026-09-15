@@ -6,7 +6,7 @@
 
 ## Metadata
 
-- Last Refreshed: 2026-09-14
+- Last Refreshed: 2026-09-15
 - Manager / Runtime: DSH Manager MVP verified with `@deepseek-ai/dsh@0.1.5-rc.1`; file-based fallback retained
 - Runtime Source: [`../runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md`](../runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md)
 - Current Protocol: `RM_AI_Development_Protocol_v2.3_Frozen`
@@ -48,6 +48,7 @@
 | Conversation / Role | Purpose | Status | Latest Authoritative Artifact | Last Updated | Freshness / Note |
 |---|---|---|---|---|---|
 | Guided Dart P0.5 exploration | Same-stage cross-solution foundational learning and note preparation | Unknown | [`../GUIDED_DART_P0_5_CHECKPOINT.md`](../GUIDED_DART_P0_5_CHECKPOINT.md) | 2026-09-14 ingest | Semantic stage is sourced; conversation activity is not registered |
+| Guided Dart Knowledge — PID / Control 接口基础 | Dedicated knowledge conversation for the P0.5 `Control` interface layer, driven by the user's existing PID notes and questions | Active (registered at bootstrap; conversation activity not yet observed) | None yet — no authoritative artifact; Manager Bootstrap Packet only | 2026-09-15 register | Manager-generated packet: [`../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md`](../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md) — a Manager output, not semantic authority; user-side PID notes and video material are user-reported and not registered |
 | rm-ai-control Maintainer | Maintain Core Protocol and project-level method from real RM friction without taking the project Main Supervisor role | Unknown | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/archive/Protocol_Maintainer_Checkpoint_v2.3.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/archive/Protocol_Maintainer_Checkpoint_v2.3.md) | 2026-09-14 ingest | Current project-layer name; source artifact retains the historical role name. Real RM long-term validation remains incomplete |
 | DSH Manager Runtime Validation | Validate the Manager `ingest` capability with a mechanical-only smoke test | Completed | [`../archive/state-updates/STATE_UPDATE_MANAGER_RUNTIME_SMOKE_TEST.md`](../archive/state-updates/STATE_UPDATE_MANAGER_RUNTIME_SMOKE_TEST.md) | 2026-09-14 ingest | Mechanical-only validation entry; the source asserts no Guided Dart / Protocol semantic change |
 
@@ -102,6 +103,7 @@ Manager does not resolve semantic conflicts independently; it marks them and req
 - 2026-09-14: Ingested and archived [`../archive/state-updates/STATE_UPDATE_MANAGER_RUNTIME_SMOKE_TEST.md`](../archive/state-updates/STATE_UPDATE_MANAGER_RUNTIME_SMOKE_TEST.md) — mechanical-only Manager runtime ingest validation entry recorded as Completed; no project, protocol, or knowledge semantic state was changed.
 - 2026-09-14: Verified the DSH Manager MVP capabilities and overreach boundaries; runtime evidence and fallback are recorded in [`../runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md`](../runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md).
 - 2026-09-14: Generated [`../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_COORDINATE_FRAMES.md`](../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_COORDINATE_FRAMES.md) using Overview + Relevant Detail.
+- 2026-09-15: Registered the new dedicated Guided Dart Knowledge conversation `PID / Control 接口基础` as Active and generated [`../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md`](../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md). No project stage, milestone, protocol, learning-state, or knowledge-asset semantic change was made.
 
 ---
 
