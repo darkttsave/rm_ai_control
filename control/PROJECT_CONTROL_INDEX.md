@@ -6,7 +6,7 @@
 
 ## Metadata
 
-- Last Refreshed: 2026-09-15
+- Last Refreshed: 2026-09-16
 - Manager / Runtime: DSH Manager MVP verified with `@deepseek-ai/dsh@0.1.5-rc.1`; file-based fallback retained
 - Runtime Source: [`../runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md`](../runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md)
 - Current Protocol: `RM_AI_Development_Protocol_v2.3_Frozen`
@@ -58,7 +58,8 @@
 
 | Area | Practical State Summary | Relevant Assets / State | Source | Last Updated |
 |---|---|---|---|---|
-| Guided Dart cross-solution foundations | P0.5 material includes system-layer distinctions, timing/response concepts, and attitude/trajectory/AoA distinctions; this is recorded progress, not a mastery claim | Learning State: Not Registered; Knowledge Asset Index: Not Registered | [`../GUIDED_DART_P0_5_CHECKPOINT.md`](../GUIDED_DART_P0_5_CHECKPOINT.md) | 2026-09-14 ingest |
+| Guided Dart cross-solution foundations | P0.5 material includes system-layer distinctions, timing/response concepts, and attitude/trajectory/AoA distinctions; this is recorded progress, not a mastery claim | Learning State: [`knowledge/LEARNING_STATE.md`](knowledge/LEARNING_STATE.md) (only C++ / OpenCV / ROS2 registered; PnP, EKF, Deep Learning, PID / Control remain Not Registered); Knowledge Asset Index: [`knowledge/KNOWLEDGE_ASSET_INDEX.md`](knowledge/KNOWLEDGE_ASSET_INDEX.md) | [`../GUIDED_DART_P0_5_CHECKPOINT.md`](../GUIDED_DART_P0_5_CHECKPOINT.md) | 2026-09-14 ingest |
+| Cross-project knowledge state (C++ / OpenCV / ROS2) | First minimal long-term knowledge state seeded from the knowledge-reconstruction executor's report and confirmed by the user on 2026-09-16; asset identity boundaries preserved; no mastery claim beyond recorded evidence | Learning State: [`knowledge/LEARNING_STATE.md`](knowledge/LEARNING_STATE.md); Knowledge Asset Index: [`knowledge/KNOWLEDGE_ASSET_INDEX.md`](knowledge/KNOWLEDGE_ASSET_INDEX.md) | [`../archive/state-updates/STATE_UPDATE_KNOWLEDGE_STATE_INITIAL.md`](../archive/state-updates/STATE_UPDATE_KNOWLEDGE_STATE_INITIAL.md) | 2026-09-16 |
 
 ---
 
@@ -105,6 +106,7 @@ Manager does not resolve semantic conflicts independently; it marks them and req
 - 2026-09-14: Generated [`../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_COORDINATE_FRAMES.md`](../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_COORDINATE_FRAMES.md) using Overview + Relevant Detail.
 - 2026-09-15: Registered the new dedicated Guided Dart Knowledge conversation `PID / Control 接口基础` as Active and generated [`../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md`](../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md). No project stage, milestone, protocol, learning-state, or knowledge-asset semantic change was made.
 - 2026-09-15: Corrected that registration — the `Active` entry was a test registration and no real conversation had ever been created; regenerated the same packet as the **first real bootstrap**. Mechanical registration correction only; no project stage, milestone, protocol, learning-state, or knowledge-asset semantic change was made.
+- 2026-09-16: Seeded the first minimal Learning State and Knowledge Asset Index for C++ / OpenCV / ROS2 from the knowledge-reconstruction executor's candidate report, after user confirmation; Deep Learning / PnP / EKF / PID / Control remain Not Registered. Ingested and archived [`../archive/state-updates/STATE_UPDATE_KNOWLEDGE_STATE_INITIAL.md`](../archive/state-updates/STATE_UPDATE_KNOWLEDGE_STATE_INITIAL.md).
 
 ---
 
