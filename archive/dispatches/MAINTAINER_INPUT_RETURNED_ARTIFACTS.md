@@ -1,3 +1,17 @@
+```yaml
+Artifact Type: Maintainer Input — Problem Report + Recommendation
+Scope: Project-level repository structure and Artifact lifecycle
+Producer: Manager (rm-ai-control_v1.0 Navigator)
+Created: 2026-09-16
+Lifecycle: Archived
+Semantic Authority: Role Report
+Authoritative Source: archive/dispatches/MAINTAINER_INPUT_RETURNED_ARTIFACTS.md（本文件即原始证据本体）
+Supersedes: None
+Next Consumer: None
+```
+
+> **Archive Record**（由 Memory Curator 添加的生命周期 metadata，非正文语义）：本 Artifact 已由 `outbox/` Pending Consumption 归档到 `archive/dispatches/`，Lifecycle 为 `Consumed → Archived`。消费证据：`rm-ai-control_v1.1` 已按其问题与建议实现（git commit `a6c032c969e81ff617e4e121cb8d3087596f1d8e`，`feat: establish memory curation in rm-ai-control v1.1`），并由 Human / Maintainer 确认。归档后的正文内容未改动。
+
 # Maintainer Input — 下游返还产物的存放与生命周期
 
 > From：Manager（`rm-ai-control_v1.0` Navigator）

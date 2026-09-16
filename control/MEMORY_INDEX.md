@@ -35,7 +35,6 @@ No Pending inbound Artifact is registered.
 | [`../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md`](../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md) | Guided Dart PID / Control Knowledge Conversation | Await explicit consumption evidence; PID / Control state remains Not Registered |
 | [`../outbox/BOOTSTRAP_KNOWLEDGE_STATE_FIRST_VERSION.md`](../outbox/BOOTSTRAP_KNOWLEDGE_STATE_FIRST_VERSION.md) | Existing rm-ai-control initialization executor | Await explicit consumption evidence |
 | [`../outbox/BOOTSTRAP_KNOWLEDGE_STATE_SEED.md`](../outbox/BOOTSTRAP_KNOWLEDGE_STATE_SEED.md) | Knowledge-reconstruction executor | Await explicit consumption evidence |
-| [`../outbox/MAINTAINER_INPUT_RETURNED_ARTIFACTS.md`](../outbox/MAINTAINER_INPUT_RETURNED_ARTIFACTS.md) | rm-ai-control Maintainer / Human | Await explicit consumption evidence |
 
 ## Freshness Rule
 
