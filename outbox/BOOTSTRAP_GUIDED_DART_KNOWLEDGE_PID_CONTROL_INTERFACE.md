@@ -1,6 +1,22 @@
 # Bootstrap Packet
 
-> Producer：Manager
+```yaml
+Artifact Type: Bootstrap Packet (Knowledge Conversation Handoff)
+Scope: Project / Guided Dart / Knowledge
+Producer: Manager (rm-ai-control_v1.1 Navigator)
+Created: 2026-09-16
+Lifecycle: Pending
+Semantic Authority: Mechanical (assembled from cited stable sources; asserts no new semantic state)
+Authoritative Source:
+  - control/knowledge/LEARNING_STATE.md
+  - control/knowledge/KNOWLEDGE_ASSET_INDEX.md
+  - projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md
+  - control/PROJECT_CONTROL_INDEX.md
+Supersedes: None
+Next Consumer: Guided Dart PID / Control Knowledge Conversation
+```
+
+> Producer：Manager（`rm-ai-control_v1.1` Navigator）
 >
 > Consumer：新的 Guided Dart 知识对话（Knowledge Conversation）— PID / Control 接口基础
 >
@@ -8,13 +24,15 @@
 >
 > 本包只组装上下文与指针，不产生新的项目事实、学习状态或验证结论。
 >
-> **Bootstrap 轮次**：2026-09-15 **首次真实 Bootstrap**。此前的同名登记为测试操作，未产生真实知识对话；承载旧「电控学习入口」的对话已被用户归档且当前无法定位。本包不依赖任何聊天记录——入口即本文件。
+> **Bootstrap 轮次**：2026-09-16 **首次真实 Bootstrap**（按 `rm-ai-control_v1.1` Artifact Lifecycle 更新版）。此前的同名登记为测试操作，未产生真实知识对话；承载旧「电控学习入口」的对话已被用户归档且当前无法定位。本包不依赖任何聊天记录——入口即本文件。
+>
+> **Lifecycle**：本包在 `outbox/` 中为 `Pending Consumption`，由 [`../control/MEMORY_INDEX.md`](../control/MEMORY_INDEX.md) 导航。它**不是**语义权威，下游不得把它当作权威来源引用。目标对话真正建立后，须提供消费证据，再由 Memory Curator 归入 `archive/dispatches/`。
 
 ## Target
 
 - Target Role / Conversation Type: 独立知识对话（Knowledge Conversation），消费 `playbooks/knowledge/` 知识层入口
 - New / Continue Existing: New
-- Bootstrap Round: 1（首次真实交接；2026-09-15 重生成，替代同名测试版本）
+- Bootstrap Round: 1（首次真实交接；2026-09-16 按 v1.1 更新，替代同名测试版本）
 - Suggested Name: `Guided Dart Knowledge — PID / Control 接口基础（P0.5）`
 
 ## Goal
@@ -50,7 +68,7 @@
 
 ### Sources
 
-- `control/PROJECT_CONTROL_INDEX.md`（Last Refreshed: 2026-09-15）
+- `control/PROJECT_CONTROL_INDEX.md`（Last Refreshed: 2026-09-16）
 - `projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`（Control Index 登记的 Stage Source 与 Latest Project State；artifact 内未声明日期，文件系统时间戳 2026-09-13）
 
 ## Relevant Decisions / Invariants
@@ -77,36 +95,44 @@ L0 Reproduce / L1 Operate / L2 Tune / L3 Diagnose / L4 Modify / L5 Explain / L6 
 
 ## Relevant Learning State
 
-**Unknown / Not Registered。**
+**已建立（Current）。** 首版最小 Learning State 于 2026-09-16 经用户确认落盘，但**只登记 C++ / OpenCV / ROS2**。
 
-`control/PROJECT_CONTROL_INDEX.md` §3 明确记录 Guided Dart 跨方案基础方向的 `Learning State: Not Registered`。Checkpoint 中的“已学习 / 已明确”条目是**已记录的探索进度**，不是已登记的用户 Learning State，也不能作为掌握度结论使用。
+与本主题相关的部分：
 
-具体到本主题：
+- `C++`：**`L4 Modify`，限定于已完成的 OpenCV / ROS2 小型任务语境**。这是唯一与本主题有实质关系的已登记条目——PID / Control 的实现与阅读会落在 C++ 上。其 `Known Gaps` 明确包含类 / 对象 / 生命周期 / 所有权 / 多态 / 回调绑定仍可能造成阅读阻塞，且「有速查入口 ≠ 断点已消失」。**不得把该限定语境的 L4 当作全局 C++ 能力。**
+- `OpenCV` / `ROS2`：已登记，但**与本主题无直接关系**，不构成本轮前置。
+- **`PID / Control` 本身仍为 `Not Registered`**：本主题没有任何已登记的用户学习状态，因此下游**不得假设用户已具备 PID 前置**。
 
-- 用户已知悉 / 接触过 PID 与卡尔曼滤波——此为**用户本轮的口头陈述**，未见于任何权威产物，故不作为已登记学习状态。
-- 「P0 阶段对话曾建议了解 PID 与卡尔曼滤波」同样**仅属用户陈述**，未登记于任何权威产物；Manager 不把它写成项目决定。
-- 因此下游不得假设用户已具备 PID 前置，也不得在讲解后自行宣布用户已掌握。
+用户侧陈述（仍未登记）：
+
+- 用户已知悉 / 接触过 PID 与卡尔曼滤波——此为**用户口头陈述**，未见于任何权威产物，不作为已登记学习状态。
+- 「P0 阶段对话曾建议了解 PID 与卡尔曼滤波」同样**仅属用户陈述**，Manager 未把它写成项目决定。
+
+**边界**：下游不得在讲解后自行宣布用户已掌握；任何 Learning State Patch 必须由用户确认。
 
 ### Learning State Source
 
-- Unknown / Not Registered（无权威 Learning State Artifact 被登记）
-- 可用的初始化入口：`protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/LEARNING_STATE_TEMPLATE.md` 与 `templates/KNOWLEDGE_PROMPT_CARDS.md` Card 0（最小可用版本即可，不做全知识库建档）
+- Current：[`../control/knowledge/LEARNING_STATE.md`](../control/knowledge/LEARNING_STATE.md)（Lifecycle `Current`；2026-09-16；来源为用户确认的知识重构执行体候选报告）
+- 该文件的 `Not Registered` 一节显式保留：`Deep Learning`、`PnP`、`EKF`、`PID / Control`
+- Patch 入口：`protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/LEARNING_STATE_TEMPLATE.md` 的 `Patch Convention`（只提最小 Patch，不重写全文）
 
 ## Relevant Knowledge Assets
 
-**Unknown / Not Registered。**
+**已建立（Current），但本主题无已登记资产。** 首版 Knowledge Asset Index 于 2026-09-16 落盘，共 **21 条**（C++ 5 / OpenCV 11 / ROS2 5），全部位于外部工作区 `C:\Users\SHIN\Desktop\知识重构`。
 
-`control/PROJECT_CONTROL_INDEX.md` §3 明确记录 `Knowledge Asset Index: Not Registered`。
+- **没有任何一条资产属于 PID / Control 主题**：seed 报告明确只在 C++ / OpenCV / ROS2 范围内提取，未检索、也未登记 PID / Control 相关材料。
+- 与本主题可能相邻的是 C++ 的通用资产（知识总目录、类专题、回调专题），但它们**不包含 PID 内容**，不能替代本主题的材料。
 
 需要特别区分（防止把用户材料误当已登记资产）：
 
-- 用户提到自己**做过一个「笔记整理的项目」**，本轮讨论将围绕这些笔记与疑问展开 —— 此信息为**用户本轮陈述，未经核实、未登记**。
-- 该笔记整理项目的位置、结构、命名、覆盖范围，以及其中哪些内容涉及 PID / Control，**Manager 一概未知**，不得假设。
+- 用户提到的**「笔记整理的项目」**现已可定位为上述外部工作区，但该工作区中**是否存在 PID / Control 笔记尚未确认**，也未登记为资产；Manager 不得假设。
 - `projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md` §7 登记的用户侧材料是 `knowledge_note.md（迎角、攻角与俯仰角）` 与 `02(1).md`（笔记风格参考），**两者均为 AoA / 笔记风格相关，未涉及 PID**；不得把它们当作本主题的 PID 笔记。
+- 用户另提到的**中科大电控教学视频**未登记为任何资产。
 
 ### Asset Source
 
-- Unknown / Not Registered（无 Knowledge Asset Index 被登记；用户侧笔记项目未登记）
+- Current：[`../control/knowledge/KNOWLEDGE_ASSET_INDEX.md`](../control/knowledge/KNOWLEDGE_ASSET_INDEX.md)（Lifecycle `Current`；21 条；所有资产路径相对外部工作区 `C:\Users\SHIN\Desktop\知识重构`）
+- 该索引只覆盖 seed 范围（C++ / OpenCV / ROS2）；PID / Control 属未登记范围
 
 ## Required Protocol / Entry Files
 
@@ -170,19 +196,21 @@ Manager 不能替用户决定，以下保持留空待用户给出：
 - 本次新出现的 Unknown 与暴露出的前置基础断点。
 - 是否出现需要回到 Manager 的状态变化（例如主题切换、需要 Checkpoint / State Update、需要登记新的 Knowledge Asset）；如有，按 `common/Carry_Forward.md` 形式返回。
 - 明确声明：本对话不产生项目阶段、技术路线或掌握度结论；如需登记 Learning State Patch，必须由用户确认。
+- **消费证据**：目标对话真正建立后，请向 Manager 确认（例如说明"新对话已建立并开始使用本包"），以便 Memory Curator 把本包从 `outbox/`（`Pending Consumption`）归入 `archive/dispatches/`。**不得仅凭时间或文件名推断已消费。**
 
 ## Freshness / Confidence
 
-- Latest source date: `control/PROJECT_CONTROL_INDEX.md` 为 2026-09-15（本次重生成刷新）；`projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md` artifact 内未声明日期（文件系统时间戳 2026-09-13）。
+- Latest source date: `control/PROJECT_CONTROL_INDEX.md` 与 `control/MEMORY_INDEX.md` 均为 2026-09-16；`control/knowledge/LEARNING_STATE.md` 与 `control/knowledge/KNOWLEDGE_ASSET_INDEX.md` 为 2026-09-16（`Current`）；`projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md` artifact 内未声明日期（文件系统时间戳 2026-09-13）。
 - Possibly stale items: Control Index §2 记录 Guided Dart P0.5 对话活动状态为 Unknown；上游对话的实际进展可能晚于该索引，若与 Checkpoint 冲突以新权威 Artifact 为准。
-- Missing authoritative source: 无被登记的 Learning State Artifact；无 Knowledge Asset Index；本主题用户笔记与视频材料未提供；Main Supervisor 未登记。承载旧「电控学习入口」的对话已被用户归档且未定位——该对话从未登记为权威产物，其丢失不影响本包（本包不引用任何聊天记录）。
+- Missing authoritative source: 本主题（PID / Control）**无 Learning State 登记、无 Knowledge Asset 登记**——长期状态文件虽已存在，但两者都不覆盖本主题；本主题用户笔记与视频材料未提供；Main Supervisor 未登记。承载旧「电控学习入口」的对话已被用户归档且未定位——该对话从未登记为权威产物，其丢失不影响本包（本包不引用任何聊天记录）。
+- Known pending action: 本包是 `outbox/` 中的 `Pending Consumption`；目标对话建立后需提供消费证据，供 Memory Curator 归入 `archive/dispatches/`。另：`LEARNING_STATE.md` 记录的是**全局**知识状态，其更新不会由本主题对话自动触发。
 
 ## Carry Forward
 
 下游必须保留：
 
 - Current Goal：围绕用户的既有 PID 笔记与疑问，建立制导镖 `Control` 接口层所需的通用理解；不进入正式方案设计，不提前锁定下一赛季技术路线。
-- Verified Facts：P0 系统地图已完成；`Guidance / Control / Actuator` 分层；`Measurement ≠ State`；姿态 ≠ 速度方向；`算法算得快 ≠ 飞镖反应得快`；2026 规则仅历史基线；`Control` 属接口知识区、不要求飞控 / 机械专家深度。
+- Verified Facts：P0 系统地图已完成；`Guidance / Control / Actuator` 分层；`Measurement ≠ State`；姿态 ≠ 速度方向；`算法算得快 ≠ 飞镖反应得快`；2026 规则仅历史基线；`Control` 属接口知识区、不要求飞控 / 机械专家深度。另：C++ / OpenCV / ROS2 已建立首版 `Current` Learning State（C++ 为限定语境的 `L4 Modify`），但 **`PID / Control` 本身仍为 `Not Registered`**；Knowledge Asset Index 的 21 条资产中**不含** PID / Control。
 - Locked Decisions：当前 Stage 为 `P0.5 — 内容方向探索`；不进入 Project Inception；不提前锁定技术路线；不深入三回路 / 伪攻角控制公式、ISMCG 推导、完整飞行动力学推导、CFD、高级飞控设计；不深入单一学校源码。
 - Active Constraints：笔记组织沿用已登记结构（图优先、依赖顺序、短标题、细节后置、图片留空）；讲解与笔记产出解耦；有笔记 ≠ 用户已掌握。
 - Open Questions：用户 PID 疑问清单；Sufficiency 目标等级；笔记归属与落点；卡尔曼滤波是否另开线程；中科大视频材料；项目侧长期 Unknown（下一赛季规则、队内遗产、人员分工、实际控制 / 机械能力）。
