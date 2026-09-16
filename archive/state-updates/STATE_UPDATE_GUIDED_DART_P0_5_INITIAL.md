@@ -11,7 +11,7 @@
 
 ## Trigger
 
-Seed the Manager Control Index from the current Guided Dart authoritative Stage Checkpoint supplied at repository root.
+Seed the Manager Control Index from the current Guided Dart authoritative Stage Checkpoint, now stored at `projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`.
 
 ## What Changed
 
@@ -30,8 +30,8 @@ Seed the Manager Control Index from the current Guided Dart authoritative Stage 
 
 ## Authoritative Artifact
 
-- File / Report / Checkpoint / Decision: `GUIDED_DART_P0_5_CHECKPOINT.md`
-- Path / Reference: [`../../GUIDED_DART_P0_5_CHECKPOINT.md`](../../GUIDED_DART_P0_5_CHECKPOINT.md)
+- File / Report / Checkpoint / Decision: `projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`
+- Path / Reference: [`../../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`](../../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md)
 
 ## Manager May Update
 

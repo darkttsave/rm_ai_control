@@ -31,8 +31,8 @@
 - File / Report / Checkpoint / Decision:
   - [`../../control/knowledge/LEARNING_STATE.md`](../../control/knowledge/LEARNING_STATE.md)
   - [`../../control/knowledge/KNOWLEDGE_ASSET_INDEX.md`](../../control/knowledge/KNOWLEDGE_ASSET_INDEX.md)
-  - [`../../temporary/KNOWLEDGE_STATE_SEED_CANDIDATE.md`](../../temporary/KNOWLEDGE_STATE_SEED_CANDIDATE.md)
-  - User confirmation recorded in [`../../outbox/BOOTSTRAP_KNOWLEDGE_STATE_FIRST_VERSION.md`](../../outbox/BOOTSTRAP_KNOWLEDGE_STATE_FIRST_VERSION.md)
+  - [`../returns/KNOWLEDGE_STATE_SEED_CANDIDATE.md`](../returns/KNOWLEDGE_STATE_SEED_CANDIDATE.md)
+  - User confirmation is recorded in this archived State Update and the committed Current Learning State; no Pending outbox path is used as an authoritative source.
 - Path / Reference: Evidence pointers inside the two state files are relative to external workspace `C:\Users\SHIN\Desktop\知识重构`; that workspace was not accessed or copied during this landing.
 
 ## Manager May Update

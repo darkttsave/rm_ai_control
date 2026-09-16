@@ -26,7 +26,7 @@
 
 - 这是知识断点延续，不是项目方向决策，也不是仓库实现任务，因此不进入 Main Supervisor / Human，也不进入 Work / Executor。
 - `control/PROJECT_CONTROL_INDEX.md` §8 明确：继续 Guided Dart 知识缺口 → Specialist + Knowledge Playbook，或在合适时使用独立知识对话。
-- `GUIDED_DART_P0_5_CHECKPOINT.md` §8 已把 `坐标系与时间` 登记为下一主题建议，§9 “First Next Step” 指向同一主题。
+- `projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md` §8 已把 `坐标系与时间` 登记为下一主题建议，§9 “First Next Step” 指向同一主题。
 - 该主题与 P0.5 目标（跨方案通用基础 + 可复习笔记）同阶段对齐，适合续接而非新建项目线。
 
 ## Current Project Context
@@ -45,7 +45,7 @@
 ### Sources
 
 - `control/PROJECT_CONTROL_INDEX.md`（Last Refreshed: 2026-09-14）
-- `GUIDED_DART_P0_5_CHECKPOINT.md`（Control Index 登记的 Stage Source 与 Latest Project State；artifact 内未声明日期，文件系统时间戳 2026-09-13）
+- `projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`（Control Index 登记的 Stage Source 与 Latest Project State；artifact 内未声明日期，文件系统时间戳 2026-09-13）
 
 ## Relevant Decisions / Invariants
 
@@ -99,7 +99,7 @@
 
 指针，不复制内容：
 
-- `GUIDED_DART_P0_5_CHECKPOINT.md` §8（Next Step：坐标系与时间主题建议）与 §5（笔记组织方式、暂不深入项）。
+- `projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md` §8（Next Step：坐标系与时间主题建议）与 §5（笔记组织方式、暂不深入项）。
 - 用户侧飞镖笔记：`knowledge_note.md（迎角、攻角与俯仰角）` — AoA / Pitch / 安装角概念参考，其中部分表述已被纠偏。
 - 用户侧笔记风格参考：`02(1).md`。
 - 用户当前飞镖笔记（由用户在本对话中提供）。
@@ -143,7 +143,7 @@ Manager 不能替用户决定，以下保持留空待用户给出：
 
 ## Freshness / Confidence
 
-- Latest source date: `control/PROJECT_CONTROL_INDEX.md` 为 2026-09-14；`GUIDED_DART_P0_5_CHECKPOINT.md` artifact 内未声明日期（文件系统时间戳 2026-09-13）。
+- Latest source date: `control/PROJECT_CONTROL_INDEX.md` 为 2026-09-14；`projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md` artifact 内未声明日期（文件系统时间戳 2026-09-13）。
 - Possibly stale items: Control Index §2 记录 Guided Dart P0.5 对话活动状态为 Unknown；上游对话的实际进展可能晚于该索引，若与 Checkpoint 冲突以新权威 Artifact 为准。
 - Missing authoritative source: 无被登记的 Learning State Artifact；无 Knowledge Asset Index；Main Supervisor 未登记。
 

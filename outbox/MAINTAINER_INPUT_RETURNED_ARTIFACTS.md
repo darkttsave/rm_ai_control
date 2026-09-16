@@ -21,7 +21,7 @@
 | `outbox/` | Manager 生成、等待下游消费的输出 | 5 个文件（4 份交接包 + README） |
 | `inbox/` | "尚待 ingest 的正式状态更新或 release packet" | **仅 README.md**，自仓库初始化以来从未被使用 |
 | `archive/state-updates/` | 已 ingest 的 STATE_UPDATE | 4 份 |
-| 仓库根目录 | （无明文定义） | 5 个 tracked 文件：`.gitattributes`、`AGENTS.md`、`GUIDED_DART_P0_5_CHECKPOINT.md`、`MANAGER_CHARTER.md`、`README.md` |
+| 仓库根目录 | （无明文定义） | 当时包含 Guided Dart P0.5 checkpoint；v1.1 后该文件位于 `projects/guided-dart/` |
 | `temporary/` | **仅存在于对话约定** | 未跟踪；无 README；无根 `.gitignore`；未出现在 `README.md` 的 Repository Map |
 
 **结论**：入站通道名义上存在（`inbox/`），但从未启用，且其定义范围**窄于**实际入站物品种类。
@@ -32,10 +32,10 @@
 本轮角色 A 的种子报告 `KNOWLEDGE_STATE_SEED_CANDIDATE.md`（21 条资产、三主题状态候选的实际来源）就落在 `temporary/`，`git status` 显示为 `?? temporary/`。
 
 **P2 — 由此产生来源链腐坏。**
-`control/knowledge/LEARNING_STATE.md` 第 3 行与 `archive/state-updates/STATE_UPDATE_KNOWLEDGE_STATE_INITIAL.md` 的 `Authoritative Artifact` 均链接 `../../temporary/KNOWLEDGE_STATE_SEED_CANDIDATE.md`。**权威状态文件的来源指针指向一个不受版本控制、且已被计划重构的目录。**
+`control/knowledge/LEARNING_STATE.md` 与 `archive/state-updates/STATE_UPDATE_KNOWLEDGE_STATE_INITIAL.md` 当时均指向一份位于 `temporary/` 的未跟踪 seed candidate。**权威状态文件的来源指针当时指向一个不受版本控制、且已被计划重构的目录。**
 
 **P3 — 根目录承载项目产物，一次误移动即造成大范围链接断裂。**
-`GUIDED_DART_P0_5_CHECKPOINT.md` 位于仓库根目录，被误移入 `temporary/` 后，实测引用面为：
+Guided Dart P0.5 checkpoint 当时位于仓库根目录，被误移入 `temporary/` 后，实测引用面为：
 
 ```text
 archive/state-updates/STATE_UPDATE_GUIDED_DART_P0_5_INITIAL.md   2 行
@@ -93,8 +93,7 @@ Manager → 下游             outbox/
 在方案 1 基础上，把**项目权威产物移出根目录**：
 
 ```text
-projects/
-  guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md      ← 从根目录迁入
+projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md      ← 从根目录迁入
 ```
 
 并一次性修正上表 7 文件 / 23 行 / 31 处引用，同步更新 `README.md` 的 Repository Map。

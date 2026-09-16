@@ -1,0 +1,3 @@
+# Disposable local scratch space. Keep only its tracked explanation.
+temporary/*
+!temporary/README.md

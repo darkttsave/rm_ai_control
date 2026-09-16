@@ -34,7 +34,7 @@
 
 ### 2. 内容来源
 
-- 候选报告：[`../temporary/KNOWLEDGE_STATE_SEED_CANDIDATE.md`](../temporary/KNOWLEDGE_STATE_SEED_CANDIDATE.md)
+- 候选报告：[`../archive/returns/KNOWLEDGE_STATE_SEED_CANDIDATE.md`](../archive/returns/KNOWLEDGE_STATE_SEED_CANDIDATE.md)
 - 报告生产者：知识重构执行体；其工作区为 `C:\Users\SHIN\Desktop\知识重构`（**本仓库之外**）
 - 报告内 `A. Learning State Candidate` 与 `B. Knowledge Asset Candidate` 是本轮落盘的内容主体
 
@@ -117,13 +117,13 @@ Learning State: Not Registered; Knowledge Asset Index: Not Registered
 ```
 改为
 ```text
-Learning State: [`knowledge/LEARNING_STATE.md`](knowledge/LEARNING_STATE.md) (only C++ / OpenCV / ROS2 registered; PnP, EKF, Deep Learning, PID / Control remain Not Registered); Knowledge Asset Index: [`knowledge/KNOWLEDGE_ASSET_INDEX.md`](knowledge/KNOWLEDGE_ASSET_INDEX.md)
+Learning State: [`knowledge/LEARNING_STATE.md`](../control/knowledge/LEARNING_STATE.md) (only C++ / OpenCV / ROS2 registered; PnP, EKF, Deep Learning, PID / Control remain Not Registered); Knowledge Asset Index: [`knowledge/KNOWLEDGE_ASSET_INDEX.md`](../control/knowledge/KNOWLEDGE_ASSET_INDEX.md)
 ```
 
 并在该表**新增一行**：
 
 ```text
-| Cross-project knowledge state (C++ / OpenCV / ROS2) | First minimal long-term knowledge state seeded from the knowledge-reconstruction executor's report and confirmed by the user on 2026-09-16; asset identity boundaries preserved; no mastery claim beyond recorded evidence | Learning State: [`knowledge/LEARNING_STATE.md`](knowledge/LEARNING_STATE.md); Knowledge Asset Index: [`knowledge/KNOWLEDGE_ASSET_INDEX.md`](knowledge/KNOWLEDGE_ASSET_INDEX.md) | [`../archive/state-updates/STATE_UPDATE_KNOWLEDGE_STATE_INITIAL.md`](../archive/state-updates/STATE_UPDATE_KNOWLEDGE_STATE_INITIAL.md) | 2026-09-16 |
+| Cross-project knowledge state (C++ / OpenCV / ROS2) | First minimal long-term knowledge state seeded from the knowledge-reconstruction executor's report and confirmed by the user on 2026-09-16; asset identity boundaries preserved; no mastery claim beyond recorded evidence | Learning State: [`knowledge/LEARNING_STATE.md`](../control/knowledge/LEARNING_STATE.md); Knowledge Asset Index: [`knowledge/KNOWLEDGE_ASSET_INDEX.md`](../control/knowledge/KNOWLEDGE_ASSET_INDEX.md) | [`../archive/state-updates/STATE_UPDATE_KNOWLEDGE_STATE_INITIAL.md`](../archive/state-updates/STATE_UPDATE_KNOWLEDGE_STATE_INITIAL.md) | 2026-09-16 |
 ```
 
 (c) §7 `Recent Significant Updates`：**追加**一行（不要改写既有行）：
@@ -137,7 +137,7 @@ Learning State: [`knowledge/LEARNING_STATE.md`](knowledge/LEARNING_STATE.md) (on
 在 `UNIVERSAL_PROJECT_AI_BEHAVIOR.md` 段落之后追加：
 
 ```text
-[`knowledge/`](knowledge/) 保存长期知识状态：[`LEARNING_STATE.md`](knowledge/LEARNING_STATE.md) 记录用户已确认的学习状态，[`KNOWLEDGE_ASSET_INDEX.md`](knowledge/KNOWLEDGE_ASSET_INDEX.md) 记录知识资产的身份与职责；两者都是状态与指针，不替代其来源材料。
+[`knowledge/`](../control/knowledge/) 保存长期知识状态：[`LEARNING_STATE.md`](../control/knowledge/LEARNING_STATE.md) 记录用户已确认的学习状态，[`KNOWLEDGE_ASSET_INDEX.md`](../control/knowledge/KNOWLEDGE_ASSET_INDEX.md) 记录知识资产的身份与职责；两者都是状态与指针，不替代其来源材料。
 ```
 
 可选：如果 `control/knowledge/README.md` 能提供超出上述两个文件本身的导航价值，可建；否则不要建。
@@ -149,7 +149,7 @@ Learning State: [`knowledge/LEARNING_STATE.md`](knowledge/LEARNING_STATE.md) (on
 - 重新初始化本仓库，或重写 `AGENTS.md` / `MANAGER_CHARTER.md` / `UNIVERSAL_PROJECT_AI_BEHAVIOR.md`；
 - 修改 `protocol/current/` 下任何内容（Frozen 基线只读）；
 - 修改 `control/SYSTEM_CAPABILITY_INDEX.md`（Capability Impact = `None`）；
-- 修改 `GUIDED_DART_P0_5_CHECKPOINT.md`，或改动 Guided Dart P0.5 阶段；
+- 修改 `projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`，或改动 Guided Dart P0.5 阶段；
 - 改动 `control/PROJECT_CONTROL_INDEX.md` §2 中 PID 知识对话那一行（PID 线程语义不变）；
 - 新增主题、升格等级、把 `Source` 资产升级为 `Canonical`、或合并同主题资产；
 - 访问或写入 `C:\Users\SHIN\Desktop\知识重构`（不需要；只用报告里的指针文本）；
@@ -159,9 +159,9 @@ Learning State: [`knowledge/LEARNING_STATE.md`](knowledge/LEARNING_STATE.md) (on
 ## Git 要求（遵守 [`../control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](../control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md)）
 
 1. 开始前执行 `git status --porcelain --untracked-files=all` 并记录。
-   **预期**：工作树干净，只有 `?? temporary/KNOWLEDGE_STATE_SEED_CANDIDATE.md`。
+   **当时预期**：工作树干净，只有一份位于 `temporary/` 的未跟踪 seed candidate（v1.1 已将其晋升到 `archive/returns/`）。
    - `temporary/` 是**用户临时区**：不得提交、不得删除、不得移动，也不得为"让状态干净"而处理它。
-   - 如果看到**预期之外**的修改（例如 `GUIDED_DART_P0_5_CHECKPOINT.md` 的删除）：**停下来报告，不要提交，也不要回滚**。
+   - 如果看到**预期之外**的修改（例如 `projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md` 的删除）：**停下来报告，不要提交，也不要回滚**。
 2. 只暂存本轮负责的 5 个文件（`control/knowledge/` 两个、`archive/state-updates/` 一个、`control/PROJECT_CONTROL_INDEX.md`、`control/README.md`）。
 3. 提交前检查：`git diff --cached` 全文、相对链接可解析、无 Secret / Token / 运行缓存。
 4. 建议 commit message（按实际 diff 决定）：`feat: seed initial knowledge state`

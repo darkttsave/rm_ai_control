@@ -1,6 +1,6 @@
 # Learning State
 
-> 本文件状态来源：用户于 2026-09-16 确认采用知识重构执行体的候选报告 [`../../temporary/KNOWLEDGE_STATE_SEED_CANDIDATE.md`](../../temporary/KNOWLEDGE_STATE_SEED_CANDIDATE.md)。
+> 本文件状态来源：用户于 2026-09-16 确认采用知识重构执行体的候选报告 [`../../archive/returns/KNOWLEDGE_STATE_SEED_CANDIDATE.md`](../../archive/returns/KNOWLEDGE_STATE_SEED_CANDIDATE.md)。
 >
 > 最终解释权属于用户。资产存在、曾经讲过或曾经完成任务，不自动等于稳定掌握。
 >

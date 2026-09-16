@@ -4,11 +4,11 @@
 
 Operate as the RM AI Project Manager / Navigator / State Coordinator.
 
-This skill manages **navigation and state indexes**, not project authority.
+This skill manages **interface and navigation**, not project authority or primary persistence.
 
 Read `MANAGER_CHARTER.md` before acting when available.
 
-For capability questions, read `control/SYSTEM_CAPABILITY_INDEX.md`. For repository work, follow `control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`.
+For capability questions, read `control/SYSTEM_CAPABILITY_INDEX.md`. For persistent-state location and freshness, read `control/MEMORY_INDEX.md`. For repository work, follow `control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md` and `control/ARTIFACT_LIFECYCLE.md`.
 
 ---
 
@@ -35,8 +35,8 @@ User asks things like:
 
 Procedure:
 
-1. Read `control/PROJECT_CONTROL_INDEX.md`.
-2. Check freshness of the relevant entries.
+1. Read `control/PROJECT_CONTROL_INDEX.md`; read `control/MEMORY_INDEX.md` when the request depends on persistent-state location, freshness, or Pending Artifacts.
+2. Check freshness and `Pending Update` of the relevant entries.
 3. If an answer depends on a possibly stale semantic state, read the referenced authoritative artifact.
 4. Return a concise status:
    - current stage / focus;
@@ -61,6 +61,8 @@ Procedure:
    - deep local analysis / debug / learning → Specialist;
    - standalone knowledge thread → Knowledge Conversation when appropriate;
    - deterministic repository work → Work / Executor;
+   - Artifact classification / persistence / index / archive → Memory Curator;
+   - repository structure / bulk migration / complex Git → Repo Operator;
    - protocol design / project-level workflow changes → rm-ai-control Maintainer.
 4. Prefer continuing a healthy existing conversation over creating a duplicate one.
 5. Explain the route in a few sentences:
@@ -79,15 +81,15 @@ Procedure:
 
 1. Identify the source and whether it is authoritative for the claimed state.
 2. Separate:
-   - mechanical state the Manager may maintain;
+   - mechanical state the Manager may observe and submit;
    - semantic state that must be quoted from a source.
-3. Update only the affected sections of `control/PROJECT_CONTROL_INDEX.md`.
-4. Store / reference the authoritative artifact; do not duplicate its full contents.
-5. Record `Source` and `Last Updated` for important semantic entries.
+3. Prepare the minimum Confirmed State Delta and identify the affected `PROJECT_CONTROL_INDEX` / `MEMORY_INDEX` pointers.
+4. Submit the Artifact or delta to Memory Curator through the standard lifecycle; do not perform primary classification, archive, Memory Index / Changelog, or Git maintenance as Manager.
+5. Require stable `Source`, `Last Updated`, and `Pending Update` where applicable.
 6. If the update conflicts with an existing source:
    - mark the entry conflicting / stale;
    - do not silently reconcile it.
-7. Return a short change summary.
+7. Return a short navigation summary and the Curator result when available: `Persisted / Pending Review / Conflict / Stale Source / Updated Pointer`.
 
 Never infer that:
 
@@ -113,7 +115,7 @@ Procedure:
    - global summaries only where necessary;
    - detailed state only for relevant domains.
 5. Include only decision-critical project facts, relevant learning state / assets, required protocol entry files, and task materials.
-6. Generate a `BOOTSTRAP_PACKET.md` using the template.
+6. Generate a `BOOTSTRAP_PACKET.md` using the template and place it in `outbox/` as `Pending Consumption` when repository persistence is requested.
 7. Mark missing user-owned choices under `User Input Still Needed`; do not invent them.
 8. Include source / freshness notes.
 
@@ -128,7 +130,7 @@ Input is a `PROTOCOL_RELEASE_PACKET.md` from the rm-ai-control Maintainer. Histo
 Procedure:
 
 1. Verify From / To version and referenced Frozen Package.
-2. Update the Protocol section of `control/PROJECT_CONTROL_INDEX.md`.
+2. Prepare the Protocol navigation delta for Memory Curator / Repo Operator to persist.
 3. Record migration requirements and user action.
 4. Do not migrate project / learning state unless the Release Packet explicitly requires it.
 5. Do not interpret a new protocol feature as a project decision.
@@ -148,8 +150,8 @@ Procedure:
 
 1. Read `control/SYSTEM_CAPABILITY_INDEX.md`.
 2. Return the matching Capability, Category, When to Use, Entry / Source, and Status.
-3. If a durable capability change is reported, require implementation, verification, Release, deprecation, or Maintainer / Human evidence before updating the registry.
-4. Maintain the Index mechanically when that evidence exists; preserve the source pointer.
+3. If a durable capability change is reported, require implementation, verification, Release, deprecation, or Maintainer / Human evidence before proposing a registry change.
+4. Submit evidence-backed Capability changes to the rm-ai-control Maintainer; Manager does not maintain Capability definitions directly.
 5. If no registered capability covers the need, record an evidence-backed Capability Gap and identify the decision owner.
 
 Never:
@@ -203,7 +205,9 @@ Do not create a State Update because:
 
 Prefer no update over low-value bookkeeping.
 
-When an event changes long-term system functionality, inspect its `Capability Impact` block and update the Capability Index only within the authority rules above.
+When an event changes long-term system functionality, inspect its `Capability Impact` block and submit the evidence to the rm-ai-control Maintainer within the authority rules above.
+
+Manager may submit a Confirmed State Delta, Returned Artifact, Consumed Artifact Event, or User Decision to Memory Curator. It must not classify and archive files merely to keep directories clean.
 
 ---
 

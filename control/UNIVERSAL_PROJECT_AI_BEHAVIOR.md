@@ -1,4 +1,4 @@
-# Universal Project AI Behavior — rm-ai-control_v1.0
+# Universal Project AI Behavior — rm-ai-control_v1.1
 
 > 薄的项目级行为入口。它引用现有 Protocol / Manager 机制，不建立第二套 Context、Handoff、Reporting 或 State 系统。
 
@@ -48,8 +48,8 @@ Next Step
 
 ## 4. State Synchronization
 
-- 各项目角色维护 Role-local continuity；Manager 维护 [`PROJECT_CONTROL_INDEX.md`](PROJECT_CONTROL_INDEX.md) 中的 Project-global navigation state。
-- 语义事实必须来自权威产物，遵守 `Authoritative Artifact > Manager Control Index > Conversation Summary`。
+- 各项目角色维护 Role-local continuity；Manager 使用 [`PROJECT_CONTROL_INDEX.md`](PROJECT_CONTROL_INDEX.md) 导航 Project-global state；Memory Curator 负责权威来源确定后的持久化与索引同步。
+- 语义事实必须来自权威产物，遵守 `Authoritative Artifact > Memory / Control Index > Conversation Summary`。
 - 关键事件通过合适的 Checkpoint、Task Report、Specialist Return、Stage Report 或 STATE_UPDATE 向外同步。
 - 普通解释、无持久影响的小问题和未采纳的 brainstorm 不触发状态写入。
 - Manager 的 ingest、freshness 与冲突处理遵守 [`../MANAGER_CHARTER.md`](../MANAGER_CHARTER.md) 和 [`../.agents/skills/rm-project-manager/SKILL.md`](../.agents/skills/rm-project-manager/SKILL.md)。
@@ -58,5 +58,11 @@ Next Step
 
 - 先查 [`SYSTEM_CAPABILITY_INDEX.md`](SYSTEM_CAPABILITY_INDEX.md)，避免重复设计已有能力。
 - 报告者只陈述有实现、验证或正式决策支持的 `Added / Changed / Deprecated`。
-- Manager 可以维护索引并记录有证据的 Gap，但不能自行创造 Capability，也不能修改 Core Protocol。
+- Manager 可以导航 Capability 并观察有证据的 Gap；定义变化交给 rm-ai-control Maintainer 裁决、由 Repo Operator 确定性落盘。Manager 不能自行创造 Capability，也不能修改 Core Protocol。
 - Core Protocol 的变化必须由 rm-ai-control Maintainer 通过正式 Protocol Release 处理。
+
+## 6. Artifact Return
+
+- Returned Artifact、Confirmed State Delta、Consumed Artifact Event 和 User Decision 按 [`ARTIFACT_LIFECYCLE.md`](ARTIFACT_LIFECYCLE.md) 进入 `inbox/`、稳定 Current 位置或相应 archive 区域。
+- `inbox/`、`outbox/`、`temporary/` 不是 Current / Authoritative Artifact 的永久来源位置。
+- 文件分类、归档、Memory Index / Changelog 和低风险生命周期维护由 Memory Curator 负责；结构变化、批量迁移与复杂 Git 工作交给 Repo Operator。

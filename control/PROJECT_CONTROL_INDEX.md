@@ -1,6 +1,6 @@
 # Project Control Index
 
-> Manager 维护的导航地图。它不是业务事实的最高权威。
+> 供 Manager 使用的项目导航地图；权威来源确定后的持久化由 Memory Curator / Repo Operator 按职责边界执行。它不是业务事实的最高权威。
 >
 > 原则：**摘要 + 指针，不复制完整正文。**
 
@@ -19,11 +19,11 @@
 ## Project: Guided Dart Project
 
 - Current Stage: `Other — P0.5` / 内容方向探索
-- Stage Source: [`../GUIDED_DART_P0_5_CHECKPOINT.md`](../GUIDED_DART_P0_5_CHECKPOINT.md)
+- Stage Source: [`../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`](../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md)
 - Current Milestone / Focus: 在不进入正式方案设计、不中途锁定下一赛季方案的前提下，继续跨方案通用基础探索并形成可复习笔记
-- Milestone / Focus Source: [`../GUIDED_DART_P0_5_CHECKPOINT.md`](../GUIDED_DART_P0_5_CHECKPOINT.md)
+- Milestone / Focus Source: [`../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`](../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md)
 - Main Supervisor: Unknown / Not Registered
-- Latest Project State: [`../GUIDED_DART_P0_5_CHECKPOINT.md`](../GUIDED_DART_P0_5_CHECKPOINT.md)
+- Latest Project State: [`../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`](../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md)
 - Last Updated: 2026-09-14 Manager ingest; source artifact date not stated (filesystem timestamp 2026-09-13)
 - Freshness: Current — supplied by the user as the current authoritative P0.5 state file for this bring-up
 - Next Major Condition: Unknown / Not Registered
@@ -47,8 +47,8 @@
 
 | Conversation / Role | Purpose | Status | Latest Authoritative Artifact | Last Updated | Freshness / Note |
 |---|---|---|---|---|---|
-| Guided Dart P0.5 exploration | Same-stage cross-solution foundational learning and note preparation | Unknown | [`../GUIDED_DART_P0_5_CHECKPOINT.md`](../GUIDED_DART_P0_5_CHECKPOINT.md) | 2026-09-14 ingest | Semantic stage is sourced; conversation activity is not registered |
-| Guided Dart Knowledge — PID / Control 接口基础 | Dedicated knowledge conversation for the P0.5 `Control` interface layer, driven by the user's existing PID notes and questions | Not yet created — the earlier 2026-09-15 `Active` entry was a test registration; awaiting the user's first real conversation | None yet — no authoritative artifact; Manager Bootstrap Packet only | 2026-09-15 re-bootstrap | Manager-generated packet: [`../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md`](../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md) — a Manager output, not semantic authority; user-side PID notes and video material are user-reported and not registered; the conversation that carried the earlier 电控 learning entry was archived by the user and is currently unlocatable (user-reported 2026-09-15) |
+| Guided Dart P0.5 exploration | Same-stage cross-solution foundational learning and note preparation | Unknown | [`../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`](../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md) | 2026-09-14 ingest | Semantic stage is sourced; conversation activity is not registered |
+| Guided Dart Knowledge — PID / Control 接口基础 | Dedicated knowledge conversation for the P0.5 `Control` interface layer, driven by the user's existing PID notes and questions | Not yet created — the earlier 2026-09-15 `Active` entry was a test registration; awaiting the user's first real conversation | None yet — no authoritative artifact; Manager Bootstrap Packet only | 2026-09-15 re-bootstrap | Manager-generated packet remains Pending Consumption and is navigated through [`MEMORY_INDEX.md`](MEMORY_INDEX.md), not used as semantic authority; user-side PID notes and video material are user-reported and not registered; the conversation that carried the earlier 电控 learning entry was archived by the user and is currently unlocatable (user-reported 2026-09-15) |
 | rm-ai-control Maintainer | Maintain Core Protocol and project-level method from real RM friction without taking the project Main Supervisor role | Unknown | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/archive/Protocol_Maintainer_Checkpoint_v2.3.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/archive/Protocol_Maintainer_Checkpoint_v2.3.md) | 2026-09-14 ingest | Current project-layer name; source artifact retains the historical role name. Real RM long-term validation remains incomplete |
 | DSH Manager Runtime Validation | Validate the Manager `ingest` capability with a mechanical-only smoke test | Completed | [`../archive/state-updates/STATE_UPDATE_MANAGER_RUNTIME_SMOKE_TEST.md`](../archive/state-updates/STATE_UPDATE_MANAGER_RUNTIME_SMOKE_TEST.md) | 2026-09-14 ingest | Mechanical-only validation entry; the source asserts no Guided Dart / Protocol semantic change |
 
@@ -58,7 +58,7 @@
 
 | Area | Practical State Summary | Relevant Assets / State | Source | Last Updated |
 |---|---|---|---|---|
-| Guided Dart cross-solution foundations | P0.5 material includes system-layer distinctions, timing/response concepts, and attitude/trajectory/AoA distinctions; this is recorded progress, not a mastery claim | Learning State: [`knowledge/LEARNING_STATE.md`](knowledge/LEARNING_STATE.md) (only C++ / OpenCV / ROS2 registered; PnP, EKF, Deep Learning, PID / Control remain Not Registered); Knowledge Asset Index: [`knowledge/KNOWLEDGE_ASSET_INDEX.md`](knowledge/KNOWLEDGE_ASSET_INDEX.md) | [`../GUIDED_DART_P0_5_CHECKPOINT.md`](../GUIDED_DART_P0_5_CHECKPOINT.md) | 2026-09-14 ingest |
+| Guided Dart cross-solution foundations | P0.5 material includes system-layer distinctions, timing/response concepts, and attitude/trajectory/AoA distinctions; this is recorded progress, not a mastery claim | Learning State: [`knowledge/LEARNING_STATE.md`](knowledge/LEARNING_STATE.md) (only C++ / OpenCV / ROS2 registered; PnP, EKF, Deep Learning, PID / Control remain Not Registered); Knowledge Asset Index: [`knowledge/KNOWLEDGE_ASSET_INDEX.md`](knowledge/KNOWLEDGE_ASSET_INDEX.md) | [`../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`](../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md) | 2026-09-14 ingest |
 | Cross-project knowledge state (C++ / OpenCV / ROS2) | First minimal long-term knowledge state seeded from the knowledge-reconstruction executor's report and confirmed by the user on 2026-09-16; asset identity boundaries preserved; no mastery claim beyond recorded evidence | Learning State: [`knowledge/LEARNING_STATE.md`](knowledge/LEARNING_STATE.md); Knowledge Asset Index: [`knowledge/KNOWLEDGE_ASSET_INDEX.md`](knowledge/KNOWLEDGE_ASSET_INDEX.md) | [`../archive/state-updates/STATE_UPDATE_KNOWLEDGE_STATE_INITIAL.md`](../archive/state-updates/STATE_UPDATE_KNOWLEDGE_STATE_INITIAL.md) | 2026-09-16 |
 
 ---
@@ -83,7 +83,7 @@ The migration and user-action entries above come from the Initial Manager Baseli
 
 | Item | Waiting For | Why It Matters | Owner / Source | Last Updated |
 |---|---|---|---|---|
-| Guided Dart project-entry facts | Next-season rules, team inheritance, ownership boundaries, and actual system capability | These facts can change whether and how work proceeds beyond P0.5 | [`../GUIDED_DART_P0_5_CHECKPOINT.md`](../GUIDED_DART_P0_5_CHECKPOINT.md) | 2026-09-14 ingest |
+| Guided Dart project-entry facts | Next-season rules, team inheritance, ownership boundaries, and actual system capability | These facts can change whether and how work proceeds beyond P0.5 | [`../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`](../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md) | 2026-09-14 ingest |
 | v2.3 real-project validation | Concrete friction from real RM / Guided Dart use | Maintainer Checkpoint explicitly leaves long-term real-project validation incomplete | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/archive/Protocol_Maintainer_Checkpoint_v2.3.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/archive/Protocol_Maintainer_Checkpoint_v2.3.md) | 2026-09-14 ingest |
 
 ---
@@ -103,8 +103,8 @@ Manager does not resolve semantic conflicts independently; it marks them and req
 - 2026-09-14: Registered v2.3 Frozen as the current protocol baseline; project and learning-state migration are not required.
 - 2026-09-14: Ingested and archived [`../archive/state-updates/STATE_UPDATE_MANAGER_RUNTIME_SMOKE_TEST.md`](../archive/state-updates/STATE_UPDATE_MANAGER_RUNTIME_SMOKE_TEST.md) — mechanical-only Manager runtime ingest validation entry recorded as Completed; no project, protocol, or knowledge semantic state was changed.
 - 2026-09-14: Verified the DSH Manager MVP capabilities and overreach boundaries; runtime evidence and fallback are recorded in [`../runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md`](../runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md).
-- 2026-09-14: Generated [`../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_COORDINATE_FRAMES.md`](../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_COORDINATE_FRAMES.md) using Overview + Relevant Detail.
-- 2026-09-15: Registered the new dedicated Guided Dart Knowledge conversation `PID / Control 接口基础` as Active and generated [`../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md`](../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md). No project stage, milestone, protocol, learning-state, or knowledge-asset semantic change was made.
+- 2026-09-14: Generated a Guided Dart coordinate-frames Bootstrap using Overview + Relevant Detail; its Pending lifecycle is navigated through [`MEMORY_INDEX.md`](MEMORY_INDEX.md).
+- 2026-09-15: Registered the new dedicated Guided Dart Knowledge conversation `PID / Control 接口基础` as Active and generated its Bootstrap; the Pending Artifact is navigated through [`MEMORY_INDEX.md`](MEMORY_INDEX.md). No project stage, milestone, protocol, learning-state, or knowledge-asset semantic change was made.
 - 2026-09-15: Corrected that registration — the `Active` entry was a test registration and no real conversation had ever been created; regenerated the same packet as the **first real bootstrap**. Mechanical registration correction only; no project stage, milestone, protocol, learning-state, or knowledge-asset semantic change was made.
 - 2026-09-16: Seeded the first minimal Learning State and Knowledge Asset Index for C++ / OpenCV / ROS2 from the knowledge-reconstruction executor's candidate report, after user confirmation; Deep Learning / PnP / EKF / PID / Control remain Not Registered. Ingested and archived [`../archive/state-updates/STATE_UPDATE_KNOWLEDGE_STATE_INITIAL.md`](../archive/state-updates/STATE_UPDATE_KNOWLEDGE_STATE_INITIAL.md).
 

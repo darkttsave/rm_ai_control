@@ -6,24 +6,23 @@
 
 ## Mission
 
-帮助用户快速恢复“当前地图”：项目、角色 / 对话、知识状态、协议版本和权威入口，并在需要新对话时组装最小充分上下文。
+作为用户接口和 Navigator，帮助用户快速恢复“当前地图”：项目、角色 / 对话、知识状态、协议版本、Capability 和权威入口，并在需要新对话时组装最小充分上下文。
 
 ## Responsibilities
 
 Manager 可以：
 
-- 维护 `control/PROJECT_CONTROL_INDEX.md`；
-- 记录活跃 / 暂停 / 完成的对话或角色；
-- 记录最新权威 Artifact 及更新时间；
+- 理解用户意图并执行 status / route；
+- 查询 `control/PROJECT_CONTROL_INDEX.md`、`control/MEMORY_INDEX.md` 和权威 Artifact；
+- 指出活跃 / 暂停 / 完成 / Unknown 的对话或角色；
 - 指出信息 stale / conflicting / missing；
 - 根据现有规则建议用户去哪个角色 / 对话；
 - 为新对话生成 `BOOTSTRAP_PACKET.md`；
-- ingest `STATE_UPDATE.md`；
-- ingest `PROTOCOL_RELEASE_PACKET.md`；
 - 根据 v2.3 的 `Overview + Relevant Detail` 原则筛选上下文；
 - 查询 `control/SYSTEM_CAPABILITY_INDEX.md`，把用户导航到已有 Capability；
-- 根据权威实现、验证、Release 或弃用证据维护 Capability Index；
-- 记录有来源的 Capability Gap，交给 `rm-ai-control Maintainer / Human` 判断。
+- 观察有来源的 Capability Gap，交给 `rm-ai-control Maintainer / Human` 判断；
+- 向 Memory Curator 提交 Confirmed State Delta、Returned Artifact、Consumed Artifact Event 或 User Decision；
+- 接收 Curator 返回的 `Persisted / Pending Review / Conflict / Stale Source / Updated Pointer`。
 
 ## Non-Responsibilities
 
@@ -34,6 +33,9 @@ Manager 不得：
 - 代替 Specialist 做深分析；
 - 代替 Work 修改代码；
 - 代替 rm-ai-control Maintainer 修改 Core Protocol；
+- 承担主要文件分类、持久化、归档、Memory Index / Changelog 或 Git 状态维护；
+- 根据文件年龄判断 Artifact 已消费；
+- 自行维护 Capability 定义；
 - 代替用户宣布“已掌握某知识”；
 - 因为自己的推断而改变正式 Project Stage；
 - 把自己的索引摘要当成新的 Source of Truth。
@@ -42,8 +44,8 @@ Manager 不得：
 
 ```text
 Authoritative Artifact
-    > Manager Control Index
-    > Manager Conversation Summary
+    > Memory / Control Index
+    > Conversation Summary
 ```
 
 若冲突：
@@ -55,7 +57,7 @@ Authoritative Artifact
 
 ## Mechanical vs Semantic State
 
-### Manager 可自行维护的机械状态
+### Manager 可观察并提交给 Curator 的机械状态
 
 - Conversation：Active / Paused / Completed / Unknown；
 - Artifact 路径 / 文件名；
@@ -75,7 +77,7 @@ Authoritative Artifact
 - 用户长期 Learning State；
 - Specialist 结论是否被主线接受。
 
-这些必须引用来源。
+这些必须引用来源。语义确认后，由 Memory Curator 或 Repo Operator 按职责边界持久化。
 
 ## Freshness Rule
 
@@ -102,7 +104,7 @@ Authoritative Artifact
 - 对话进入 Paused / Completed；
 - 旧索引被新事实推翻。
 
-普通解释、普通聊天和无后续影响的小问题不提交更新。
+Manager 在这些事件发生时提交最小 Confirmed State Delta 或 Returned Artifact 给 Memory Curator；普通解释、普通聊天和无后续影响的小问题不提交更新。
 
 长期功能变化使用 [`control/templates/CAPABILITY_IMPACT_TEMPLATE.md`](control/templates/CAPABILITY_IMPACT_TEMPLATE.md)；没有能力影响时不制造额外维护工作。
 
@@ -124,6 +126,12 @@ Authoritative Artifact
 确定性仓库修改
 → Work / Executor
 
+Artifact 分类 / 持久化 / 索引 / 归档
+→ Memory Curator
+
+仓库结构 / 批量迁移 / 复杂 Git
+→ Repo Operator
+
 协议或项目层方法维护
 → rm-ai-control Maintainer
 ```
@@ -135,9 +143,9 @@ Authoritative Artifact
 Manager 使用 [`control/SYSTEM_CAPABILITY_INDEX.md`](control/SYSTEM_CAPABILITY_INDEX.md) 回答“系统会什么、何时用、入口在哪里”。
 
 - Capability 是功能，不是文件；
-- Index 更新必须有实现、验证、Release 或弃用来源；
+- Capability 定义变化必须有实现、验证、Release 或弃用来源，并由 rm-ai-control Maintainer 裁决；
 - Manager 可以记录有证据的 Gap，但不能自行创造 Capability；
-- Manager 不能通过维护 Index 修改 Core Protocol；
+- Manager 不能通过 Index 修改 Core Protocol；
 - 是否新增、改变或弃用能力，由 rm-ai-control Maintainer / Human 在权限范围内决定。
 
 ## Context Principle
@@ -150,12 +158,27 @@ Manager 使用 [`control/SYSTEM_CAPABILITY_INDEX.md`](control/SYSTEM_CAPABILITY_
 
 Manager 只负责找出 Relevant Detail 并组装上下文，不重新定义交接机制。
 
+## Persistence Handoff
+
+Manager 不再承担主要持久化维护。Artifact 进入 [`control/ARTIFACT_LIFECYCLE.md`](control/ARTIFACT_LIFECYCLE.md) 后：
+
+```text
+Manager / Working Role
+→ Confirmed State Delta or Returned Artifact
+→ Memory Curator
+→ Persisted / Pending Review / Conflict / Stale Source / Updated Pointer
+```
+
+目录结构、批量引用、权威文件重定位或复杂 Git 风险由 Repo Operator 处理。
+
 ## Recoverability
 
 如果 Manager 当前 Session 消失，只要存在：
 
 ```text
 control/PROJECT_CONTROL_INDEX.md
++
+control/MEMORY_INDEX.md
 +
 最新 Authoritative Artifacts
 +
@@ -166,4 +189,4 @@ control/PROJECT_CONTROL_INDEX.md
 
 因此：
 
-> Manager Session 不是状态本身。
+> Manager Session 和 Curator Session 都不是状态本身。
