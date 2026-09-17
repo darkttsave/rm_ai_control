@@ -32,9 +32,10 @@ No Pending inbound Artifact is registered.
 | Artifact | Intended Consumer / Purpose | Pending Update |
 |---|---|---|
 | [`../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_COORDINATE_FRAMES.md`](../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_COORDINATE_FRAMES.md) | Guided Dart Knowledge Conversation | Await explicit consumption evidence |
-| [`../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md`](../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md) | Guided Dart PID / Control Knowledge Conversation | Await explicit consumption evidence; PID / Control state remains Not Registered |
+| [`../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md`](../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md) | Guided Dart PID / Control Knowledge Conversation（`Plain Conversation` 目标；2026-09-16 按 `rm-ai-control_v1.1` Plain Conversation Execution Contract 刷新） | Still `Pending Consumption` — 真实新对话尚未建立，无消费证据；PID / Control Learning State remains Not Registered |
 | [`../outbox/BOOTSTRAP_KNOWLEDGE_STATE_FIRST_VERSION.md`](../outbox/BOOTSTRAP_KNOWLEDGE_STATE_FIRST_VERSION.md) | Existing rm-ai-control initialization executor | Await explicit consumption evidence |
 | [`../outbox/BOOTSTRAP_KNOWLEDGE_STATE_SEED.md`](../outbox/BOOTSTRAP_KNOWLEDGE_STATE_SEED.md) | Knowledge-reconstruction executor | Await explicit consumption evidence |
+| [`../outbox/MAINTAINER_INPUT_BOOTSTRAP_EXECUTION_CONTRACT.md`](../outbox/MAINTAINER_INPUT_BOOTSTRAP_EXECUTION_CONTRACT.md) | rm-ai-control Maintainer — Bootstrap Target Surface / Execution Contract 规则缺口报告 + 建议 | Await Maintainer 消费与裁决；裁决前不归档、不写入正式规则，也不改动 Capability / Skill / Bootstrap Template |
 
 ## Freshness Rule
 
