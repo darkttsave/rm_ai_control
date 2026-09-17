@@ -46,6 +46,18 @@ Manager 可以提交：
 - Consumed Artifact Event
 - User Decision
 
+推荐使用 [`control/templates/CURATOR_UPDATE_PACKET_TEMPLATE.md`](control/templates/CURATOR_UPDATE_PACKET_TEMPLATE.md) 作为标准入口。它不是硬格式门槛：旧 Return、Checkpoint、Report 或其他有清晰来源的 Artifact 即使没有 Packet，Curator 仍应分类和处理，不得仅因缺模板拒绝 ingest。
+
+`Expected Persistence: Auto` 表示 Curator 根据事件、权威来源和 Lifecycle 自行决定：
+
+- 具体稳定落盘位置；
+- 是否及如何更新 Memory / Control Index；
+- 是否记录 Memory Changelog；
+- 是否 archive；
+- 是否形成低风险机械 commit。
+
+除非存在语义冲突、权限问题或关键事实缺失，Curator 不要求用户指定 Index 的具体行、是否写 Changelog、是否 archive 或 commit message。
+
 Curator 可以返回：
 
 - `Persisted`
@@ -55,6 +67,8 @@ Curator 可以返回：
 - `Updated Pointer`
 
 这些是仓库内交接结果，不要求 API、Backend 或 Message Bus。
+
+处理后使用 [`control/templates/CURATOR_RECEIPT_TEMPLATE.md`](control/templates/CURATOR_RECEIPT_TEMPLATE.md) 返回简短 Receipt，使 Human / Manager 能看到 Outcome、落盘位置、生命周期动作、commit 与是否需要介入；Receipt 不替代 Git 历史。
 
 ## Curator May Write Directly
 

@@ -9,8 +9,31 @@
 ## Target
 
 - Target Role / Conversation Type:
+- Target Execution Surface: `Plain Conversation | Repo-capable Role | Executor with repo write`
 - New / Continue Existing:
 - Suggested Name:
+
+`Target Execution Surface` 只区分上述三类通用环境，不建立更复杂的 Runtime taxonomy。`Repo-capable Role` 必须另行声明实际可读范围；除非明确授权，不得假设其可写。
+
+## Execution Contract
+
+- Repository Access: `None | Read-only (declare scope) | Read-write (declare scope)`
+- Local File Access: `None | User-provided attachments only | Declared paths`
+- Git Access: `None | Read-only | Write / Commit (explicitly authorized)`
+- Direct Persistence Permission: `None | Declared scope`
+- Required User-provided Materials: `None | Upload / paste / attach: ...`
+- Expected Return Channel: `Return / Checkpoint Artifact | Direct repository change | Other: ...`
+- Destination / Responsible Writer:
+
+Hard rules:
+
+- 路径不代表可读。下游真正必须阅读的内容，必须内联最小必要摘要，或由用户粘贴 / 上传 / 作为该对话可读附件提供。
+- Destination 只表示最终归属，不代表当前下游拥有写权限；必须明确最终由谁落盘。
+- `Plain Conversation` 默认无仓库访问、无任意本地文件读取、无 Git、无直接持久化写权限。它只产出 Return / Checkpoint Artifact，再经 Manager → Memory Curator / Repo Operator 进入持久状态。
+
+Plain Conversation 自足性判据：
+
+> 如果移除所有不可访问的仓库 / 本地路径后，下游已无法理解任务或完成主要工作，该 Bootstrap 不合格。
 
 ## Goal
 
@@ -56,7 +79,7 @@
 
 - 
 
-不要因为“可能有用”把整个协议全部塞进来。
+不要因为“可能有用”把整个协议全部塞进来。对 `Plain Conversation`，路径只是 provenance；在本节内联完成任务所需的最小规则，或明确要求用户提供必需原文。
 
 ## Task-specific Materials
 

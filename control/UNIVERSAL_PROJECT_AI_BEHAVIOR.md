@@ -66,3 +66,27 @@ Next Step
 - Returned Artifact、Confirmed State Delta、Consumed Artifact Event 和 User Decision 按 [`ARTIFACT_LIFECYCLE.md`](ARTIFACT_LIFECYCLE.md) 进入 `inbox/`、稳定 Current 位置或相应 archive 区域。
 - `inbox/`、`outbox/`、`temporary/` 不是 Current / Authoritative Artifact 的永久来源位置。
 - 文件分类、归档、Memory Index / Changelog 和低风险生命周期维护由 Memory Curator 负责；结构变化、批量迁移与复杂 Git 工作交给 Repo Operator。
+
+### Universal Return Contract
+
+当角色产生需要进入持久状态的变化时，在正式 Return / Report 中附带 [`templates/CURATOR_UPDATE_PACKET_TEMPLATE.md`](templates/CURATOR_UPDATE_PACKET_TEMPLATE.md)；由 Producer 描述“发生了什么”，不决定最终目录、Index 具体行、Changelog、Archive 或 commit message。
+
+典型触发：
+
+- Project Stage / Milestone、正式 Decision 或 Current Checkpoint 发生权威变化；
+- Supervisor / Specialist / Work 产生需进入主线的正式 Return；
+- Learning State、Knowledge Asset 或其他 Current State 发生经确认的变化；
+- Artifact 已明确消费、被替代或需要生命周期处理；
+- 已裁决的长期 Capability / 活跃规则变化需要持久化记录。
+
+不触发：
+
+- 普通解释、一般问答和无持久影响的小问题；
+- 未采纳 brainstorm、候选想法或尚未确认的语义判断；
+- 纯排版调整或不影响导航与恢复的机械修复。
+
+职责：
+
+- Artifact Producer：写清事件、Scope、来源 / 权威、影响、Unknown、Capability Impact 与已知 Lifecycle 事件；不负责决定最终目录。
+- Memory Curator：独立执行 Receive → Classify → Persist → Index → Archive，并返回 [`templates/CURATOR_RECEIPT_TEMPLATE.md`](templates/CURATOR_RECEIPT_TEMPLATE.md)。
+- Human：默认不填写 Update Packet；AI 应尽量自动生成。只有语义确认、冲突或缺少关键事实时才请求 Human 介入。

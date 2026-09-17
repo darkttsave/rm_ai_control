@@ -109,15 +109,21 @@ User wants to start or continue a conversation / role.
 Procedure:
 
 1. Determine the target role and goal.
-2. Apply `protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Handoff_Protocol.md` when available.
-3. Apply `protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Carry_Forward.md` when available.
-4. Use **Overview + Relevant Detail**:
+2. Before assembling context, determine the `Target Execution Surface`: `Plain Conversation`, `Repo-capable Role`, or `Executor with repo write`.
+3. Declare the actual execution contract: repository / local-file readability, Git access, direct write / persistence permission, user-provided materials, expected return channel, and the role responsible for final persistence. A destination never implies write permission.
+4. Apply `protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Handoff_Protocol.md` when available.
+5. Apply `protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Carry_Forward.md` when available.
+6. Use **Overview + Relevant Detail**:
    - global summaries only where necessary;
    - detailed state only for relevant domains.
-5. Include only decision-critical project facts, relevant learning state / assets, required protocol entry files, and task materials.
-6. Generate a `BOOTSTRAP_PACKET.md` using the template and place it in `outbox/` as `Pending Consumption` when repository persistence is requested.
-7. Mark missing user-owned choices under `User Input Still Needed`; do not invent them.
-8. Include source / freshness notes.
+7. Adapt delivery to the target surface:
+   - paths prove provenance, not readability;
+   - for `Plain Conversation`, inline the minimum rules and content required to work, or require the user to paste / upload / attach them;
+   - default `Plain Conversation` to no repository access, no arbitrary local-file access, no Git, and no direct persistence; require a Return / Checkpoint Artifact for handback.
+8. Apply the self-sufficiency test: if removing inaccessible paths makes the main task impossible to understand or perform, the packet is incomplete.
+9. Generate a `BOOTSTRAP_PACKET.md` using the template and place it in `outbox/` as `Pending Consumption` when repository persistence is requested.
+10. Mark missing user-owned choices under `User Input Still Needed`; do not invent them.
+11. Include source / freshness notes.
 
 Do not dump complete chat histories or the entire protocol into the packet.
 
@@ -207,7 +213,7 @@ Prefer no update over low-value bookkeeping.
 
 When an event changes long-term system functionality, inspect its `Capability Impact` block and submit the evidence to the rm-ai-control Maintainer within the authority rules above.
 
-Manager may submit a Confirmed State Delta, Returned Artifact, Consumed Artifact Event, or User Decision to Memory Curator. It must not classify and archive files merely to keep directories clean.
+Manager may submit a Confirmed State Delta, Returned Artifact, Consumed Artifact Event, or User Decision to Memory Curator. When the event should enter persistent state, Manager normally emits a `Curator Update Packet` using `control/templates/CURATOR_UPDATE_PACKET_TEMPLATE.md`; it does not ask the user to reorganize the same facts into a separate Curator prompt. It must not classify and archive files merely to keep directories clean.
 
 ---
 

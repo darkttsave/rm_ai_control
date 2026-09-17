@@ -5,15 +5,15 @@ Artifact Type: Maintainer Input (Rule Gap Report + Recommendation)
 Scope: System / Function (Manager Bootstrap)
 Producer: Manager (rm-ai-control_v1.1 Navigator)
 Created: 2026-09-16
-Lifecycle: Pending
-Semantic Authority: Role Report (Manager observation, grounded in measured repository evidence)
+Lifecycle: Archived
+Semantic Authority: Role Report (Manager observation, grounded in measured repository evidence; recommendation consumed by rm-ai-control Maintainer)
 Authoritative Source:
   - control/templates/BOOTSTRAP_PACKET_TEMPLATE.md
   - .agents/skills/rm-project-manager/SKILL.md
   - control/ARTIFACT_LIFECYCLE.md
   - outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md
 Supersedes: None
-Next Consumer: rm-ai-control Maintainer (then Repo Operator for deterministic landing)
+Next Consumer: None
 ```
 
 > From：Manager（`rm-ai-control_v1.1` Navigator）
@@ -106,3 +106,10 @@ Manager 的 `bootstrap` 流程与 `BOOTSTRAP_PACKET_TEMPLATE.md` **没有 "目�
 - 本报告不改变任何项目语义状态：不改变 Guided Dart P0.5，不改变 Learning State / Knowledge Asset Index，不改变 PID / Control 的 `Not Registered`。
 - 不需要 Protocol Release：属 `rm-ai-control` 项目层模板与方法。
 - 本报告中的模板与 SKILL 事实均于 2026-09-16 实际读取核对（模板 95 行、SKILL §4 共 8 步）。
+
+## 10. Consumption Record
+
+- Consumed: 2026-09-17
+- Consumer: rm-ai-control Maintainer
+- Decision: 核心建议已采纳；交由 Repo Operator 确定性落盘。
+- Lifecycle action: 从 `outbox/` 移入 `archive/dispatches/`；当前 Lifecycle 为 `Archived`。

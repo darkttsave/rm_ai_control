@@ -38,6 +38,13 @@ Memory Curator 不获得业务决策权；冲突语义保持 Pending Review 并�
 
 Persistent Memory / Artifact Curation 已完成仓库规则、索引和角色基础，但尚未经过真实 DeepSeek Memory Curator 运行验证，因此保持 `Experimental`。
 
+## v1.1 Interface Patch — 2026-09-17
+
+- Bootstrap 增加 Target Execution Surface、Execution Contract 和 Plain Conversation 自足性判据；路径不再隐含可读，Destination 不再隐含写权限。
+- 新增推荐的 Curator Update Packet 与 Curator Receipt 接口；它们完善现有 Capability，不构成新 Capability 或硬格式门槛。
+- Universal Return Contract 要求产生持久影响的角色描述“发生了什么”；Memory Curator 独立决定“怎么持久化”。
+- Maintainer Input 已有消费证据并进入 `archive/dispatches/`。
+
 ## Unchanged
 
 - Core Protocol v2.3 Frozen 内容与语义。

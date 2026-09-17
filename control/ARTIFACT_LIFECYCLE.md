@@ -64,6 +64,27 @@ Manager / Maintainer / Role
 - 不得根据文件年龄、文件名或“看起来应该用过”猜测已消费。
 - 已 ingest 的 `STATE_UPDATE` 继续放在 `archive/state-updates/`。
 
+### Plain Conversation Boundary
+
+`Plain Conversation` 默认无仓库访问、无任意本地文件读取、无 Git、无直接持久化写权限。路径只是 provenance；真正需要其阅读的内容必须内联必要摘要，或由用户粘贴、上传、作为可读取附件提供。
+
+```text
+Plain Conversation
+→ Return / Checkpoint Artifact（对话内文本）
+→ User / Manager
+→ inbox/ or Curator Update Packet (Pending)
+→ Memory Curator / Repo Operator
+```
+
+Destination 只描述最终归属，不隐含当前 Producer 的写权限。
+
+### Curator Interface
+
+- [`templates/CURATOR_UPDATE_PACKET_TEMPLATE.md`](templates/CURATOR_UPDATE_PACKET_TEMPLATE.md) 是推荐的 Producer / Manager → Curator 标准接口，不是硬格式门槛。
+- 旧 Return / Checkpoint 没有 Packet 时仍可 ingest。
+- `Expected Persistence: Auto` 表示 Curator 自行决定具体持久化动作。
+- Curator 处理后使用 [`templates/CURATOR_RECEIPT_TEMPLATE.md`](templates/CURATOR_RECEIPT_TEMPLATE.md) 摘要结果与 Human Action Required。
+
 ## Stable Reference Rule
 
 任何 `Current` 或 Authoritative Artifact 都不得永久引用 `inbox/`、`outbox/` 或 `temporary/`。

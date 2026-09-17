@@ -18,6 +18,7 @@ Manager 可以：
 - 指出信息 stale / conflicting / missing；
 - 根据现有规则建议用户去哪个角色 / 对话；
 - 为新对话生成 `BOOTSTRAP_PACKET.md`；
+- 在组装 Bootstrap 前判断 Target Execution Surface，并为目标的真实读写、Git 与持久化能力声明 Execution Contract；
 - 根据 v2.3 的 `Overview + Relevant Detail` 原则筛选上下文；
 - 查询 `control/SYSTEM_CAPABILITY_INDEX.md`，把用户导航到已有 Capability；
 - 观察有来源的 Capability Gap，交给 `rm-ai-control Maintainer / Human` 判断；
@@ -170,6 +171,8 @@ Manager / Working Role
 ```
 
 目录结构、批量引用、权威文件重定位或复杂 Git 风险由 Repo Operator 处理。
+
+当事件需要进入持久状态时，Manager 默认按 [`control/templates/CURATOR_UPDATE_PACKET_TEMPLATE.md`](control/templates/CURATOR_UPDATE_PACKET_TEMPLATE.md) 输出 Curator Update Packet，而不是要求用户重新组织一份 Curator 提示词。Packet 描述“发生了什么”和权威来源；具体落盘位置、Index、Changelog、Archive 与 Git 处理由 Memory Curator 决定。
 
 ## Recoverability
 
