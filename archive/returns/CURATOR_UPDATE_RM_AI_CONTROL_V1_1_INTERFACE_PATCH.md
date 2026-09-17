@@ -5,7 +5,7 @@ Artifact Type: Curator Update Packet
 Scope: System / Function (Bootstrap + Persistent Memory Interface)
 Producer: Repo Operator
 Created: 2026-09-17
-Lifecycle: Pending
+Lifecycle: Archived
 Semantic Authority: Mechanical
 Authoritative Source:
   - archive/dispatches/MAINTAINER_INPUT_BOOTSTRAP_EXECUTION_CONTRACT.md
@@ -13,9 +13,11 @@ Authoritative Source:
   - control/templates/CURATOR_UPDATE_PACKET_TEMPLATE.md
   - control/templates/CURATOR_RECEIPT_TEMPLATE.md
 Supersedes: None
-Next Consumer: Memory Curator
+Next Consumer: None
 Expected Persistence: Auto
 ```
+
+> **Archive Record**（由 Memory Curator 添加的生命周期 metadata，非正文语义）：本 Packet 已由 Memory Curator 从 `inbox/` Pending 状态 ingest，归入 `archive/returns/`，Lifecycle 为 `Pending → Archived`。处理结果记录于 [`../../control/MEMORY_CHANGELOG.md`](../../control/MEMORY_CHANGELOG.md) 的 2026-09-17 条目与 [`../../control/MEMORY_INDEX.md`](../../control/MEMORY_INDEX.md)；正文内容未改动。
 
 ## What Happened
 

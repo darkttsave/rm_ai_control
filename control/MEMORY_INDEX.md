@@ -9,8 +9,8 @@
 | Scope | Memory / State | Current Source | Status | Last Updated | Owner | Pending Update |
 |---|---|---|---|---|---|---|
 | System | Core Protocol / Stable Baseline | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/) | Current | 2026-09-14 | rm-ai-control Maintainer | Real RM long-term validation remains incomplete |
-| System | System Capability Index | [`SYSTEM_CAPABILITY_INDEX.md`](SYSTEM_CAPABILITY_INDEX.md) | Current | 2026-09-16 | rm-ai-control Maintainer / Repo Operator | Persistent Memory / Artifact Curation remains Experimental until real Curator validation |
-| System | Artifact Lifecycle | [`ARTIFACT_LIFECYCLE.md`](ARTIFACT_LIFECYCLE.md) | Current | 2026-09-16 | rm-ai-control Maintainer / Memory Curator | None registered |
+| System | System Capability Index | [`SYSTEM_CAPABILITY_INDEX.md`](SYSTEM_CAPABILITY_INDEX.md) | Current | 2026-09-17 | rm-ai-control Maintainer / Repo Operator | Persistent Memory / Artifact Curation remains Experimental until real Curator validation |
+| System | Artifact Lifecycle | [`ARTIFACT_LIFECYCLE.md`](ARTIFACT_LIFECYCLE.md) | Current | 2026-09-17 | rm-ai-control Maintainer / Memory Curator | None registered |
 | Control | Project Control Index | [`PROJECT_CONTROL_INDEX.md`](PROJECT_CONTROL_INDEX.md) | Current | 2026-09-16 | Memory Curator; Manager is navigation consumer | Apply only authority-backed state deltas |
 | Project / Guided Dart | P0.5 Current Checkpoint | [`../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`](../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md) | Current | Source date not stated; relocated 2026-09-16 | Guided Dart project roles / Human | Next-season rules, ownership boundaries and real system capability remain unknown |
 | Knowledge | Learning State — C++ / OpenCV / ROS2 | [`knowledge/LEARNING_STATE.md`](knowledge/LEARNING_STATE.md) | Current | 2026-09-16 | User; Memory Curator maintains pointer | Deep Learning / PnP / EKF / PID / Control remain Not Registered |
@@ -35,7 +35,6 @@ No Pending inbound Artifact is registered.
 | [`../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md`](../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md) | Guided Dart PID / Control Knowledge Conversation（`Plain Conversation` 目标；2026-09-16 按 `rm-ai-control_v1.1` Plain Conversation Execution Contract 刷新） | Still `Pending Consumption` — 真实新对话尚未建立，无消费证据；PID / Control Learning State remains Not Registered |
 | [`../outbox/BOOTSTRAP_KNOWLEDGE_STATE_FIRST_VERSION.md`](../outbox/BOOTSTRAP_KNOWLEDGE_STATE_FIRST_VERSION.md) | Existing rm-ai-control initialization executor | Await explicit consumption evidence |
 | [`../outbox/BOOTSTRAP_KNOWLEDGE_STATE_SEED.md`](../outbox/BOOTSTRAP_KNOWLEDGE_STATE_SEED.md) | Knowledge-reconstruction executor | Await explicit consumption evidence |
-| [`../outbox/MAINTAINER_INPUT_BOOTSTRAP_EXECUTION_CONTRACT.md`](../outbox/MAINTAINER_INPUT_BOOTSTRAP_EXECUTION_CONTRACT.md) | rm-ai-control Maintainer — Bootstrap Target Surface / Execution Contract 规则缺口报告 + 建议 | Await Maintainer 消费与裁决；裁决前不归档、不写入正式规则，也不改动 Capability / Skill / Bootstrap Template |
 
 ## Freshness Rule
 
