@@ -1,5 +1,13 @@
 # Curator Update Packet — Auto-Aim P2 主线与两个工作角色
 
+> ⚠️ **已被 SUPERSEDE（2026-09-17）——请勿据本 Packet 落盘阶段状态。**
+>
+> 本 Packet 中的阶段表述 `P2 — Open-source assimilation / operation / tuning / diagnosis` 已由 **Human + rm-ai-control Architect** 正式取代。当前阶段为 **`P1 — Team Legacy Assimilation & Operational Mastery`**（`Stage Model: rm-ai-control Active`）。
+>
+> 请改用：[`CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md`](CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md)。
+>
+> 本 Packet 中**仍然有效**的部分：两个工作角色的类别与 Target Execution Surface 声明、以及 3 份 Bootstrap 的 `Produced` 事件。**失效的部分**：`Current phase` 一行及其所有 P2 assimilation 表述、以及 `Unknowns / Conflicts` 中"阶段命名冲突"一条（已裁决）。建议由 Curator 在归档时标注 Superseded。
+
 ```yaml
 Artifact Type: Curator Update Packet
 Scope: Project / Auto-Aim (P2) + Role
