@@ -2,6 +2,17 @@
 
 > 只记录管理意义上的持久状态变化，不替代 Git log，也不记录 Markdown 排版或普通机械链接修复。
 
+## 2026-09-17 — Auto-Aim P1 Stage Persisted; Primary Project Changed
+
+- Human 确认 Auto-Aim 当前阶段为 `P1 — Team Legacy Assimilation & Operational Mastery`（`Stage Model: rm-ai-control Active`）；原表述 `P2 — Open-source assimilation / operation / tuning / diagnosis` 已被 supersede，不得再用于任何 Current / navigation 状态。
+- Auto-Aim 登记为 Current Primary Project，Milestone `M1 — Auto-Aim Baseline Reproduced`；Guided Dart P0.5 转为 secondary / historical preparatory exploration（其 Checkpoint 内容与语义未改变）。
+- Ingest 了 [`../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md`](../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md)（`Consumed → Archived`）；阶段语义与角色登记已持久化到 [`PROJECT_CONTROL_INDEX.md`](PROJECT_CONTROL_INDEX.md)。
+- 被 supersede 的 `CURATOR_UPDATE_PACKET_AUTO_AIM_P2_ROLES.md` 已作为历史证据归档并标注 `Superseded`，不再作为 Pending 导航项；其阶段语义从未被落盘为 Current。
+- 登记三份 `Pending Consumption` Bootstrap（Auto-Aim Main Supervisor / Code Framework Analyst / Environment Instructor）；**均未消费**，不得视为已产生项目进度，也不得视为用户已获得相应能力。
+- 提交 Repository Change Request：[`../outbox/REPOSITORY_CHANGE_REQUEST_AUTO_AIM_PROJECT_STATE.md`](../outbox/REPOSITORY_CHANGE_REQUEST_AUTO_AIM_PROJECT_STATE.md)（Auto-Aim 稳定项目状态位置；属结构变化，交 Repo Operator 裁决）。
+- `Pending Review`：`rm-ai-control Architect` 与 `rm-ai-control Maintainer` 的身份关系未确认，未自行合并。
+- 未改变：Core Protocol（Frozen 内含旧 P1 / P2 语义保持原样，引用须标注 `Stage Model: Protocol v2.3 Frozen`）、Learning State、Knowledge Asset Index、PID / Control `Not Registered` 与任何 Capability 定义。
+
 ## 2026-09-17 — Bootstrap Execution Contract Landed; Curator Interface Established
 
 - rm-ai-control Maintainer 已消费并采纳 `MAINTAINER_INPUT_BOOTSTRAP_EXECUTION_CONTRACT.md` 的核心建议；该正式出站 Artifact 已从 `outbox/` 移入 [`../archive/dispatches/MAINTAINER_INPUT_BOOTSTRAP_EXECUTION_CONTRACT.md`](../archive/dispatches/MAINTAINER_INPUT_BOOTSTRAP_EXECUTION_CONTRACT.md)，Lifecycle `Consumed → Archived`。`MEMORY_INDEX.md` 中对应的 Pending Consumption 指针已删除。

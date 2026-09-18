@@ -13,8 +13,8 @@ Artifact Type: Curator Update Packet
 Scope: Project / Auto-Aim (P2) + Role
 Producer: Manager (rm-ai-control_v1.1 Navigator)
 Created: 2026-09-17
-Lifecycle: Pending
-Semantic Authority: Human Confirmed (project direction) + Mechanical (role registration and artifact pointers)
+Lifecycle: Archived
+Semantic Authority: Mechanical (role registration and artifact pointers); its stage semantics were Superseded on 2026-09-17 and are no longer authoritative
 Authoritative Source:
   - 用户 2026-09-17 Hot Start 说明（Human Confirmed）
   - outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md
@@ -22,9 +22,11 @@ Authoritative Source:
   - control/MEMORY_INDEX.md
   - control/PROJECT_CONTROL_INDEX.md
 Supersedes: None
-Next Consumer: Memory Curator
+Next Consumer: None
 Expected Persistence: Auto
 ```
+
+> **Archive Record**（由 Memory Curator 添加的生命周期 metadata，非正文语义）：本 Packet 的阶段语义已被 Human 于 2026-09-17 supersede，Manager 已在本文件顶部标注。其**已失效**部分：`Current phase` 与全部 `P2 — Open-source assimilation…` 表述、以及 `Unknowns / Conflicts` 中已裁决的"阶段命名冲突"。其**仍有效**部分：两个工作角色的类别与 Target Execution Surface 声明、以及相关 Bootstrap 的 `Produced` 事件。Superseded By：[`CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md`](CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md)。本 Packet 因此从未被消费为 Current 语义，也未据此落盘任何阶段状态；现作为历史证据保存，Lifecycle `Pending → Archived (Superseded)`。正文内容未改动。
 
 ## What Happened
 
@@ -56,8 +58,8 @@ RoboMaster 自瞄组
 
 | 角色 | 类别 | Target Execution Surface | Bootstrap |
 |---|---|---|---|
-| Code Framework Analyst（代码框架分析者） | Specialist 类（长期工程理解） | `Repo-capable Role` | [`../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md`](../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md) |
-| Environment Configuration Instructor（项目环境配置讲师） | Work / Executor 类 | `Executor with repo write`（限环境范围） | [`../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md) |
+| Code Framework Analyst（代码框架分析者） | Specialist 类（长期工程理解） | `Repo-capable Role` | [`../../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md`](../../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md) |
+| Environment Configuration Instructor（项目环境配置讲师） | Work / Executor 类 | `Executor with repo write`（限环境范围） | [`../../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md`](../../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md) |
 
    两个角色**不是上下级**，通过 Artifact / Return 交接。两者均**不得**维护 `rm-ai-control` 的持久状态。
 
@@ -78,11 +80,11 @@ RoboMaster 自瞄组
 
 ## Artifact Lifecycle Events
 
-- Artifact: [`../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md`](../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md)
+- Artifact: [`../../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md`](../../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md)
 - Event: `Produced`
 - Evidence: 用户 2026-09-17 明确要求生成该 Bootstrap；Lifecycle `Pending`（`outbox/`，`Pending Consumption`）
 
-- Artifact: [`../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md)
+- Artifact: [`../../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md`](../../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md)
 - Event: `Produced`
 - Evidence: 同上
 
@@ -90,7 +92,7 @@ RoboMaster 自瞄组
 - Event: `Produced`
 - Evidence: Manager 按 `MANAGER_CHARTER.md` §Persistence Handoff 输出
 
-- Artifact: [`../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md`](../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md)
+- Artifact: [`../../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md`](../../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md)
 - Event: `Other` —— **状态不变**，仍为 `Pending Consumption`（用户尚未真正建立该对话）
 - Evidence: 无消费证据
 

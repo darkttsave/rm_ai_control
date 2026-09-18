@@ -5,7 +5,7 @@ Artifact Type: Curator Update Packet
 Scope: Project / Auto-Aim (P1) + Role
 Producer: Manager (rm-ai-control_v1.1 Navigator)
 Created: 2026-09-17
-Lifecycle: Pending
+Lifecycle: Archived
 Semantic Authority: Human Confirmed (stage semantics and project state) + Mechanical (role registration and artifact pointers)
 Authoritative Source:
   - 用户 2026-09-17 Hot Start 说明（Human + rm-ai-control Architect 裁决）
@@ -13,9 +13,11 @@ Authoritative Source:
   - outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md
   - outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md
 Supersedes: outbox/CURATOR_UPDATE_PACKET_AUTO_AIM_P2_ROLES.md
-Next Consumer: Memory Curator
+Next Consumer: None
 Expected Persistence: Auto
 ```
+
+> **Archive Record**（由 Memory Curator 添加的生命周期 metadata，非正文语义）：本 Packet 已由 Memory Curator 从 `outbox/` `Pending Consumption` 消费并归档到 `archive/dispatches/`，Lifecycle 为 `Consumed → Archived`。其 Human Confirmed 阶段语义与本轮登记已持久化至 [`../../control/PROJECT_CONTROL_INDEX.md`](../../control/PROJECT_CONTROL_INDEX.md) 与 [`../../control/MEMORY_INDEX.md`](../../control/MEMORY_INDEX.md)，结果记录于 [`../../control/MEMORY_CHANGELOG.md`](../../control/MEMORY_CHANGELOG.md) 的 2026-09-17 条目；正文内容未改动。
 
 ## What Happened
 
@@ -93,7 +95,7 @@ M1 — Auto-Aim Baseline Reproduced
 
 | 角色 | 类别 | Target Execution Surface | Bootstrap | 状态 |
 |---|---|---|---|---|
-| **Auto-Aim Main Supervisor**（自瞄项目总监督） | 项目级语义与推进负责人（既有 Main Supervisor 角色类别，**不是新系统 Capability**） | `Plain Conversation` | [`../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md) | `Produced` / `Pending Consumption` |
+| **Auto-Aim Main Supervisor**（自瞄项目总监督） | 项目级语义与推进负责人（既有 Main Supervisor 角色类别，**不是新系统 Capability**） | `Plain Conversation` | [`../../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md`](../../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md) | `Produced` / `Pending Consumption` |
 
 **Auto-Aim Main Supervisor 成为 Auto-Aim 项目的日常监督角色**：消费 Code Framework Analyst / Environment Configuration Instructor / Knowledge Conversation / Specialist 的 Return 与实车验证证据，负责进度判断、阻塞识别、下一项最高价值任务、路由建议与 P1 Exit 接近度判断。重大阶段变化**只提案**，由 Human 确认。
 
@@ -103,8 +105,8 @@ M1 — Auto-Aim Baseline Reproduced
 
 | 文件 | 是否修改 | 实际修改 |
 |---|---|---|
-| [`../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md`](../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md) | **是** | YAML `Scope` 的 `(P2)` → `(P1)`；`Current Project Context` 阶段表述改为 `P1 — Team Legacy Assimilation & Operational Mastery` 并加入 P1/P2 语义与阶段模型消歧规则；原"阶段命名冲突"条改为"已裁决"；`Open Questions` 移除该项 |
-| [`../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md) | **是** | 同上四项；**新增** `### Upstream Baseline vs Local Environment Adaptation（硬规则）`（本机侧自由 / 上游 tracked 的 `source`、`launch`、`YAML`、`scripts`、`algorithm configuration` 默认须先说明理由并获用户确认；`Return` 中记为 upstream deviation）；`Relevant Decisions / Invariants` 与 `Suggested Opening Prompt` 同步补充该规则 |
+| [`../../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md`](../../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md) | **是** | YAML `Scope` 的 `(P2)` → `(P1)`；`Current Project Context` 阶段表述改为 `P1 — Team Legacy Assimilation & Operational Mastery` 并加入 P1/P2 语义与阶段模型消歧规则；原"阶段命名冲突"条改为"已裁决"；`Open Questions` 移除该项 |
+| [`../../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md`](../../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md) | **是** | 同上四项；**新增** `### Upstream Baseline vs Local Environment Adaptation（硬规则）`（本机侧自由 / 上游 tracked 的 `source`、`launch`、`YAML`、`scripts`、`algorithm configuration` 默认须先说明理由并获用户确认；`Return` 中记为 upstream deviation）；`Relevant Decisions / Invariants` 与 `Suggested Opening Prompt` 同步补充该规则 |
 
 两个角色的**定位、类别、目标、First Action、Return 通道均未改变**。
 
@@ -127,23 +129,23 @@ Manager **未执行**代码分析、环境配置或自瞄调试（用户明确�
 
 ## Artifact Lifecycle Events
 
-- Artifact: [`../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md)
+- Artifact: [`../../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md`](../../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md)
 - Event: `Produced`
 - Evidence: 用户 2026-09-17 明确要求生成；`Pending Consumption`
 
-- Artifact: [`../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md`](../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md)
+- Artifact: [`../../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md`](../../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md)
 - Event: `Other`（语义刷新，仍为 `Pending Consumption`）
 - Evidence: 阶段语义由 P2 修正为 P1；无消费证据
 
-- Artifact: [`../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md)
+- Artifact: [`../../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md`](../../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md)
 - Event: `Other`（语义刷新 + 新增 upstream baseline 硬规则，仍为 `Pending Consumption`）
 - Evidence: 同上
 
-- Artifact: [`../outbox/CURATOR_UPDATE_PACKET_AUTO_AIM_P2_ROLES.md`](../outbox/CURATOR_UPDATE_PACKET_AUTO_AIM_P2_ROLES.md)
+- Artifact: [`CURATOR_UPDATE_PACKET_AUTO_AIM_P2_ROLES.md`](CURATOR_UPDATE_PACKET_AUTO_AIM_P2_ROLES.md)
 - Event: `Superseded`
 - Evidence: 其阶段表述已被 Human 取代；本 Packet 的 `Supersedes` 字段指向它。**请勿据其落盘阶段状态**；其中角色类别与 Bootstrap `Produced` 事件仍然有效。建议归档时标注 Superseded。
 
-- Artifact: [`../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md`](../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md)
+- Artifact: [`../../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md`](../../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_PID_CONTROL_INTERFACE.md)
 - Event: `Other` —— **状态不变**，仍 `Pending Consumption`（该对话尚未真正建立）
 - Evidence: 无消费证据
 

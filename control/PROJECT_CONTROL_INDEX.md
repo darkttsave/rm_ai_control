@@ -6,18 +6,54 @@
 
 ## Metadata
 
-- Last Refreshed: 2026-09-16
+- Last Refreshed: 2026-09-17
 - Manager / Runtime: DSH Manager MVP verified with `@deepseek-ai/dsh@0.1.5-rc.1`; file-based fallback retained
 - Runtime Source: [`../runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md`](../runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md)
 - Current Protocol: `RM_AI_Development_Protocol_v2.3_Frozen`
 - Protocol Source: [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/README.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/README.md)
+- Stage Model Disambiguation: 当前项目阶段一律标注 `Stage Model: rm-ai-control Active`；引用 Frozen 协议中的历史阶段语义时必须标注 `Stage Model: Protocol v2.3 Frozen`。**两套编号不得隐式混用。**
 
 ---
 
 # 1. Current Project Map
 
-## Project: Guided Dart Project
+## Project: Auto-Aim（Current Primary Project）
 
+- Current Stage: `P1 — Team Legacy Assimilation & Operational Mastery`（`Stage Model: rm-ai-control Active`）
+- Stage Source: [`../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md`](../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md)（Human Confirmed，2026-09-17 consume；稳定项目状态位置尚未建立，见 §6）
+- Current Milestone / Focus: `M1 — Auto-Aim Baseline Reproduced` —— repository identity / branch / revision 明确；environment baseline 明确；build 与 run / launch 路径可重复；initial system map 与 major modules / data flow 初图已建立；configuration / parameter entrypoints 已找到；至少一条实际 runtime evidence；unresolved unknowns 有记录
+- Milestone / Focus Source: [`../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md)（`Pending Consumption`；Goal 与 `P1 Exit` 定义）
+- Development Mode: Brownfield / Open-source Adoption；Independent Development: `Not Yet`
+- Near-term Objective: 能够独立调试并诊断步兵、哨兵自瞄（`Reproduce → Operate → Tune → Diagnose`）
+- Main Supervisor: Auto-Aim Main Supervisor（Bootstrap `Produced`；会话尚未建立）
+- Latest Project State: [`../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md`](../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md)
+- Last Updated: 2026-09-17 consume
+- Freshness: Current —— 阶段语义由 Human 确认；`M1` 各项尚无证据
+- Next Major Condition: `M1` 证据成立并接近 `P1 Exit`（8 项方向性条件）；**是否进入 P2 由 Human 确认**
+- Future Stage: `P2 — Independent Direction Development`（独立负责并开发一个方向）；User Future Specialization: Dart-body / Guided Dart
+
+### Current Verified Facts
+
+- 2026-09-17 Human 确认当前阶段为 `P1 — Team Legacy Assimilation & Operational Mastery`：接手队伍遗产 / 成熟开源 → `Reproduce → Operate → Tune → Diagnose` → 掌握步兵自瞄 → 掌握哨兵自瞄 → 建立独立调参与常见故障诊断能力。
+- `P1` **不是**独立新系统开发阶段，重点对应 `L0 Reproduce / L1 Operate / L2 Tune / L3 Diagnose`；允许必要的 `L4 Modify`，但独立架构与新方向开发不是当前主目标。
+- 原表述 `P2 — Open-source assimilation / operation / tuning / diagnosis` 已被 Human supersede，**不得再用于任何 Current / navigation 状态**。
+- 阶段模型消歧：当前阶段标注 `Stage Model: rm-ai-control Active`；Frozen 协议旧阶段语义（`P2 Project Inception` 等）继续作为历史基线存在，引用时必须标注 `Stage Model: Protocol v2.3 Frozen`。
+- Auto-Aim 为 Current Primary Project；Guided Dart P0.5 转为 secondary / historical preparatory exploration。
+
+### Current Blockers / Unknowns
+
+- 同济 2025 自瞄仓库身份未登记：地址 / 分支 / revision / 许可证 / 获取方式。
+- 目标机器事实全缺：OS / ROS / compiler / 算力 / 相机 / SDK / 网络。
+- `M1` 各项均无证据；步兵 / 哨兵优先级未定；实车条件未登记。
+- 两个工作角色的实际环境能力未验证（`Repo-capable Role`、`Executor with repo write` 目前只是 Target Execution Surface 声明）。
+- Code Framework Analyst 的 Skill / Methodology 资产未提供（其 First Action 前置）。
+- Main Supervisor 是否为当前唯一 Supervisor、是否需要上级结构，未确认。
+
+---
+
+## Project: Guided Dart Project（Secondary / historical）
+
+- Priority Position: **Secondary / historical preparatory exploration** —— 自 2026-09-17 起不是当前 Primary Project；其 Checkpoint 内容与语义未改变
 - Current Stage: `Other — P0.5` / 内容方向探索
 - Stage Source: [`../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`](../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md)
 - Current Milestone / Focus: 在不进入正式方案设计、不中途锁定下一赛季方案的前提下，继续跨方案通用基础探索并形成可复习笔记
@@ -25,7 +61,7 @@
 - Main Supervisor: Unknown / Not Registered
 - Latest Project State: [`../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`](../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md)
 - Last Updated: 2026-09-14 Manager ingest; source artifact date not stated (filesystem timestamp 2026-09-13)
-- Freshness: Current — supplied by the user as the current authoritative P0.5 state file for this bring-up
+- Freshness: Current —— 其阶段语义仍由用户提供的权威 P0.5 状态文件支撑；自 2026-09-17 起优先级为 secondary / historical，不再代表当前主项目
 - Next Major Condition: Unknown / Not Registered
 
 ### Current Verified Facts
@@ -47,7 +83,10 @@
 
 | Conversation / Role | Purpose | Status | Latest Authoritative Artifact | Last Updated | Freshness / Note |
 |---|---|---|---|---|---|
-| Guided Dart P0.5 exploration | Same-stage cross-solution foundational learning and note preparation | Unknown | [`../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`](../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md) | 2026-09-14 ingest | Semantic stage is sourced; conversation activity is not registered |
+| Auto-Aim Main Supervisor（自瞄项目总监督） | Auto-Aim 项目日常监督：消费各角色 Return 与实车验证证据，判断进度 / 阻塞 / 下一项最高价值任务 / 路由，维护 `M1 → P1 Exit` 推进判断 | Not yet created — Bootstrap `Produced`，`Pending Consumption`；`Plain Conversation` | [`../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md) | 2026-09-17 Bootstrap | 沿用协议既有 Main Supervisor 角色类别的**工作角色**，不是新 Capability；重大阶段变化只提案、由 Human 确认；不进入 `rm-ai-control` 持久化；会话建立前不得视为已产生任何进度判断 |
+| Auto-Aim Code Framework Analyst（代码框架分析者） | 长期工程理解：工程结构、模块 / 数据流、配置与参数入口、"为什么这样写" | Not yet created — Bootstrap `Produced`，`Pending Consumption`；Target Execution Surface `Repo-capable Role`（目标面） | [`../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md`](../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md) | 2026-09-17 Bootstrap（阶段语义已刷新为 `P1`） | 实际读写能力未验证；Skill / Methodology 资产未提供 |
+| Auto-Aim Environment Configuration Instructor（项目环境配置讲师） | 环境复现：安装 / 构建 / 启动路径与踩坑记录，形成可复现命令；区分 upstream baseline 与本机适配 | Not yet created — Bootstrap `Produced`，`Pending Consumption`；Target Execution Surface `Executor with repo write`（限环境范围，目标面） | [`../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md) | 2026-09-17 Bootstrap（含 upstream baseline 硬规则） | 目标机器事实全缺；实际执行能力未验证 |
+| Guided Dart P0.5 exploration | Same-stage cross-solution foundational learning and note preparation（现为 secondary / historical line） | Unknown | [`../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`](../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md) | 2026-09-14 ingest | Semantic stage is sourced; conversation activity is not registered |
 | Guided Dart Knowledge — PID / Control 接口基础 | Dedicated knowledge conversation for the P0.5 `Control` interface layer, driven by the user's existing PID notes and questions | Not yet created — the earlier 2026-09-15 `Active` entry was a test registration; awaiting the user's first real conversation | None yet — no authoritative artifact; Manager Bootstrap Packet only | 2026-09-15 re-bootstrap | Manager-generated packet remains Pending Consumption and is navigated through [`MEMORY_INDEX.md`](MEMORY_INDEX.md), not used as semantic authority; user-side PID notes and video material are user-reported and not registered; the conversation that carried the earlier 电控 learning entry was archived by the user and is currently unlocatable (user-reported 2026-09-15) |
 | rm-ai-control Maintainer | Maintain Core Protocol and project-level method from real RM friction without taking the project Main Supervisor role | Unknown | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/archive/Protocol_Maintainer_Checkpoint_v2.3.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/archive/Protocol_Maintainer_Checkpoint_v2.3.md) | 2026-09-14 ingest | Current project-layer name; source artifact retains the historical role name. Real RM long-term validation remains incomplete |
 | DSH Manager Runtime Validation | Validate the Manager `ingest` capability with a mechanical-only smoke test | Completed | [`../archive/state-updates/STATE_UPDATE_MANAGER_RUNTIME_SMOKE_TEST.md`](../archive/state-updates/STATE_UPDATE_MANAGER_RUNTIME_SMOKE_TEST.md) | 2026-09-14 ingest | Mechanical-only validation entry; the source asserts no Guided Dart / Protocol semantic change |
@@ -83,6 +122,11 @@ The migration and user-action entries above come from the Initial Manager Baseli
 
 | Item | Waiting For | Why It Matters | Owner / Source | Last Updated |
 |---|---|---|---|---|
+| Auto-Aim `M1` evidence | 仓库身份 / 环境基线 / 可复现 build 与 launch / system map / config 入口 / 至少一条 runtime evidence | `M1` 未成立前无法判定 `P1` 进展，也无法判断进入 `P1 Exit` 的距离 | [`../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md`](../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md) | 2026-09-17 |
+| Tongji 2025 auto-aim repository identity | 地址 / 分支 / revision / 许可证 / 获取方式 | 决定能否开始 `Reproduce`，以及 Code Framework Analyst 能读到什么 | 同上 | 2026-09-17 |
+| Auto-Aim target machine facts | OS / ROS / compiler / 算力 / 相机 / SDK / 网络 | 环境基线与可行性判断的前置；缺此无法确认 `Executor with repo write` 的实际作用域 | 同上 | 2026-09-17 |
+| Auto-Aim role environment capability confirmation | 用户首次启动各角色时确认实际读 / 写 / Git 能力 | Bootstrap 声明的是 Target Execution Surface（目标面），不是已验证事实 | [`../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md) 等三份 Auto-Aim Bootstrap | 2026-09-17 |
+| Auto-Aim 步兵 / 哨兵 priority and real-vehicle conditions | Human 决策与实车条件登记 | 决定 `P1` 内部推进顺序 | [`../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md) | 2026-09-17 |
 | Guided Dart project-entry facts | Next-season rules, team inheritance, ownership boundaries, and actual system capability | These facts can change whether and how work proceeds beyond P0.5 | [`../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`](../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md) | 2026-09-14 ingest |
 | v2.3 real-project validation | Concrete friction from real RM / Guided Dart use | Maintainer Checkpoint explicitly leaves long-term real-project validation incomplete | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/archive/Protocol_Maintainer_Checkpoint_v2.3.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/archive/Protocol_Maintainer_Checkpoint_v2.3.md) | 2026-09-14 ingest |
 
@@ -90,14 +134,23 @@ The migration and user-action entries above come from the Initial Manager Baseli
 
 # 6. Stale / Conflicting Entries
 
-No stale or conflicting entry is registered.
+| Entry | Problem | Authoritative Source Needed | Manager Action |
+|---|---|---|---|
+| `rm-ai-control Architect` vs `rm-ai-control Maintainer` | 两个角色名的身份关系未确认（改名 / 并存 / 同一角色的不同称呼）；不明确则无法确定阶段语义与项目层方法裁决应记在哪个角色名下 | Human / `rm-ai-control Architect` | `Pending Review` —— 已注册，**未调和**；Manager 与 Curator 均不得自行合并两者 |
+| `P2 — Open-source assimilation / operation / tuning / diagnosis` | 该阶段表述已被 Human 于 2026-09-17 supersede；任何 Current / navigation 状态都不得再使用 | Human Confirmed（2026-09-17 阶段裁决） | Resolved —— 记录为 `Superseded`；原 Packet 已归档并标注 Superseded |
+| Auto-Aim 稳定项目状态位置 | Current Primary Project 尚无 `projects/` 稳定项目状态位置；当前阶段来源为 `archive/dispatches/` 中的已 ingest 证据（属历史证据区，非项目状态层） | Repo Operator（结构裁决） | Repository Change Request 已提交：[`../outbox/REPOSITORY_CHANGE_REQUEST_AUTO_AIM_PROJECT_STATE.md`](../outbox/REPOSITORY_CHANGE_REQUEST_AUTO_AIM_PROJECT_STATE.md) |
 
-Manager does not resolve semantic conflicts independently; it marks them and requests or reads an authoritative source.
+Manager / Memory Curator 不自行解决语义冲突，只标记并请求 / 读取权威来源。
 
 ---
 
 # 7. Recent Significant Updates
 
+- 2026-09-17: Human 确认 Auto-Aim 当前阶段为 `P1 — Team Legacy Assimilation & Operational Mastery`（`Stage Model: rm-ai-control Active`），原 `P2 — Open-source assimilation…` 表述 superseded；Ingested [`../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md`](../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md)。
+- 2026-09-17: 登记 Auto-Aim 为 Current Primary Project 与 Milestone `M1 — Auto-Aim Baseline Reproduced`；Guided Dart P0.5 转为 secondary / historical（Checkpoint 内容未改变）。
+- 2026-09-17: 登记三个 Auto-Aim 工作角色及其 `Pending Consumption` Bootstrap（Main Supervisor / Code Framework Analyst / Environment Instructor）；**均未消费**，未产生项目证据。
+- 2026-09-17: 被 supersede 的 P2 Packet 已归档为历史证据并标注 `Superseded`，不再作为 Pending 导航项。
+- 2026-09-17: 向 Repo Operator 提交 Repository Change Request（Auto-Aim 稳定项目状态位置，结构变化）。
 - 2026-09-14: Ingested [`../archive/state-updates/STATE_UPDATE_GUIDED_DART_P0_5_INITIAL.md`](../archive/state-updates/STATE_UPDATE_GUIDED_DART_P0_5_INITIAL.md) from the Guided Dart P0.5 Stage Checkpoint.
 - 2026-09-14: Ingested [`../archive/state-updates/STATE_UPDATE_PROTOCOL_MAINTAINER_INITIAL.md`](../archive/state-updates/STATE_UPDATE_PROTOCOL_MAINTAINER_INITIAL.md) from the Maintainer Checkpoint and Initial Manager Baseline Release Packet.
 - 2026-09-14: Registered v2.3 Frozen as the current protocol baseline; project and learning-state migration are not required.
@@ -112,7 +165,9 @@ Manager does not resolve semantic conflicts independently; it marks them and req
 
 # 8. Recommended Navigation
 
-- If the user asks about Guided Dart project direction or transition beyond P0.5 → Main Supervisor / Human, using the current Stage Checkpoint.
+- If the user asks about Auto-Aim current stage, progress, blockers or next task → Auto-Aim Main Supervisor / Human, using the ingested `P1` packet and the role Bootstraps.
+- If the user asks about Auto-Aim code structure / parameters → Auto-Aim Code Framework Analyst; about installation / build / launch → Auto-Aim Environment Configuration Instructor.
+- If the user asks about Guided Dart project direction or transition beyond P0.5 → Main Supervisor / Human, using the current Stage Checkpoint（secondary / historical line）. 引用其阶段语义时标注 `Stage Model: Protocol v2.3 Frozen`。
 - If the user asks about current implementation / repository work → Work / Executor in the relevant business repository, not this control repository.
 - If the user continues a Guided Dart knowledge gap → Specialist + Knowledge Playbook, or a dedicated Knowledge Conversation where appropriate.
 - If the user asks about protocol / project-level workflow → rm-ai-control Maintainer.
