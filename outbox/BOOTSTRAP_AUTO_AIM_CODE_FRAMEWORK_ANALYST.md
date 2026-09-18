@@ -2,7 +2,7 @@
 
 ```yaml
 Artifact Type: Bootstrap Packet (Role Initialization)
-Scope: Project / Auto-Aim (P2) / Role
+Scope: Project / Auto-Aim (P1) / Role
 Producer: Manager (rm-ai-control_v1.1 Navigator)
 Created: 2026-09-17
 Lifecycle: Pending
@@ -108,7 +108,11 @@ Code Framework Analyst（本对话）
 
 只放会改变本任务判断的项目事实：
 
-- **当前主项目方向 = RoboMaster 自瞄（Auto-Aim）**；当前阶段由用户描述为 `P2 — Open-source assimilation / operation / tuning / diagnosis`（**该阶段名与 Frozen 协议的 `P2 Project Inception` 用词冲突，见 `Current Unknowns / Gaps`**；Manager 未自行调和）。
+- **当前主项目方向 = RoboMaster 自瞄（Auto-Aim）** —— Primary Project。
+- **当前阶段（`Stage Model: rm-ai-control Active`）= `P1 — Team Legacy Assimilation & Operational Mastery`**：接手队伍遗产 / 成熟开源 → `Reproduce → Operate → Tune → Diagnose` → 掌握步兵自瞄 → 掌握哨兵自瞄 → 建立独立调参与常见故障诊断能力。
+  - **P1 不是独立新系统开发阶段。** 重点对应 `L0 Reproduce / L1 Operate / L2 Tune / L3 Diagnose`；允许必要的 `L4 Modify`，但**独立架构与新方向开发不是当前主目标**。
+  - 未来 `P2 — Independent Direction Development` 才表示开始独立负责并开发一个方向；用户预期的个人 P2 专精方向是 **Dart-body / Guided Dart**。**进入 P2 由 Human 确认**，任何角色不得自行宣布。
+- **阶段模型消歧（必须遵守）**：本包一律使用 `Stage Model: rm-ai-control Active`。Frozen 协议中的旧 P1 / P2 语义只作历史基线存在，引用时必须显式标注 `Stage Model: Protocol v2.3 Frozen`。**两个阶段编号不得隐式混用。**
 - **来源工程 = 同济大学 2025 自瞄开源项目**（仓库地址 / 获取方式**尚未登记**，需用户提供）。
 - **用户未来主要负责：镖体方向指导**；当前**不是独立开发阶段**。
 - 用户近中期目标：**独立调试步兵自瞄 + 独立调试哨兵自瞄**；后续再细分（镖体方向、能量机关、代码维护）。
@@ -217,7 +221,7 @@ Step 6 Modify      明确 Scope 与 Required Verification Level，先保护外�
 
 ## Current Unknowns / Gaps
 
-- **阶段命名冲突**：用户称当前为 `P2 — Open-source assimilation / operation / tuning / diagnosis`；Frozen 协议 `START_HERE.md` 中 `P2 = Project Inception`（收敛 Mission / System Map / Asset-Gap / Entry Strategy / First Milestone）。**Manager 不自行调和**，已作为冲突提交，需 Human / Maintainer 明确。
+- **~~阶段命名冲突~~（已裁决）**：Human + rm-ai-control Architect 于 2026-09-17 正式确认——当前阶段为 **`P1 — Team Legacy Assimilation & Operational Mastery`**（`Stage Model: rm-ai-control Active`）；原 `P2 — Open-source assimilation / operation / tuning / diagnosis` 表述**已被 supersede**，不得再使用。
 - 同济仓库地址、分支、版本、许可证与获取方式**未登记**。
 - 步兵 / 哨兵两条线在当前开源工程中的**差异范围未知**。
 - 本阶段需要哪些外部 Skill 的哪些部分**未知**（取决于用户在 `First Action` 中提供的资产）。
@@ -271,6 +275,6 @@ Step 6 Modify      明确 Scope 与 Required Verification Level，先保护外�
 - **Verified Facts**（来自用户确认）：主项目 = Auto-Aim；来源工程 = 同济 2025 自瞄开源；近期目标 = 独立调试步兵 + 哨兵；未来专精 = 镖体方向指导；Guided Dart P0.5 = 次要 / 历史线。
 - **Locked Decisions**：Brownfield First；不新建复杂 Agent 框架；不重做 Skill 调研；Skill 不做成强制流水线；不修改 `rm-ai-control`。
 - **Active Constraints**：Execution Contract 如上；长期状态只能经 Manager → Memory Curator；不得宣布用户掌握。
-- **Open Questions**：阶段命名冲突；仓库获取方式；Skill 资产；步兵 / 哨兵优先级；硬件与延迟事实。
+- **Open Questions**：仓库获取方式；Skill 资产；步兵 / 哨兵优先级；硬件与延迟事实。
 - **Required Materials**：同济仓库连接 + Skill 资产（`First Action`）+ 用户真实问题。
 - **First Next Step**：向用户索要 Skill / Methodology 资产，然后建立 repo 入口与运行链地图。
