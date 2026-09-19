@@ -24,8 +24,13 @@
 - Canonical Source:
 - Persistent Authority Delivery: `Inline minimum | Project Instructions + Project Sources | Local Role Anchor | Repo startup rule + Role Anchor | Attached Anchor | Other: ...`
 - Authority Availability at Startup: `Verified readable | User must provide / attach | Unknown`
+- Required Authority Dependencies:
+  - Authority ID:
+  - Resolved Canonical Source / Section:
+  - Required Runtime Delivery Artifact:
+  - Runtime Readability: `Verified | Missing | Unknown`
 
-短期临时任务不强制创建 Anchor。需要 Anchor 时，Bootstrap 只引用 Anchor ID / Version 和交付方式，不复制 Anchor 全文，也不把 Bootstrap 当作长期 Authority 替代品。
+短期临时任务不强制创建 Anchor。需要 Anchor 时，Bootstrap 只引用 Anchor ID / Version 和交付方式，不复制 Anchor 全文，也不把 Bootstrap 当作长期 Authority 替代品。依赖项通过 [`../AUTHORITY_INDEX.md`](../AUTHORITY_INDEX.md) 解析，只列本次任务需要的 closure。
 
 ## Execution Contract
 

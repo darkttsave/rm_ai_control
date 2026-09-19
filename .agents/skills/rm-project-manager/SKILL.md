@@ -112,21 +112,23 @@ Procedure:
 2. Before assembling context, determine the `Target Execution Surface`: `Plain Conversation`, `Repo-capable Role`, or `Executor with repo write`.
 3. Determine whether this is a long-lived formal role that requires a Persistent Role Anchor. Short-lived temporary work does not require one by default.
 4. When an Anchor is required, identify its Anchor ID / Version, Canonical Source, `Persistent Authority Delivery`, and whether the target Runtime can actually re-read it. A path is provenance, not readability; Bootstrap is not a substitute for the Anchor.
-5. Declare the actual execution contract: repository / local-file readability, Git access, direct write / persistence permission, user-provided materials, expected return channel, and the role responsible for final persistence. A destination never implies write permission.
-6. Apply `protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Handoff_Protocol.md` when available.
-7. Apply `protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Carry_Forward.md` when available.
-8. Use **Overview + Relevant Detail**:
+5. Resolve each required Authority ID or semantic Authority name through `control/AUTHORITY_INDEX.md` to its Canonical Source, Section / Locator, and Required Runtime Delivery Artifact. Authority names are not filenames; never ask the Human to guess the file.
+6. Build only the Authority dependency closure needed by this task, verify every Runtime Delivery Artifact is readable on the target surface, and record unresolved dependencies. Do not deliver the whole repository.
+7. Declare the actual execution contract: repository / local-file readability, Git access, direct write / persistence permission, user-provided materials, expected return channel, and the role responsible for final persistence. A destination never implies write permission.
+8. Apply `protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Handoff_Protocol.md` when available.
+9. Apply `protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Carry_Forward.md` when available.
+10. Use **Overview + Relevant Detail**:
    - global summaries only where necessary;
    - detailed state only for relevant domains.
-9. Adapt delivery to the target surface:
+11. Adapt delivery to the target surface:
    - paths prove provenance, not readability;
    - for `Plain Conversation`, inline the minimum rules and content required to work, or require the user to paste / upload / attach them;
    - default `Plain Conversation` to no repository access, no arbitrary local-file access, no Git, and no direct persistence; require a Return / Checkpoint Artifact for handback.
-10. For Persistent Authority delivery, use the minimum matching deployment: short Plain Chat → inline minimum; long-lived ChatGPT Project / Cloud Work → Project Instructions + Project Sources; Local Work → local Anchor; Repo Executor → startup rule + repo Anchor + Git; Temporary Specialist → attached or otherwise readable Anchor.
-11. Apply the self-sufficiency test: if removing inaccessible paths makes the main task impossible to understand or perform, the packet is incomplete.
-12. Generate a `BOOTSTRAP_PACKET.md` using the template and place it in `outbox/` as `Pending Consumption` when repository persistence is requested.
-13. Mark missing user-owned choices under `User Input Still Needed`; do not invent them.
-14. Include source / freshness notes.
+12. For Persistent Authority delivery, use the minimum matching deployment: short Plain Chat → inline minimum; long-lived ChatGPT Project / Cloud Work → Project Instructions + Project Sources containing the Role Anchor, task dependency closure, and recovery instructions; Local Work → local Anchor; Repo Executor → startup rule + repo Anchor + Git; Temporary Specialist → attached or otherwise readable Anchor.
+13. Apply the self-sufficiency test: if removing inaccessible paths makes the main task impossible to understand or perform, the packet is incomplete.
+14. Generate a `BOOTSTRAP_PACKET.md` using the template and place it in `outbox/` as `Pending Consumption` when repository persistence is requested.
+15. Mark missing user-owned choices under `User Input Still Needed`; do not invent them.
+16. Include source / freshness notes.
 
 Do not dump complete chat histories or the entire protocol into the packet.
 

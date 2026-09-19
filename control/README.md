@@ -4,6 +4,8 @@
 
 [`SYSTEM_CAPABILITY_INDEX.md`](SYSTEM_CAPABILITY_INDEX.md) 是功能导航，回答系统会什么、何时使用和入口在哪里；Capability 不是文件，索引也不替代实现与验证来源。
 
+[`AUTHORITY_INDEX.md`](AUTHORITY_INDEX.md) 是 Authority discovery / resolution 薄索引，把 Authority ID 或语义名称映射到 Canonical Source、Section / Locator 与 Runtime Delivery Artifact；它不是 Authority 正文或数据库。
+
 [`UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](UNIVERSAL_PROJECT_AI_BEHAVIOR.md) 是薄的项目级通用行为入口，复用现有 Context / Handoff / Reporting / State 机制并补齐 Git Hygiene。
 
 [`role-anchors/`](role-anchors/) 保存长期正式角色的 Canonical Role Anchor；它们定义稳定身份与 Authority，不保存当前阶段、Milestone 或 Session 进度。

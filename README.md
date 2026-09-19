@@ -53,6 +53,7 @@ Persistent Authority
 - [`protocol/releases/`](protocol/releases/)：Manager 使用的协议 Release Packet。
 - [`control/`](control/)：Project State、System Capability、Memory Navigation、Artifact Lifecycle、Universal Behavior 和控制模板。
 - [`control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md)：通用 AI 行为、事件驱动自维护与 Git Hygiene。
+- [`control/AUTHORITY_INDEX.md`](control/AUTHORITY_INDEX.md)：把 Authority ID / 语义名称解析到 Canonical Source、Section 与 Runtime Delivery Artifact 的薄索引。
 - [`control/role-anchors/`](control/role-anchors/)：长期正式角色的 Canonical Role Anchor；Runtime Delivery Copy 必须由目标环境实际可读。
 - [`projects/`](projects/)：项目级 Current State 与权威产物；当前启用 `projects/guided-dart/`。
 - [`inbox/`](inbox/)：外部角色 / Conversation → Memory Curator 的 Pending 入站区，不是长期存储。

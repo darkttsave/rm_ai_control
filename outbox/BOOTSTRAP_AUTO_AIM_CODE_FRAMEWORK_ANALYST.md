@@ -5,7 +5,7 @@ Artifact Type: Bootstrap Packet (Role Initialization)
 Scope: Project / Auto-Aim (P1) / Role
 Producer: Manager (rm-ai-control_v1.1 Navigator)
 Created: 2026-09-17
-Updated: 2026-09-19 (rm-ai-control_v1.2 anchor-aware delivery patch)
+Updated: 2026-09-19 (rm-ai-control_v1.2 anchor-aware delivery + Authority dependency resolution patch)
 Lifecycle: Pending
 Semantic Authority: Mechanical (assembled from cited stable sources; asserts no new semantic state)
 Authoritative Source:
@@ -15,6 +15,7 @@ Authoritative Source:
   - control/knowledge/LEARNING_STATE.md
   - control/knowledge/KNOWLEDGE_ASSET_INDEX.md
   - control/role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md
+  - control/AUTHORITY_INDEX.md
 Supersedes: None
 Next Consumer: Code Framework Analyst conversation
 ```
@@ -38,10 +39,24 @@ Next Consumer: Code Framework Analyst conversation
 
 - Persistent Role Anchor Required: **Yes**
 - Anchor ID: `auto-aim-code-framework-analyst`
-- Required Version: `1.0`
+- Required Version: `1.1`
 - Canonical Source: [`../control/role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md`](../control/role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md)
 - Persistent Authority Delivery: **ChatGPT Project Instructions + Project Sources**；若目标环境不能持续读取 Project Source，则由用户把 Anchor 作为当前可读取附件提供
 - Authority Availability at Startup: **必须由目标 Runtime 验证**；路径存在不能作为可读证据
+
+### Required Authority Dependency Closure
+
+通过 [`../control/AUTHORITY_INDEX.md`](../control/AUTHORITY_INDEX.md) 解析；Human 不负责猜文件名。
+
+| When | Authority ID | Runtime Delivery Artifact |
+|---|---|---|
+| 所有正式角色工作 | `role:auto-aim-code-framework-analyst` | `AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md` version `1.1` |
+| 正式 Return / Curator Update Packet | `contract:universal-return` | `UNIVERSAL_PROJECT_AI_BEHAVIOR.md`（`## 7. Artifact Return` → `### Universal Return Contract`） |
+| 正式 Return / Curator Update Packet | `template:curator-update-packet` | `CURATOR_UPDATE_PACKET_TEMPLATE.md` |
+| 正式知识笔记时追加 | `playbook:knowledge-learning-notes` | `KNOWLEDGE_LEARNING_AND_NOTES.md` |
+| 本轮明确要求 Project Assimilation Method 时追加 | `playbook:project-assimilation` | `Project_Assimilation.md` |
+
+ChatGPT Project / Cloud Work 的 Runtime Authority Delivery = Project-level Recovery Instructions + Role Anchor + 本次实际 dependency closure。只交付本次需要的文件，不上传整个 `rm-ai-control`。
 
 Bootstrap 负责本次项目上下文和任务，不替代 Role Anchor 的长期 Authority。正式工作开始前执行 `Locate → Read → Verify Anchor ID → Verify Version → Continue`。
 

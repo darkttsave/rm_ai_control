@@ -13,7 +13,7 @@
 - Artifact Promotion Gate：Authority 不可读时只允许生成明确标记的 Draft，不得晋升为 Current / Authoritative Artifact。
 - Target Surface → Persistent Authority Delivery 的第一版部署映射。
 - 可复制到 ChatGPT Project 自定义指令的公共 Authority Recovery 模板。
-- 首个 Canonical Anchor：`auto-aim-code-framework-analyst` version `1.0`。
+- 首个 Canonical Anchor：`auto-aim-code-framework-analyst`；初版 `1.0`，Runtime Pilot 修复后当前版本 `1.1`。
 
 ## Integrated
 
@@ -26,7 +26,21 @@
 
 新增一个适度粒度 Capability：`Persistent Authority / Long-lived Role Continuity`，状态为 `Experimental`。
 
-规则已实现，但尚未完成真实 ChatGPT Project Runtime Authority Recovery Pilot，因此不能标记为 `Active`。
+首次真实 ChatGPT Project Runtime Authority Recovery Pilot 已通过 Role Anchor 恢复、Artifact Promotion Gate 与外部 Authority 原文重读；后续暴露并修复了 Authority Dependency Discovery Gap。该修复尚需持续真实使用验证，因此仍不能标记为 `Active`。
+
+## Runtime Pilot Follow-up — Authority Dependency Discovery
+
+首次真实 Pilot 证明 Persistent Authority Recovery 本身可工作，同时暴露：角色知道 Authority 的语义名称，不代表知道其 Authority ID、Canonical Source、Section / Locator 和所需 Runtime Delivery Artifact。
+
+本次 v1.2 增量修复：
+
+- 新增薄索引 [`../../control/AUTHORITY_INDEX.md`](../../control/AUTHORITY_INDEX.md)，只登记真实已使用 / 已引用的 Authority。
+- `Universal Return Contract` 现在明确解析到 `control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md` 的 `## 7. Artifact Return` → `### Universal Return Contract`，而不是一个不存在的同名文件。
+- Curator Update Packet 明确解析到 `control/templates/CURATOR_UPDATE_PACKET_TEMPLATE.md`。
+- Code Analyst Anchor 从 `1.0` 升至 `1.1`，显式声明正式 Return、Knowledge Note 与 Project Assimilation 的 Authority dependencies；旧 `1.0` Runtime Copy 应识别为 stale。
+- Manager 现在从 Authority Index 解析本次任务所需 dependency closure，交付对应 Runtime Artifact，并验证目标 Runtime 可读；不要求 Human 猜文件名，也不交付整个仓库。
+
+采用最小 Anchor versioning 规则：Identity / Mission / Authority Boundary 的不兼容变化交 Human / Maintainer；影响正式行为的 Authority Dependency、Recovery Requirement 或 Artifact Gate 强化执行 Minor `+1`；纯排版与非语义修正不升版。不扩展为完整 SemVer 治理。
 
 ## Unchanged
 

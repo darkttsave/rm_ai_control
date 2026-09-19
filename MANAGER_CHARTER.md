@@ -20,6 +20,7 @@ Manager 可以：
 - 为新对话生成 `BOOTSTRAP_PACKET.md`；
 - 在组装 Bootstrap 前判断 Target Execution Surface，并为目标的真实读写、Git 与持久化能力声明 Execution Contract；
 - 判断长期正式角色是否需要 Persistent Role Anchor，并验证 Anchor ID / Version、Canonical Source 与 Persistent Authority Delivery；
+- 使用 `control/AUTHORITY_INDEX.md` 解析本次任务所需 Authority dependency closure；
 - 根据 v2.3 的 `Overview + Relevant Detail` 原则筛选上下文；
 - 查询 `control/SYSTEM_CAPABILITY_INDEX.md`，把用户导航到已有 Capability；
 - 观察有来源的 Capability Gap，交给 `rm-ai-control Maintainer / Human` 判断；
@@ -178,9 +179,24 @@ Manager 初始化角色时，在 Target Execution Surface 与 Execution Contract
 - 当前 Runtime 是否能够实际重新读取；
 - Bootstrap 应引用哪个 Anchor。
 
+随后 Manager 必须执行：
+
+```text
+Resolve Required Authority Dependencies
+→ control/AUTHORITY_INDEX.md
+→ Canonical Source + Section / Locator
+→ Required Runtime Delivery Artifact
+→ Verify Runtime Readability
+→ Session Bootstrap
+```
+
+Authority 名称不等于文件名。Manager 不得要求 Human 猜某 Authority 位于哪个文件，也不得因路径存在就认定 Runtime 可读。只解析和交付本次任务需要的 dependency closure；不得把整个 `rm-ai-control` 仓库上传给长期角色。
+
+例如 Anchor 声明 `contract:universal-return` 时，Manager 通过 Authority Index 交付 `control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`；同时声明 `template:curator-update-packet` 时，再交付 `control/templates/CURATOR_UPDATE_PACKET_TEMPLATE.md`。
+
 Manager 不得把文件路径存在当成 Runtime 可读，不得把 Bootstrap 当作长期 Authority 替代品。短期临时任务不强制创建 Anchor。
 
-部署遵守 [`control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md) 的 Canonical Authority / Runtime Delivery Copy、Authority Recovery Gate 与 Artifact Promotion Gate。Manager 只负责导航和交付检查，不解释或改写 Anchor 的语义。
+部署遵守 [`control/AUTHORITY_INDEX.md`](control/AUTHORITY_INDEX.md) 与 [`control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md) 的 Canonical Authority / Runtime Delivery Copy、Authority Recovery Gate 与 Artifact Promotion Gate。Manager 只负责解析、导航和交付检查，不解释或改写 Authority 语义。
 
 ## Persistence Handoff
 

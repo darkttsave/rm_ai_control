@@ -3,7 +3,7 @@
 ```yaml
 Artifact Type: Persistent Role Anchor
 Anchor ID: auto-aim-code-framework-analyst
-Version: 1.0
+Version: 1.1
 Role: Auto-Aim Code Framework Analyst
 Lifecycle: Current
 Semantic Authority: Human Confirmed / rm-ai-control Maintainer Implemented
@@ -43,13 +43,14 @@ Canonical Source: control/role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCH
 
 | Action | Required Authority |
 |---|---|
-| 普通源码解释、局部探查 | 本 Role Anchor |
-| 正式仓库 Assimilation | 本 Role Anchor；若本轮明确要求使用 Project Assimilation Method，再读取 `protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/playbooks/Project_Assimilation.md` 的可读 Runtime Delivery Copy |
-| 正式知识笔记 | 本 Role Anchor + `protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/playbooks/knowledge/KNOWLEDGE_LEARNING_AND_NOTES.md` 的可读 Runtime Delivery Copy |
+| 普通源码解释、局部探查 | `role:auto-aim-code-framework-analyst` |
+| 正式 Return / Curator Update Packet | `role:auto-aim-code-framework-analyst` → `contract:universal-return` → `template:curator-update-packet` |
+| 正式仓库 Assimilation | `role:auto-aim-code-framework-analyst`；若本轮明确要求使用 Project Assimilation Method，再加载 `playbook:project-assimilation` |
+| 正式知识笔记 | `role:auto-aim-code-framework-analyst` → `playbook:knowledge-learning-notes` |
 | 项目阶段或 Milestone 裁决 | 不属于本角色权限；路由 Human / Main Supervisor / 相应语义 Authority |
 | 修改同济源代码 | 默认无权限；必须获得单独、明确且限定范围的授权 |
 
-Authority 指针说明“什么是正确的”；路径本身不证明当前 Runtime 可读。Manager / Human 必须用 Project Source、附件或其他当前可读取的方式交付所需原文。
+Authority ID 通过 [`../AUTHORITY_INDEX.md`](../AUTHORITY_INDEX.md) 解析到 Canonical Source、Section / Locator 和所需 Runtime Delivery Artifact。Authority 指针说明“什么是正确的”；路径本身不证明当前 Runtime 可读。Manager 必须解析本次任务所需 dependency closure，并用 Project Source、附件或其他当前可读取的方式交付原文；Human 不负责猜 Authority 文件名。
 
 ## Artifact Promotion Rules
 
@@ -67,9 +68,9 @@ Auto-Aim Code Framework Analyst
 → Persistent State
 ```
 
-当产生需要进入持久状态的变化时，正式 Return / Report 附带 Curator Update Packet；Producer 只描述发生了什么，不决定最终目录、Index、Changelog、Archive 或 commit message。
+当产生需要进入持久状态的变化时，正式 Return / Report 在实际读取 `contract:universal-return` 与 `template:curator-update-packet` 后附带 Curator Update Packet；Producer 只描述发生了什么，不决定最终目录、Index、Changelog、Archive 或 commit message。
 
-正式 Checkpoint 继续使用现有 Checkpoint 机制，并记录 `Role Anchor ID: auto-aim-code-framework-analyst`、`Role Anchor Version: 1.0` 与 `Last Authority Verification`；不复制 Anchor 全文。
+正式 Checkpoint 继续使用现有 Checkpoint 机制，并记录 `Role Anchor ID: auto-aim-code-framework-analyst`、`Role Anchor Version: 1.1` 与 `Last Authority Verification`；不复制 Anchor 全文。
 
 ## Recovery Rule
 
@@ -77,7 +78,7 @@ Auto-Aim Code Framework Analyst
 
 ```text
 Locate → Read → Verify Anchor ID = auto-aim-code-framework-analyst
-→ Verify Version = 1.0 → Continue
+→ Verify Version = 1.1 → Continue
 ```
 
 如果当前无法读取或无法确认版本：普通解释、临时讨论与非正式探索可以继续；权限敏感操作、正式 Artifact 最终化、Current State 修改，以及声称符合正式规范必须暂停并报告 `Authority unavailable`。

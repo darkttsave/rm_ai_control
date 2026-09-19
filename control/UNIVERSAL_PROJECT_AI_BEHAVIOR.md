@@ -73,6 +73,18 @@ Target Surface 的第一版部署映射：
 
 这只是部署映射，不建立新 Runtime、自动同步或推送服务。
 
+对于 ChatGPT Project / Cloud Work，Runtime Authority Delivery 由以下最小集合组成：
+
+```text
+Role Anchor
++ 本次任务实际需要的 Authority Dependency closure
++ Project-level Recovery Instructions
+```
+
+Authority dependency 通过 [`AUTHORITY_INDEX.md`](AUTHORITY_INDEX.md) 从 Authority ID / 语义名称解析到 Canonical Source、Section / Locator 和 Runtime Delivery Artifact。只交付本次任务闭包，不上传整个仓库。
+
+例如 Code Analyst 的正式 Return 最小闭包是 Role Anchor + `UNIVERSAL_PROJECT_AI_BEHAVIOR.md` + `CURATOR_UPDATE_PACKET_TEMPLATE.md`；正式知识笔记再加入 `KNOWLEDGE_LEARNING_AND_NOTES.md`，明确使用 Project Assimilation Method 时再加入 `Project_Assimilation.md`。
+
 ### Authority Recovery Gate
 
 拥有 Role Anchor 的长期正式角色，在以下事件必须重新读取当前 Anchor：首次启动、明显上下文恢复、长时间中断后继续、权限敏感操作、正式 Artifact 生成前、准备改变 Current State，或只能记得规则大意而不能确认原文。

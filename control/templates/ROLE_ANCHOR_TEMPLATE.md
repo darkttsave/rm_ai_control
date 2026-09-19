@@ -28,6 +28,14 @@
 
 只登记动作与 Authority 指针；不要复制外部协议全文。
 
+### Minimal Versioning Rule
+
+- Role Identity / Mission / Authority Boundary 发生不兼容变化：不在执行任务中自行决定版本策略，提交 Human / rm-ai-control Maintainer 判断。
+- Role Identity 不变，但新增或强化会影响正式行为的 Authority Dependency、Recovery Requirement 或 Artifact Gate：Minor `+1`。
+- 纯排版、错别字或非语义路径说明修正：不升版本。
+
+这是一条最小判断规则，不扩展为完整 SemVer 治理体系。
+
 ## Artifact Promotion Rules
 
 - Temporary 输出晋升为 Formal / Persistent / Authoritative Artifact 前，重新读取本 Anchor。
