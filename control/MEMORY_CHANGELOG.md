@@ -1,6 +1,17 @@
-# Memory Changelog — rm-ai-control_v1.1
+# Memory Changelog — rm-ai-control_v1.2
 
 > 只记录管理意义上的持久状态变化，不替代 Git log，也不记录 Markdown 排版或普通机械链接修复。
+
+## 2026-09-19 — Persistent Authority v1.2 Landed; First Runtime Pilot Evidence Ingested
+
+- `rm-ai-control_v1.2`（主题 `Persistent Authority + Long-lived Role Continuity`）落地：Canonical Authority / Runtime Delivery Copy 区分、Authority Recovery Gate、Artifact Promotion Gate，以及 Role Anchor 与 Bootstrap / Checkpoint 的集成。Core Protocol 基线仍为 `v2.3 Frozen`。
+- 建立首个 Canonical Role Anchor `auto-aim-code-framework-analyst`（初版 `1.0`）；Authority Dependency Discovery Gap 修复后升至 `1.1`，旧 `1.0` Runtime Copy 记为 `stale`。
+- 建立 [`AUTHORITY_INDEX.md`](AUTHORITY_INDEX.md)（薄 Authority discovery / resolution 索引），以及 [`templates/ROLE_ANCHOR_TEMPLATE.md`](templates/ROLE_ANCHOR_TEMPLATE.md) 与 [`templates/PROJECT_AUTHORITY_RECOVERY_INSTRUCTIONS.md`](templates/PROJECT_AUTHORITY_RECOVERY_INSTRUCTIONS.md)。
+- 新 Capability `Persistent Authority / Long-lived Role Continuity` 登记为 `Experimental` —— 由 rm-ai-control Maintainer 裁决、Repo Operator 落盘；Memory Curator 未修改任何 Capability 定义。
+- Ingest 并将 4 份正式 Return 归档至 [`../archive/returns/`](../archive/returns/)：v1.2 implementation、Authority Dependency Discovery Pilot follow-up、Runtime Authority Pilot（Role Report）、Role Anchor Version Recovery Test（Role Report）。四者去重后同属**一个** Capability 的连续证据，**不构成多个独立 Capability**。
+- Runtime Verification 状态：ChatGPT Project 中 Authority Recovery `PASS`、Artifact Promotion Gate `PASS`、Authority 不可读时正式 Packet 被正确暂停、Role Anchor Version Recovery `1.1` `PASS`；`1.0` Runtime Copy 为 `stale`。Canonical Version 与 Runtime Delivery Version 一致为 `1.1`；Runtime Delivery Copy 不作为 Canonical Authority。
+- 未改变任何业务状态：Primary Project、Project Stage、Milestone、Learning State、Knowledge Asset Index、用户工程能力判断、Guided Dart P0.5、Future P2 与 PID / Control 线程均不变。Auto-Aim Code Framework Analyst Bootstrap 仍为 `Pending Consumption` —— 角色运行不被推断为该 Bootstrap 已消费，也不被推断为 Auto-Aim 项目进度。
+- `Pending`：Persistent Authority Capability 在持续真实使用验证前保持 `Experimental`；`rm-ai-control Architect` 与 `rm-ai-control Maintainer` 的身份关系仍为 `Pending Review`。
 
 ## 2026-09-17 — Auto-Aim P1 Stage Persisted; Primary Project Changed
 

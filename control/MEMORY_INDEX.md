@@ -1,4 +1,4 @@
-# Memory Index — rm-ai-control_v1.1
+# Memory Index — rm-ai-control_v1.2
 
 > 回答“当前有哪些重要持久状态、在哪里、是否新鲜”。本索引不是状态本体。
 >
@@ -9,9 +9,12 @@
 | Scope | Memory / State | Current Source | Status | Last Updated | Owner | Pending Update |
 |---|---|---|---|---|---|---|
 | System | Core Protocol / Stable Baseline | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/) | Current | 2026-09-14 | rm-ai-control Maintainer | Real RM long-term validation remains incomplete |
-| System | System Capability Index | [`SYSTEM_CAPABILITY_INDEX.md`](SYSTEM_CAPABILITY_INDEX.md) | Current | 2026-09-17 | rm-ai-control Maintainer / Repo Operator | Persistent Memory / Artifact Curation remains Experimental until real Curator validation |
-| System | Artifact Lifecycle | [`ARTIFACT_LIFECYCLE.md`](ARTIFACT_LIFECYCLE.md) | Current | 2026-09-17 | rm-ai-control Maintainer / Memory Curator | None registered |
-| Control | Project Control Index | [`PROJECT_CONTROL_INDEX.md`](PROJECT_CONTROL_INDEX.md) | Current | 2026-09-17 | Memory Curator; Manager is navigation consumer | Apply only authority-backed state deltas |
+| System | Project version / Release record — `rm-ai-control_v1.2` | [`../releases/rm-ai-control_v1.2/RELEASE_NOTES.md`](../releases/rm-ai-control_v1.2/RELEASE_NOTES.md) | Current | 2026-09-19 | rm-ai-control Maintainer | Core Protocol baseline remains `v2.3 Frozen`; v1.2 is a project-layer release |
+| System | System Capability Index | [`SYSTEM_CAPABILITY_INDEX.md`](SYSTEM_CAPABILITY_INDEX.md) | Current | 2026-09-19 | rm-ai-control Maintainer / Repo Operator | `Persistent Authority / Long-lived Role Continuity` and `Persistent Memory / Artifact Curation` both remain Experimental pending continued real validation |
+| System | Artifact Lifecycle | [`ARTIFACT_LIFECYCLE.md`](ARTIFACT_LIFECYCLE.md) | Current | 2026-09-19 | rm-ai-control Maintainer / Memory Curator | None registered |
+| System | Authority Index — Authority discovery / resolution | [`AUTHORITY_INDEX.md`](AUTHORITY_INDEX.md) | Current | 2026-09-19 | rm-ai-control Maintainer / Memory Curator | Thin index of currently used Authorities only; an unresolved Authority ID must be reported, never guessed from a filename |
+| Control | Project Control Index | [`PROJECT_CONTROL_INDEX.md`](PROJECT_CONTROL_INDEX.md) | Current | 2026-09-19 | Memory Curator; Manager is navigation consumer | Apply only authority-backed state deltas |
+| Role / Auto-Aim | Persistent Role Anchor — `auto-aim-code-framework-analyst` | [`role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md`](role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md) | Current — Canonical Version `1.1` | 2026-09-19 | rm-ai-control Maintainer / anchored role | Runtime Delivery Copy `1.1` re-read and verified (`PASS`); the old `1.0` Runtime Copy is `stale` and must not be used as current Authority |
 | Project / Auto-Aim | P1 Current Stage + `M1`（Current Primary Project） | [`../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md`](../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md)（`Stage Model: rm-ai-control Active`；稳定项目状态位置尚未建立） | Current | 2026-09-17 consume | Human（阶段语义）；Memory Curator maintains pointer | `M1` evidence 全缺；stable Auto-Aim project state location pending Repo Operator |
 | Project / Guided Dart | P0.5 Current Checkpoint — secondary / historical line | [`../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`](../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md) | Current | Source date not stated; relocated 2026-09-16; priority position updated 2026-09-17 | Guided Dart project roles / Human | Next-season rules, ownership boundaries and real system capability remain unknown |
 | Knowledge | Learning State — C++ / OpenCV / ROS2 | [`knowledge/LEARNING_STATE.md`](knowledge/LEARNING_STATE.md) | Current | 2026-09-16 | User; Memory Curator maintains pointer | Deep Learning / PnP / EKF / PID / Control remain Not Registered |
@@ -33,7 +36,7 @@ No Pending inbound Artifact is registered.
 | Artifact | Intended Consumer / Purpose | Pending Update |
 |---|---|---|
 | [`../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md) | Auto-Aim Main Supervisor 对话（`Plain Conversation`） | Await explicit consumption evidence — 会话尚未建立；角色存在不等于已产生进度判断 |
-| [`../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md`](../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md) | Auto-Aim Code Framework Analyst（`Repo-capable Role` 目标面） | Await explicit consumption evidence — 会话尚未建立；阶段语义已刷新为 `P1` |
+| [`../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md`](../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md) | Auto-Aim Code Framework Analyst（`Repo-capable Role` 目标面） | Await explicit consumption evidence —— Bootstrap Packet 本身仍未被消费；角色已在 ChatGPT Project Runtime 运行并以 Role Anchor `1.1` 通过 Authority 验证，但**运行不等于本 Packet 已消费** |
 | [`../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md) | Auto-Aim Environment Configuration Instructor（`Executor with repo write` 目标面，限环境范围） | Await explicit consumption evidence — 会话尚未建立；含 upstream baseline 硬规则 |
 | [`../outbox/REPOSITORY_CHANGE_REQUEST_AUTO_AIM_PROJECT_STATE.md`](../outbox/REPOSITORY_CHANGE_REQUEST_AUTO_AIM_PROJECT_STATE.md) | Repo Operator —— Auto-Aim 稳定项目状态位置（结构变化） | Await Repo Operator 裁决与落盘；非语义冲突，不阻塞现有导航 |
 | [`../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_COORDINATE_FRAMES.md`](../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_COORDINATE_FRAMES.md) | Guided Dart Knowledge Conversation | Await explicit consumption evidence |

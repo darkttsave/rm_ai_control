@@ -5,7 +5,7 @@ Artifact Type: Curator Update Packet
 Scope: System / rm-ai-control_v1.2 / Persistent Authority
 Producer: rm-ai-control v1.2 Runtime Pilot follow-up executor
 Created: 2026-09-19
-Lifecycle: Pending
+Lifecycle: Archived
 Semantic Authority: Human Confirmed / Mechanical Implementation
 Authoritative Source:
   - Human-confirmed ChatGPT Project Runtime Pilot result (2026-09-19)
@@ -13,9 +13,11 @@ Authoritative Source:
   - control/role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md
   - releases/rm-ai-control_v1.2/RELEASE_NOTES.md
 Supersedes: Only the "Runtime Pilot not yet completed" unknown in inbox/CURATOR_UPDATE_PACKET_RM_AI_CONTROL_V1_2.md
-Next Consumer: Memory Curator
+Next Consumer: None
 Expected Persistence: Auto
 ```
+
+> **Archive Record**（由 Memory Curator 添加的生命周期 metadata，非正文语义）：本 Packet 已由 Memory Curator 从 `inbox/` `Pending` 状态 ingest 并归档到 `archive/returns/`，Lifecycle 为 `Pending → Archived`。其 Authority Dependency Discovery Gap 修复、[`../../control/AUTHORITY_INDEX.md`](../../control/AUTHORITY_INDEX.md) 的建立、以及 Role Anchor `1.0 → 1.1` 的升版事实已持久化至 [`../../control/MEMORY_INDEX.md`](../../control/MEMORY_INDEX.md)、[`../../control/PROJECT_CONTROL_INDEX.md`](../../control/PROJECT_CONTROL_INDEX.md)；结果记录于 [`../../control/MEMORY_CHANGELOG.md`](../../control/MEMORY_CHANGELOG.md) 的 2026-09-19 条目。其记录的 Anchor 版本升迁已由 [`CURATOR_UPDATE_PACKET_ROLE_ANCHOR_VERSION_RECOVERY_TEST.md`](CURATOR_UPDATE_PACKET_ROLE_ANCHOR_VERSION_RECOVERY_TEST.md) 在 Runtime 侧独立验证。正文内容未改动。
 
 ## What Happened
 

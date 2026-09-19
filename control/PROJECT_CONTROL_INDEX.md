@@ -6,9 +6,10 @@
 
 ## Metadata
 
-- Last Refreshed: 2026-09-17
+- Last Refreshed: 2026-09-19
 - Manager / Runtime: DSH Manager MVP verified with `@deepseek-ai/dsh@0.1.5-rc.1`; file-based fallback retained
 - Runtime Source: [`../runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md`](../runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md)
+- Project Version: `rm-ai-control_v1.2`（release 2026-09-19；主题 `Persistent Authority + Long-lived Role Continuity`）
 - Current Protocol: `RM_AI_Development_Protocol_v2.3_Frozen`
 - Protocol Source: [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/README.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/README.md)
 - Stage Model Disambiguation: 当前项目阶段一律标注 `Stage Model: rm-ai-control Active`；引用 Frozen 协议中的历史阶段语义时必须标注 `Stage Model: Protocol v2.3 Frozen`。**两套编号不得隐式混用。**
@@ -84,7 +85,7 @@
 | Conversation / Role | Purpose | Status | Latest Authoritative Artifact | Last Updated | Freshness / Note |
 |---|---|---|---|---|---|
 | Auto-Aim Main Supervisor（自瞄项目总监督） | Auto-Aim 项目日常监督：消费各角色 Return 与实车验证证据，判断进度 / 阻塞 / 下一项最高价值任务 / 路由，维护 `M1 → P1 Exit` 推进判断 | Not yet created — Bootstrap `Produced`，`Pending Consumption`；`Plain Conversation` | [`../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md) | 2026-09-17 Bootstrap | 沿用协议既有 Main Supervisor 角色类别的**工作角色**，不是新 Capability；重大阶段变化只提案、由 Human 确认；不进入 `rm-ai-control` 持久化；会话建立前不得视为已产生任何进度判断 |
-| Auto-Aim Code Framework Analyst（代码框架分析者） | 长期工程理解：工程结构、模块 / 数据流、配置与参数入口、"为什么这样写" | Not yet created — Bootstrap `Produced`，`Pending Consumption`；Target Execution Surface `Repo-capable Role`（目标面） | [`../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md`](../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md) | 2026-09-17 Bootstrap（阶段语义已刷新为 `P1`） | 实际读写能力未验证；Skill / Methodology 资产未提供 |
+| Auto-Aim Code Framework Analyst（代码框架分析者） | 长期工程理解：工程结构、模块 / 数据流、配置与参数入口、"为什么这样写" | Active — ChatGPT Project Runtime Pilot `PASS`（2026-09-19）；Bootstrap Packet 本身仍为 `Pending Consumption` | Persistent Role Anchor [`role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md`](role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md)（Canonical Version `1.1`） | 2026-09-19 Runtime Pilot | Target Execution Surface `Repo-capable Role`（目标面）；Runtime Delivery Copy `1.1` 已实际重读并验证，旧 `1.0` Runtime Copy 为 `stale`；未产生任何 Auto-Aim 项目进度或 M1 证据 |
 | Auto-Aim Environment Configuration Instructor（项目环境配置讲师） | 环境复现：安装 / 构建 / 启动路径与踩坑记录，形成可复现命令；区分 upstream baseline 与本机适配 | Not yet created — Bootstrap `Produced`，`Pending Consumption`；Target Execution Surface `Executor with repo write`（限环境范围，目标面） | [`../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md) | 2026-09-17 Bootstrap（含 upstream baseline 硬规则） | 目标机器事实全缺；实际执行能力未验证 |
 | Guided Dart P0.5 exploration | Same-stage cross-solution foundational learning and note preparation（现为 secondary / historical line） | Unknown | [`../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`](../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md) | 2026-09-14 ingest | Semantic stage is sourced; conversation activity is not registered |
 | Guided Dart Knowledge — PID / Control 接口基础 | Dedicated knowledge conversation for the P0.5 `Control` interface layer, driven by the user's existing PID notes and questions | Not yet created — the earlier 2026-09-15 `Active` entry was a test registration; awaiting the user's first real conversation | None yet — no authoritative artifact; Manager Bootstrap Packet only | 2026-09-15 re-bootstrap | Manager-generated packet remains Pending Consumption and is navigated through [`MEMORY_INDEX.md`](MEMORY_INDEX.md), not used as semantic authority; user-side PID notes and video material are user-reported and not registered; the conversation that carried the earlier 电控 learning entry was archived by the user and is currently unlocatable (user-reported 2026-09-15) |
@@ -146,6 +147,10 @@ Manager / Memory Curator 不自行解决语义冲突，只标记并请求 / 读�
 
 # 7. Recent Significant Updates
 
+- 2026-09-19: `rm-ai-control_v1.2` 落地（`Persistent Authority + Long-lived Role Continuity`）：Canonical Authority / Runtime Delivery Copy 区分、Authority Recovery Gate、Artifact Promotion Gate、Role Anchor 与 Bootstrap / Checkpoint 集成；Core Protocol 基线不变。
+- 2026-09-19: 首个 Canonical Role Anchor `auto-aim-code-framework-analyst` 建立（`1.0`），Authority Dependency Discovery Gap 修复后升至 `1.1`；[`AUTHORITY_INDEX.md`](AUTHORITY_INDEX.md) 建立，旧 `1.0` Runtime Copy 记为 `stale`。
+- 2026-09-19: Auto-Aim Code Framework Analyst 在 ChatGPT Project Runtime 完成首次 Persistent Authority Pilot：Authority Recovery `PASS`、Artifact Promotion Gate `PASS`、Authority 不可读时正式 Packet 被正确暂停、Role Anchor Version Recovery `1.1` `PASS`。**未产生任何 Auto-Aim 项目进度或 `M1` 证据**；其 Bootstrap Packet 仍为 `Pending Consumption`。
+- 2026-09-19: Ingest 并归档 4 份 v1.2 / Runtime Pilot 正式 Return 至 [`../archive/returns/`](../archive/returns/)；四者同属一个 Capability 的连续证据。
 - 2026-09-17: Human 确认 Auto-Aim 当前阶段为 `P1 — Team Legacy Assimilation & Operational Mastery`（`Stage Model: rm-ai-control Active`），原 `P2 — Open-source assimilation…` 表述 superseded；Ingested [`../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md`](../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md)。
 - 2026-09-17: 登记 Auto-Aim 为 Current Primary Project 与 Milestone `M1 — Auto-Aim Baseline Reproduced`；Guided Dart P0.5 转为 secondary / historical（Checkpoint 内容未改变）。
 - 2026-09-17: 登记三个 Auto-Aim 工作角色及其 `Pending Consumption` Bootstrap（Main Supervisor / Code Framework Analyst / Environment Instructor）；**均未消费**，未产生项目证据。
@@ -171,4 +176,5 @@ Manager / Memory Curator 不自行解决语义冲突，只标记并请求 / 读�
 - If the user asks about current implementation / repository work → Work / Executor in the relevant business repository, not this control repository.
 - If the user continues a Guided Dart knowledge gap → Specialist + Knowledge Playbook, or a dedicated Knowledge Conversation where appropriate.
 - If the user asks about protocol / project-level workflow → rm-ai-control Maintainer.
+- If the user asks about a Persistent Role Anchor, Authority ID resolution or Runtime Delivery → [`AUTHORITY_INDEX.md`](AUTHORITY_INDEX.md) → Canonical Source → the anchored role / Manager; Anchor semantics are Maintainer / Human territory.
 - If the user asks “where should I go?” → Manager uses this Index and the latest authoritative sources to suggest a route.
