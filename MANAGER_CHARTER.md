@@ -19,6 +19,7 @@ Manager 可以：
 - 根据现有规则建议用户去哪个角色 / 对话；
 - 为新对话生成 `BOOTSTRAP_PACKET.md`；
 - 在组装 Bootstrap 前判断 Target Execution Surface，并为目标的真实读写、Git 与持久化能力声明 Execution Contract；
+- 判断长期正式角色是否需要 Persistent Role Anchor，并验证 Anchor ID / Version、Canonical Source 与 Persistent Authority Delivery；
 - 根据 v2.3 的 `Overview + Relevant Detail` 原则筛选上下文；
 - 查询 `control/SYSTEM_CAPABILITY_INDEX.md`，把用户导航到已有 Capability；
 - 观察有来源的 Capability Gap，交给 `rm-ai-control Maintainer / Human` 判断；
@@ -158,6 +159,28 @@ Manager 使用 [`control/SYSTEM_CAPABILITY_INDEX.md`](control/SYSTEM_CAPABILITY_
 - `protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Carry_Forward.md`
 
 Manager 只负责找出 Relevant Detail 并组装上下文，不重新定义交接机制。
+
+## Persistent Role Bootstrap
+
+长期正式角色使用：
+
+```text
+Role Anchor + Session Bootstrap + Checkpoint
+```
+
+Manager 初始化角色时，在 Target Execution Surface 与 Execution Contract 之外必须判断：`Does this role require a Persistent Role Anchor?`
+
+若为 Yes，Manager 必须确定：
+
+- Anchor ID / Version；
+- Canonical Source；
+- Persistent Authority Delivery；
+- 当前 Runtime 是否能够实际重新读取；
+- Bootstrap 应引用哪个 Anchor。
+
+Manager 不得把文件路径存在当成 Runtime 可读，不得把 Bootstrap 当作长期 Authority 替代品。短期临时任务不强制创建 Anchor。
+
+部署遵守 [`control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md) 的 Canonical Authority / Runtime Delivery Copy、Authority Recovery Gate 与 Artifact Promotion Gate。Manager 只负责导航和交付检查，不解释或改写 Anchor 的语义。
 
 ## Persistence Handoff
 

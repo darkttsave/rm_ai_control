@@ -1,4 +1,4 @@
-# Artifact Lifecycle — rm-ai-control_v1.1
+# Artifact Lifecycle — rm-ai-control_v1.2
 
 > 薄的项目级 Artifact 生命周期规则。它管理存放、导航和持久化，不改变 Core Protocol、业务语义或角色权限。
 
@@ -41,6 +41,18 @@ Scope
 - `Mechanical`
 
 Header 描述权威边界，不自动让文件成为 Source of Truth。
+
+## Artifact Promotion Gate
+
+当 Artifact 从 Temporary / Candidate 晋升为 Formal、Persistent、Current 或 Authoritative 时，Producer 必须先识别其声明依赖的 Authority：
+
+```text
+No additional Authority → Finalize
+Authority readable       → Read original → Verify → Finalize
+Authority unavailable    → Draft only
+```
+
+`Draft only` 必须明确标记“未经过正式 Authority 校验”，不可被 Current State、Control / Memory Index 或其他权威 Artifact 引用为正式事实。拥有 Role Anchor 的长期角色还必须按 [`UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](UNIVERSAL_PROJECT_AI_BEHAVIOR.md) 执行 Authority Recovery Gate。
 
 ## Inbound and Outbound Flow
 

@@ -5,6 +5,7 @@ Artifact Type: Bootstrap Packet (Role Initialization)
 Scope: Project / Auto-Aim (P1) / Role
 Producer: Manager (rm-ai-control_v1.1 Navigator)
 Created: 2026-09-17
+Updated: 2026-09-19 (rm-ai-control_v1.2 anchor-aware delivery patch)
 Lifecycle: Pending
 Semantic Authority: Mechanical (assembled from cited stable sources; asserts no new semantic state)
 Authoritative Source:
@@ -13,6 +14,7 @@ Authoritative Source:
   - protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/playbooks/Project_Assimilation.md
   - control/knowledge/LEARNING_STATE.md
   - control/knowledge/KNOWLEDGE_ASSET_INDEX.md
+  - control/role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md
 Supersedes: None
 Next Consumer: Code Framework Analyst conversation
 ```
@@ -32,6 +34,17 @@ Next Consumer: Code Framework Analyst conversation
 
 **角色类别说明**（避免建立新体系）：本角色在现有 operating model 中属于 **Specialist 类**——负责局部深入分析与理解，不承担项目方向决策。它**不是** Repo Operator，也**不是**负责大规模改代码的 Work。
 
+## Persistent Role Authority
+
+- Persistent Role Anchor Required: **Yes**
+- Anchor ID: `auto-aim-code-framework-analyst`
+- Required Version: `1.0`
+- Canonical Source: [`../control/role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md`](../control/role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md)
+- Persistent Authority Delivery: **ChatGPT Project Instructions + Project Sources**；若目标环境不能持续读取 Project Source，则由用户把 Anchor 作为当前可读取附件提供
+- Authority Availability at Startup: **必须由目标 Runtime 验证**；路径存在不能作为可读证据
+
+Bootstrap 负责本次项目上下文和任务，不替代 Role Anchor 的长期 Authority。正式工作开始前执行 `Locate → Read → Verify Anchor ID → Verify Version → Continue`。
+
 ## Execution Contract
 
 - Repository Access: **`Read-only`**——**仅限连接的同济 2025 自瞄代码仓库**。`rm-ai-control` 控制仓库**不在可读范围内**，其中的路径一律只是 provenance。
@@ -45,9 +58,11 @@ Next Consumer: Code Framework Analyst conversation
 Hard rules：
 
 - **路径不代表可读。** 本包中所有 `rm-ai-control` 路径（`control/…`、`protocol/…`、`projects/…`）只是 provenance；本对话无法访问该仓库。
+- **Canonical 不代表已交付。** 目标角色必须实际读到 Anchor 的 Runtime Delivery Copy；不能用本 Bootstrap、聊天记忆或摘要替代 Anchor 原文。
 - **Destination 只表示最终归属，不代表你有写权限。**
 - 你**不得**直接维护或改写：Learning State、Knowledge Asset Index、Project Control Index、Memory Index、Memory Changelog、任何协议文件或 Git 历史。
 - 你**不得**把本对话的结论当成已生效的持久状态。
+- Anchor 不可读取或版本无法确认时，普通解释与非正式探索可继续；权限敏感操作、正式 Artifact 最终化、Current State 修改和正式合规声明必须暂停并报告 `Authority unavailable`。
 
 ### Return Path（明确）
 

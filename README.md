@@ -1,6 +1,6 @@
-# rm-ai-control_v1.1
+# rm-ai-control_v1.2
 
-`rm-ai-control_v1.1` 是 RM + AI 项目的持久控制仓库。它把稳定协议、系统能力导航、项目控制状态、Artifact Lifecycle、Persistent Memory 与可回退 Manager Runtime 放在同一个可维护版本体系中。
+`rm-ai-control_v1.2` 是 RM + AI 项目的持久控制仓库。它把稳定协议、系统能力导航、项目控制状态、Artifact Lifecycle、Persistent Authority、Persistent Memory 与可回退 Manager Runtime 放在同一个可维护版本体系中。
 
 它保存协议基线、导航索引、正式状态输入和最小充分交接输出；它不是 RoboMaster 业务代码仓库，也不是 DSH Runtime 开发仓库。Manager 的角色是 **Control Plane / Navigator**，不是 Command Chain。
 
@@ -33,9 +33,12 @@ Control State
 
 Persistent Memory
 = 当前有哪些持久状态、在哪里、是否新鲜
+
+Persistent Authority
+= 长期正式角色是谁、必须遵守什么、当前 Runtime 能否重新读取
 ```
 
-- **Core Protocol / Stable Baseline**：[`protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/`](protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/)。Frozen 保持原样；`rm-ai-control_v1.1` 是项目版本，不是 Protocol v2.4。
+- **Core Protocol / Stable Baseline**：[`protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/`](protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/)。Frozen 保持原样；`rm-ai-control_v1.2` 是项目版本，不是 Protocol v2.4。
 - **System Capabilities**：[`control/SYSTEM_CAPABILITY_INDEX.md`](control/SYSTEM_CAPABILITY_INDEX.md)。按能力而非文件提供用途、入口、Owner 和可用状态。
 - **Control State**：[`control/PROJECT_CONTROL_INDEX.md`](control/PROJECT_CONTROL_INDEX.md)。保存当前项目与角色的导航摘要、freshness 和权威来源指针。
 - **Persistent Memory**：[`control/MEMORY_INDEX.md`](control/MEMORY_INDEX.md)。导航 Current State、Pending Artifact 与 freshness，不复制事实正文。
@@ -50,15 +53,16 @@ Persistent Memory
 - [`protocol/releases/`](protocol/releases/)：Manager 使用的协议 Release Packet。
 - [`control/`](control/)：Project State、System Capability、Memory Navigation、Artifact Lifecycle、Universal Behavior 和控制模板。
 - [`control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md)：通用 AI 行为、事件驱动自维护与 Git Hygiene。
+- [`control/role-anchors/`](control/role-anchors/)：长期正式角色的 Canonical Role Anchor；Runtime Delivery Copy 必须由目标环境实际可读。
 - [`projects/`](projects/)：项目级 Current State 与权威产物；当前启用 `projects/guided-dart/`。
 - [`inbox/`](inbox/)：外部角色 / Conversation → Memory Curator 的 Pending 入站区，不是长期存储。
 - [`outbox/`](outbox/)：等待目标角色消费的正式出站区；留在这里表示 Pending Consumption。
 - [`archive/`](archive/)：Historical Evidence；`returns/` 保存已处理入站，`dispatches/` 保存已消费出站，`state-updates/` 保存已 ingest State Update。
 - [`temporary/`](temporary/)：Disposable Local Scratch Space；除说明文件外由 Git 忽略，不得作为稳定 Source of Truth。
 - [`runtime/dsh-pilot/`](runtime/dsh-pilot/)：固定版本的 DSH Manager MVP 启动与状态说明；运行缓存和密钥不入 Git。
-- [`releases/rm-ai-control_v1.1/RELEASE_NOTES.md`](releases/rm-ai-control_v1.1/RELEASE_NOTES.md)：当前项目版本的 Release 记录。
+- [`releases/rm-ai-control_v1.2/RELEASE_NOTES.md`](releases/rm-ai-control_v1.2/RELEASE_NOTES.md)：当前项目版本的 Release 记录。
 
-当前项目版本是 `rm-ai-control_v1.1`；其 Core Protocol 基线仍是 `RM_AI_Development_Protocol_v2.3_Frozen`。Frozen 展开目录不得在本仓库内修改；原始 ZIP 保存在 [`archive/source-packages/`](archive/source-packages/)，用于完整性核验和恢复。
+当前项目版本是 `rm-ai-control_v1.2`；其 Core Protocol 基线仍是 `RM_AI_Development_Protocol_v2.3_Frozen`。Frozen 展开目录不得在本仓库内修改；原始 ZIP 保存在 [`archive/source-packages/`](archive/source-packages/)，用于完整性核验和恢复。
 
 ## DSH Pilot Boundary
 

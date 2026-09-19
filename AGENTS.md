@@ -1,6 +1,6 @@
-# AGENTS.md — rm-ai-control_v1.1 Bootstrap
+# AGENTS.md — rm-ai-control_v1.2 Bootstrap
 
-本仓库是 `rm-ai-control_v1.1` 的控制平面与持久状态容器，不是 RM 业务代码或 DSH Runtime 开发仓库。
+本仓库是 `rm-ai-control_v1.2` 的控制平面与持久状态容器，不是 RM 业务代码或 DSH Runtime 开发仓库。
 
 开始工作前读取：
 
@@ -13,6 +13,8 @@
 7. [`control/MEMORY_INDEX.md`](control/MEMORY_INDEX.md)
 8. 与当前任务相关的 [`protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/`](protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/) 条目
 9. 操作 DSH Manager 时读取 [`runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md`](runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md)
+
+如果当前任务被赋予 Persistent Role Anchor，开始正式工作前读取其 Canonical 或当前可访问的 Runtime Delivery Copy，并核对 Anchor ID / Version。首次启动、上下文恢复、长时间中断、权限敏感操作、正式 Artifact 生成前或 Current State 修改前，按 [`control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md) 执行 Authority Recovery Gate。聊天记忆和摘要不能代替 Anchor 原文。
 
 使用 [`.agents/skills/rm-project-manager/SKILL.md`](.agents/skills/rm-project-manager/SKILL.md) 执行 Manager 的 `status`、`route`、`ingest`、`bootstrap`、`protocol-update` 或 `capability` 意图。
 

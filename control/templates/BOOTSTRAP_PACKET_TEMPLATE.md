@@ -15,6 +15,18 @@
 
 `Target Execution Surface` 只区分上述三类通用环境，不建立更复杂的 Runtime taxonomy。`Repo-capable Role` 必须另行声明实际可读范围；除非明确授权，不得假设其可写。
 
+## Persistent Role Authority
+
+- Persistent Role Anchor Required: `Yes | No`
+- Required Role Anchor:
+  - Anchor ID:
+  - Required Version:
+- Canonical Source:
+- Persistent Authority Delivery: `Inline minimum | Project Instructions + Project Sources | Local Role Anchor | Repo startup rule + Role Anchor | Attached Anchor | Other: ...`
+- Authority Availability at Startup: `Verified readable | User must provide / attach | Unknown`
+
+短期临时任务不强制创建 Anchor。需要 Anchor 时，Bootstrap 只引用 Anchor ID / Version 和交付方式，不复制 Anchor 全文，也不把 Bootstrap 当作长期 Authority 替代品。
+
 ## Execution Contract
 
 - Repository Access: `None | Read-only (declare scope) | Read-write (declare scope)`
@@ -30,6 +42,7 @@ Hard rules:
 - 路径不代表可读。下游真正必须阅读的内容，必须内联最小必要摘要，或由用户粘贴 / 上传 / 作为该对话可读附件提供。
 - Destination 只表示最终归属，不代表当前下游拥有写权限；必须明确最终由谁落盘。
 - `Plain Conversation` 默认无仓库访问、无任意本地文件读取、无 Git、无直接持久化写权限。它只产出 Return / Checkpoint Artifact，再经 Manager → Memory Curator / Repo Operator 进入持久状态。
+- Canonical Source 的路径只证明 provenance；Manager 必须验证目标 Runtime 能否实际读取相应 Runtime Delivery Copy。
 
 Plain Conversation 自足性判据：
 

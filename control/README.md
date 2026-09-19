@@ -6,10 +6,12 @@
 
 [`UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](UNIVERSAL_PROJECT_AI_BEHAVIOR.md) 是薄的项目级通用行为入口，复用现有 Context / Handoff / Reporting / State 机制并补齐 Git Hygiene。
 
+[`role-anchors/`](role-anchors/) 保存长期正式角色的 Canonical Role Anchor；它们定义稳定身份与 Authority，不保存当前阶段、Milestone 或 Session 进度。
+
 [`ARTIFACT_LIFECYCLE.md`](ARTIFACT_LIFECYCLE.md) 定义 Draft / Pending / Current / Consumed / Archived，以及 inbox / outbox / archive / temporary 的稳定引用规则。
 
 [`MEMORY_INDEX.md`](MEMORY_INDEX.md) 回答当前有哪些持久状态、在哪里、是否新鲜；[`MEMORY_CHANGELOG.md`](MEMORY_CHANGELOG.md) 只记录管理意义上的状态变化。二者都不是状态本体。
 
 [`knowledge/`](knowledge/) 保存长期知识状态：[`LEARNING_STATE.md`](knowledge/LEARNING_STATE.md) 记录用户已确认的学习状态，[`KNOWLEDGE_ASSET_INDEX.md`](knowledge/KNOWLEDGE_ASSET_INDEX.md) 记录知识资产的身份与职责；两者都是状态与指针，不替代其来源材料。
 
-`templates/` 保存 Artifact Header、Manager 正式输入输出和索引模板，以及可附加到关键报告的 Capability Impact 字段。
+`templates/` 保存 Artifact Header、Manager 正式输入输出和索引模板，以及 Role Anchor、Project Authority Recovery Instructions 与可附加到关键报告的 Capability Impact 字段。

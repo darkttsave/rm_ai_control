@@ -21,6 +21,7 @@ Memory Curator 可以：
 - 执行低风险、机械性的生命周期文件维护；
 - 对自己形成的稳定、已验证、边界明确的机械变更负责 commit；
 - 向 Repo Operator 发出 Repository Change Request。
+- 维护 Current Anchor identity / version pointer、Canonical path pointer、已知 Runtime deployment state，以及 stale / version mismatch 的机械状态。
 
 ## Must Not
 
@@ -34,6 +35,8 @@ Memory Curator 不可以：
 - 自己解决互相矛盾的语义状态；
 - 根据文件年龄猜测 outbox Artifact 已消费；
 - 把 Memory Index、Control Index 或 Conversation Summary 当作事实本体。
+- 解释、裁决或改写 Role Anchor 语义；Anchor 语义由 Human、rm-ai-control Maintainer 或相应语义 Authority 决定。
+- 建立 Anchor database、实时同步、自动推送或其他新的 Authority Runtime。
 
 语义冲突保持 Lifecycle `Pending`，标记为 `Pending Review`，并交给相应的 Human、Manager、Supervisor 或 rm-ai-control Maintainer。
 

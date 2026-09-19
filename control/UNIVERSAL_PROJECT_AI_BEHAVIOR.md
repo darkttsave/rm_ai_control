@@ -1,4 +1,4 @@
-# Universal Project AI Behavior — rm-ai-control_v1.1
+# Universal Project AI Behavior — rm-ai-control_v1.2
 
 > 薄的项目级行为入口。它引用现有 Protocol / Manager 机制，不建立第二套 Context、Handoff、Reporting 或 State 系统。
 
@@ -34,7 +34,70 @@ Next Step
 - [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Handoff_Protocol.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Handoff_Protocol.md)
 - [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Carry_Forward.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Carry_Forward.md)
 
-## 3. Project Reporting
+长期正式角色使用三层连续性：
+
+```text
+Role Anchor       = 我是谁、长期必须遵守什么
+Session Bootstrap = 本次为什么启动、当前任务是什么
+Checkpoint        = 现在做到哪里
+```
+
+Bootstrap 不替代长期 Authority。存在正式 Role Anchor 时，Checkpoint 在既有模板内容前附加：
+
+```text
+Role Anchor ID:
+Role Anchor Version:
+Last Authority Verification:
+```
+
+并继续保存 `Current Goal / Verified Facts / Decisions / Unknowns / Current Work / Next Step`。临时任务没有正式 Role Anchor 时，不强制填写 Anchor 字段。
+
+## 3. Persistent Authority
+
+### Canonical Authority and Runtime Delivery Copy
+
+- **Canonical Authority**：`rm-ai-control` 中版本受控的权威原文，决定 `What is correct?`。
+- **Runtime Delivery Copy**：目标角色在当前运行环境中能够长期重新读取的副本，决定 `Can this role actually read it now?`。
+- 两者不得混为一谈；文件路径存在不代表目标角色可读取。
+
+Target Surface 的第一版部署映射：
+
+| Target Surface | Persistent Authority Delivery |
+|---|---|
+| Short-lived Plain Chat | Inline minimum required authority |
+| Long-lived Chat in ChatGPT Project | Project Instructions + Project Sources |
+| Cloud Work in ChatGPT Project | Project Instructions + Project Sources |
+| Local Work | Local Role Anchor |
+| Repo Executor | `AGENTS.md` / startup rule + repo Role Anchor + Git |
+| Temporary Specialist | Attached Anchor / other currently accessible persistent source |
+
+这只是部署映射，不建立新 Runtime、自动同步或推送服务。
+
+### Authority Recovery Gate
+
+拥有 Role Anchor 的长期正式角色，在以下事件必须重新读取当前 Anchor：首次启动、明显上下文恢复、长时间中断后继续、权限敏感操作、正式 Artifact 生成前、准备改变 Current State，或只能记得规则大意而不能确认原文。
+
+```text
+Locate → Read → Verify Anchor ID → Verify Version → Continue
+```
+
+聊天记忆、摘要或过去回答不能代替 Authority Verification。若 Anchor 不可读取或版本无法确认：
+
+- 可以继续普通解释、临时讨论和非正式探索；
+- 必须暂停权限敏感操作、正式 Artifact 最终化、Current State 修改，以及“符合正式规范”的声明；
+- 主动报告 `Authority unavailable`。
+
+### Artifact Promotion Gate
+
+当输出从 `Temporary` 晋升为 `Formal / Persistent / Authoritative` 时，先检查相关 Authority：
+
+- 没有额外 Authority → 正常 Finalize；
+- 有 Authority 且当前可读 → 读取原文后 Finalize；
+- 有 Authority 但不可读 → 请求恢复；若用户暂不提供，只能生成明确标记为“未经过正式 Authority 校验”的 Draft，不得作为 Current / Authoritative Artifact。
+
+典型晋升包括 Explanation → Formal Note、Discussion → Decision Record、Investigation → Authoritative Report、Experiment → Stable SOP、Candidate → Current State、Temporary Config → Team Baseline。
+
+## 4. Project Reporting
 
 在真实关键节点选择已有产物，不新增平行报告体系：
 
@@ -46,7 +109,7 @@ Next Step
 
 报告使用 Frozen Protocol 中现有模板，或使用 [`templates/STATE_UPDATE_TEMPLATE.md`](templates/STATE_UPDATE_TEMPLATE.md)。长期功能变化附加 [`templates/CAPABILITY_IMPACT_TEMPLATE.md`](templates/CAPABILITY_IMPACT_TEMPLATE.md)；没有影响时只写 `None`。
 
-## 4. State Synchronization
+## 5. State Synchronization
 
 - 各项目角色维护 Role-local continuity；Manager 使用 [`PROJECT_CONTROL_INDEX.md`](PROJECT_CONTROL_INDEX.md) 导航 Project-global state；Memory Curator 负责权威来源确定后的持久化与索引同步。
 - 语义事实必须来自权威产物，遵守 `Authoritative Artifact > Memory / Control Index > Conversation Summary`。
@@ -54,14 +117,14 @@ Next Step
 - 普通解释、无持久影响的小问题和未采纳的 brainstorm 不触发状态写入。
 - Manager 的 ingest、freshness 与冲突处理遵守 [`../MANAGER_CHARTER.md`](../MANAGER_CHARTER.md) 和 [`../.agents/skills/rm-project-manager/SKILL.md`](../.agents/skills/rm-project-manager/SKILL.md)。
 
-## 5. Capability Changes
+## 6. Capability Changes
 
 - 先查 [`SYSTEM_CAPABILITY_INDEX.md`](SYSTEM_CAPABILITY_INDEX.md)，避免重复设计已有能力。
 - 报告者只陈述有实现、验证或正式决策支持的 `Added / Changed / Deprecated`。
 - Manager 可以导航 Capability 并观察有证据的 Gap；定义变化交给 rm-ai-control Maintainer 裁决、由 Repo Operator 确定性落盘。Manager 不能自行创造 Capability，也不能修改 Core Protocol。
 - Core Protocol 的变化必须由 rm-ai-control Maintainer 通过正式 Protocol Release 处理。
 
-## 6. Artifact Return
+## 7. Artifact Return
 
 - Returned Artifact、Confirmed State Delta、Consumed Artifact Event 和 User Decision 按 [`ARTIFACT_LIFECYCLE.md`](ARTIFACT_LIFECYCLE.md) 进入 `inbox/`、稳定 Current 位置或相应 archive 区域。
 - `inbox/`、`outbox/`、`temporary/` 不是 Current / Authoritative Artifact 的永久来源位置。
