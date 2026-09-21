@@ -2,6 +2,15 @@
 
 > 只记录管理意义上的持久状态变化，不替代 Git log，也不记录 Markdown 排版或普通机械链接修复。
 
+## 2026-09-21 — Auto-Aim Checkpoint and Supporting Conversations Ingested
+
+- Ingest Auto-Aim Code Framework Analyst Checkpoint（`Role Report`，2026-09-20）：由 `inbox/` 归档至 [`../archive/returns/AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md`](../archive/returns/AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md)（`Pending → Archived`），原始文件名与来源保留在 Archive Record。
+- 持久化为 Current 的内容：上游仓库身份与 revision（`TongjiSuperPower/sp_vision_25` @ `bd9f5e798fa3c6dd3b483ae6627796afb41c608d`，只读调查）、`Target` 之后双后端结构（`Aimer` / `MPC Planner` 共享 `Detector` / `Solver` / `Tracker` / `Target`）、`M1` 逐项证据状态、role-local continuity 与下一步六模块对比。
+- **未**持久化为 Current Fact：八个调参实例的讲解覆盖与 role-local Decisions 记为 `Role Report`，**不构成 Project Stage / Milestone 变更，也不构成对用户掌握程度的判断**；八项源码级疑点登记为**待实车验证的调查入口**，不是已确认缺陷。
+- Consume 并归档 Auto-Aim Supporting Conversations 增量 Packet 至 [`../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_SUPPORTING_CONVERSATIONS.md`](../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_SUPPORTING_CONVERSATIONS.md)（`Consumed → Archived`）；登记两个 Supporting Conversation（Auto-Aim Code Segment Analyst、C++ Quick Knowledge Conversation）于 [`PROJECT_CONTROL_INDEX.md`](PROJECT_CONTROL_INDEX.md) §2，均为 `Pending Consumption`、**无 Role Anchor**、复用既有 Capability。
+- 复核确认 Manager 判断：本次**未新增** Authority 条目与 Role Anchor，[`AUTHORITY_INDEX.md`](AUTHORITY_INDEX.md) 未改动；[`SYSTEM_CAPABILITY_INDEX.md`](SYSTEM_CAPABILITY_INDEX.md) 未因本次 ingest 改动。
+- 未改变：Project Stage（`P1`）、Milestone（`M1`）、Learning State、Knowledge Asset Index、用户工程能力判断、Guided Dart P0.5、Future P2、PID / Control 线程、既有 Role Anchor 版本与任何角色职责。Code Framework Analyst Bootstrap 仍为 `Pending Consumption`。
+
 ## 2026-09-21 — Persistent Authority Capability Promoted to Active (Human Confirmed)
 
 - `Persistent Authority / Long-lived Role Continuity`：`Experimental` → `Active`，由 **Human Confirmed** 直接决定（2026-09-21）。原 v1.2 登记条件"需持续真实使用验证"已由 Role Anchor `auto-aim-code-framework-analyst` `1.1` 的两次真实 Runtime 事件满足（2026-09-19 Pilot `PASS`；2026-09-20 持续使用中 Authority Recovery `SUCCESS`，`Runtime Authority Gap: None`）。
@@ -9,7 +18,7 @@
 - **边界说明**：Capability 定义与状态变化通常由 rm-ai-control Maintainer 裁决、Repo Operator 确定性落盘。本次因 Human 直接指令，由 Memory Curator 执行状态字段落盘并留痕；记录为**一次性授权**，不构成 Curator 可自行变更 Capability 的先例。
 - 验证范围如实记录：截至 2026-09-21 仅覆盖 **1 个 anchored role / 1 个 Runtime Surface（ChatGPT Project）**；多角色、多 Runtime Surface 尚未验证。
 - `Persistent Memory / Artifact Curation` **保持 `Experimental`**（本轮未获授权变更）。
-- 登记本轮新到达的 3 份 Pending Artifact（**仅登记，未 ingest**）：[`../inbox/Auto-Aim Code Framework Analyst — Checkpoint.md`](<../inbox/Auto-Aim Code Framework Analyst — Checkpoint.md>)（Role Report / Checkpoint，2026-09-20）、[`../outbox/CURATOR_UPDATE_PACKET_AUTO_AIM_SUPPORTING_CONVERSATIONS.md`](../outbox/CURATOR_UPDATE_PACKET_AUTO_AIM_SUPPORTING_CONVERSATIONS.md) 与两份新 Bootstrap（Code Segment Analyst / C++ Quick Knowledge）。四者内容均**未被**写为 Current Fact。
+- 登记本轮新到达的 3 份 Pending Artifact（**仅登记，未 ingest**）：[`../archive/returns/AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md`](../archive/returns/AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md)（Role Report / Checkpoint，2026-09-20）、[`../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_SUPPORTING_CONVERSATIONS.md`](../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_SUPPORTING_CONVERSATIONS.md) 与两份新 Bootstrap（Code Segment Analyst / C++ Quick Knowledge）。四者内容均**未被**写为 Current Fact。（其中 Checkpoint 与增量 Packet 已于同日 ingest 并归档，见上一条；链接已更新为稳定位置。）
 - 未改变：Project Stage、Milestone、Learning State、Knowledge Asset Index、用户工程能力判断、Guided Dart P0.5、Future P2、既有 Role Anchor 版本与任何角色职责。
 
 ## 2026-09-19 — Persistent Authority v1.2 Landed; First Runtime Pilot Evidence Ingested

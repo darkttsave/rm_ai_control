@@ -15,7 +15,8 @@
 | System | Authority Index — Authority discovery / resolution | [`AUTHORITY_INDEX.md`](AUTHORITY_INDEX.md) | Current | 2026-09-19 | rm-ai-control Maintainer / Memory Curator | Thin index of currently used Authorities only; an unresolved Authority ID must be reported, never guessed from a filename |
 | Control | Project Control Index | [`PROJECT_CONTROL_INDEX.md`](PROJECT_CONTROL_INDEX.md) | Current | 2026-09-19 | Memory Curator; Manager is navigation consumer | Apply only authority-backed state deltas |
 | Role / Auto-Aim | Persistent Role Anchor — `auto-aim-code-framework-analyst` | [`role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md`](role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md) | Current — Canonical Version `1.1` | 2026-09-19 | rm-ai-control Maintainer / anchored role | Runtime Delivery Copy `1.1` re-read and verified (`PASS`); the old `1.0` Runtime Copy is `stale` and must not be used as current Authority |
-| Project / Auto-Aim | P1 Current Stage + `M1`（Current Primary Project） | [`../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md`](../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md)（`Stage Model: rm-ai-control Active`；稳定项目状态位置尚未建立） | Current | 2026-09-17 consume | Human（阶段语义）；Memory Curator maintains pointer | `M1` evidence 全缺；stable Auto-Aim project state location pending Repo Operator |
+| Project / Auto-Aim | P1 Current Stage + `M1`（Current Primary Project） | [`../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md`](../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md)（阶段语义，Human Confirmed；稳定项目状态位置尚未建立） | Current | 2026-09-17 consume | Human（阶段语义）；Memory Curator maintains pointer | `M1` 仅部分有证据（见下）；stable Auto-Aim project state location pending Repo Operator |
+| Project / Auto-Aim | Upstream repository identity + verified revision | [`../archive/returns/AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md`](../archive/returns/AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md)（`Role Report`，只读调查） | Current | 2026-09-20 verified；2026-09-21 ingest | Code Framework Analyst（Role Report）；Memory Curator maintains pointer | branch / 许可证 / 获取方式未登记；`M1` 的 environment / build / launch / runtime evidence 仍无证据；八项源码疑点待实车验证 |
 | Project / Guided Dart | P0.5 Current Checkpoint — secondary / historical line | [`../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`](../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md) | Current | Source date not stated; relocated 2026-09-16; priority position updated 2026-09-17 | Guided Dart project roles / Human | Next-season rules, ownership boundaries and real system capability remain unknown |
 | Knowledge | Learning State — C++ / OpenCV / ROS2 | [`knowledge/LEARNING_STATE.md`](knowledge/LEARNING_STATE.md) | Current | 2026-09-16 | User; Memory Curator maintains pointer | Deep Learning / PnP / EKF / PID / Control remain Not Registered |
 | Knowledge | Knowledge Asset Index — 21 registered assets | [`knowledge/KNOWLEDGE_ASSET_INDEX.md`](knowledge/KNOWLEDGE_ASSET_INDEX.md) | Current | 2026-09-16 | User / Knowledge roles; Memory Curator maintains pointer | Incremental updates only when asset lifecycle changes |
@@ -25,9 +26,7 @@
 
 ### Inbox
 
-以下入站 Artifact 已被接收并登记为 `Pending`，**尚未 ingest**；其内容不得在 ingest 前被当作 Current Fact：
-
-- [`../inbox/Auto-Aim Code Framework Analyst — Checkpoint.md`](<../inbox/Auto-Aim Code Framework Analyst — Checkpoint.md>) —— Role Report / Checkpoint（Producer: Auto-Aim Code Framework Analyst，2026-09-20，Role Anchor `1.1`，`Authority Recovery: SUCCESS`）。等待 Memory Curator ingest；其在 `Must Remain Unchanged` 中声明不改变 Project Stage / Milestone / Learning State / Persistent Authority Capability Status。
+No Pending inbound Artifact is registered.
 
 ### Outbox — Pending Consumption
 
@@ -37,11 +36,10 @@
 
 | Artifact | Intended Consumer / Purpose | Pending Update |
 |---|---|---|
-| [`../outbox/CURATOR_UPDATE_PACKET_AUTO_AIM_SUPPORTING_CONVERSATIONS.md`](../outbox/CURATOR_UPDATE_PACKET_AUTO_AIM_SUPPORTING_CONVERSATIONS.md) | Memory Curator —— Auto-Aim P1 Supporting Conversations 增量登记（Manager，2026-09-21） | Await Curator ingest；本轮**未 ingest**（仅登记 Pending），PROJECT_CONTROL_INDEX §2 / §5 尚未据此更新 |
 | [`../outbox/BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md`](../outbox/BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md) | Auto-Aim Code Segment Analyst 对话（`Repo-capable Role` 目标面；Supporting Conversation，无 Role Anchor） | Await explicit consumption evidence — 会话尚未建立；实际仓库读取能力未验证 |
 | [`../outbox/BOOTSTRAP_CPP_QUICK_KNOWLEDGE_CONVERSATION.md`](../outbox/BOOTSTRAP_CPP_QUICK_KNOWLEDGE_CONVERSATION.md) | C++ Quick Knowledge Conversation（`Plain Conversation`；Supporting Conversation，无 Role Anchor） | Await explicit consumption evidence — 会话尚未建立 |
 | [`../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md) | Auto-Aim Main Supervisor 对话（`Plain Conversation`） | Await explicit consumption evidence — 会话尚未建立；角色存在不等于已产生进度判断 |
-| [`../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md`](../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md) | Auto-Aim Code Framework Analyst（`Repo-capable Role` 目标面） | Await explicit consumption evidence —— Bootstrap Packet 本身仍未被消费；角色已在 ChatGPT Project Runtime 运行并以 Role Anchor `1.1` 通过 Authority 验证，但**运行不等于本 Packet 已消费** |
+| [`../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md`](../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md) | Auto-Aim Code Framework Analyst（`Repo-capable Role` 目标面） | Await explicit consumption evidence —— Bootstrap Packet 本身仍未被消费；角色已在 ChatGPT Project Runtime 运行、以 Role Anchor `1.1` 通过 Authority 验证并产出正式 Checkpoint，但**运行与 Return 不等于本 Packet 已消费** |
 | [`../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md) | Auto-Aim Environment Configuration Instructor（`Executor with repo write` 目标面，限环境范围） | Await explicit consumption evidence — 会话尚未建立；含 upstream baseline 硬规则 |
 | [`../outbox/REPOSITORY_CHANGE_REQUEST_AUTO_AIM_PROJECT_STATE.md`](../outbox/REPOSITORY_CHANGE_REQUEST_AUTO_AIM_PROJECT_STATE.md) | Repo Operator —— Auto-Aim 稳定项目状态位置（结构变化） | Await Repo Operator 裁决与落盘；非语义冲突，不阻塞现有导航 |
 | [`../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_COORDINATE_FRAMES.md`](../outbox/BOOTSTRAP_GUIDED_DART_KNOWLEDGE_COORDINATE_FRAMES.md) | Guided Dart Knowledge Conversation | Await explicit consumption evidence |

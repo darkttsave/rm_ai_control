@@ -5,7 +5,7 @@ Artifact Type: Curator Update Packet
 Scope: Project / Auto-Aim (P1) + Role (Supporting Conversations)
 Producer: Manager (rm-ai-control_v1.2 Navigator)
 Created: 2026-09-21
-Lifecycle: Pending
+Lifecycle: Archived
 Semantic Authority: Supervisor Confirmed (增量申请来源) + Mechanical (角色登记与 Artifact 指针)
 Authoritative Source:
   - 用户转达的 Auto-Aim Main Supervisor 2026-09-21 Supporting Conversation 增量申请
@@ -13,9 +13,11 @@ Authoritative Source:
   - outbox/BOOTSTRAP_CPP_QUICK_KNOWLEDGE_CONVERSATION.md
   - control/AUTHORITY_INDEX.md
 Supersedes: None
-Next Consumer: Memory Curator
+Next Consumer: None
 Expected Persistence: Auto
 ```
+
+> **Archive Record**（由 Memory Curator 添加的生命周期 metadata，非正文语义）：本 Packet 已由 Memory Curator 从 `outbox/` `Pending Consumption` 消费并归档到 `archive/dispatches/`，Lifecycle 为 `Consumed → Archived`。其请求的登记已落盘：[`../../control/PROJECT_CONTROL_INDEX.md`](../../control/PROJECT_CONTROL_INDEX.md) §2 新增两个 Supporting Conversation、§5 新增待验证项；[`../../control/MEMORY_INDEX.md`](../../control/MEMORY_INDEX.md) 保留两份 Bootstrap 的 `Pending Consumption` 登记。结果记录于 [`../../control/MEMORY_CHANGELOG.md`](../../control/MEMORY_CHANGELOG.md) 的 2026-09-21 条目。其"不新增 Role Anchor / 不新增 Authority 条目"的判断经 Curator 复核确认后执行 —— [`../../control/AUTHORITY_INDEX.md`](../../control/AUTHORITY_INDEX.md) 未改动。正文内容未改动。
 
 ## What Happened
 
@@ -32,8 +34,8 @@ Auto-Aim Main Supervisor 提交 **P1 阶段 Supporting Conversation 增量申请
 
 | 角色 | 类别 | Target Execution Surface | 管理模式 | Bootstrap | 状态 |
 |---|---|---|---|---|---|
-| **Auto-Aim Code Segment Analyst**（代码段分析者） | Supporting Conversation；**只读**源码调查 | `Repo-capable Role`（建议 Cloud Work / Repo-capable，**用途仅限源码证据获取**） | `Conversation` | [`../outbox/BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md`](../outbox/BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md) | `Produced` / `Pending Consumption` |
-| **C++ Quick Knowledge Conversation** | Supporting Conversation；Knowledge Conversation 类别 | `Plain Conversation` | `Conversation` | [`../outbox/BOOTSTRAP_CPP_QUICK_KNOWLEDGE_CONVERSATION.md`](../outbox/BOOTSTRAP_CPP_QUICK_KNOWLEDGE_CONVERSATION.md) | `Produced` / `Pending Consumption` |
+| **Auto-Aim Code Segment Analyst**（代码段分析者） | Supporting Conversation；**只读**源码调查 | `Repo-capable Role`（建议 Cloud Work / Repo-capable，**用途仅限源码证据获取**） | `Conversation` | [`../../outbox/BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md`](../../outbox/BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md) | `Produced` / `Pending Consumption` |
+| **C++ Quick Knowledge Conversation** | Supporting Conversation；Knowledge Conversation 类别 | `Plain Conversation` | `Conversation` | [`../../outbox/BOOTSTRAP_CPP_QUICK_KNOWLEDGE_CONVERSATION.md`](../../outbox/BOOTSTRAP_CPP_QUICK_KNOWLEDGE_CONVERSATION.md) | `Produced` / `Pending Consumption` |
 
 ### 3. Persistent Role Authority 判断（Manager 判定，未自行创建 Anchor）
 
@@ -89,11 +91,11 @@ Auto-Aim Main Supervisor 提交 **P1 阶段 Supporting Conversation 增量申请
 
 ## Artifact Lifecycle Events
 
-- Artifact: [`../outbox/BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md`](../outbox/BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md)
+- Artifact: [`../../outbox/BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md`](../../outbox/BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md)
 - Event: `Produced`
 - Evidence: Main Supervisor 2026-09-21 增量申请；`Pending Consumption`
 
-- Artifact: [`../outbox/BOOTSTRAP_CPP_QUICK_KNOWLEDGE_CONVERSATION.md`](../outbox/BOOTSTRAP_CPP_QUICK_KNOWLEDGE_CONVERSATION.md)
+- Artifact: [`../../outbox/BOOTSTRAP_CPP_QUICK_KNOWLEDGE_CONVERSATION.md`](../../outbox/BOOTSTRAP_CPP_QUICK_KNOWLEDGE_CONVERSATION.md)
 - Event: `Produced`
 - Evidence: 同上；`Pending Consumption`
 

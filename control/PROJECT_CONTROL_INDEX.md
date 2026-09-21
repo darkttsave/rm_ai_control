@@ -25,11 +25,13 @@
 - Current Milestone / Focus: `M1 — Auto-Aim Baseline Reproduced` —— repository identity / branch / revision 明确；environment baseline 明确；build 与 run / launch 路径可重复；initial system map 与 major modules / data flow 初图已建立；configuration / parameter entrypoints 已找到；至少一条实际 runtime evidence；unresolved unknowns 有记录
 - Milestone / Focus Source: [`../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md)（`Pending Consumption`；Goal 与 `P1 Exit` 定义）
 - Development Mode: Brownfield / Open-source Adoption；Independent Development: `Not Yet`
+- Upstream Repository: `TongjiSuperPower/sp_vision_25` —— Verified Revision `bd9f5e798fa3c6dd3b483ae6627796afb41c608d`（只读调查）
+- Upstream Repository Source: [`../archive/returns/AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md`](../archive/returns/AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md)（`Role Report`，2026-09-20 ingest）
 - Near-term Objective: 能够独立调试并诊断步兵、哨兵自瞄（`Reproduce → Operate → Tune → Diagnose`）
 - Main Supervisor: Auto-Aim Main Supervisor（Bootstrap `Produced`；会话尚未建立）
-- Latest Project State: [`../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md`](../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md)
-- Last Updated: 2026-09-17 consume
-- Freshness: Current —— 阶段语义由 Human 确认；`M1` 各项尚无证据
+- Latest Project State: [`../archive/returns/AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md`](../archive/returns/AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md)（Code Framework Analyst role continuity，`Role Report`）+ [`../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md`](../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md)（阶段语义，`Human Confirmed`）
+- Last Updated: 2026-09-21 ingest（Code Framework Analyst Checkpoint，2026-09-20）
+- Freshness: Current —— 阶段语义由 Human 确认；仓库身份 / revision 已由 Role Report 核验；`M1` 仅部分有证据（见下）
 - Next Major Condition: `M1` 证据成立并接近 `P1 Exit`（8 项方向性条件）；**是否进入 P2 由 Human 确认**
 - Future Stage: `P2 — Independent Direction Development`（独立负责并开发一个方向）；User Future Specialization: Dart-body / Guided Dart
 
@@ -40,15 +42,20 @@
 - 原表述 `P2 — Open-source assimilation / operation / tuning / diagnosis` 已被 Human supersede，**不得再用于任何 Current / navigation 状态**。
 - 阶段模型消歧：当前阶段标注 `Stage Model: rm-ai-control Active`；Frozen 协议旧阶段语义（`P2 Project Inception` 等）继续作为历史基线存在，引用时必须标注 `Stage Model: Protocol v2.3 Frozen`。
 - Auto-Aim 为 Current Primary Project；Guided Dart P0.5 转为 secondary / historical preparatory exploration。
+- 仓库身份已核验（`Role Report`，2026-09-20）：上游为 `TongjiSuperPower/sp_vision_25`，本次只读调查的 revision 为 `bd9f5e798fa3c6dd3b483ae6627796afb41c608d`，调查模式为只读，**未运行、未修改**。
+- 上游系统结构（`Role Report`）：`Target` 之后存在两条后端 —— `Aimer`（输出 yaw/pitch，由下位机完成主要闭环）与 `MPC Planner`（生成参考轨迹并输出 yaw/pitch 及速度、加速度，由下位机跟随）；二者共用 `Detector`、`Solver`、`Tracker`、`Target`，**不是两套独立自瞄**。
+- `M1` 各项证据状态（按 `M1` 定义逐项对照，未由角色或 Curator 宣布完成）：repository identity / revision **已有证据**；initial system map 与 major modules / data flow **部分已有证据**；unresolved unknowns **已记录**；environment baseline、可复现 build 与 run/launch 路径、configuration / parameter entrypoints、实际 runtime evidence **尚无证据**。
+- Code Framework Analyst 已完成八个典型调参问题实例的源码级讲解（`Role Report`），并已进入"模块级对比"准备状态；该记录**不是**用户掌握程度判断，也**不是**调车或实车验证结果。
 
 ### Current Blockers / Unknowns
 
-- 同济 2025 自瞄仓库身份未登记：地址 / 分支 / revision / 许可证 / 获取方式。
+- 同济 2025 自瞄仓库的 **branch / 许可证 / 获取方式仍未登记**（仅仓库名与 revision 已核验）。
 - 目标机器事实全缺：OS / ROS / compiler / 算力 / 相机 / SDK / 网络。
-- `M1` 各项均无证据；步兵 / 哨兵优先级未定；实车条件未登记。
-- 两个工作角色的实际环境能力未验证（`Repo-capable Role`、`Executor with repo write` 目前只是 Target Execution Surface 声明）。
+- `M1` 的 environment baseline、可复现 build / launch、config entrypoints 与实际 runtime evidence 仍无证据；步兵 / 哨兵优先级未定；实车条件未登记。
+- 工作角色的实际环境能力未验证（`Repo-capable Role`、`Executor with repo write` 目前只是 Target Execution Surface 声明）。
 - Code Framework Analyst 的 Skill / Methodology 资产未提供（其 First Action 前置）。
 - Main Supervisor 是否为当前唯一 Supervisor、是否需要上级结构，未确认。
+- 用户车辆最终采用 `Aimer` 还是 `MPC Planner` 尚未由真实部署入口确认；电控端是否完整使用 Planner 输出的角速度 / 角加速度未验证。
 
 ---
 
@@ -85,7 +92,9 @@
 | Conversation / Role | Purpose | Status | Latest Authoritative Artifact | Last Updated | Freshness / Note |
 |---|---|---|---|---|---|
 | Auto-Aim Main Supervisor（自瞄项目总监督） | Auto-Aim 项目日常监督：消费各角色 Return 与实车验证证据，判断进度 / 阻塞 / 下一项最高价值任务 / 路由，维护 `M1 → P1 Exit` 推进判断 | Not yet created — Bootstrap `Produced`，`Pending Consumption`；`Plain Conversation` | [`../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md) | 2026-09-17 Bootstrap | 沿用协议既有 Main Supervisor 角色类别的**工作角色**，不是新 Capability；重大阶段变化只提案、由 Human 确认；不进入 `rm-ai-control` 持久化；会话建立前不得视为已产生任何进度判断 |
-| Auto-Aim Code Framework Analyst（代码框架分析者） | 长期工程理解：工程结构、模块 / 数据流、配置与参数入口、"为什么这样写" | Active — ChatGPT Project Runtime Pilot `PASS`（2026-09-19）；Bootstrap Packet 本身仍为 `Pending Consumption` | Persistent Role Anchor [`role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md`](role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md)（Canonical Version `1.1`） | 2026-09-19 Runtime Pilot | Target Execution Surface `Repo-capable Role`（目标面）；Runtime Delivery Copy `1.1` 已实际重读并验证，旧 `1.0` Runtime Copy 为 `stale`；未产生任何 Auto-Aim 项目进度或 M1 证据 |
+| Auto-Aim Code Framework Analyst（代码框架分析者） | 长期工程理解：工程结构、模块 / 数据流、配置与参数入口、"为什么这样写" | Active — ChatGPT Project Runtime Pilot `PASS`（2026-09-19）；已产出首个正式 Checkpoint（2026-09-20）；Bootstrap Packet 本身仍为 `Pending Consumption` | Persistent Role Anchor [`role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md`](role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md)（Canonical Version `1.1`）；Checkpoint [`../archive/returns/AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md`](../archive/returns/AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md) | 2026-09-20 Checkpoint ingest | Target Execution Surface `Repo-capable Role`（目标面）；Runtime Delivery Copy `1.1` 已验证，旧 `1.0` Runtime Copy 为 `stale`；role-local 状态：八个调参实例讲解完成、下一步进入六模块级对比（Detector → Solver → Tracker/Target/EKF → Aimer/Planner → Shooter → IO/时间戳/多线程）；Role-local Decisions：以实例讲解为主、不再自动产出调参手册（用户自行保存笔记）、参数只能在问题首次出现的层级调整；**未产生 M1 的 build / runtime 证据** |
+| Auto-Aim Code Segment Analyst（代码段分析者） | Supporting Conversation：局部源码实现问题（某检测框在哪里生成、数据如何跨文件流动、callback / queue / thread 局部调用关系、数学表达如何落到真实 C++） | Not yet created — Bootstrap `Produced`，`Pending Consumption`；`Repo-capable Role`（目标面，用途仅限源码证据获取） | [`../outbox/BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md`](../outbox/BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md) | 2026-09-21 Bootstrap | Supporting Conversation，**无 Role Anchor**（Manager 判定，Curator 复核确认）；实际仓库读取能力未验证；升级触发条件已记录（反复大量读文件 / 搜索噪声 / 文本搜索不足 / 丢失跨文件调用关系） |
+| C++ Quick Knowledge Conversation | Supporting Conversation / Knowledge Conversation：C++ 即时知识补缺（STL / ranges、lambda、智能指针、RAII、move semantics、template、`optional` / `variant`、Eigen 表达、并发） | Not yet created — Bootstrap `Produced`，`Pending Consumption`；`Plain Conversation` | [`../outbox/BOOTSTRAP_CPP_QUICK_KNOWLEDGE_CONVERSATION.md`](../outbox/BOOTSTRAP_CPP_QUICK_KNOWLEDGE_CONVERSATION.md) | 2026-09-21 Bootstrap | Supporting Conversation，**无 Role Anchor**；`playbook:knowledge-learning-notes` 已内联为最小规则；机制清单与期望深度未知；是否形成正式笔记及落点未定；**不得据此更新 Learning State** |
 | Auto-Aim Environment Configuration Instructor（项目环境配置讲师） | 环境复现：安装 / 构建 / 启动路径与踩坑记录，形成可复现命令；区分 upstream baseline 与本机适配 | Not yet created — Bootstrap `Produced`，`Pending Consumption`；Target Execution Surface `Executor with repo write`（限环境范围，目标面） | [`../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md) | 2026-09-17 Bootstrap（含 upstream baseline 硬规则） | 目标机器事实全缺；实际执行能力未验证 |
 | Guided Dart P0.5 exploration | Same-stage cross-solution foundational learning and note preparation（现为 secondary / historical line） | Unknown | [`../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`](../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md) | 2026-09-14 ingest | Semantic stage is sourced; conversation activity is not registered |
 | Guided Dart Knowledge — PID / Control 接口基础 | Dedicated knowledge conversation for the P0.5 `Control` interface layer, driven by the user's existing PID notes and questions | Not yet created — the earlier 2026-09-15 `Active` entry was a test registration; awaiting the user's first real conversation | None yet — no authoritative artifact; Manager Bootstrap Packet only | 2026-09-15 re-bootstrap | Manager-generated packet remains Pending Consumption and is navigated through [`MEMORY_INDEX.md`](MEMORY_INDEX.md), not used as semantic authority; user-side PID notes and video material are user-reported and not registered; the conversation that carried the earlier 电控 learning entry was archived by the user and is currently unlocatable (user-reported 2026-09-15) |
@@ -128,6 +137,9 @@ The migration and user-action entries above come from the Initial Manager Baseli
 | Auto-Aim target machine facts | OS / ROS / compiler / 算力 / 相机 / SDK / 网络 | 环境基线与可行性判断的前置；缺此无法确认 `Executor with repo write` 的实际作用域 | 同上 | 2026-09-17 |
 | Auto-Aim role environment capability confirmation | 用户首次启动各角色时确认实际读 / 写 / Git 能力 | Bootstrap 声明的是 Target Execution Surface（目标面），不是已验证事实 | [`../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md) 等三份 Auto-Aim Bootstrap | 2026-09-17 |
 | Auto-Aim 步兵 / 哨兵 priority and real-vehicle conditions | Human 决策与实车条件登记 | 决定 `P1` 内部推进顺序 | [`../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md) | 2026-09-17 |
+| Auto-Aim 上游源码风险项的实车验证 | 真实编译目标与实车实验裁定以下 8 项源码级疑点的影响：`Shooter` 创建但未写入最终 `command.shoot`；`minimum_vision_system` 忽略 `Shooter` 返回值；NIS 阈值 `0.711` 与注释"四自由度 95%"不一致；平衡步兵装甲板关联固定访问前三个候选的越界风险；`standard.cpp` 未经 `Decider` 设置优先级；普通 `Aimer` 用有符号角速度而 `MPC Planner` 用绝对值（高低速延迟方向不对称）；`MPC Planner` 未以实际云台角度 / 角速度作为优化初始状态；主相机发现更高优先级目标后立即切换、缺少独立切换确认与保持机制 | 这些是**调查入口，不是已确认缺陷**；未验证前不得作为最终修改结论 | [`../archive/returns/AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md`](../archive/returns/AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md) | 2026-09-20 Role Report |
+| Auto-Aim 部署入口确认 | 用户车辆最终采用 `Aimer` 还是 `MPC Planner`；电控端是否完整使用 Planner 输出的角速度 / 角加速度 | 决定后续调参与诊断集中于哪条后端 | 同上 | 2026-09-20 Role Report |
+| Auto-Aim Code Segment Analyst 实际读取能力验证 | 用户首次启动时确认 search / 查引用 / 读 Git history 的实际能力；`contract:universal-return` 与 `template:curator-update-packet` 的 Runtime 副本是否可读 | 未验证时正式 Return 只能产出标注"未经过正式 Authority 校验"的 Draft | [`../outbox/BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md`](../outbox/BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md) | 2026-09-21 Bootstrap |
 | Guided Dart project-entry facts | Next-season rules, team inheritance, ownership boundaries, and actual system capability | These facts can change whether and how work proceeds beyond P0.5 | [`../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`](../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md) | 2026-09-14 ingest |
 | v2.3 real-project validation | Concrete friction from real RM / Guided Dart use | Maintainer Checkpoint explicitly leaves long-term real-project validation incomplete | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/archive/Protocol_Maintainer_Checkpoint_v2.3.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/archive/Protocol_Maintainer_Checkpoint_v2.3.md) | 2026-09-14 ingest |
 
@@ -139,7 +151,7 @@ The migration and user-action entries above come from the Initial Manager Baseli
 |---|---|---|---|
 | `rm-ai-control Architect` vs `rm-ai-control Maintainer` | 两个角色名的身份关系未确认（改名 / 并存 / 同一角色的不同称呼）；不明确则无法确定阶段语义与项目层方法裁决应记在哪个角色名下 | Human / `rm-ai-control Architect` | `Pending Review` —— 已注册，**未调和**；Manager 与 Curator 均不得自行合并两者 |
 | `P2 — Open-source assimilation / operation / tuning / diagnosis` | 该阶段表述已被 Human 于 2026-09-17 supersede；任何 Current / navigation 状态都不得再使用 | Human Confirmed（2026-09-17 阶段裁决） | Resolved —— 记录为 `Superseded`；原 Packet 已归档并标注 Superseded |
-| Auto-Aim 稳定项目状态位置 | Current Primary Project 尚无 `projects/` 稳定项目状态位置；当前阶段来源为 `archive/dispatches/` 中的已 ingest 证据（属历史证据区，非项目状态层） | Repo Operator（结构裁决） | Repository Change Request 已提交：[`../outbox/REPOSITORY_CHANGE_REQUEST_AUTO_AIM_PROJECT_STATE.md`](../outbox/REPOSITORY_CHANGE_REQUEST_AUTO_AIM_PROJECT_STATE.md) |
+| Auto-Aim 稳定项目状态位置 | Current Primary Project 尚无 `projects/` 稳定项目状态位置；项目状态已分布于 `PROJECT_CONTROL_INDEX` §1、`archive/dispatches/`（阶段语义）与 `archive/returns/`（Role Report 证据）。Checkpoint ingest 后该缺口更实质。 | Repo Operator（结构裁决） | Repository Change Request 已提交：[`../outbox/REPOSITORY_CHANGE_REQUEST_AUTO_AIM_PROJECT_STATE.md`](../outbox/REPOSITORY_CHANGE_REQUEST_AUTO_AIM_PROJECT_STATE.md) |
 
 Manager / Memory Curator 不自行解决语义冲突，只标记并请求 / 读取权威来源。
 
@@ -147,6 +159,9 @@ Manager / Memory Curator 不自行解决语义冲突，只标记并请求 / 读�
 
 # 7. Recent Significant Updates
 
+- 2026-09-21: Ingest Code Framework Analyst Checkpoint（2026-09-20，`Role Report`）：核验上游仓库 `TongjiSuperPower/sp_vision_25` @ `bd9f5e798fa3c6dd3b483ae6627796afb41c608d`、澄清 `Aimer` 与 `MPC Planner` 为共享感知前端的两种后端、记录八个调参实例与八项待实车验证的源码疑点；`M1` 逐项证据状态已如实登记（**未宣布 `M1` 完成**）。
+- 2026-09-21: Consume 并归档 Auto-Aim Supporting Conversations 增量 Packet；登记两个 Supporting Conversation（Code Segment Analyst / C++ Quick Knowledge），两者**均无 Role Anchor**、复用既有 Capability、未新增 Authority 条目。
+- 2026-09-21: `Persistent Authority / Long-lived Role Continuity` 由 Human Confirmed 升级为 `Active`（见 [`SYSTEM_CAPABILITY_INDEX.md`](SYSTEM_CAPABILITY_INDEX.md) § Status Change Record）。
 - 2026-09-19: `rm-ai-control_v1.2` 落地（`Persistent Authority + Long-lived Role Continuity`）：Canonical Authority / Runtime Delivery Copy 区分、Authority Recovery Gate、Artifact Promotion Gate、Role Anchor 与 Bootstrap / Checkpoint 集成；Core Protocol 基线不变。
 - 2026-09-19: 首个 Canonical Role Anchor `auto-aim-code-framework-analyst` 建立（`1.0`），Authority Dependency Discovery Gap 修复后升至 `1.1`；[`AUTHORITY_INDEX.md`](AUTHORITY_INDEX.md) 建立，旧 `1.0` Runtime Copy 记为 `stale`。
 - 2026-09-19: Auto-Aim Code Framework Analyst 在 ChatGPT Project Runtime 完成首次 Persistent Authority Pilot：Authority Recovery `PASS`、Artifact Promotion Gate `PASS`、Authority 不可读时正式 Packet 被正确暂停、Role Anchor Version Recovery `1.1` `PASS`。**未产生任何 Auto-Aim 项目进度或 `M1` 证据**；其 Bootstrap Packet 仍为 `Pending Consumption`。

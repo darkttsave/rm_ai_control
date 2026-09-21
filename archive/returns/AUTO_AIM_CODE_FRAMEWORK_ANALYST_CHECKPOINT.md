@@ -1,3 +1,23 @@
+```yaml
+Artifact Type: Role Checkpoint + Curator Update Packet (Plain Conversation Return)
+Scope: Project / Auto-Aim (P1) / Role continuity
+Producer: Auto-Aim Code Framework Analyst
+Created: 2026-09-20
+Lifecycle: Archived
+Semantic Authority: Role Report
+Authoritative Source: archive/returns/AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md（本文件即原始证据本体；Runtime Surface: ChatGPT Project；Role Anchor `auto-aim-code-framework-analyst` v1.1）
+Supersedes: None
+Next Consumer: None
+```
+
+> **Archive Record**（由 Memory Curator 添加的生命周期 metadata，非正文语义）：本 Checkpoint 由 Memory Curator 于 2026-09-21 从 `inbox/` ingest 并归档到 `archive/returns/`，Lifecycle 为 `Pending → Archived`。**原始文件名**：`Auto-Aim Code Framework Analyst — Checkpoint.md`（用户放入 `inbox/`，此前未被 Git 跟踪）；归档副本正文未改动，文件名已规范化为稳定名。
+>
+> **已持久化**：其可核验事实（上游仓库身份与 revision、Role Anchor 版本与 Authority Recovery 结果、role-local continuity 与下一步）已登记至 [`../../control/PROJECT_CONTROL_INDEX.md`](../../control/PROJECT_CONTROL_INDEX.md) 与 [`../../control/MEMORY_INDEX.md`](../../control/MEMORY_INDEX.md)；结果记录于 [`../../control/MEMORY_CHANGELOG.md`](../../control/MEMORY_CHANGELOG.md) 的 2026-09-21 条目。
+>
+> **未持久化为 Current Fact**：八个调参实例的讲解覆盖、用户讲解偏好与 role-local Decisions 属 **Role Report**；其记录不构成 Project Stage / Milestone 变更，也**不构成对用户掌握程度的判断**。八项 `Source-Level Concerns` 是**待实车验证的调查入口**，未被登记为已确认缺陷。
+>
+> **时序说明**：本 Checkpoint 的 `Must Remain Unchanged` 写有 "Persistent Authority / Long-lived Role Continuity：Experimental"（2026-09-20 时点）。该 Capability 已于 **2026-09-21** 由 Human Confirmed 升级为 `Active`；两者不冲突 —— 前者是当日状态陈述，后者是其后的人类决定，且本 Checkpoint 的 Producer 遵守了"不自行升级"的约束。
+
 Auto-Aim Code Framework Analyst — Checkpoint
 Role Anchor ID: auto-aim-code-framework-analyst
 Role Anchor Version: 1.1
