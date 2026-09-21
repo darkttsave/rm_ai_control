@@ -2,6 +2,16 @@
 
 > 只记录管理意义上的持久状态变化，不替代 Git log，也不记录 Markdown 排版或普通机械链接修复。
 
+## 2026-09-21 — Persistent Authority Capability Promoted to Active (Human Confirmed)
+
+- `Persistent Authority / Long-lived Role Continuity`：`Experimental` → `Active`，由 **Human Confirmed** 直接决定（2026-09-21）。原 v1.2 登记条件"需持续真实使用验证"已由 Role Anchor `auto-aim-code-framework-analyst` `1.1` 的两次真实 Runtime 事件满足（2026-09-19 Pilot `PASS`；2026-09-20 持续使用中 Authority Recovery `SUCCESS`，`Runtime Authority Gap: None`）。
+- 落盘范围仅限 [`SYSTEM_CAPABILITY_INDEX.md`](SYSTEM_CAPABILITY_INDEX.md) 该 Capability 行的 `Status` 字段，并在该文件新增 `## Status Change Record` 记录决定来源、证据、边界与验证范围。**未改动** Capability 名称、Purpose、When to Use、Entry / Source、Owner，也未改动 Core Protocol、方法论或角色权限。
+- **边界说明**：Capability 定义与状态变化通常由 rm-ai-control Maintainer 裁决、Repo Operator 确定性落盘。本次因 Human 直接指令，由 Memory Curator 执行状态字段落盘并留痕；记录为**一次性授权**，不构成 Curator 可自行变更 Capability 的先例。
+- 验证范围如实记录：截至 2026-09-21 仅覆盖 **1 个 anchored role / 1 个 Runtime Surface（ChatGPT Project）**；多角色、多 Runtime Surface 尚未验证。
+- `Persistent Memory / Artifact Curation` **保持 `Experimental`**（本轮未获授权变更）。
+- 登记本轮新到达的 3 份 Pending Artifact（**仅登记，未 ingest**）：[`../inbox/Auto-Aim Code Framework Analyst — Checkpoint.md`](<../inbox/Auto-Aim Code Framework Analyst — Checkpoint.md>)（Role Report / Checkpoint，2026-09-20）、[`../outbox/CURATOR_UPDATE_PACKET_AUTO_AIM_SUPPORTING_CONVERSATIONS.md`](../outbox/CURATOR_UPDATE_PACKET_AUTO_AIM_SUPPORTING_CONVERSATIONS.md) 与两份新 Bootstrap（Code Segment Analyst / C++ Quick Knowledge）。四者内容均**未被**写为 Current Fact。
+- 未改变：Project Stage、Milestone、Learning State、Knowledge Asset Index、用户工程能力判断、Guided Dart P0.5、Future P2、既有 Role Anchor 版本与任何角色职责。
+
 ## 2026-09-19 — Persistent Authority v1.2 Landed; First Runtime Pilot Evidence Ingested
 
 - `rm-ai-control_v1.2`（主题 `Persistent Authority + Long-lived Role Continuity`）落地：Canonical Authority / Runtime Delivery Copy 区分、Authority Recovery Gate、Artifact Promotion Gate，以及 Role Anchor 与 Bootstrap / Checkpoint 的集成。Core Protocol 基线仍为 `v2.3 Frozen`。

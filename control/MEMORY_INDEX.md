@@ -10,7 +10,7 @@
 |---|---|---|---|---|---|---|
 | System | Core Protocol / Stable Baseline | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/) | Current | 2026-09-14 | rm-ai-control Maintainer | Real RM long-term validation remains incomplete |
 | System | Project version / Release record — `rm-ai-control_v1.2` | [`../releases/rm-ai-control_v1.2/RELEASE_NOTES.md`](../releases/rm-ai-control_v1.2/RELEASE_NOTES.md) | Current | 2026-09-19 | rm-ai-control Maintainer | Core Protocol baseline remains `v2.3 Frozen`; v1.2 is a project-layer release |
-| System | System Capability Index | [`SYSTEM_CAPABILITY_INDEX.md`](SYSTEM_CAPABILITY_INDEX.md) | Current | 2026-09-19 | rm-ai-control Maintainer / Repo Operator | `Persistent Authority / Long-lived Role Continuity` and `Persistent Memory / Artifact Curation` both remain Experimental pending continued real validation |
+| System | System Capability Index | [`SYSTEM_CAPABILITY_INDEX.md`](SYSTEM_CAPABILITY_INDEX.md) | Current | 2026-09-21 | rm-ai-control Maintainer / Repo Operator | `Persistent Authority / Long-lived Role Continuity` now `Active` (Human Confirmed, 2026-09-21); `Persistent Memory / Artifact Curation` remains `Experimental` |
 | System | Artifact Lifecycle | [`ARTIFACT_LIFECYCLE.md`](ARTIFACT_LIFECYCLE.md) | Current | 2026-09-19 | rm-ai-control Maintainer / Memory Curator | None registered |
 | System | Authority Index — Authority discovery / resolution | [`AUTHORITY_INDEX.md`](AUTHORITY_INDEX.md) | Current | 2026-09-19 | rm-ai-control Maintainer / Memory Curator | Thin index of currently used Authorities only; an unresolved Authority ID must be reported, never guessed from a filename |
 | Control | Project Control Index | [`PROJECT_CONTROL_INDEX.md`](PROJECT_CONTROL_INDEX.md) | Current | 2026-09-19 | Memory Curator; Manager is navigation consumer | Apply only authority-backed state deltas |
@@ -25,7 +25,9 @@
 
 ### Inbox
 
-No Pending inbound Artifact is registered.
+以下入站 Artifact 已被接收并登记为 `Pending`，**尚未 ingest**；其内容不得在 ingest 前被当作 Current Fact：
+
+- [`../inbox/Auto-Aim Code Framework Analyst — Checkpoint.md`](<../inbox/Auto-Aim Code Framework Analyst — Checkpoint.md>) —— Role Report / Checkpoint（Producer: Auto-Aim Code Framework Analyst，2026-09-20，Role Anchor `1.1`，`Authority Recovery: SUCCESS`）。等待 Memory Curator ingest；其在 `Must Remain Unchanged` 中声明不改变 Project Stage / Milestone / Learning State / Persistent Authority Capability Status。
 
 ### Outbox — Pending Consumption
 
@@ -35,6 +37,9 @@ No Pending inbound Artifact is registered.
 
 | Artifact | Intended Consumer / Purpose | Pending Update |
 |---|---|---|
+| [`../outbox/CURATOR_UPDATE_PACKET_AUTO_AIM_SUPPORTING_CONVERSATIONS.md`](../outbox/CURATOR_UPDATE_PACKET_AUTO_AIM_SUPPORTING_CONVERSATIONS.md) | Memory Curator —— Auto-Aim P1 Supporting Conversations 增量登记（Manager，2026-09-21） | Await Curator ingest；本轮**未 ingest**（仅登记 Pending），PROJECT_CONTROL_INDEX §2 / §5 尚未据此更新 |
+| [`../outbox/BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md`](../outbox/BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md) | Auto-Aim Code Segment Analyst 对话（`Repo-capable Role` 目标面；Supporting Conversation，无 Role Anchor） | Await explicit consumption evidence — 会话尚未建立；实际仓库读取能力未验证 |
+| [`../outbox/BOOTSTRAP_CPP_QUICK_KNOWLEDGE_CONVERSATION.md`](../outbox/BOOTSTRAP_CPP_QUICK_KNOWLEDGE_CONVERSATION.md) | C++ Quick Knowledge Conversation（`Plain Conversation`；Supporting Conversation，无 Role Anchor） | Await explicit consumption evidence — 会话尚未建立 |
 | [`../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_MAIN_SUPERVISOR.md) | Auto-Aim Main Supervisor 对话（`Plain Conversation`） | Await explicit consumption evidence — 会话尚未建立；角色存在不等于已产生进度判断 |
 | [`../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md`](../outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md) | Auto-Aim Code Framework Analyst（`Repo-capable Role` 目标面） | Await explicit consumption evidence —— Bootstrap Packet 本身仍未被消费；角色已在 ChatGPT Project Runtime 运行并以 Role Anchor `1.1` 通过 Authority 验证，但**运行不等于本 Packet 已消费** |
 | [`../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md) | Auto-Aim Environment Configuration Instructor（`Executor with repo write` 目标面，限环境范围） | Await explicit consumption evidence — 会话尚未建立；含 upstream baseline 硬规则 |
