@@ -44,6 +44,37 @@ Auto-Aim Main Supervisor 提交**新增角色申请**。来源是**已经发生�
 
 **限定三（upstream baseline 纪律）**：由于本角色是**决定改什么**的角色，Bootstrap 中加入最强上游纪律——任何针对同济 upstream **tracked 文件**（`source` / `launch` / `YAML` / `scripts` / `algorithm configuration`）的变更，必须先说明 `为什么必须改 / 改什么 / 影响哪个 baseline / 如何回滚` 并获**用户明确授权**；不得"顺手改"；提案应落在明确 revision / 独立工作分支上。
 
+### 审理后的 Supervisor 决策确认（2026-09-22，由 Human 转达）
+
+Supervisor **认可本次审理结果与三项限定**，并对 Manager 留下的 6 个开口给出决策；这些决策已刷新进 Bootstrap：
+
+| 开口 | Supervisor 决策 | 状态 |
+|---|---|---|
+| 极小写权限 | **暂不授予，保持 `no-write`**；先验证"Coordinator → 用户 / Executor"模式是否真的造成摩擦 | **已关闭** |
+| branch / revision | **固定 verified revision + 每个修改任务独立 `task/<具体任务>` 分支**；不在 baseline / main 上直接实验；是否 commit / push / merge 由用户按具体任务决定 | **已关闭** |
+| 验收证据 | **谁实际执行，谁提供原始 evidence**：用户自己改→用户提供 build / runtime 结果；Executor 改→Executor 返回 diff + build / test / runtime evidence；Coordinator 只审查，不代替声称验证 | **已关闭** |
+| 常驻 Executor | **暂不创建**；第一个真正达到"多文件 / 机械性修改较多"的任务出现时创建**一次性** Work / Executor；**反复出现后**才考虑常驻 | **已关闭** |
+| `template:task-brief` | 属 **Maintainer / Authority Index** 问题，**本角色不处理**；正式登记前继续按 Bootstrap 降级路径执行 | 归属已明确（登记仍未决） |
+| Segment Analyst 状态 | **已有消费证据**，应提交 Memory Curator 修正 `Pending` 状态 | **已解决**（见 `Unknowns` 第 1 条） |
+
+**Anchor 触发条件已收紧**：Coordinator **第一次实际路由真实 tracked-source 修改任务**时，即应重新评估是否建立 Role Anchor（最终由 Human / Maintainer 决定）。
+
+**Supervisor 冻结的项目关系**（不进入任务交付责任链的仅为知识支持支线）：
+
+```text
+Code Framework Analyst      长期模块学习
+Code Segment Analyst        局部源码理解（Read-only）
+        │ 源码事实
+        ↓
+Engineering Task Coordinator  学长工程任务闭环（Read-only / no-write）
+        ├─ 小任务 → 用户修改
+        └─ 大任务 → 一次性 Executor → diff/build/runtime → Coordinator 验收
+
+C++ Quick Knowledge / Control Theory = 知识支持，不进入任务交付责任链
+```
+
+**Supervisor 建议的最小下一步**：启动 Engineering Task Coordinator 对话；暂不创建 Executor、不改变 Segment Analyst；等下一次学长真正下达修改类任务时，第一次完整跑通 `Task → Scope → Authorization → Modification → Evidence → Acceptance`，再据实际摩擦判断是否需要写权限、常驻 Executor 或 Role Anchor。
+
 ### 3. 新增 Supporting Conversation
 
 | 角色 | 类别 | Target Execution Surface | 管理模式 | Bootstrap | 状态 |
@@ -148,13 +179,14 @@ Task Received → Clarify Required Outcome → Inspect Relevant Source
 
 ## Unknowns / Conflicts
 
-1. **状态一致性问题（仅报告，未调和）**：申请 §五 称 Code Segment Analyst "已积累 `YOLO → Armor → Solver/PnP → Tracker/Target → 11D EKF → Aimer 前状态` 的源码理解，并正在从调试输出进入 Aimer 调查"；但 `PROJECT_CONTROL_INDEX` §2 与 `MEMORY_INDEX` 登记的该角色仍为 **`Not yet created — Pending Consumption`**。
-   → Manager **不自行调和**：若该对话确已建立，请提供**消费证据**交 Memory Curator 处理该 Pending Bootstrap；在此之前按 `Pending` 记录。
-2. **`template:task-brief` 未登记于 `AUTHORITY_INDEX`** → unresolved Authority dependency（见 §5），需 Maintainer / Curator 裁决。
-3. **下游 Repo / Work Executor 尚不存在**：中大型任务的落地路径为"按需建立一次性 Work / Executor 会话"。**Manager 未新建该角色**（属提前扩张）；是否需要常驻会话由 Human / Main Supervisor 决定。
-4. **Coordinator 的实际仓库读取能力未验证**；**是否授予极小写权限**未决定（当前默认 no-write）。
-5. **上游变更分支 / revision 策略未定**；**学长任务的验收方式与交付标准未登记**。
-6. 未发现语义冲突；**无 `Pending Review` 项**（第 1 条为状态不一致，需消费证据，不属语义冲突）。
+1. **状态一致性（已解决，由用户直接提交 Curator）**：Supervisor 已确认 Code Segment Analyst **已有消费证据**（其 Checkpoint 记录 `Conversation Role = Auto-Aim Code Segment Analyst`、`Role Type = Supporting Conversation`、`Repository Mode = Read-only investigation`，锁定实际仓库 revision，并已产生真实源码调查结果与后续工作）。
+   → **该消费证据由用户直接提交 Memory Curator**，并请将该 Bootstrap 从 `Pending Consumption` 修正为实际已运行状态。**Manager 不代为处理**，也不再把它列为开放缺口。
+2. **`template:task-brief` 未登记于 `AUTHORITY_INDEX`** → unresolved Authority dependency（见 §5）。**Supervisor 明确：属 Maintainer / Authority Index 问题，Coordinator 不处理**；正式登记前继续使用 Bootstrap 的降级路径。
+3. **下游 Repo / Work Executor 不存在**：Supervisor 决定**暂不创建常驻会话**；第一个真正达到"多文件 / 机械性修改较多"的任务出现时创建**一次性** Work / Executor，**反复出现后**才考虑常驻。
+4. **Coordinator 的实际仓库读取能力未验证**（首次启动时确认）。**写权限已决定：暂不授予，保持 `no-write`。**
+5. **分支 / revision 策略已决定**：固定 **verified revision** + 每任务独立 `task/<具体任务>` 分支；不在 baseline / main 上直接实验；是否 commit / push / merge 由**用户**按具体任务决定。
+6. **Anchor 触发条件已收紧**：Coordinator **第一次实际路由真实 tracked-source 修改任务**时，即应重新评估是否建立 Role Anchor（最终由 Human / Maintainer 决定）。
+7. 未发现语义冲突；**无 `Pending Review` 项**。
 
 ## Expected Persistence
 

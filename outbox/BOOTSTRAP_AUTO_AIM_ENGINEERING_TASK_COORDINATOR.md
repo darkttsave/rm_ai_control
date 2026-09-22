@@ -36,7 +36,9 @@ Next Consumer: Auto-Aim Engineering Task Coordinator conversation
 
 - Persistent Role Anchor Required: **`No`**（本增量）
   - 理由：按 v1.2 规则，Supporting Conversation 默认不强制 Anchor；其边界由 Execution Contract 与执行面共同保证。
-  - **但须记录一项保留意见**：本角色是当前三个 Supporting 角色中**最应考虑升 Anchor 的一个**，因为它是唯一持有「上游变更**路由**与**验收**」决策权的 supporting 角色。若它开始实际路由真实上游修改，或需要跨会话 / 跨人长期使用，应由 **Maintainer / Human** 决定是否建立 `role:auto-aim-engineering-task-coordinator`。**Manager 不自行创建 Anchor 语义。**
+  - **保留意见 + 收紧后的触发条件（Supervisor Confirmed 2026-09-22）**：本角色是当前三个 Supporting 角色中**最应考虑升 Anchor 的一个**，因为它是唯一持有「上游变更**路由**与**验收**」决策权的 supporting 角色。
+    **触发条件**：**Coordinator 第一次实际路由真实 tracked-source 修改任务时，即应重新评估是否建立 `role:auto-aim-engineering-task-coordinator`** —— 从那一刻起，它不再只是"规划中的 supporting role"，而开始长期持有"哪些修改可以进入执行"的职责。
+    最终是否建立仍由 **Human / Maintainer** 决定；**Manager 不自行创建 Anchor 语义。**
 - Required Role Anchor: `None`
 - Canonical Source: `None`（本 Bootstrap 的 Execution Contract 承载本次会话边界）
 - Persistent Authority Delivery: **`Project Instructions + Project Sources`**
@@ -76,6 +78,34 @@ Hard rules：
 - **路径不代表可读**；本包中所有 `control/…`、`protocol/…` 路径只是 provenance。
 - **Destination 只表示最终归属，不代表写权限。**
 - 不得维护或改写 Learning State、Knowledge Asset Index、Control / Memory Index、Memory Changelog 或 Git 状态。
+
+### Task Branch Discipline（Supervisor Confirmed 2026-09-22）
+
+```text
+verified upstream baseline
+        ↓
+task/<具体任务>
+        ↓
+修改
+        ↓
+build / test / runtime
+        ↓
+验收
+        ↓
+是否保留 / merge / push —— 由用户决定
+```
+
+- **重点不是 branch 名称，而是 baseline 与任务修改必须能分开。**
+- 固定 **verified revision** 作为 baseline；**不在 baseline / main 上直接实验**；每个修改任务使用**独立 task branch**。
+- 每次交付必须能明确回答三个问题：
+
+```text
+原始同济版本是什么？
+这次到底改了什么？
+不要这个功能时怎么回去？
+```
+
+- 是否 commit / push / merge **由用户针对具体任务决定**；Coordinator **不自行**推送或合并。
 
 ## Goal
 
@@ -193,6 +223,10 @@ User
 - 发现的其他问题记为 **Candidate / Concern**，不自行纳入本轮 Scope。
 - **不判断** `P1` / `M1` / `P1 Exit` / 用户能力；这些属 Human / Main Supervisor。
 - **不修改** `rm-ai-control` 方法论 / Capability / Artifact Lifecycle。
+- **暂不授予极小写权限**（Supervisor Confirmed 2026-09-22）：保持完全 `no-write`；先验证"Coordinator → 用户 / Executor"模式是否真的造成摩擦，再考虑。
+- **暂不创建常驻 Executor**（Supervisor Confirmed）：第一个真正达到"多文件 / 机械性修改较多"的任务出现时，再创建**一次性** Work / Executor；**反复出现后**才考虑常驻。
+- **谁实际执行，谁提供原始 evidence**（Supervisor Confirmed）：用户自己改 → 用户提供 build / runtime 结果；Executor 改 → Executor 返回 diff + build / test / runtime evidence；**Coordinator 只审查，不代替声称验证**。
+- **baseline 与任务修改必须能分开**（Supervisor Confirmed）：固定 verified revision + 每任务独立 `task/<具体任务>` 分支，**不在 baseline / main 上直接实验**（细则见 `Execution Contract → Task Branch Discipline`）。
 
 ## Relevant Learning State
 
@@ -257,22 +291,24 @@ Relevant Playbook / Sources
 
 ## Current Unknowns / Gaps
 
-- **下游 Executor 尚不存在**：目前**没有**已登记的 Auto-Aim Repo / Work Executor 会话。较大任务的落地路径为"**按需建立一次性 Work / Executor 会话**（使用 `TASK_BRIEF`）"，其可用性未验证。**Manager 未新建该角色**（属提前扩张）。
-- **`template:task-brief` 未登记于 `AUTHORITY_INDEX`** → unresolved Authority dependency（已上报）。
-- 本对话的**实际仓库读取能力未验证**（`Repo-capable` 是目标面声明）。
-- **学长任务的期望交付标准未登记**：是"能跑"、"能观察"、还是需要可提交的 diff / 报告。
-- 是否授予 Coordinator **极小写权限**，未被决定；当前按**默认 no-write** 配置。
-- 上游变更的**分支 / revision 策略**未定（是否在独立分支上工作、是否允许后续提交回上游）。
-- **状态一致性问题（仅报告，不调和）**：申请 §五 称 Code Segment Analyst "已积累 `YOLO → Armor → Solver/PnP → Tracker/Target → 11D EKF → Aimer 前状态` 的源码理解，并正在从调试输出进入 Aimer 调查"；但 `PROJECT_CONTROL_INDEX` §2 与 `MEMORY_INDEX` 登记的该角色仍为 **`Not yet created — Pending Consumption`**。二者不一致，**Manager 不自行调和**：若该对话确已建立，请提供**消费证据**交 Memory Curator。
+**已由 Supervisor 决策关闭（2026-09-22）**：极小写权限、分支 / revision 策略、验收证据归属、常驻 Executor、Segment Analyst 状态一致性 —— 见 `Relevant Decisions / Invariants` 与 `Execution Contract → Task Branch Discipline`。
+
+仍然开放：
+
+- **`template:task-brief` 未登记于 `AUTHORITY_INDEX`** → unresolved Authority dependency。**Supervisor 明确：属 Maintainer / Authority Index 问题，本角色不处理**；在正式登记前继续按本 Bootstrap 的降级路径执行（内联 Brief 结构 + 标注"未经过正式 Authority 校验"）。
+- **下游 Executor 按需创建**：目前**没有**已登记的 Auto-Aim Repo / Work Executor 会话；**暂不创建常驻会话**，第一个真正达到"多文件 / 机械性修改较多"的任务出现时再创建**一次性** Work / Executor（反复出现后才考虑常驻）。**Manager 未新建该角色。**
+- 本对话的**实际仓库读取能力未验证**（`Repo-capable` 是目标面声明），需首次启动时确认。
+- **学长任务的期望交付标准未登记**：是"能跑"、"能观察"，还是需要可提交的 diff / 报告。
+- **本次 baseline revision 需在启动时确认**；已知的只读调查 revision 为 `bd9f5e798fa3c6dd3b483ae6627796afb41c608d`（Branch / 许可证 / 获取方式仍未登记）。
+
+> **Segment Analyst 状态一致性（已解决）**：Supervisor 已确认该角色**已有消费证据**（其 Checkpoint 记录了 `Conversation Role = Auto-Aim Code Segment Analyst`、`Role Type = Supporting Conversation`、`Repository Mode = Read-only investigation`，并锁定实际仓库 revision，且已产生真实源码调查结果与后续工作）。**该消费证据由用户直接提交 Memory Curator**，Manager 不代为处理；本 Bootstrap 不再把该项列为开放缺口。
 
 ## User Input Still Needed
 
 - **Coordinator 的实际读取能力**确认（能否搜索 / 查引用 / 看 Git history）。
-- 是否授予**极小写权限**，还是保持**完全 no-write**（默认）。
-- **上游变更的分支策略**：是否在独立工作分支上进行；是否允许提交回上游。
-- **首批具体任务**：学长当前实际布置了什么（原始原话最佳）。
-- **验收方式**：谁能提供真实 build / runtime 证据（用户自行编译？Environment Instructor？未来的一次性 Work Executor？）。
-- **是否需要**为下游 Executor 建立常驻会话（或继续按需一次性会话）。
+- **本次 baseline revision**：以哪个 revision 作为 verified baseline 开始（默认对齐 `bd9f5e798fa3c6dd3b483ae6627796afb41c608d`）。
+- **首批具体任务**：学长当前实际布置了什么（原始原话最佳），以及期望结果与验收标准。
+- **验收证据来源**：本次由谁实际执行修改并提供 build / runtime 原始证据。
 
 ## Suggested Opening Prompt
 
@@ -288,7 +324,11 @@ Relevant Playbook / Sources
 >
 > 你没有写权限，所以**只能基于实际观察到的 build / test / runtime 证据**做验收，证据不足就写 Unverified，**不要替我声称已验证**。涉及 EKF / NIS / MPC 等理论时不要在这里展开课程——我的 Learning State 里 PnP / EKF / Deep Learning / PID / Control 都是 Not Registered，理论缺口请建议我路由到相应角色。
 >
-> 请先问我：学长这次布置的具体任务原话是什么、期望结果是什么、以及验收由谁做。
+> Branch 纪律（已确认）：以 **verified revision** 为 baseline，**不在 baseline / main 上直接实验**，每个修改任务使用**独立 `task/<具体任务>` 分支**。每次交付你都要能明确回答三件事：**原始同济版本是什么？这次到底改了什么？不要这个功能时怎么回去？** 是否 commit / push / merge 由我决定，你不要自行推送或合并。
+>
+> 权限现状（已确认）：**暂不授予你写权限，保持完全 no-write**；**暂不创建常驻 Executor** —— 第一个真正"多文件 / 机械性修改较多"的任务出现时，我们再按需建立一次性 Work / Executor（用 `TASK_BRIEF`）。验收证据由**实际执行者**提供原文：我自己改就我给 build / runtime 结果，Executor 改就由它返回 diff + build / test / runtime，你只做对照审查。`template:task-brief` 尚未在 Authority Index 登记，属 Maintainer 事项，你先用本包内联的 Brief 结构工作（并标注"未经过正式 Authority 校验"）。
+>
+> 请先问我：学长这次布置的具体任务原话是什么、期望结果是什么、以及本次以哪个 revision 作为 baseline。
 
 ## Verification / Expected Return
 
@@ -305,16 +345,17 @@ Relevant Playbook / Sources
 
 ## Freshness / Confidence
 
-- Latest source date: 申请 2026-09-22；`control/MEMORY_INDEX.md` 2026-09-21；`AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md` 2026-09-20（已 ingest）。
-- Possibly stale items: `PROJECT_CONTROL_INDEX` 对 Code Segment Analyst 的登记（**Not yet created**）与申请 §五 的表述不一致；`M1` 的 environment / build / launch / runtime 证据仍无。
-- Missing authoritative source: `template:task-brief` 未登记于 `AUTHORITY_INDEX`；下游 Repo / Work Executor 会话不存在；本对话实际读取能力未验证。
+- **本 Bootstrap 于 2026-09-22 更新**：加入 Supervisor 确认的 Task-level 限定、`no-write`、Task Branch Discipline、验收证据归属、暂不创建常驻 Executor，以及收紧后的 Anchor 触发条件。
+- Latest source date: 角色申请 2026-09-22；Supervisor 决策确认 2026-09-22；`control/MEMORY_INDEX.md` 2026-09-21；`AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md` 2026-09-20（已 ingest）。
+- Possibly stale items: `PROJECT_CONTROL_INDEX` 仍把 Code Segment Analyst 登记为 **`Not yet created`** —— 其消费证据由用户直接提交 Curator，修正后该条目即过期；`M1` 的 environment / build / launch / runtime 证据仍无。
+- Missing authoritative source: `template:task-brief` 未登记于 `AUTHORITY_INDEX`（属 Maintainer 事项）；下游 Repo / Work Executor 会话不存在（按需创建）；本对话实际读取能力未验证。
 
 ## Carry Forward
 
 - **Current Goal**：让学长 / 用户提出的**具体工程任务**真正闭环交付。
 - **Verified Facts**：Primary Project = Auto-Aim；Stage = `P1`；Milestone = `M1`；上游 = `TongjiSuperPower/sp_vision_25` @ `bd9f5e7…`（只读调查，已 ingest）；Target 之后 `Aimer` / `MPC Planner` 双后端共享 `Detector` / `Solver` / `Tracker` / `Target`；8 项源码疑点为**待实车验证的调查入口**（非已确认缺陷）。
-- **Locked Decisions**：默认 no-write；小任务指导用户、大任务 `TASK_BRIEF` 路由；不扩大 Segment Analyst 权限；不授予任何角色大规模修改上游的默认权限；不顺手重构；不判断阶段与能力；不修改 `rm-ai-control`。
+- **Locked Decisions**：默认 no-write（**暂不授予极小写权限**）；小任务指导用户、大任务 `TASK_BRIEF` 路由；**暂不创建常驻 Executor**（按需一次性）；**固定 verified revision + 每任务独立 `task/<具体任务>` 分支，不在 baseline / main 上直接实验**；**验收证据由实际执行者提供原文，Coordinator 只审查**；不扩大 Segment Analyst 权限；不授予任何角色大规模修改上游的默认权限；不顺手重构；不判断阶段与能力；不修改 `rm-ai-control`。
 - **Active Constraints**：Execution Contract 如上；`Upstream baseline ≠ Local environment adaptation`；验证证据不得代为背书；长期状态经 Manager → Curator。
-- **Open Questions**：实际读取能力；是否授予极小写权限；上游分支策略；下游 Executor 是否存在（按需一次性）；`template:task-brief` 登记；Segment Analyst 状态一致性。
+- **Open Questions**：本对话实际读取能力（首次启动确认）；本次 baseline revision；学长任务与验收标准；`template:task-brief` 是否登记（Maintainer 事项）。
 - **Required Materials**：学长任务原话 + 期望结果 + 报错 / 现象 + build / 运行条件 + `TASK_BRIEF` 模板可读副本（如需路由）。
 - **First Next Step**：向用户索取当前具体任务原话与期望结果，然后按 `Task Received → Clarify → Inspect → Scope/Risk → Route → Verify → Return` 开始。
