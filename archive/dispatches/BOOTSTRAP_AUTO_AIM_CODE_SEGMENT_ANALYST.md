@@ -5,7 +5,7 @@ Artifact Type: Bootstrap Packet (Supporting Conversation Initialization)
 Scope: Project / Auto-Aim (P1) / Role (Supporting Conversation)
 Producer: Manager (rm-ai-control_v1.2 Navigator)
 Created: 2026-09-21
-Lifecycle: Pending
+Lifecycle: Archived
 Semantic Authority: Mechanical (assembled from cited stable sources; asserts no new semantic state)
 Authoritative Source:
   - 用户/Main Supervisor 2026-09-21 Supporting Conversation 增量申请
@@ -14,8 +14,16 @@ Authoritative Source:
   - control/templates/CURATOR_UPDATE_PACKET_TEMPLATE.md
   - control/role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md
 Supersedes: None
-Next Consumer: Auto-Aim Code Segment Analyst conversation
+Next Consumer: None
 ```
+
+> **Archive Record**（由 Memory Curator 添加的生命周期 metadata，非正文语义）：本 Bootstrap 已由 Memory Curator 从 `outbox/` `Pending Consumption` 消费并归档到 `archive/dispatches/`，Lifecycle 为 **`Consumed → Archived`**。
+>
+> **消费证据**（此前登记为 Pending 属正确状态，现已具备证据）：目标 `Auto-Aim Code Segment Analyst` 对话已真实建立并运行，其 Stage Checkpoint 在 `## 7. Current Materials / Source Anchors` 中把 `BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md` 列为"当前 Supporting Conversation 执行边界"，并按其只读边界产出了锁定 revision 的源码级结果。证据见 [`../../archive/returns/STAGE_CHECKPOINT_AUTO_AIM_CODE_SEGMENT_ANALYST_A.md`](../returns/STAGE_CHECKPOINT_AUTO_AIM_CODE_SEGMENT_ANALYST_A.md)（Thread A，2026-09-21）与其配套 Packet；消费判定由 Auto-Aim Main Supervisor 确认（`Supervisor Confirmed`，2026-09-22 经 Manager 转达）并转交 Curator 落盘。
+>
+> **Thread 说明**：该 Supporting Conversation 存在**两个并行线程**（用户说明：A / B）。本消费证明确立"该角色已实际运行"；但**各线程的 role-local continuity 分别记录**，B 线程尚未返回，不得据此推断 B 的状态。
+>
+> 正文内容未改动。
 
 > Producer：Manager（`rm-ai-control_v1.2` Navigator）
 >

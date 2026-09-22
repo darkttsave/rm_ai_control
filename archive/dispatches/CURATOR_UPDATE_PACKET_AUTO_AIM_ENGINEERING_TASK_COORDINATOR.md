@@ -5,7 +5,7 @@ Artifact Type: Curator Update Packet
 Scope: Project / Auto-Aim (P1) + Role (Supporting Conversation, task-level)
 Producer: Manager (rm-ai-control_v1.2 Navigator)
 Created: 2026-09-22
-Lifecycle: Pending
+Lifecycle: Archived
 Semantic Authority: Supervisor Confirmed (角色申请来源) + Mechanical (角色登记、Authority 依赖与 Artifact 指针)
 Authoritative Source:
   - 用户转达的 Auto-Aim Main Supervisor 2026-09-22 新增角色申请
@@ -13,9 +13,15 @@ Authoritative Source:
   - control/AUTHORITY_INDEX.md
   - control/PROJECT_CONTROL_INDEX.md
 Supersedes: None
-Next Consumer: Memory Curator
+Next Consumer: None
 Expected Persistence: Auto
 ```
+
+> **Archive Record**（由 Memory Curator 添加的生命周期 metadata，非正文语义）：本 Packet 已由 Memory Curator 从 `outbox/` `Pending Consumption` 消费并归档到 `archive/dispatches/`，Lifecycle 为 `Consumed → Archived`。其请求的登记已落盘：[`../../control/PROJECT_CONTROL_INDEX.md`](../../control/PROJECT_CONTROL_INDEX.md) §2 新增 Auto-Aim Engineering Task Coordinator、§5 新增待验证项、§6 新增 `template:task-brief` unresolved Authority dependency（`Pending Review`，交 Maintainer / Human 裁决）；[`../../control/MEMORY_INDEX.md`](../../control/MEMORY_INDEX.md) 保留新 Bootstrap 的 `Pending Consumption` 登记。结果记录于 [`../../control/MEMORY_CHANGELOG.md`](../../control/MEMORY_CHANGELOG.md) 的 2026-09-22 条目。
+>
+> **§5 建议未被执行**：本 Packet 建议向 [`../../control/AUTHORITY_INDEX.md`](../../control/AUTHORITY_INDEX.md) 新增 `template:task-brief` 条目。Curator **未改动** `AUTHORITY_INDEX.md` —— 该索引自身规定"索引缺项由 Human / rm-ai-control Maintainer 确认"，登记 Authority 条目属 Authority 语义范围。已按 `Pending Review` 登记并路由，Bootstrap 的降级路径保持有效。
+>
+> **`Unknowns` 第 1 条的落盘**：Supervisor 确认 Code Segment Analyst 已有消费证据一项，已执行 —— 其 Bootstrap 已归档至 [`BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md`](BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md)。正文内容未改动。
 
 ## What Happened
 
@@ -79,7 +85,7 @@ C++ Quick Knowledge / Control Theory = 知识支持，不进入任务交付责�
 
 | 角色 | 类别 | Target Execution Surface | 管理模式 | Bootstrap | 状态 |
 |---|---|---|---|---|---|
-| **Auto-Aim Engineering Task Coordinator**（自瞄工程任务协调对话 / 学长任务中游负责人） | Supporting Conversation（**Task-level** 交付闭环） | `Repo-capable Role`（read access；**默认 no-write**） | `Conversation` | [`../outbox/BOOTSTRAP_AUTO_AIM_ENGINEERING_TASK_COORDINATOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_ENGINEERING_TASK_COORDINATOR.md) | `Produced` / `Pending Consumption` |
+| **Auto-Aim Engineering Task Coordinator**（自瞄工程任务协调对话 / 学长任务中游负责人） | Supporting Conversation（**Task-level** 交付闭环） | `Repo-capable Role`（read access；**默认 no-write**） | `Conversation` | [`../../outbox/BOOTSTRAP_AUTO_AIM_ENGINEERING_TASK_COORDINATOR.md`](../../outbox/BOOTSTRAP_AUTO_AIM_ENGINEERING_TASK_COORDINATOR.md) | `Produced` / `Pending Consumption` |
 
 固定工作循环：
 
@@ -150,7 +156,7 @@ Task Received → Clarify Required Outcome → Inspect Relevant Source
 
 ## Artifact Lifecycle Events
 
-- Artifact: [`../outbox/BOOTSTRAP_AUTO_AIM_ENGINEERING_TASK_COORDINATOR.md`](../outbox/BOOTSTRAP_AUTO_AIM_ENGINEERING_TASK_COORDINATOR.md)
+- Artifact: [`../../outbox/BOOTSTRAP_AUTO_AIM_ENGINEERING_TASK_COORDINATOR.md`](../../outbox/BOOTSTRAP_AUTO_AIM_ENGINEERING_TASK_COORDINATOR.md)
 - Event: `Produced`
 - Evidence: Main Supervisor 2026-09-22 申请，经 Manager 审理认可并附三项限定；`Pending Consumption`
 

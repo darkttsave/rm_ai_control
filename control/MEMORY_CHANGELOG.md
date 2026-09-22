@@ -2,6 +2,17 @@
 
 > 只记录管理意义上的持久状态变化，不替代 Git log，也不记录 Markdown 排版或普通机械链接修复。
 
+## 2026-09-22 — Segment Analyst Thread A Ingested; Bootstrap Consumed; Task Coordinator Registered
+
+- Ingest Code Segment Analyst **Thread A** Stage Checkpoint（`Role Report`，2026-09-21）与其配套 Curator Update Packet，归档至 [`../archive/returns/STAGE_CHECKPOINT_AUTO_AIM_CODE_SEGMENT_ANALYST_A.md`](../archive/returns/STAGE_CHECKPOINT_AUTO_AIM_CODE_SEGMENT_ANALYST_A.md) 与 [`../archive/returns/CURATOR_UPDATE_PACKET_AUTO_AIM_CODE_SEGMENT_ANALYST_A.md`](../archive/returns/CURATOR_UPDATE_PACKET_AUTO_AIM_CODE_SEGMENT_ANALYST_A.md)。
+- **Thread 处理**：用户说明同一提示词开启了两个并行对话（A / B）；本轮两份返回件均来自 **A**。文件名中的 `_A` 是线程标签，**不是版本号**。B 线程尚未返回，其 role-local continuity **未登记**，且不得与 A 混同。
+- 持久化为 Current 的源码级事实：`auto_aim_test.cpp` 主链（`YOLO → Armor → Tracker(Solver + Target/EKF) → Aimer → Command`）、`Detector` / `Classifier` 与 `YOLO` 的并列关系、`Armor` / `Solver` / `Target` 职责边界、11D whole-car EKF 与 4D 观测、动态观测噪声 `R`、`ekf_x()` 与 Plotter（`127.0.0.1:9870`）接口、`cmake --build build --target auto_aim_test -j2` 构建路径。`M1` 的 build 项记为**部分证据**（单 target），**未宣布 `M1` 完成**。
+- **未**持久化为 Current Fact：Checkpoint §4 的"边跑边打"归因与 ego-motion 补偿方案是**假设**；自身平移未补偿的**实际影响未经实验验证**；本 Checkpoint 不裁决 Stage / Milestone / 用户掌握等级。
+- **生命周期修正（有证据）**：Auto-Aim Code Segment Analyst Bootstrap 由 `Pending Consumption` 修正为 **`Consumed`**，归档至 [`../archive/dispatches/BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md`](../archive/dispatches/BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md)。证据：该角色已真实建立并按 Bootstrap 的只读边界运行，其 Checkpoint 将 Bootstrap 列为"当前执行边界"。消费判定由 Auto-Aim Main Supervisor 确认（`Supervisor Confirmed`，经 Manager 转达）。
+- Consume 并归档 Auto-Aim Engineering Task Coordinator 增量 Packet 至 [`../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_ENGINEERING_TASK_COORDINATOR.md`](../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_ENGINEERING_TASK_COORDINATOR.md)；登记新 Supporting Conversation **Auto-Aim Engineering Task Coordinator**（Task-level 交付闭环、默认 `no-write`、每任务独立 `task/<具体任务>` 分支、暂不创建常驻 Executor、无 Role Anchor）于 [`PROJECT_CONTROL_INDEX.md`](PROJECT_CONTROL_INDEX.md) §2，其 Bootstrap 保持 `Pending Consumption`。
+- 登记 `template:task-brief` 为 **unresolved Authority dependency**（`Pending Review`）：[`AUTHORITY_INDEX.md`](AUTHORITY_INDEX.md) 未被改动 —— 登记 Authority 条目属 Authority 语义范围，须由 Human / rm-ai-control Maintainer 确认；Coordinator 继续按 Bootstrap 降级路径执行。
+- 未改变：Project Stage（`P1`）、Milestone（`M1`）、Learning State、Knowledge Asset Index、用户工程能力判断、Guided Dart P0.5、Future P2、既有 Role Anchor 版本、Capability 定义与任何角色职责。
+
 ## 2026-09-21 — Auto-Aim Checkpoint and Supporting Conversations Ingested
 
 - Ingest Auto-Aim Code Framework Analyst Checkpoint（`Role Report`，2026-09-20）：由 `inbox/` 归档至 [`../archive/returns/AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md`](../archive/returns/AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md)（`Pending → Archived`），原始文件名与来源保留在 Archive Record。
