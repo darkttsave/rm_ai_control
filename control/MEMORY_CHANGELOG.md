@@ -2,6 +2,16 @@
 
 > 只记录管理意义上的持久状态变化，不替代 Git log，也不记录 Markdown 排版或普通机械链接修复。
 
+## 2026-09-25 — First Maintainer Whale Fall Completed; Canonical Anchor Recovered
+
+- Human 以 `APPROVED WITH MINOR REVISION` 批准 Maintainer Anchor Proposal，并确认继续处理；审理证据归档于 [`../archive/returns/MAINTAINER_ANCHOR_PROPOSAL_REVIEW_FEEDBACK.md`](../archive/returns/MAINTAINER_ANCHOR_PROPOSAL_REVIEW_FEEDBACK.md)。
+- 建立 Canonical Role Anchor [`role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md`](role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md)：Anchor ID `rm-ai-control-maintainer`、Version `1.0`、Role `rm-ai-control Maintainer`、Execution Capability `Repo-capable`。明确 `Repository Access ≠ Semantic Authority`；未授予业务状态裁决权或无限仓库修改权。
+- [`AUTHORITY_INDEX.md`](AUTHORITY_INDEX.md) 登记 `role:rm-ai-control-maintainer`；[`../AGENTS.md`](../AGENTS.md) 增加可选仓库启动定位，使本地 Runtime 能从 Canonical Anchor 恢复。
+- 第1次鲸鸣完成 Identity、Authority Resolution、System Lineage、Current State、Boundary 与 Repository 检查，结果 `PASS`；证据见 [`../archive/returns/FIRST_WHALE_SONG_MAINTAINER_RECOVERY_REPORT.md`](../archive/returns/FIRST_WHALE_SONG_MAINTAINER_RECOVERY_REPORT.md)。因 `Anchor 创建 + Authority Index 登记 + Bootstrap 可恢复 + 鲸鸣 PASS` 四项全部成立，第1次鲸落记为 `Completed`。
+- 用户提供的交接包由 `inbox/` 移至 [`../archive/returns/第1次鲸落_Maintainer交接包_修正版/`](../archive/returns/第1次鲸落_Maintainer交接包_修正版/)（`Pending → Consumed → Archived`）；包内 Draft / Candidate / Observation 不因归档而升级为 Current Authority。
+- 未创建系统术语 Authority、鲸落 / 鲸鸣 Canonical Definition、新 Capability 或 `rm-ai-control_v1.3`；未修改 Frozen Protocol、业务 Project Stage / Milestone、Learning State、Knowledge Asset Index 或用户能力判断。
+- `rm-ai-control Architect` 与 `rm-ai-control Maintainer` 的身份关系继续保持 `Pending Review`；`template:task-brief` unresolved Authority dependency 与 Auto-Aim 稳定项目状态位置缺口保持原状。
+
 ## 2026-09-22 — Segment Analyst Thread A Ingested; Bootstrap Consumed; Task Coordinator Registered
 
 - Ingest Code Segment Analyst **Thread A** Stage Checkpoint（`Role Report`，2026-09-21）与其配套 Curator Update Packet，归档至 [`../archive/returns/STAGE_CHECKPOINT_AUTO_AIM_CODE_SEGMENT_ANALYST_A.md`](../archive/returns/STAGE_CHECKPOINT_AUTO_AIM_CODE_SEGMENT_ANALYST_A.md) 与 [`../archive/returns/CURATOR_UPDATE_PACKET_AUTO_AIM_CODE_SEGMENT_ANALYST_A.md`](../archive/returns/CURATOR_UPDATE_PACKET_AUTO_AIM_CODE_SEGMENT_ANALYST_A.md)。
