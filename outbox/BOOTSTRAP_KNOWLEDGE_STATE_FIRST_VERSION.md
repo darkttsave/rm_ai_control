@@ -96,7 +96,7 @@
   - `Capability Impact` → `None`（Learning State 与 Knowledge Asset Index 本身已是既有 Capability，本轮只是首次创建状态实例；不得据此新增 Capability）
 - 该文件放在 `archive/state-updates/` 以沿用仓库既有约定（既有三份 STATE_UPDATE 均在此目录）。
 
-### 4. `control/PROJECT_CONTROL_INDEX.md` —— 仅限以下机械编辑
+### 4. `control/dashboard/PROJECT_CONTROL_INDEX.md` —— 仅限以下机械编辑
 
 **只做这三处，其余内容必须逐字节不变。**
 
@@ -148,21 +148,21 @@ Learning State: [`knowledge/LEARNING_STATE.md`](../control/knowledge/LEARNING_ST
 
 - 重新初始化本仓库，或重写 `AGENTS.md` / `MANAGER_CHARTER.md` / `UNIVERSAL_PROJECT_AI_BEHAVIOR.md`；
 - 修改 `protocol/current/` 下任何内容（Frozen 基线只读）；
-- 修改 `control/SYSTEM_CAPABILITY_INDEX.md`（Capability Impact = `None`）；
+- 修改 `control/dashboard/SYSTEM_CAPABILITY_INDEX.md`（Capability Impact = `None`）；
 - 修改 `projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`，或改动 Guided Dart P0.5 阶段；
-- 改动 `control/PROJECT_CONTROL_INDEX.md` §2 中 PID 知识对话那一行（PID 线程语义不变）；
+- 改动 `control/dashboard/PROJECT_CONTROL_INDEX.md` §2 中 PID 知识对话那一行（PID 线程语义不变）；
 - 新增主题、升格等级、把 `Source` 资产升级为 `Canonical`、或合并同主题资产；
 - 访问或写入 `C:\Users\SHIN\Desktop\知识重构`（不需要；只用报告里的指针文本）；
 - 提交、删除或移动 `temporary/` 下的任何文件（那是用户临时区）；
 - 生成正式笔记或 Note Output。
 
-## Git 要求（遵守 [`../control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](../control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md)）
+## Git 要求（遵守 [`../control/ai/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](../control/ai/UNIVERSAL_PROJECT_AI_BEHAVIOR.md)）
 
 1. 开始前执行 `git status --porcelain --untracked-files=all` 并记录。
    **当时预期**：工作树干净，只有一份位于 `temporary/` 的未跟踪 seed candidate（v1.1 已将其晋升到 `archive/returns/`）。
    - `temporary/` 是**用户临时区**：不得提交、不得删除、不得移动，也不得为"让状态干净"而处理它。
    - 如果看到**预期之外**的修改（例如 `projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md` 的删除）：**停下来报告，不要提交，也不要回滚**。
-2. 只暂存本轮负责的 5 个文件（`control/knowledge/` 两个、`archive/state-updates/` 一个、`control/PROJECT_CONTROL_INDEX.md`、`control/README.md`）。
+2. 只暂存本轮负责的 5 个文件（`control/knowledge/` 两个、`archive/state-updates/` 一个、`control/dashboard/PROJECT_CONTROL_INDEX.md`、`control/README.md`）。
 3. 提交前检查：`git diff --cached` 全文、相对链接可解析、无 Secret / Token / 运行缓存。
 4. 建议 commit message（按实际 diff 决定）：`feat: seed initial knowledge state`
 5. 完成后报告：**commit hash**、变更文件清单、Control Index 的**精确 diff**、**剩余 dirty state 及其归属**、以及任何偏离本 packet 的地方。
@@ -173,7 +173,7 @@ Learning State: [`knowledge/LEARNING_STATE.md`](../control/knowledge/LEARNING_ST
 
 - 预期之外的 Git 状态（见上）；
 - 候选报告与上述字段要求无法对应（缺字段、结构不同）；
-- 候选报告与 `control/PROJECT_CONTROL_INDEX.md` 现有条目冲突；
+- 候选报告与 `control/dashboard/PROJECT_CONTROL_INDEX.md` 现有条目冲突；
 - 必须修改 Frozen Protocol 或必须新增 Capability 才能继续；
 - 必须改变 `temporary/` 或外部工作区的结构。
 

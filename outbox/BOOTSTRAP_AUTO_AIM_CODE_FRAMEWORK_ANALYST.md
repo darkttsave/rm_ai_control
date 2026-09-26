@@ -9,13 +9,13 @@ Updated: 2026-09-19 (rm-ai-control_v1.2 anchor-aware delivery + Authority depend
 Lifecycle: Pending
 Semantic Authority: Mechanical (assembled from cited stable sources; asserts no new semantic state)
 Authoritative Source:
-  - control/MEMORY_INDEX.md
-  - control/PROJECT_CONTROL_INDEX.md
+  - control/memory/MEMORY_INDEX.md
+  - control/dashboard/PROJECT_CONTROL_INDEX.md
   - protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/playbooks/Project_Assimilation.md
   - control/knowledge/LEARNING_STATE.md
   - control/knowledge/KNOWLEDGE_ASSET_INDEX.md
-  - control/role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md
-  - control/AUTHORITY_INDEX.md
+  - control/authority/role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md
+  - control/authority/AUTHORITY_INDEX.md
 Supersedes: None
 Next Consumer: Code Framework Analyst conversation
 ```
@@ -40,13 +40,13 @@ Next Consumer: Code Framework Analyst conversation
 - Persistent Role Anchor Required: **Yes**
 - Anchor ID: `auto-aim-code-framework-analyst`
 - Required Version: `1.1`
-- Canonical Source: [`../control/role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md`](../control/role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md)
+- Canonical Source: [`../control/authority/role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md`](../control/authority/role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md)
 - Persistent Authority Delivery: **ChatGPT Project Instructions + Project Sources**；若目标环境不能持续读取 Project Source，则由用户把 Anchor 作为当前可读取附件提供
 - Authority Availability at Startup: **必须由目标 Runtime 验证**；路径存在不能作为可读证据
 
 ### Required Authority Dependency Closure
 
-通过 [`../control/AUTHORITY_INDEX.md`](../control/AUTHORITY_INDEX.md) 解析；Human 不负责猜文件名。
+通过 [`../control/authority/AUTHORITY_INDEX.md`](../control/authority/AUTHORITY_INDEX.md) 解析；Human 不负责猜文件名。
 
 | When | Authority ID | Runtime Delivery Artifact |
 |---|---|---|
@@ -151,7 +151,7 @@ Code Framework Analyst（本对话）
 ### Sources
 
 - 用户 2026-09-17 Hot Start 说明（Human Confirmed 项目方向与角色设计输入）
-- `control/PROJECT_CONTROL_INDEX.md`、`control/MEMORY_INDEX.md`（2026-09-16/17）
+- `control/dashboard/PROJECT_CONTROL_INDEX.md`、`control/memory/MEMORY_INDEX.md`（2026-09-16/17）
 
 ## Relevant Decisions / Invariants
 
@@ -293,7 +293,7 @@ Step 6 Modify      明确 Scope 与 Required Verification Level，先保护外�
 
 ## Freshness / Confidence
 
-- Latest source date: 用户 2026-09-17 Hot Start 输入；`control/PROJECT_CONTROL_INDEX.md` 为 2026-09-16；`control/MEMORY_INDEX.md` 为 2026-09-17。
+- Latest source date: 用户 2026-09-17 Hot Start 输入；`control/dashboard/PROJECT_CONTROL_INDEX.md` 为 2026-09-16；`control/memory/MEMORY_INDEX.md` 为 2026-09-17。
 - Possibly stale items: `PROJECT_CONTROL_INDEX.md` 的 Project Map**仍以 Guided Dart P0.5 为主项目**，尚未反映本次主项目变更（该变更已作为 Human Confirmed State Delta 提交 Curator，**尚未落盘**）。
 - Missing authoritative source: 同济仓库未登记；Skill 资产未提供；自瞄相关 Learning State / Asset 均未登记。
 

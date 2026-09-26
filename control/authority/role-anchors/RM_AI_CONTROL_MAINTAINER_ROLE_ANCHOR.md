@@ -8,7 +8,7 @@ Role: rm-ai-control Maintainer
 Execution Capability: Repo-capable
 Lifecycle: Current
 Semantic Authority: Human Confirmed
-Canonical Source: control/role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md
+Canonical Source: control/authority/role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md
 ```
 
 ## Mission
@@ -135,17 +135,17 @@ Semantic Authority
 | Action | Required Authority / Source |
 |---|---|
 | 所有正式 Maintainer 行为 | `role:rm-ai-control-maintainer`；核对 Anchor ID / Version |
-| 仓库启动与任务边界 | [`../../AGENTS.md`](../../AGENTS.md)（若当前 Runtime / Repository 存在） |
-| Repository Hygiene、Authority Recovery、Artifact Promotion、Return | [`../UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](../UNIVERSAL_PROJECT_AI_BEHAVIOR.md) |
-| Artifact 生命周期与 Current / Pending / Historical 分类 | [`../ARTIFACT_LIFECYCLE.md`](../ARTIFACT_LIFECYCLE.md) |
+| 仓库启动与任务边界 | [`../../AGENTS.md`](../../../AGENTS.md)（若当前 Runtime / Repository 存在） |
+| Repository Hygiene、Authority Recovery、Artifact Promotion、Return | [`../UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](../../ai/UNIVERSAL_PROJECT_AI_BEHAVIOR.md) |
+| Artifact 生命周期与 Current / Pending / Historical 分类 | [`../ARTIFACT_LIFECYCLE.md`](../../governance/ARTIFACT_LIFECYCLE.md) |
 | Authority dependency 发现与解析 | [`../AUTHORITY_INDEX.md`](../AUTHORITY_INDEX.md) |
-| Capability 判断与变更边界 | [`../SYSTEM_CAPABILITY_INDEX.md`](../SYSTEM_CAPABILITY_INDEX.md) |
-| 当前系统版本与源优先级 | [`../../README.md`](../../README.md) + 当前 Release Notes |
-| 当前项目与持久状态恢复 | [`../PROJECT_CONTROL_INDEX.md`](../PROJECT_CONTROL_INDEX.md) + [`../MEMORY_INDEX.md`](../MEMORY_INDEX.md) + 其指向的 Authoritative Artifacts |
-| Manager 接口与边界 | [`../../MANAGER_CHARTER.md`](../../MANAGER_CHARTER.md) + [`.agents/skills/rm-project-manager/SKILL.md`](../../.agents/skills/rm-project-manager/SKILL.md) |
-| Memory Curator 接口与边界 | [`../../MEMORY_CURATOR_CHARTER.md`](../../MEMORY_CURATOR_CHARTER.md) |
-| Core Protocol 版本与 Frozen 边界 | 当前 [`../../protocol/current/`](../../protocol/current/) 基线 + 对应 Protocol Release Packet / Maintainer Checkpoint |
-| Role Anchor 结构与版本规则 | [`../templates/ROLE_ANCHOR_TEMPLATE.md`](../templates/ROLE_ANCHOR_TEMPLATE.md) |
+| Capability 判断与变更边界 | [`../SYSTEM_CAPABILITY_INDEX.md`](../../dashboard/SYSTEM_CAPABILITY_INDEX.md) |
+| 当前系统版本与源优先级 | [`../../README.md`](../../../README.md) + 当前 Release Notes |
+| 当前项目与持久状态恢复 | [`../PROJECT_CONTROL_INDEX.md`](../../dashboard/PROJECT_CONTROL_INDEX.md) + [`../MEMORY_INDEX.md`](../../memory/MEMORY_INDEX.md) + 其指向的 Authoritative Artifacts |
+| Manager 接口与边界 | [`../../MANAGER_CHARTER.md`](../../../MANAGER_CHARTER.md) + [`.agents/skills/rm-project-manager/SKILL.md`](../../../.agents/skills/rm-project-manager/SKILL.md) |
+| Memory Curator 接口与边界 | [`../../MEMORY_CURATOR_CHARTER.md`](../../../MEMORY_CURATOR_CHARTER.md) |
+| Core Protocol 版本与 Frozen 边界 | 当前 [`../../protocol/current/`](../../../protocol/current/) 基线 + 对应 Protocol Release Packet / Maintainer Checkpoint |
+| Role Anchor 结构与版本规则 | [`../templates/ROLE_ANCHOR_TEMPLATE.md`](../../templates/ROLE_ANCHOR_TEMPLATE.md) |
 | 需进入持久状态的正式 Return | `contract:universal-return` + `template:curator-update-packet` |
 
 Authority ID 通过 [`../AUTHORITY_INDEX.md`](../AUTHORITY_INDEX.md) 解析。若依赖项无法定位、无法读取、版本无法确认，或索引与原文冲突，应报告 `Authority unavailable` 或 `Pending Review`，不得靠猜测补全。

@@ -17,7 +17,7 @@ Next Consumer: None
 Expected Persistence: Auto
 ```
 
-> **Archive Record**（由 Memory Curator 添加的生命周期 metadata，非正文语义）：本 Packet 已由 Memory Curator 从 `inbox/` Pending 状态 ingest，归入 `archive/returns/`，Lifecycle 为 `Pending → Archived`。处理结果记录于 [`../../control/MEMORY_CHANGELOG.md`](../../control/MEMORY_CHANGELOG.md) 的 2026-09-17 条目与 [`../../control/MEMORY_INDEX.md`](../../control/MEMORY_INDEX.md)；正文内容未改动。
+> **Archive Record**（由 Memory Curator 添加的生命周期 metadata，非正文语义）：本 Packet 已由 Memory Curator 从 `inbox/` Pending 状态 ingest，归入 `archive/returns/`，Lifecycle 为 `Pending → Archived`。处理结果记录于 [`../../control/MEMORY_CHANGELOG.md`](../../control/memory/MEMORY_CHANGELOG.md) 的 2026-09-17 条目与 [`../../control/MEMORY_INDEX.md`](../../control/memory/MEMORY_INDEX.md)；正文内容未改动。
 
 ## What Happened
 

@@ -30,9 +30,9 @@ Next Step
 
 维护是事件驱动的，不是每轮写“记忆”。Context 健康、重新锚定、Checkpoint、Handoff 与 Carry Forward 直接复用：
 
-- [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Context_Health.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Context_Health.md)
-- [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Handoff_Protocol.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Handoff_Protocol.md)
-- [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Carry_Forward.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Carry_Forward.md)
+- [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Context_Health.md`](../../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Context_Health.md)
+- [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Handoff_Protocol.md`](../../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Handoff_Protocol.md)
+- [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Carry_Forward.md`](../../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Carry_Forward.md)
 
 长期正式角色使用三层连续性：
 
@@ -81,7 +81,7 @@ Role Anchor
 + Project-level Recovery Instructions
 ```
 
-Authority dependency 通过 [`AUTHORITY_INDEX.md`](AUTHORITY_INDEX.md) 从 Authority ID / 语义名称解析到 Canonical Source、Section / Locator 和 Runtime Delivery Artifact。只交付本次任务闭包，不上传整个仓库。
+Authority dependency 通过 [`AUTHORITY_INDEX.md`](../authority/AUTHORITY_INDEX.md) 从 Authority ID / 语义名称解析到 Canonical Source、Section / Locator 和 Runtime Delivery Artifact。只交付本次任务闭包，不上传整个仓库。
 
 例如 Code Analyst 的正式 Return 最小闭包是 Role Anchor + `UNIVERSAL_PROJECT_AI_BEHAVIOR.md` + `CURATOR_UPDATE_PACKET_TEMPLATE.md`；正式知识笔记再加入 `KNOWLEDGE_LEARNING_AND_NOTES.md`，明确使用 Project Assimilation Method 时再加入 `Project_Assimilation.md`。
 
@@ -119,32 +119,32 @@ Locate → Read → Verify Anchor ID → Verify Version → Continue
 - 阶段结束或移交 → Stage Report；
 - 需要同步 Manager 索引 → STATE_UPDATE。
 
-报告使用 Frozen Protocol 中现有模板，或使用 [`templates/STATE_UPDATE_TEMPLATE.md`](templates/STATE_UPDATE_TEMPLATE.md)。长期功能变化附加 [`templates/CAPABILITY_IMPACT_TEMPLATE.md`](templates/CAPABILITY_IMPACT_TEMPLATE.md)；没有影响时只写 `None`。
+报告使用 Frozen Protocol 中现有模板，或使用 [`templates/STATE_UPDATE_TEMPLATE.md`](../templates/STATE_UPDATE_TEMPLATE.md)。长期功能变化附加 [`templates/CAPABILITY_IMPACT_TEMPLATE.md`](../templates/CAPABILITY_IMPACT_TEMPLATE.md)；没有影响时只写 `None`。
 
 ## 5. State Synchronization
 
-- 各项目角色维护 Role-local continuity；Manager 使用 [`PROJECT_CONTROL_INDEX.md`](PROJECT_CONTROL_INDEX.md) 导航 Project-global state；Memory Curator 负责权威来源确定后的持久化与索引同步。
+- 各项目角色维护 Role-local continuity；Manager 使用 [`PROJECT_CONTROL_INDEX.md`](../dashboard/PROJECT_CONTROL_INDEX.md) 导航 Project-global state；Memory Curator 负责权威来源确定后的持久化与索引同步。
 - 语义事实必须来自权威产物，遵守 `Authoritative Artifact > Memory / Control Index > Conversation Summary`。
 - 关键事件通过合适的 Checkpoint、Task Report、Specialist Return、Stage Report 或 STATE_UPDATE 向外同步。
 - 普通解释、无持久影响的小问题和未采纳的 brainstorm 不触发状态写入。
-- Manager 的 ingest、freshness 与冲突处理遵守 [`../MANAGER_CHARTER.md`](../MANAGER_CHARTER.md) 和 [`../.agents/skills/rm-project-manager/SKILL.md`](../.agents/skills/rm-project-manager/SKILL.md)。
+- Manager 的 ingest、freshness 与冲突处理遵守 [`../MANAGER_CHARTER.md`](../../MANAGER_CHARTER.md) 和 [`../.agents/skills/rm-project-manager/SKILL.md`](../../.agents/skills/rm-project-manager/SKILL.md)。
 
 ## 6. Capability Changes
 
-- 先查 [`SYSTEM_CAPABILITY_INDEX.md`](SYSTEM_CAPABILITY_INDEX.md)，避免重复设计已有能力。
+- 先查 [`SYSTEM_CAPABILITY_INDEX.md`](../dashboard/SYSTEM_CAPABILITY_INDEX.md)，避免重复设计已有能力。
 - 报告者只陈述有实现、验证或正式决策支持的 `Added / Changed / Deprecated`。
 - Manager 可以导航 Capability 并观察有证据的 Gap；定义变化交给 rm-ai-control Maintainer 裁决、由 Repo Operator 确定性落盘。Manager 不能自行创造 Capability，也不能修改 Core Protocol。
 - Core Protocol 的变化必须由 rm-ai-control Maintainer 通过正式 Protocol Release 处理。
 
 ## 7. Artifact Return
 
-- Returned Artifact、Confirmed State Delta、Consumed Artifact Event 和 User Decision 按 [`ARTIFACT_LIFECYCLE.md`](ARTIFACT_LIFECYCLE.md) 进入 `inbox/`、稳定 Current 位置或相应 archive 区域。
+- Returned Artifact、Confirmed State Delta、Consumed Artifact Event 和 User Decision 按 [`ARTIFACT_LIFECYCLE.md`](../governance/ARTIFACT_LIFECYCLE.md) 进入 `inbox/`、稳定 Current 位置或相应 archive 区域。
 - `inbox/`、`outbox/`、`temporary/` 不是 Current / Authoritative Artifact 的永久来源位置。
 - 文件分类、归档、Memory Index / Changelog 和低风险生命周期维护由 Memory Curator 负责；结构变化、批量迁移与复杂 Git 工作交给 Repo Operator。
 
 ### Universal Return Contract
 
-当角色产生需要进入持久状态的变化时，在正式 Return / Report 中附带 [`templates/CURATOR_UPDATE_PACKET_TEMPLATE.md`](templates/CURATOR_UPDATE_PACKET_TEMPLATE.md)；由 Producer 描述“发生了什么”，不决定最终目录、Index 具体行、Changelog、Archive 或 commit message。
+当角色产生需要进入持久状态的变化时，在正式 Return / Report 中附带 [`templates/CURATOR_UPDATE_PACKET_TEMPLATE.md`](../templates/CURATOR_UPDATE_PACKET_TEMPLATE.md)；由 Producer 描述“发生了什么”，不决定最终目录、Index 具体行、Changelog、Archive 或 commit message。
 
 典型触发：
 
@@ -163,5 +163,5 @@ Locate → Read → Verify Anchor ID → Verify Version → Continue
 职责：
 
 - Artifact Producer：写清事件、Scope、来源 / 权威、影响、Unknown、Capability Impact 与已知 Lifecycle 事件；不负责决定最终目录。
-- Memory Curator：独立执行 Receive → Classify → Persist → Index → Archive，并返回 [`templates/CURATOR_RECEIPT_TEMPLATE.md`](templates/CURATOR_RECEIPT_TEMPLATE.md)。
+- Memory Curator：独立执行 Receive → Classify → Persist → Index → Archive，并返回 [`templates/CURATOR_RECEIPT_TEMPLATE.md`](../templates/CURATOR_RECEIPT_TEMPLATE.md)。
 - Human：默认不填写 Update Packet；AI 应尽量自动生成。只有语义确认、冲突或缺少关键事实时才请求 Human 介入。

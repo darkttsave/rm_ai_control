@@ -18,6 +18,6 @@ Next Consumer: None
 
 - 交接包是设计来源与历史证据，不整体成为 Current / Authoritative Artifact。
 - 其中标记为 Draft、Proposal、Observation 或历史脉络的内容维持原有权威等级。
-- Current Maintainer 身份与权限以 [`../../../control/role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md`](../../../control/role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md) 为准。
-- Authority 登记以 [`../../../control/AUTHORITY_INDEX.md`](../../../control/AUTHORITY_INDEX.md) 为准。
+- Current Maintainer 身份与权限以 [`../../../control/role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md`](../../../control/authority/role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md) 为准。
+- Authority 登记以 [`../../../control/AUTHORITY_INDEX.md`](../../../control/authority/AUTHORITY_INDEX.md) 为准。
 - 第1次鲸鸣结果以 [`../FIRST_WHALE_SONG_MAINTAINER_RECOVERY_REPORT.md`](../FIRST_WHALE_SONG_MAINTAINER_RECOVERY_REPORT.md) 为准。

@@ -9,8 +9,8 @@ Lifecycle: Pending
 Semantic Authority: Mechanical (assembled from cited stable sources; asserts no new semantic state)
 Authoritative Source:
   - 用户 2026-09-17 Hot Start 说明（Human Confirmed 阶段语义与角色设计）
-  - control/MEMORY_INDEX.md
-  - control/PROJECT_CONTROL_INDEX.md  # 尚未反映本次变更，见 Freshness
+  - control/memory/MEMORY_INDEX.md
+  - control/dashboard/PROJECT_CONTROL_INDEX.md  # 尚未反映本次变更，见 Freshness
   - protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/playbooks/Project_Assimilation.md
   - outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md
   - outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md
@@ -162,7 +162,7 @@ rm-ai-control Architect       = 阶段语义与项目层方法裁决；**不进�
 ### Sources
 
 - 用户 2026-09-17 Hot Start 说明（Human Confirmed）
-- `control/MEMORY_INDEX.md`、`control/PROJECT_CONTROL_INDEX.md`（**provenance，不可读取**；后者尚未反映本次变更）
+- `control/memory/MEMORY_INDEX.md`、`control/dashboard/PROJECT_CONTROL_INDEX.md`（**provenance，不可读取**；后者尚未反映本次变更）
 
 ## Relevant Decisions / Invariants
 
@@ -296,7 +296,7 @@ L6 Reconstruct 没有现成实现能重新设计并验证吗？
 - 两个已有角色的**实际环境能力**（`Repo-capable`、`Executor with repo write`）**未验证**。
 - 步兵 vs 哨兵优先级**未定**；是否已有实车 / 场地 / 数据**未登记**。
 - 上一级 Supervisor 结构未登记（本角色是否为当前唯一 Supervisor 未确认）。
-- `control/PROJECT_CONTROL_INDEX.md` 的 Project Map **尚未反映**本次阶段与主项目变更（已提交 Curator，未落盘）。
+- `control/dashboard/PROJECT_CONTROL_INDEX.md` 的 Project Map **尚未反映**本次阶段与主项目变更（已提交 Curator，未落盘）。
 
 ## User Input Still Needed
 
@@ -340,8 +340,8 @@ L6 Reconstruct 没有现成实现能重新设计并验证吗？
 
 ## Freshness / Confidence
 
-- Latest source date: 用户 2026-09-17 Hot Start 输入（Human Confirmed）；`control/MEMORY_INDEX.md` 为 2026-09-17。
-- Possibly stale items: `control/PROJECT_CONTROL_INDEX.md`（2026-09-16）的 Project Map 仍以 Guided Dart P0.5 为主项目，**尚未反映 Auto-Aim / P1 变更**——该变更已作为 Curator Update Packet 提交，**尚未落盘**；原有 `outbox/CURATOR_UPDATE_PACKET_AUTO_AIM_P2_ROLES.md` 含已 supersede 的 P2 表述，请不要引用它。
+- Latest source date: 用户 2026-09-17 Hot Start 输入（Human Confirmed）；`control/memory/MEMORY_INDEX.md` 为 2026-09-17。
+- Possibly stale items: `control/dashboard/PROJECT_CONTROL_INDEX.md`（2026-09-16）的 Project Map 仍以 Guided Dart P0.5 为主项目，**尚未反映 Auto-Aim / P1 变更**——该变更已作为 Curator Update Packet 提交，**尚未落盘**；原有 `outbox/CURATOR_UPDATE_PACKET_AUTO_AIM_P2_ROLES.md` 含已 supersede 的 P2 表述，请不要引用它。
 - Missing authoritative source: 同济仓库未登记；机器事实缺失；自瞄相关 Learning State / Asset 均未登记；M1 各项均无证据。
 
 ## Carry Forward

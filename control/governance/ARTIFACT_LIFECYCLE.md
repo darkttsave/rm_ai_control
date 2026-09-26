@@ -30,7 +30,7 @@ Scope
 
 ## Common Header
 
-新 Artifact 和以后被实质触及的旧 Artifact 逐步采用 [`templates/ARTIFACT_HEADER_TEMPLATE.md`](templates/ARTIFACT_HEADER_TEMPLATE.md)。不批量改写历史文件，也不向原始证据正文注入新语义。
+新 Artifact 和以后被实质触及的旧 Artifact 逐步采用 [`templates/ARTIFACT_HEADER_TEMPLATE.md`](../templates/ARTIFACT_HEADER_TEMPLATE.md)。不批量改写历史文件，也不向原始证据正文注入新语义。
 
 `Semantic Authority` 至少使用：
 
@@ -52,7 +52,7 @@ Authority readable       → Read original → Verify → Finalize
 Authority unavailable    → Draft only
 ```
 
-`Draft only` 必须明确标记“未经过正式 Authority 校验”，不可被 Current State、Control / Memory Index 或其他权威 Artifact 引用为正式事实。拥有 Role Anchor 的长期角色还必须按 [`UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](UNIVERSAL_PROJECT_AI_BEHAVIOR.md) 执行 Authority Recovery Gate。
+`Draft only` 必须明确标记“未经过正式 Authority 校验”，不可被 Current State、Control / Memory Index 或其他权威 Artifact 引用为正式事实。拥有 Role Anchor 的长期角色还必须按 [`UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](../ai/UNIVERSAL_PROJECT_AI_BEHAVIOR.md) 执行 Authority Recovery Gate。
 
 ## Inbound and Outbound Flow
 
@@ -92,10 +92,10 @@ Destination 只描述最终归属，不隐含当前 Producer 的写权限。
 
 ### Curator Interface
 
-- [`templates/CURATOR_UPDATE_PACKET_TEMPLATE.md`](templates/CURATOR_UPDATE_PACKET_TEMPLATE.md) 是推荐的 Producer / Manager → Curator 标准接口，不是硬格式门槛。
+- [`templates/CURATOR_UPDATE_PACKET_TEMPLATE.md`](../templates/CURATOR_UPDATE_PACKET_TEMPLATE.md) 是推荐的 Producer / Manager → Curator 标准接口，不是硬格式门槛。
 - 旧 Return / Checkpoint 没有 Packet 时仍可 ingest。
 - `Expected Persistence: Auto` 表示 Curator 自行决定具体持久化动作。
-- Curator 处理后使用 [`templates/CURATOR_RECEIPT_TEMPLATE.md`](templates/CURATOR_RECEIPT_TEMPLATE.md) 摘要结果与 Human Action Required。
+- Curator 处理后使用 [`templates/CURATOR_RECEIPT_TEMPLATE.md`](../templates/CURATOR_RECEIPT_TEMPLATE.md) 摘要结果与 Human Action Required。
 
 ## Stable Reference Rule
 
@@ -147,4 +147,4 @@ Pending return = Y
 - rm-ai-control Maintainer：方法论、Capability 和项目版本裁决。
 - Repo Operator：跨目录、跨文件、批量引用、Git 风险或结构规则修改。
 
-详细边界见 [`../MEMORY_CURATOR_CHARTER.md`](../MEMORY_CURATOR_CHARTER.md)。
+详细边界见 [`../MEMORY_CURATOR_CHARTER.md`](../../MEMORY_CURATOR_CHARTER.md)。

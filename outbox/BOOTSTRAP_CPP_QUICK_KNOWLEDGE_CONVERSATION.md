@@ -9,7 +9,7 @@ Lifecycle: Pending
 Semantic Authority: Mechanical (assembled from cited stable sources; asserts no new semantic state)
 Authoritative Source:
   - 用户/Main Supervisor 2026-09-21 Supporting Conversation 增量申请
-  - control/AUTHORITY_INDEX.md
+  - control/authority/AUTHORITY_INDEX.md
   - control/knowledge/LEARNING_STATE.md
   - protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/playbooks/knowledge/KNOWLEDGE_LEARNING_AND_NOTES.md
 Supersedes: None
@@ -43,7 +43,7 @@ Next Consumer: C++ Quick Knowledge Conversation
 | Authority ID | Resolved Canonical Source / Section | Required Runtime Delivery Artifact | Runtime Readability |
 |---|---|---|---|
 | `playbook:knowledge-learning-notes` | `protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/playbooks/knowledge/KNOWLEDGE_LEARNING_AND_NOTES.md` → 整个文件；本节已内联最小规则 | **已内联**（无需外部副本） | **`Verified`**（内联） |
-| `contract:universal-return` | `control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md` → `## 7. Artifact Return` → `### Universal Return Contract` | 该文件的可读副本 | **`Missing`** —— **仅当**真的产出正式 Knowledge Note / Return 时才需要用户提供 |
+| `contract:universal-return` | `control/ai/UNIVERSAL_PROJECT_AI_BEHAVIOR.md` → `## 7. Artifact Return` → `### Universal Return Contract` | 该文件的可读副本 | **`Missing`** —— **仅当**真的产出正式 Knowledge Note / Return 时才需要用户提供 |
 | `template:curator-update-packet` | `control/templates/CURATOR_UPDATE_PACKET_TEMPLATE.md` → 整个文件 | 该模板的可读副本 | **`Missing`** —— 同上，条件性 |
 
 > 本对话**默认不需要**外部 Authority 文件即可工作（`playbook:knowledge-learning-notes` 的最小规则已内联）。只有要产出**正式**知识笔记或 Return 时，才需要用户提供后两者；**在此之前可正常运行，但不得声称符合正式规范**。

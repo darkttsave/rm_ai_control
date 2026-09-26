@@ -53,7 +53,7 @@ Human / Main Supervisor
 | Authority ID | Resolved Canonical Source / Section | Required Runtime Delivery Artifact | Runtime Readability |
 |---|---|---|---|
 | `template:task-brief` | `protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/TASK_BRIEF_TEMPLATE.md`（整个文件） | **不需要** —— Brief 内容已全部内联于本文件 | **N/A（已内联）** |
-| `contract:universal-return` | `control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md` → `## 7. Artifact Return` → `### Universal Return Contract` | **不需要** —— Executor 不产出 Curator Packet，只产出原始执行证据 | **N/A** |
+| `contract:universal-return` | `control/ai/UNIVERSAL_PROJECT_AI_BEHAVIOR.md` → `## 7. Artifact Return` → `### Universal Return Contract` | **不需要** —— Executor 不产出 Curator Packet，只产出原始执行证据 | **N/A** |
 
 > **`template:task-brief` 的索引状态（如实标注）**：该 Authority **尚未登记于 `AUTHORITY_INDEX.md`**，已在 `PROJECT_CONTROL_INDEX.md` §6 记为 **`Pending Review`**（登记属 Authority 语义范围，须由 Human / Maintainer 确认；Canonical 文件已实测存在，62 行）。
 > 按降级规则：**Manager 未猜测 Authority 文件名**，而是**实际读取**该 Canonical 文件并按其结构生成本 Brief，同时**把全部内容内联**——因此本 Brief 对该 Authority **不产生运行期依赖**。唯一未解决的是"索引登记"这一层，**不阻塞本次执行**。
@@ -192,7 +192,7 @@ Pre-switch working-tree state ≈ Post-switch working-tree state
 ### Sources
 
 - Supervisor 审批《Auto-Aim 工程下游执行体启用申请》（`Approved with Constraints`，2026-09-22）
-- `control/PROJECT_CONTROL_INDEX.md`、`control/MEMORY_INDEX.md`（2026-09-22）
+- `control/dashboard/PROJECT_CONTROL_INDEX.md`、`control/memory/MEMORY_INDEX.md`（2026-09-22）
 - `archive/returns/STAGE_CHECKPOINT_AUTO_AIM_CODE_SEGMENT_ANALYST_A.md`（`Role Report`，2026-09-21）
 
 ## Relevant Decisions / Invariants

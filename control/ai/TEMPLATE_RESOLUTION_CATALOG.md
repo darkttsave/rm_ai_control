@@ -94,18 +94,18 @@ Executor with repo write
 
 | Human / AI may say | Decision question | Resolve to | Canonical source |
 |---|---|---|---|
-| “对话太长了”“存一下进度” | 当前工作是否尚未结束？ | Stage / Specialist Checkpoint | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/STAGE_CHECKPOINT_TEMPLATE.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/STAGE_CHECKPOINT_TEMPLATE.md) |
-| “总监督换个对话” | 是否仍是同一项目主线？ | Supervisor Snapshot | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/SUPERVISOR_SNAPSHOT_TEMPLATE.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/SUPERVISOR_SNAPSHOT_TEMPLATE.md) |
-| “交接一下”“给下一个 AI” | 是同阶段继续、换角色、执行任务还是长期继任？ | Handoff decision first | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Handoff_Protocol.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Handoff_Protocol.md) |
-| “开个专家”“让分析者看看” | 是否需要独立深分析？ | Specialist Brief | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/SPECIALIST_BRIEF_TEMPLATE.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/SPECIALIST_BRIEF_TEMPLATE.md) |
-| “专项结论返回主线” | 是否已形成足够影响主线的结论？ | Specialist Return | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/SPECIALIST_RETURN_TEMPLATE.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/SPECIALIST_RETURN_TEMPLATE.md) |
-| “交给执行体”“任务模板” | 方案是否已足够明确？ | Executor Task Brief | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/TASK_BRIEF_TEMPLATE.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/TASK_BRIEF_TEMPLATE.md) |
-| “执行结果”“任务报告” | 是否为 Work / Executor 一轮执行结果？ | Task Report | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/TASK_REPORT_TEMPLATE.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/TASK_REPORT_TEMPLATE.md) |
-| “启动新对话 / 角色” | 目标 Product Mode、Execution Surface 和 Authority 是否明确？ | Bootstrap Packet | [`templates/BOOTSTRAP_PACKET_TEMPLATE.md`](templates/BOOTSTRAP_PACKET_TEMPLATE.md) |
-| “恢复长期角色 / 权限” | 普通 Re-anchor 还是 Persistent Authority Recovery？ | Role Anchor + Recovery Instructions | [`UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](UNIVERSAL_PROJECT_AI_BEHAVIOR.md), [`templates/PROJECT_AUTHORITY_RECOVERY_INSTRUCTIONS.md`](templates/PROJECT_AUTHORITY_RECOVERY_INSTRUCTIONS.md) |
-| “整理笔记” | 临时整理还是长期知识资产？ | Informal output or Knowledge Note rules | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/playbooks/knowledge/KNOWLEDGE_LEARNING_AND_NOTES.md`](../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/playbooks/knowledge/KNOWLEDGE_LEARNING_AND_NOTES.md) |
-| “入库”“持久化” | 语义是否已由相应 Authority 确认？ | Curator Update Packet → Curator | [`templates/CURATOR_UPDATE_PACKET_TEMPLATE.md`](templates/CURATOR_UPDATE_PACKET_TEMPLATE.md) |
-| “处理结果怎么样” | 是否为 Curator 处理回执？ | Curator Receipt | [`templates/CURATOR_RECEIPT_TEMPLATE.md`](templates/CURATOR_RECEIPT_TEMPLATE.md) |
+| “对话太长了”“存一下进度” | 当前工作是否尚未结束？ | Stage / Specialist Checkpoint | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/STAGE_CHECKPOINT_TEMPLATE.md`](../../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/STAGE_CHECKPOINT_TEMPLATE.md) |
+| “总监督换个对话” | 是否仍是同一项目主线？ | Supervisor Snapshot | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/SUPERVISOR_SNAPSHOT_TEMPLATE.md`](../../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/SUPERVISOR_SNAPSHOT_TEMPLATE.md) |
+| “交接一下”“给下一个 AI” | 是同阶段继续、换角色、执行任务还是长期继任？ | Handoff decision first | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Handoff_Protocol.md`](../../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Handoff_Protocol.md) |
+| “开个专家”“让分析者看看” | 是否需要独立深分析？ | Specialist Brief | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/SPECIALIST_BRIEF_TEMPLATE.md`](../../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/SPECIALIST_BRIEF_TEMPLATE.md) |
+| “专项结论返回主线” | 是否已形成足够影响主线的结论？ | Specialist Return | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/SPECIALIST_RETURN_TEMPLATE.md`](../../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/SPECIALIST_RETURN_TEMPLATE.md) |
+| “交给执行体”“任务模板” | 方案是否已足够明确？ | Executor Task Brief | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/TASK_BRIEF_TEMPLATE.md`](../../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/TASK_BRIEF_TEMPLATE.md) |
+| “执行结果”“任务报告” | 是否为 Work / Executor 一轮执行结果？ | Task Report | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/TASK_REPORT_TEMPLATE.md`](../../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/TASK_REPORT_TEMPLATE.md) |
+| “启动新对话 / 角色” | 目标 Product Mode、Execution Surface 和 Authority 是否明确？ | Bootstrap Packet | [`templates/BOOTSTRAP_PACKET_TEMPLATE.md`](../templates/BOOTSTRAP_PACKET_TEMPLATE.md) |
+| “恢复长期角色 / 权限” | 普通 Re-anchor 还是 Persistent Authority Recovery？ | Role Anchor + Recovery Instructions | [`UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](UNIVERSAL_PROJECT_AI_BEHAVIOR.md), [`templates/PROJECT_AUTHORITY_RECOVERY_INSTRUCTIONS.md`](../templates/PROJECT_AUTHORITY_RECOVERY_INSTRUCTIONS.md) |
+| “整理笔记” | 临时整理还是长期知识资产？ | Informal output or Knowledge Note rules | [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/playbooks/knowledge/KNOWLEDGE_LEARNING_AND_NOTES.md`](../../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/playbooks/knowledge/KNOWLEDGE_LEARNING_AND_NOTES.md) |
+| “入库”“持久化” | 语义是否已由相应 Authority 确认？ | Curator Update Packet → Curator | [`templates/CURATOR_UPDATE_PACKET_TEMPLATE.md`](../templates/CURATOR_UPDATE_PACKET_TEMPLATE.md) |
+| “处理结果怎么样” | 是否为 Curator 处理回执？ | Curator Receipt | [`templates/CURATOR_RECEIPT_TEMPLATE.md`](../templates/CURATOR_RECEIPT_TEMPLATE.md) |
 
 没有单一通用 `Return Template`。必须按 Producer 和 Next Consumer 选择 Specialist Return、Task Report、Stage Report、Checkpoint 或 Curator Packet。
 
@@ -204,9 +204,9 @@ Requested Delivery: Path / Inline minimum / Attachment / Repo source
 
 | Instance state | Location / navigation |
 |---|---|
-| Pending dispatch | `outbox/` + `control/MEMORY_INDEX.md` |
+| Pending dispatch | `outbox/` + `control/memory/MEMORY_INDEX.md` |
 | Current project / role state | stable Current path + Control / Memory Index pointer |
-| Current Role Anchor | `control/role-anchors/` + Authority Index |
+| Current Role Anchor | `control/authority/role-anchors/` + Authority Index |
 | Consumed dispatch | `archive/dispatches/` |
 | Processed return | `archive/returns/` |
 | Ingested State Update | `archive/state-updates/` |

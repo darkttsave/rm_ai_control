@@ -9,9 +9,9 @@ Lifecycle: Pending
 Semantic Authority: Mechanical (assembled from cited stable sources; asserts no new semantic state)
 Authoritative Source:
   - 用户转达的 Auto-Aim Main Supervisor 2026-09-22 新增角色申请
-  - control/PROJECT_CONTROL_INDEX.md
-  - control/MEMORY_INDEX.md
-  - control/AUTHORITY_INDEX.md
+  - control/dashboard/PROJECT_CONTROL_INDEX.md
+  - control/memory/MEMORY_INDEX.md
+  - control/authority/AUTHORITY_INDEX.md
   - archive/returns/AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md
 Supersedes: None
 Next Consumer: Auto-Aim Engineering Task Coordinator conversation
@@ -47,7 +47,7 @@ Next Consumer: Auto-Aim Engineering Task Coordinator conversation
 
 | Authority ID | Resolved Canonical Source / Section | Required Runtime Delivery Artifact | Runtime Readability |
 |---|---|---|---|
-| `contract:universal-return` | `control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md` → `## 7. Artifact Return` → `### Universal Return Contract` | 该文件的可读副本 | **`Unknown`** —— 部署时验证 |
+| `contract:universal-return` | `control/ai/UNIVERSAL_PROJECT_AI_BEHAVIOR.md` → `## 7. Artifact Return` → `### Universal Return Contract` | 该文件的可读副本 | **`Unknown`** —— 部署时验证 |
 | `template:curator-update-packet` | `control/templates/CURATOR_UPDATE_PACKET_TEMPLATE.md` → 整个文件 | 该模板的可读副本 | **`Unknown`** —— 部署时验证 |
 | **`template:task-brief`（未登记）** | 应为 `protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/TASK_BRIEF_TEMPLATE.md` | 该协议模板的可读副本 | **`Missing` —— 该 Authority 尚未在 `AUTHORITY_INDEX.md` 登记** |
 
@@ -210,7 +210,7 @@ User
 ### Sources
 
 - 用户转达的 Auto-Aim Main Supervisor 2026-09-22 新增角色申请
-- `control/PROJECT_CONTROL_INDEX.md`（2026-09-19）、`control/MEMORY_INDEX.md`（2026-09-21）
+- `control/dashboard/PROJECT_CONTROL_INDEX.md`（2026-09-19）、`control/memory/MEMORY_INDEX.md`（2026-09-21）
 - `archive/returns/AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md`（2026-09-20 `Role Report`，已 ingest）
 
 ## Relevant Decisions / Invariants
@@ -346,7 +346,7 @@ Relevant Playbook / Sources
 ## Freshness / Confidence
 
 - **本 Bootstrap 于 2026-09-22 更新**：加入 Supervisor 确认的 Task-level 限定、`no-write`、Task Branch Discipline、验收证据归属、暂不创建常驻 Executor，以及收紧后的 Anchor 触发条件。
-- Latest source date: 角色申请 2026-09-22；Supervisor 决策确认 2026-09-22；`control/MEMORY_INDEX.md` 2026-09-21；`AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md` 2026-09-20（已 ingest）。
+- Latest source date: 角色申请 2026-09-22；Supervisor 决策确认 2026-09-22；`control/memory/MEMORY_INDEX.md` 2026-09-21；`AUTO_AIM_CODE_FRAMEWORK_ANALYST_CHECKPOINT.md` 2026-09-20（已 ingest）。
 - Possibly stale items: `PROJECT_CONTROL_INDEX` 仍把 Code Segment Analyst 登记为 **`Not yet created`** —— 其消费证据由用户直接提交 Curator，修正后该条目即过期；`M1` 的 environment / build / launch / runtime 证据仍无。
 - Missing authoritative source: `template:task-brief` 未登记于 `AUTHORITY_INDEX`（属 Maintainer 事项）；下游 Repo / Work Executor 会话不存在（按需创建）；本对话实际读取能力未验证。
 

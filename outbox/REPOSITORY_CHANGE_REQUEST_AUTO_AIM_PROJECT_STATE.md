@@ -9,8 +9,8 @@ Lifecycle: Pending
 Semantic Authority: Mechanical（结构性缺口，不改动任何语义状态）
 Authoritative Source:
   - archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md
-  - control/PROJECT_CONTROL_INDEX.md
-  - control/ARTIFACT_LIFECYCLE.md
+  - control/dashboard/PROJECT_CONTROL_INDEX.md
+  - control/governance/ARTIFACT_LIFECYCLE.md
   - README.md
 Supersedes: None
 Next Consumer: Repo Operator
@@ -35,10 +35,10 @@ projects/auto-aim/                               ← 与 guided-dart 同构的�
 
 | 事实 | 证据 |
 |---|---|
-| `Auto-Aim` 已成为 Current Primary Project | [`../control/PROJECT_CONTROL_INDEX.md`](../control/PROJECT_CONTROL_INDEX.md) §1 |
+| `Auto-Aim` 已成为 Current Primary Project | [`../control/dashboard/PROJECT_CONTROL_INDEX.md`](../control/dashboard/PROJECT_CONTROL_INDEX.md) §1 |
 | 其 Human Confirmed 阶段语义来源当前是一份**已 ingest 的入站证据**，位于 `archive/dispatches/` | [`../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md`](../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md) |
 | 仓库设计把 `projects/` 定义为"项目级 Current State 与权威产物"，但该目录下目前只有 `guided-dart/` | [`../README.md`](../README.md) Repository Map；`git ls-files projects/` |
-| `archive/` 的既有语义是"只作为历史证据保存" | [`../control/ARTIFACT_LIFECYCLE.md`](../control/ARTIFACT_LIFECYCLE.md) Lifecycle States |
+| `archive/` 的既有语义是"只作为历史证据保存" | [`../control/governance/ARTIFACT_LIFECYCLE.md`](../control/governance/ARTIFACT_LIFECYCLE.md) Lifecycle States |
 
 因此当前状态是：**Primary Project 的 Current 阶段来源落在历史证据区，且没有项目状态本体**。这不会立即造成错误（导航仍可用），但会让"Auto-Aim 当前状态在哪"依赖对一份归档 Packet 的解读，而不是一份明确的 Current 状态文件。
 
@@ -48,7 +48,7 @@ projects/auto-aim/                               ← 与 guided-dart 同构的�
 
 - 未创建任何目录或文件于 `projects/`。
 - 未迁移、未改写任何权威产物。
-- 未改动 `control/ARTIFACT_LIFECYCLE.md`、`SYSTEM_CAPABILITY_INDEX.md`、任何模板、Charter 或方法论。
+- 未改动 `control/governance/ARTIFACT_LIFECYCLE.md`、`SYSTEM_CAPABILITY_INDEX.md`、任何模板、Charter 或方法论。
 - 未改变阶段语义：本请求只搬运"存放位置"，阶段语义已由 Human 确认并已持久化。
 
 ## 4. 可接受的裁决结果
@@ -59,7 +59,7 @@ projects/auto-aim/                               ← 与 guided-dart 同构的�
 
 ## 5. 当前替代状态（无需等待本请求即可工作）
 
-- 阶段语义与 M1 定义已持久化于 [`../control/PROJECT_CONTROL_INDEX.md`](../control/PROJECT_CONTROL_INDEX.md) §1。
+- 阶段语义与 M1 定义已持久化于 [`../control/dashboard/PROJECT_CONTROL_INDEX.md`](../control/dashboard/PROJECT_CONTROL_INDEX.md) §1。
 - 缺口已登记于同文件 §6，`Memory Curator` 与 `Manager` 均可导航到。
 - 三份 Auto-Aim Bootstrap 仍为 `Pending Consumption`，其消费不依赖本请求。
 

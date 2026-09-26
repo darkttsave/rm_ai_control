@@ -34,7 +34,7 @@
 
 本次 v1.2 增量修复：
 
-- 新增薄索引 [`../../control/AUTHORITY_INDEX.md`](../../control/AUTHORITY_INDEX.md)，只登记真实已使用 / 已引用的 Authority。
+- 新增薄索引 [`../../control/AUTHORITY_INDEX.md`](../../control/authority/AUTHORITY_INDEX.md)，只登记真实已使用 / 已引用的 Authority。
 - `Universal Return Contract` 现在明确解析到 `control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md` 的 `## 7. Artifact Return` → `### Universal Return Contract`，而不是一个不存在的同名文件。
 - Curator Update Packet 明确解析到 `control/templates/CURATOR_UPDATE_PACKET_TEMPLATE.md`。
 - Code Analyst Anchor 从 `1.0` 升至 `1.1`，显式声明正式 Return、Knowledge Note 与 Project Assimilation 的 Authority dependencies；旧 `1.0` Runtime Copy 应识别为 stale。

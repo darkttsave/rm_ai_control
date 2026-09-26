@@ -8,7 +8,7 @@ This skill manages **interface and navigation**, not project authority or primar
 
 Read `MANAGER_CHARTER.md` before acting when available.
 
-For capability questions, read `control/SYSTEM_CAPABILITY_INDEX.md`. For persistent-state location and freshness, read `control/MEMORY_INDEX.md`. For template discovery, role trigger profiles, and execution-surface delivery, read `control/TEMPLATE_RESOLUTION_CATALOG.md`. For repository work, follow `control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md` and `control/ARTIFACT_LIFECYCLE.md`.
+For capability questions, read `control/dashboard/SYSTEM_CAPABILITY_INDEX.md`. For persistent-state location and freshness, read `control/memory/MEMORY_INDEX.md`. For template discovery, role trigger profiles, and execution-surface delivery, read `control/ai/TEMPLATE_RESOLUTION_CATALOG.md`. For repository work, follow `control/ai/UNIVERSAL_PROJECT_AI_BEHAVIOR.md` and `control/governance/ARTIFACT_LIFECYCLE.md`.
 
 ---
 
@@ -35,7 +35,7 @@ User asks things like:
 
 Procedure:
 
-1. Read `control/PROJECT_CONTROL_INDEX.md`; read `control/MEMORY_INDEX.md` when the request depends on persistent-state location, freshness, or Pending Artifacts.
+1. Read `control/dashboard/PROJECT_CONTROL_INDEX.md`; read `control/memory/MEMORY_INDEX.md` when the request depends on persistent-state location, freshness, or Pending Artifacts.
 2. Check freshness and `Pending Update` of the relevant entries.
 3. If an answer depends on a possibly stale semantic state, read the referenced authoritative artifact.
 4. Return a concise status:
@@ -112,9 +112,9 @@ Procedure:
 2. Identify the Product Mode (`Conversation`, `Work Cloud`, `Work Local`, or other), then determine the actual `Target Execution Surface`: `Plain Conversation`, `Repo-capable Role`, or `Executor with repo write`. Product name never substitutes for a capability check.
 3. Determine whether this is a long-lived formal role that requires a Persistent Role Anchor. Short-lived temporary work does not require one by default.
 4. When an Anchor is required, identify its Anchor ID / Version, Canonical Source, `Persistent Authority Delivery`, and whether the target Runtime can actually re-read it. A path is provenance, not readability; Bootstrap is not a substitute for the Anchor.
-5. Resolve each required Authority ID or semantic Authority name through `control/AUTHORITY_INDEX.md` to its Canonical Source, Section / Locator, and Required Runtime Delivery Artifact. Authority names are not filenames; never ask the Human to guess the file.
+5. Resolve each required Authority ID or semantic Authority name through `control/authority/AUTHORITY_INDEX.md` to its Canonical Source, Section / Locator, and Required Runtime Delivery Artifact. Authority names are not filenames; never ask the Human to guess the file.
 6. Build only the Authority dependency closure needed by this task, verify every Runtime Delivery Artifact is readable on the target surface, and record unresolved dependencies. Do not deliver the whole repository.
-7. Read `control/TEMPLATE_RESOLUTION_CATALOG.md`, select only the target role's Trigger Profile, and resolve templates required at startup. Do not deliver the whole Catalog.
+7. Read `control/ai/TEMPLATE_RESOLUTION_CATALOG.md`, select only the target role's Trigger Profile, and resolve templates required at startup. Do not deliver the whole Catalog.
 8. Declare which templates are already readable, delivered inline / attached, or available only on demand. Define the exact missing-dependency behavior and whether an informal draft is allowed.
 9. Declare the actual execution contract: repository / local-file readability, Git access, direct write / persistence permission, user-provided materials, expected return channel, and the role responsible for final persistence. A destination never implies write permission.
 10. Apply `protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Handoff_Protocol.md` when available.
@@ -161,7 +161,7 @@ User asks what the system can do, when to use a function, where its entry is, or
 
 Procedure:
 
-1. Read `control/SYSTEM_CAPABILITY_INDEX.md`.
+1. Read `control/dashboard/SYSTEM_CAPABILITY_INDEX.md`.
 2. Return the matching Capability, Category, When to Use, Entry / Source, and Status.
 3. If a durable capability change is reported, require implementation, verification, Release, deprecation, or Maintainer / Human evidence before proposing a registry change.
 4. Submit evidence-backed Capability changes to the rm-ai-control Maintainer; Manager does not maintain Capability definitions directly.
@@ -182,7 +182,7 @@ Input is an explicit Template Dependency Request from Human or a downstream role
 
 Procedure:
 
-1. Read `control/TEMPLATE_RESOLUTION_CATALOG.md`.
+1. Read `control/ai/TEMPLATE_RESOLUTION_CATALOG.md`.
 2. Resolve the requested intent to the correct Artifact type and Canonical Source; distinguish similarly named templates before delivery.
 3. Verify the target Product Mode and actual Execution Surface.
 4. Deliver the minimum matching form:

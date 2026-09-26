@@ -16,7 +16,7 @@ Next Consumer: None
 >
 > **配套 Packet**：本次同一事件的正式信封为 [`CURATOR_UPDATE_PACKET_AUTO_AIM_CODE_SEGMENT_ANALYST_A.md`](CURATOR_UPDATE_PACKET_AUTO_AIM_CODE_SEGMENT_ANALYST_A.md)（同线程、同 revision）；两者是**一个** ingest 事件的正交记录，未被合并或改写。
 >
-> **已持久化**：可核验的源码级事实（主链、`Armor` / `Solver` / `Target` 职责、11D 状态与 4D 观测、动态观测噪声 R、`ekf_x()` 与 Plotter 接口、`cmake --build build --target auto_aim_test -j2` 构建路径）与 role-local continuity 已登记至 [`../../control/PROJECT_CONTROL_INDEX.md`](../../control/PROJECT_CONTROL_INDEX.md) 与 [`../../control/MEMORY_INDEX.md`](../../control/MEMORY_INDEX.md)。完整技术正文以**本文件**为准，索引只保留摘要与指针。
+> **已持久化**：可核验的源码级事实（主链、`Armor` / `Solver` / `Target` 职责、11D 状态与 4D 观测、动态观测噪声 R、`ekf_x()` 与 Plotter 接口、`cmake --build build --target auto_aim_test -j2` 构建路径）与 role-local continuity 已登记至 [`../../control/PROJECT_CONTROL_INDEX.md`](../../control/dashboard/PROJECT_CONTROL_INDEX.md) 与 [`../../control/MEMORY_INDEX.md`](../../control/memory/MEMORY_INDEX.md)。完整技术正文以**本文件**为准，索引只保留摘要与指针。
 >
 > **未持久化为 Current Fact**：§4 `Current Understanding / Hypotheses`（"边跑边打"归因、完整 ego-motion 补偿方案）是**假设，不是事实**；§6 `Open Questions` 与"自身平移未补偿"的**实际影响程度未经实验验证**；本 Checkpoint 不裁决 Project Stage / Milestone / 用户掌握等级。
 

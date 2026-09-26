@@ -12,17 +12,17 @@
 
 Memory Curator 可以：
 
-- 接收 Artifact 并按 [`control/ARTIFACT_LIFECYCLE.md`](control/ARTIFACT_LIFECYCLE.md) 分类；
+- 接收 Artifact 并按 [`control/governance/ARTIFACT_LIFECYCLE.md`](control/governance/ARTIFACT_LIFECYCLE.md) 分类；
 - 把已确认语义持久化到既有稳定位置；
 - 将已处理 Return 归入 `archive/returns/`；
 - 在有明确消费证据后，将出站 Artifact 归入 `archive/dispatches/`；
-- 维护 [`control/MEMORY_INDEX.md`](control/MEMORY_INDEX.md) 与 [`control/MEMORY_CHANGELOG.md`](control/MEMORY_CHANGELOG.md)；
+- 维护 [`control/memory/MEMORY_INDEX.md`](control/memory/MEMORY_INDEX.md) 与 [`control/memory/MEMORY_CHANGELOG.md`](control/memory/MEMORY_CHANGELOG.md)；
 - 检查 stale source、dangling reference 和 Pending Artifact；
 - 执行低风险、机械性的生命周期文件维护；
 - 对自己形成的稳定、已验证、边界明确的机械变更负责 commit；
 - 向 Repo Operator 发出 Repository Change Request。
 - 维护 Current Anchor identity / version pointer、Canonical path pointer、已知 Runtime deployment state，以及 stale / version mismatch 的机械状态。
-- 在模板语义已经由 Human / rm-ai-control Maintainer 确认后，维护 `control/TEMPLATE_RESOLUTION_CATALOG.md` 中的路径、Lifecycle、freshness 与实例导航等机械信息。
+- 在模板语义已经由 Human / rm-ai-control Maintainer 确认后，维护 `control/ai/TEMPLATE_RESOLUTION_CATALOG.md` 中的路径、Lifecycle、freshness 与实例导航等机械信息。
 
 ## Must Not
 

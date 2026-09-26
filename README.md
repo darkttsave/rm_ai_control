@@ -15,7 +15,7 @@ Authoritative Artifact
 ```
 
 - 项目阶段、里程碑、技术决定、验证结论和用户学习状态等语义事实，只能由相应权威产物支持。
-- [`control/PROJECT_CONTROL_INDEX.md`](control/PROJECT_CONTROL_INDEX.md) 与 [`control/MEMORY_INDEX.md`](control/MEMORY_INDEX.md) 只保存导航摘要与来源指针，不替代权威产物。
+- [`control/dashboard/PROJECT_CONTROL_INDEX.md`](control/dashboard/PROJECT_CONTROL_INDEX.md) 与 [`control/memory/MEMORY_INDEX.md`](control/memory/MEMORY_INDEX.md) 只保存导航摘要与来源指针，不替代权威产物。
 - Manager 可以解释路径、时间、活跃状态和 freshness 等机械状态；Memory Curator 负责权威来源确定后的持久化。二者都不能用推断填补语义事实。
 - 来源冲突时，只标记冲突并请求或读取最新权威产物，不自行调和。
 
@@ -39,9 +39,9 @@ Persistent Authority
 ```
 
 - **Core Protocol / Stable Baseline**：[`protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/`](protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/)。Frozen 保持原样；`rm-ai-control_v1.2` 是项目版本，不是 Protocol v2.4。
-- **System Capabilities**：[`control/SYSTEM_CAPABILITY_INDEX.md`](control/SYSTEM_CAPABILITY_INDEX.md)。按能力而非文件提供用途、入口、Owner 和可用状态。
-- **Control State**：[`control/PROJECT_CONTROL_INDEX.md`](control/PROJECT_CONTROL_INDEX.md)。保存当前项目与角色的导航摘要、freshness 和权威来源指针。
-- **Persistent Memory**：[`control/MEMORY_INDEX.md`](control/MEMORY_INDEX.md)。导航 Current State、Pending Artifact 与 freshness，不复制事实正文。
+- **System Capabilities**：[`control/dashboard/SYSTEM_CAPABILITY_INDEX.md`](control/dashboard/SYSTEM_CAPABILITY_INDEX.md)。按能力而非文件提供用途、入口、Owner 和可用状态。
+- **Control State**：[`control/dashboard/PROJECT_CONTROL_INDEX.md`](control/dashboard/PROJECT_CONTROL_INDEX.md)。保存当前项目与角色的导航摘要、freshness 和权威来源指针。
+- **Persistent Memory**：[`control/memory/MEMORY_INDEX.md`](control/memory/MEMORY_INDEX.md)。导航 Current State、Pending Artifact 与 freshness，不复制事实正文。
 - **Authoritative Artifacts**：真正的事实本体；Index 与 Conversation Summary 都不能替代它们。
 
 ## Repository Map
@@ -52,10 +52,10 @@ Persistent Authority
 - [`protocol/current/`](protocol/current/)：当前 Frozen 协议的原样展开内容，只读基线。
 - [`protocol/releases/`](protocol/releases/)：Manager 使用的协议 Release Packet。
 - [`control/`](control/)：Project State、System Capability、Memory Navigation、Artifact Lifecycle、Universal Behavior 和控制模板。
-- [`control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md)：通用 AI 行为、事件驱动自维护与 Git Hygiene。
-- [`control/AUTHORITY_INDEX.md`](control/AUTHORITY_INDEX.md)：把 Authority ID / 语义名称解析到 Canonical Source、Section 与 Runtime Delivery Artifact 的薄索引。
-- [`control/TEMPLATE_RESOLUTION_CATALOG.md`](control/TEMPLATE_RESOLUTION_CATALOG.md)：供 Manager / Maintainer / Curator 使用的模板解析入口；按模糊需求、角色触发和执行表面定位最小交付，不替代 Canonical Template。
-- [`control/role-anchors/`](control/role-anchors/)：长期正式角色的 Canonical Role Anchor；Runtime Delivery Copy 必须由目标环境实际可读。
+- [`control/ai/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](control/ai/UNIVERSAL_PROJECT_AI_BEHAVIOR.md)：通用 AI 行为、事件驱动自维护与 Git Hygiene。
+- [`control/authority/AUTHORITY_INDEX.md`](control/authority/AUTHORITY_INDEX.md)：把 Authority ID / 语义名称解析到 Canonical Source、Section 与 Runtime Delivery Artifact 的薄索引。
+- [`control/ai/TEMPLATE_RESOLUTION_CATALOG.md`](control/ai/TEMPLATE_RESOLUTION_CATALOG.md)：供 Manager / Maintainer / Curator 使用的模板解析入口；按模糊需求、角色触发和执行表面定位最小交付，不替代 Canonical Template。
+- [`control/authority/role-anchors/`](control/authority/role-anchors/)：长期正式角色的 Canonical Role Anchor；Runtime Delivery Copy 必须由目标环境实际可读。
 - [`projects/`](projects/)：项目级 Current State 与权威产物；当前启用 `projects/guided-dart/`。
 - [`inbox/`](inbox/)：外部角色 / Conversation → Memory Curator 的 Pending 入站区，不是长期存储。
 - [`outbox/`](outbox/)：等待目标角色消费的正式出站区；留在这里表示 Pending Consumption。

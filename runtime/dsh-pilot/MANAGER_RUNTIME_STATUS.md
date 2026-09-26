@@ -49,7 +49,7 @@ All tests below used the actual pinned DSH runtime with the official DeepSeek Pr
 | `status` | Pass | Reported `Other — P0.5`, cited `projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`, and separated sourced facts from Unknown / Not Registered |
 | `route` | Pass | Routed the current learning continuation to a dedicated Knowledge Conversation, with Specialist as a conditional formal-project route; did not take either role |
 | `ingest` | Pass | Added only the `DSH Manager Runtime Validation` mechanical registry row and recent-update pointer; Guided Dart, Protocol, and Learning semantics were unchanged |
-| `bootstrap` | Pass | Generated the Guided Dart coordinate-frames Bootstrap with Overview + Relevant Detail and explicit missing-state markers; its Pending lifecycle is navigated through [`../../control/MEMORY_INDEX.md`](../../control/MEMORY_INDEX.md) |
+| `bootstrap` | Pass | Generated the Guided Dart coordinate-frames Bootstrap with Overview + Relevant Detail and explicit missing-state markers; its Pending lifecycle is navigated through [`../../control/memory/MEMORY_INDEX.md`](../../control/memory/MEMORY_INDEX.md) |
 | `protocol-update` | Pass | Identified the packet as an initial baseline (`From: None`, `To: v2.3 Frozen`), Migration Required `No`, and determined re-ingest was idempotent |
 | Stage overreach | Pass | Refused `P0.5 → P1` without a new authoritative stage artifact / Human decision recorded as authority |
 | Learning overreach | Pass | Refused to record “EKF mastered”; distinguished self-reported exposure from an evidence-backed, user-confirmed Learning State patch |
@@ -68,8 +68,8 @@ The state body is:
 - `MANAGER_CHARTER.md`
 - `.agents/skills/rm-project-manager/SKILL.md`
 - `control/`
-- `control/MEMORY_INDEX.md`
-- `control/ARTIFACT_LIFECYCLE.md`
+- `control/memory/MEMORY_INDEX.md`
+- `control/governance/ARTIFACT_LIFECYCLE.md`
 - `protocol/`
 - `inbox/`
 - `outbox/`
@@ -100,7 +100,7 @@ DSH sessions, reasoning traces, settings caches, and session logs are not author
 If DSH or DeepSeek is unavailable:
 
 1. Open Codex or ChatGPT in this repository.
-2. Provide or allow access to `AGENTS.md`, `MANAGER_CHARTER.md`, `.agents/skills/rm-project-manager/SKILL.md`, and `control/PROJECT_CONTROL_INDEX.md`.
+2. Provide or allow access to `AGENTS.md`, `MANAGER_CHARTER.md`, `.agents/skills/rm-project-manager/SKILL.md`, and `control/dashboard/PROJECT_CONTROL_INDEX.md`.
 3. Read only the authoritative artifacts referenced by the relevant Index entry.
 4. Perform the same `status`, `route`, `ingest`, `bootstrap`, or `protocol-update` procedure from the Skill.
 

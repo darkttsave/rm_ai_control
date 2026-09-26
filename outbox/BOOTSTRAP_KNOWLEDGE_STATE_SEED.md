@@ -169,6 +169,6 @@ L6 Reconstruct
 
 ## Freshness / Confidence
 
-- Issued: 2026-09-15（Manager，`rm-ai-control`；与 `control/PROJECT_CONTROL_INDEX.md` 的 Last Refreshed 一致）
-- 依据：`control/PROJECT_CONTROL_INDEX.md` §3 — `Learning State: Not Registered`、`Knowledge Asset Index: Not Registered`
+- Issued: 2026-09-15（Manager，`rm-ai-control`；与 `control/dashboard/PROJECT_CONTROL_INDEX.md` 的 Last Refreshed 一致）
+- 依据：`control/dashboard/PROJECT_CONTROL_INDEX.md` §3 — `Learning State: Not Registered`、`Knowledge Asset Index: Not Registered`
 - 你的报告必须自带来源时间点；Manager 不假设你的重构成果是最新的。

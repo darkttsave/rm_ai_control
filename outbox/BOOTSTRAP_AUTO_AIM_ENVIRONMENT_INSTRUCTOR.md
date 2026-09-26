@@ -8,8 +8,8 @@ Created: 2026-09-17
 Lifecycle: Pending
 Semantic Authority: Mechanical (assembled from cited stable sources; asserts no new semantic state)
 Authoritative Source:
-  - control/MEMORY_INDEX.md
-  - control/PROJECT_CONTROL_INDEX.md
+  - control/memory/MEMORY_INDEX.md
+  - control/dashboard/PROJECT_CONTROL_INDEX.md
   - protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/playbooks/Project_Assimilation.md
   - outbox/BOOTSTRAP_AUTO_AIM_CODE_FRAMEWORK_ANALYST.md
 Supersedes: None
@@ -146,7 +146,7 @@ verified runtime evidence
 ### Sources
 
 - 用户 2026-09-17 Hot Start 说明（Human Confirmed 项目方向与角色设计输入）
-- `control/PROJECT_CONTROL_INDEX.md`、`control/MEMORY_INDEX.md`
+- `control/dashboard/PROJECT_CONTROL_INDEX.md`、`control/memory/MEMORY_INDEX.md`
 
 ## Relevant Decisions / Invariants
 
@@ -318,7 +318,7 @@ Unresolved problems
 
 ## Freshness / Confidence
 
-- Latest source date: 用户 2026-09-17 Hot Start 输入；`control/MEMORY_INDEX.md` 为 2026-09-17。
+- Latest source date: 用户 2026-09-17 Hot Start 输入；`control/memory/MEMORY_INDEX.md` 为 2026-09-17。
 - Possibly stale items: `PROJECT_CONTROL_INDEX.md`（2026-09-16）的 Project Map 仍以 Guided Dart P0.5 为主项目，**尚未反映本次主项目变更**（已作为 Human Confirmed State Delta 提交 Curator，未落盘）。
 - Missing authoritative source: 同济仓库未登记；目标机器事实全部缺失；环境类 Knowledge Asset 为 0。
 

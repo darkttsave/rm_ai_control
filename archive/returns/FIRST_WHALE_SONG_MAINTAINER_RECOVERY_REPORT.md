@@ -27,8 +27,8 @@ Runtime Surface: Local Repo-capable Maintainer
 
 | Gate | Result | Evidence |
 |---|---|---|
-| Canonical Anchor 创建 | PASS | [`../../control/role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md`](../../control/role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md) |
-| Authority Index 登记 | PASS | [`../../control/AUTHORITY_INDEX.md`](../../control/AUTHORITY_INDEX.md) 中 `role:rm-ai-control-maintainer` |
+| Canonical Anchor 创建 | PASS | [`../../control/role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md`](../../control/authority/role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md) |
+| Authority Index 登记 | PASS | [`../../control/AUTHORITY_INDEX.md`](../../control/authority/AUTHORITY_INDEX.md) 中 `role:rm-ai-control-maintainer` |
 | Bootstrap 可恢复 | PASS | [`../../AGENTS.md`](../../AGENTS.md) 能定位 Anchor；Anchor 将 `AGENTS.md` 表达为当前 Runtime / Repository 存在时的依赖 |
 | 第1次鲸鸣 Pilot | PASS | 本报告的 Identity、Authority、State、Boundary 与 Repository 检查 |
 
@@ -41,7 +41,7 @@ Runtime Surface: Local Repo-capable Maintainer
 - Anchor ID：`rm-ai-control-maintainer`
 - Anchor Version：`1.0`
 - Execution Capability：`Repo-capable`
-- Canonical Source：[`../../control/role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md`](../../control/role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md)
+- Canonical Source：[`../../control/role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md`](../../control/authority/role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md)
 - Result：`PASS`
 
 身份从 Canonical Anchor 原文恢复，不从聊天历史、交接摘要或 Draft 角色卡恢复。

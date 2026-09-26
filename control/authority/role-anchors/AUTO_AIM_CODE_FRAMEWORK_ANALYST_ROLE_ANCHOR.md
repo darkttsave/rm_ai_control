@@ -7,7 +7,7 @@ Version: 1.1
 Role: Auto-Aim Code Framework Analyst
 Lifecycle: Current
 Semantic Authority: Human Confirmed / rm-ai-control Maintainer Implemented
-Canonical Source: control/role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md
+Canonical Source: control/authority/role-anchors/AUTO_AIM_CODE_FRAMEWORK_ANALYST_ROLE_ANCHOR.md
 ```
 
 ## Mission

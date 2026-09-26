@@ -13,17 +13,17 @@
 Manager 可以：
 
 - 理解用户意图并执行 status / route；
-- 查询 `control/PROJECT_CONTROL_INDEX.md`、`control/MEMORY_INDEX.md` 和权威 Artifact；
+- 查询 `control/dashboard/PROJECT_CONTROL_INDEX.md`、`control/memory/MEMORY_INDEX.md` 和权威 Artifact；
 - 指出活跃 / 暂停 / 完成 / Unknown 的对话或角色；
 - 指出信息 stale / conflicting / missing；
 - 根据现有规则建议用户去哪个角色 / 对话；
 - 为新对话生成 `BOOTSTRAP_PACKET.md`；
 - 在组装 Bootstrap 前判断 Target Execution Surface，并为目标的真实读写、Git 与持久化能力声明 Execution Contract；
 - 判断长期正式角色是否需要 Persistent Role Anchor，并验证 Anchor ID / Version、Canonical Source 与 Persistent Authority Delivery；
-- 使用 `control/AUTHORITY_INDEX.md` 解析本次任务所需 Authority dependency closure；
+- 使用 `control/authority/AUTHORITY_INDEX.md` 解析本次任务所需 Authority dependency closure；
 - 根据 v2.3 的 `Overview + Relevant Detail` 原则筛选上下文；
-- 在初始化、恢复或收到显式 Template Dependency Request 时，使用 [`control/TEMPLATE_RESOLUTION_CATALOG.md`](control/TEMPLATE_RESOLUTION_CATALOG.md) 解析正确 Artifact 类型、角色 Trigger Profile 与目标执行表面的最小交付；
-- 查询 `control/SYSTEM_CAPABILITY_INDEX.md`，把用户导航到已有 Capability；
+- 在初始化、恢复或收到显式 Template Dependency Request 时，使用 [`control/ai/TEMPLATE_RESOLUTION_CATALOG.md`](control/ai/TEMPLATE_RESOLUTION_CATALOG.md) 解析正确 Artifact 类型、角色 Trigger Profile 与目标执行表面的最小交付；
+- 查询 `control/dashboard/SYSTEM_CAPABILITY_INDEX.md`，把用户导航到已有 Capability；
 - 观察有来源的 Capability Gap，交给 `rm-ai-control Maintainer / Human` 判断；
 - 向 Memory Curator 提交 Confirmed State Delta、Returned Artifact、Consumed Artifact Event 或 User Decision；
 - 接收 Curator 返回的 `Persisted / Pending Review / Conflict / Stale Source / Updated Pointer`。
@@ -145,7 +145,7 @@ Artifact 分类 / 持久化 / 索引 / 归档
 
 ## Capability Navigation
 
-Manager 使用 [`control/SYSTEM_CAPABILITY_INDEX.md`](control/SYSTEM_CAPABILITY_INDEX.md) 回答“系统会什么、何时用、入口在哪里”。
+Manager 使用 [`control/dashboard/SYSTEM_CAPABILITY_INDEX.md`](control/dashboard/SYSTEM_CAPABILITY_INDEX.md) 回答“系统会什么、何时用、入口在哪里”。
 
 - Capability 是功能，不是文件；
 - Capability 定义变化必须有实现、验证、Release 或弃用来源，并由 rm-ai-control Maintainer 裁决；
@@ -185,7 +185,7 @@ Manager 初始化角色时，在 Target Execution Surface 与 Execution Contract
 
 ```text
 Resolve Required Authority Dependencies
-→ control/AUTHORITY_INDEX.md
+→ control/authority/AUTHORITY_INDEX.md
 → Canonical Source + Section / Locator
 → Required Runtime Delivery Artifact
 → Verify Runtime Readability
@@ -194,7 +194,7 @@ Resolve Required Authority Dependencies
 
 Authority 名称不等于文件名。Manager 不得要求 Human 猜某 Authority 位于哪个文件，也不得因路径存在就认定 Runtime 可读。只解析和交付本次任务需要的 dependency closure；不得把整个 `rm-ai-control` 仓库上传给长期角色。
 
-例如 Anchor 声明 `contract:universal-return` 时，Manager 通过 Authority Index 交付 `control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`；同时声明 `template:curator-update-packet` 时，再交付 `control/templates/CURATOR_UPDATE_PACKET_TEMPLATE.md`。
+例如 Anchor 声明 `contract:universal-return` 时，Manager 通过 Authority Index 交付 `control/ai/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`；同时声明 `template:curator-update-packet` 时，再交付 `control/templates/CURATOR_UPDATE_PACKET_TEMPLATE.md`。
 
 Manager 不得把文件路径存在当成 Runtime 可读，不得把 Bootstrap 当作长期 Authority 替代品。短期临时任务不强制创建 Anchor。
 
@@ -202,11 +202,11 @@ Manager 还必须区分 Product Mode 与实际能力：`Conversation`、`Work Cl
 
 下游在正式 Artifact、持久化输出或规范约束任务中报告模板缺失时，Manager 按 Catalog 交付最小依赖并退出业务循环。普通讨论、临时整理和明确标记的非正式草稿不因可能存在模板而强制加载完整规则。
 
-部署遵守 [`control/AUTHORITY_INDEX.md`](control/AUTHORITY_INDEX.md) 与 [`control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md) 的 Canonical Authority / Runtime Delivery Copy、Authority Recovery Gate 与 Artifact Promotion Gate。Manager 只负责解析、导航和交付检查，不解释或改写 Authority 语义。
+部署遵守 [`control/authority/AUTHORITY_INDEX.md`](control/authority/AUTHORITY_INDEX.md) 与 [`control/ai/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](control/ai/UNIVERSAL_PROJECT_AI_BEHAVIOR.md) 的 Canonical Authority / Runtime Delivery Copy、Authority Recovery Gate 与 Artifact Promotion Gate。Manager 只负责解析、导航和交付检查，不解释或改写 Authority 语义。
 
 ## Persistence Handoff
 
-Manager 不再承担主要持久化维护。Artifact 进入 [`control/ARTIFACT_LIFECYCLE.md`](control/ARTIFACT_LIFECYCLE.md) 后：
+Manager 不再承担主要持久化维护。Artifact 进入 [`control/governance/ARTIFACT_LIFECYCLE.md`](control/governance/ARTIFACT_LIFECYCLE.md) 后：
 
 ```text
 Manager / Working Role
@@ -224,9 +224,9 @@ Manager / Working Role
 如果 Manager 当前 Session 消失，只要存在：
 
 ```text
-control/PROJECT_CONTROL_INDEX.md
+control/dashboard/PROJECT_CONTROL_INDEX.md
 +
-control/MEMORY_INDEX.md
+control/memory/MEMORY_INDEX.md
 +
 最新 Authoritative Artifacts
 +

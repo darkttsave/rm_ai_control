@@ -17,7 +17,7 @@ Next Consumer: None
 Expected Persistence: Auto
 ```
 
-> **Archive Record**（由 Memory Curator 添加的生命周期 metadata，非正文语义）：本 Packet 已由 Memory Curator 从 `outbox/` `Pending Consumption` 消费并归档到 `archive/dispatches/`，Lifecycle 为 `Consumed → Archived`。其请求的登记已落盘：[`../../control/PROJECT_CONTROL_INDEX.md`](../../control/PROJECT_CONTROL_INDEX.md) §2 新增两个 Supporting Conversation、§5 新增待验证项；[`../../control/MEMORY_INDEX.md`](../../control/MEMORY_INDEX.md) 保留两份 Bootstrap 的 `Pending Consumption` 登记。结果记录于 [`../../control/MEMORY_CHANGELOG.md`](../../control/MEMORY_CHANGELOG.md) 的 2026-09-21 条目。其"不新增 Role Anchor / 不新增 Authority 条目"的判断经 Curator 复核确认后执行 —— [`../../control/AUTHORITY_INDEX.md`](../../control/AUTHORITY_INDEX.md) 未改动。正文内容未改动。
+> **Archive Record**（由 Memory Curator 添加的生命周期 metadata，非正文语义）：本 Packet 已由 Memory Curator 从 `outbox/` `Pending Consumption` 消费并归档到 `archive/dispatches/`，Lifecycle 为 `Consumed → Archived`。其请求的登记已落盘：[`../../control/PROJECT_CONTROL_INDEX.md`](../../control/dashboard/PROJECT_CONTROL_INDEX.md) §2 新增两个 Supporting Conversation、§5 新增待验证项；[`../../control/MEMORY_INDEX.md`](../../control/memory/MEMORY_INDEX.md) 保留两份 Bootstrap 的 `Pending Consumption` 登记。结果记录于 [`../../control/MEMORY_CHANGELOG.md`](../../control/memory/MEMORY_CHANGELOG.md) 的 2026-09-21 条目。其"不新增 Role Anchor / 不新增 Authority 条目"的判断经 Curator 复核确认后执行 —— [`../../control/AUTHORITY_INDEX.md`](../../control/authority/AUTHORITY_INDEX.md) 未改动。正文内容未改动。
 
 ## What Happened
 

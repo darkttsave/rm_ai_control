@@ -17,9 +17,9 @@ Next Consumer: None
 Expected Persistence: Auto
 ```
 
-> **Archive Record**（由 Memory Curator 添加的生命周期 metadata，非正文语义）：本 Packet 已由 Memory Curator 从 `outbox/` `Pending Consumption` 消费并归档到 `archive/dispatches/`，Lifecycle 为 `Consumed → Archived`。其请求的登记已落盘：[`../../control/PROJECT_CONTROL_INDEX.md`](../../control/PROJECT_CONTROL_INDEX.md) §2 新增 Auto-Aim Engineering Task Coordinator、§5 新增待验证项、§6 新增 `template:task-brief` unresolved Authority dependency（`Pending Review`，交 Maintainer / Human 裁决）；[`../../control/MEMORY_INDEX.md`](../../control/MEMORY_INDEX.md) 保留新 Bootstrap 的 `Pending Consumption` 登记。结果记录于 [`../../control/MEMORY_CHANGELOG.md`](../../control/MEMORY_CHANGELOG.md) 的 2026-09-22 条目。
+> **Archive Record**（由 Memory Curator 添加的生命周期 metadata，非正文语义）：本 Packet 已由 Memory Curator 从 `outbox/` `Pending Consumption` 消费并归档到 `archive/dispatches/`，Lifecycle 为 `Consumed → Archived`。其请求的登记已落盘：[`../../control/PROJECT_CONTROL_INDEX.md`](../../control/dashboard/PROJECT_CONTROL_INDEX.md) §2 新增 Auto-Aim Engineering Task Coordinator、§5 新增待验证项、§6 新增 `template:task-brief` unresolved Authority dependency（`Pending Review`，交 Maintainer / Human 裁决）；[`../../control/MEMORY_INDEX.md`](../../control/memory/MEMORY_INDEX.md) 保留新 Bootstrap 的 `Pending Consumption` 登记。结果记录于 [`../../control/MEMORY_CHANGELOG.md`](../../control/memory/MEMORY_CHANGELOG.md) 的 2026-09-22 条目。
 >
-> **§5 建议未被执行**：本 Packet 建议向 [`../../control/AUTHORITY_INDEX.md`](../../control/AUTHORITY_INDEX.md) 新增 `template:task-brief` 条目。Curator **未改动** `AUTHORITY_INDEX.md` —— 该索引自身规定"索引缺项由 Human / rm-ai-control Maintainer 确认"，登记 Authority 条目属 Authority 语义范围。已按 `Pending Review` 登记并路由，Bootstrap 的降级路径保持有效。
+> **§5 建议未被执行**：本 Packet 建议向 [`../../control/AUTHORITY_INDEX.md`](../../control/authority/AUTHORITY_INDEX.md) 新增 `template:task-brief` 条目。Curator **未改动** `AUTHORITY_INDEX.md` —— 该索引自身规定"索引缺项由 Human / rm-ai-control Maintainer 确认"，登记 Authority 条目属 Authority 语义范围。已按 `Pending Review` 登记并路由，Bootstrap 的降级路径保持有效。
 >
 > **`Unknowns` 第 1 条的落盘**：Supervisor 确认 Code Segment Analyst 已有消费证据一项，已执行 —— 其 Bootstrap 已归档至 [`BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md`](BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md)。正文内容未改动。
 

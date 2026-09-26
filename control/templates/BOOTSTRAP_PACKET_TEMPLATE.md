@@ -31,7 +31,7 @@
   - Required Runtime Delivery Artifact:
   - Runtime Readability: `Verified | Missing | Unknown`
 
-短期临时任务不强制创建 Anchor。需要 Anchor 时，Bootstrap 只引用 Anchor ID / Version 和交付方式，不复制 Anchor 全文，也不把 Bootstrap 当作长期 Authority 替代品。依赖项通过 [`../AUTHORITY_INDEX.md`](../AUTHORITY_INDEX.md) 解析，只列本次任务需要的 closure。
+短期临时任务不强制创建 Anchor。需要 Anchor 时，Bootstrap 只引用 Anchor ID / Version 和交付方式，不复制 Anchor 全文，也不把 Bootstrap 当作长期 Authority 替代品。依赖项通过 [`../AUTHORITY_INDEX.md`](../authority/AUTHORITY_INDEX.md) 解析，只列本次任务需要的 closure。
 
 ## Execution Contract
 
@@ -64,7 +64,7 @@ Plain Conversation 自足性判据：
 - Missing Dependency Behavior: `Request exact dependency | Continue as clearly marked informal draft | Stop formal output`
 - Informal Fallback Allowed: `Yes | No | Conditional: ...`
 
-解析模板时使用 [`../TEMPLATE_RESOLUTION_CATALOG.md`](../TEMPLATE_RESOLUTION_CATALOG.md)。不要把完整 Catalog 交给下游；只交付当前角色相关的 Trigger Profile 和本次需要的模板。
+解析模板时使用 [`../TEMPLATE_RESOLUTION_CATALOG.md`](../ai/TEMPLATE_RESOLUTION_CATALOG.md)。不要把完整 Catalog 交给下游；只交付当前角色相关的 Trigger Profile 和本次需要的模板。
 
 正式 Artifact、持久化输出或声称符合正式规范的工作开始前，必须确认所需 Template / Authority 实际可读。不可读时，下游应返回：
 

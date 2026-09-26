@@ -11,7 +11,7 @@ This entry runs the existing Memory Curator role through the same pinned DSH hea
 Canonical role boundary remains:
 
 - [`../../MEMORY_CURATOR_CHARTER.md`](../../MEMORY_CURATOR_CHARTER.md)
-- [`../../control/ARTIFACT_LIFECYCLE.md`](../../control/ARTIFACT_LIFECYCLE.md)
+- [`../../control/governance/ARTIFACT_LIFECYCLE.md`](../../control/governance/ARTIFACT_LIFECYCLE.md)
 
 The DSH session is disposable. Repository files remain the state body.
 

@@ -27,7 +27,7 @@ Auto-Aim Main Supervisor 对 Coordinator 提交的《Auto-Aim 工程下游执行
 
 Supervisor 决议的 10 节约束（首轮任务、分支改名、参考 revision 处理、Evidence-first、working tree 保留语义、remote 限制、允许 / 禁止操作、Return 要求、Lifecycle）**可逐条转成可执行 Brief**，未发现互相矛盾或无法执行的要求。Manager 据此生成正式 Task Brief：
 
-[`../outbox/TASK_BRIEF_AUTO_AIM_REPO_TAKEOVER.md`](../outbox/TASK_BRIEF_AUTO_AIM_REPO_TAKEOVER.md)（`Produced` / `Pending Consumption`）
+[`../outbox/TASK_BRIEF_AUTO_AIM_REPO_TAKEOVER.md`](TASK_BRIEF_AUTO_AIM_REPO_TAKEOVER.md)（`Produced` / `Pending Consumption`）
 
 **设计决定**：该文件**同时充任 Task Brief 与 v1.2 Bootstrap Packet**。一次性 Executor 的"任务边界"与"启动上下文"是同一交付物，**故意不分拆**——分拆会让 scope 与权限在两份文件之间漂移。文件内含协议 `TASK_BRIEF_TEMPLATE.md` 的字段结构（含 Supervisor 认可的两项扩展），并附 v1.2 必需的 `Target` / `Persistent Role Authority` / `Execution Contract`。
 
@@ -59,19 +59,19 @@ Supervisor 指定宿主为 **DSH**。Brief 的 Execution Contract 是**实际约
 
 - **任务授权**：用户转达的 Supervisor 审批（2026-09-22）→ `Supervisor Confirmed`。
 - **协议结构依据**：`protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/templates/TASK_BRIEF_TEMPLATE.md`（Manager 实际读取，62 行）。
-- **项目事实依据**：`control/PROJECT_CONTROL_INDEX.md`、`control/MEMORY_INDEX.md`（2026-09-22）；`archive/returns/STAGE_CHECKPOINT_AUTO_AIM_CODE_SEGMENT_ANALYST_A.md`（Thread A，`Role Report`，2026-09-21，`M1` build 项单 target 部分证据）。
+- **项目事实依据**：`control/dashboard/PROJECT_CONTROL_INDEX.md`、`control/memory/MEMORY_INDEX.md`（2026-09-22）；`archive/returns/STAGE_CHECKPOINT_AUTO_AIM_CODE_SEGMENT_ANALYST_A.md`（Thread A，`Role Report`，2026-09-21，`M1` build 项单 target 部分证据）。
 - **模板依据**：`control/templates/BOOTSTRAP_PACKET_TEMPLATE.md`（v1.2）。
 
 ## Active Rules or State Affected
 
-- `control/PROJECT_CONTROL_INDEX.md` §5 Pending / Awaited Events：可由 Curator 更新"Coordinator 上线与首次任务"等待项的实际状态（Brief 已发出，等待 Executor Return）。
-- `control/MEMORY_INDEX.md`：Pending Outbox 概览需新增本 Task Brief。
-- `control/SYSTEM_CAPABILITY_INDEX.md`：**不需要**改动（见 `Capability Impact`）。
-- `control/AUTHORITY_INDEX.md`：**仍未改动**；`template:task-brief` 保持 `Pending Review`。
+- `control/dashboard/PROJECT_CONTROL_INDEX.md` §5 Pending / Awaited Events：可由 Curator 更新"Coordinator 上线与首次任务"等待项的实际状态（Brief 已发出，等待 Executor Return）。
+- `control/memory/MEMORY_INDEX.md`：Pending Outbox 概览需新增本 Task Brief。
+- `control/dashboard/SYSTEM_CAPABILITY_INDEX.md`：**不需要**改动（见 `Capability Impact`）。
+- `control/authority/AUTHORITY_INDEX.md`：**仍未改动**；`template:task-brief` 保持 `Pending Review`。
 
 ## Artifact Lifecycle Events
 
-- Artifact: [`../outbox/TASK_BRIEF_AUTO_AIM_REPO_TAKEOVER.md`](../outbox/TASK_BRIEF_AUTO_AIM_REPO_TAKEOVER.md)
+- Artifact: [`../outbox/TASK_BRIEF_AUTO_AIM_REPO_TAKEOVER.md`](TASK_BRIEF_AUTO_AIM_REPO_TAKEOVER.md)
 - Event: `Produced`
 - Evidence: Supervisor `Approved with Constraints`（2026-09-22）；交付对象为一次性 DSH Executor（经 Coordinator）；`Pending Consumption`
 
