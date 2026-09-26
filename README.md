@@ -54,20 +54,21 @@ Persistent Authority
 - [`control/`](control/)：Project State、System Capability、Memory Navigation、Artifact Lifecycle、Universal Behavior 和控制模板。
 - [`control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md)：通用 AI 行为、事件驱动自维护与 Git Hygiene。
 - [`control/AUTHORITY_INDEX.md`](control/AUTHORITY_INDEX.md)：把 Authority ID / 语义名称解析到 Canonical Source、Section 与 Runtime Delivery Artifact 的薄索引。
+- [`control/TEMPLATE_RESOLUTION_CATALOG.md`](control/TEMPLATE_RESOLUTION_CATALOG.md)：供 Manager / Maintainer / Curator 使用的模板解析入口；按模糊需求、角色触发和执行表面定位最小交付，不替代 Canonical Template。
 - [`control/role-anchors/`](control/role-anchors/)：长期正式角色的 Canonical Role Anchor；Runtime Delivery Copy 必须由目标环境实际可读。
 - [`projects/`](projects/)：项目级 Current State 与权威产物；当前启用 `projects/guided-dart/`。
 - [`inbox/`](inbox/)：外部角色 / Conversation → Memory Curator 的 Pending 入站区，不是长期存储。
 - [`outbox/`](outbox/)：等待目标角色消费的正式出站区；留在这里表示 Pending Consumption。
 - [`archive/`](archive/)：Historical Evidence；`returns/` 保存已处理入站，`dispatches/` 保存已消费出站，`state-updates/` 保存已 ingest State Update。
 - [`temporary/`](temporary/)：Disposable Local Scratch Space；除说明文件外由 Git 忽略，不得作为稳定 Source of Truth。
-- [`runtime/dsh-pilot/`](runtime/dsh-pilot/)：固定版本的 DSH Manager MVP 启动与状态说明；运行缓存和密钥不入 Git。
+- [`runtime/dsh-pilot/`](runtime/dsh-pilot/)：固定版本的 DSH 控制面运行入口；Manager 已有 live validation，Curator Entry 已实现但仍待独立 Runtime validation；运行缓存和密钥不入 Git。
 - [`releases/rm-ai-control_v1.2/RELEASE_NOTES.md`](releases/rm-ai-control_v1.2/RELEASE_NOTES.md)：当前项目版本的 Release 记录。
 
 当前项目版本是 `rm-ai-control_v1.2`；其 Core Protocol 基线仍是 `RM_AI_Development_Protocol_v2.3_Frozen`。Frozen 展开目录不得在本仓库内修改；原始 ZIP 保存在 [`archive/source-packages/`](archive/source-packages/)，用于完整性核验和恢复。
 
 ## DSH Pilot Boundary
 
-DSH Manager MVP 位于 [`runtime/dsh-pilot/`](runtime/dsh-pilot/)，只使用固定版本的官方 headless profile；不修改 DSH 源码，不开发 Plugin / Backend，也不把 DSH Session 当作状态本体。当前验证边界与回退方式见 [`MANAGER_RUNTIME_STATUS.md`](runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md)。
+DSH 控制面位于 [`runtime/dsh-pilot/`](runtime/dsh-pilot/)，通过同一固定版本官方 headless profile 分别启动 Manager 与 Memory Curator；两者共享 Runtime，不共享角色权限，且都不作为项目任务 Executor。不修改 DSH 源码，不开发 Plugin / Backend，也不把 DSH Session 当作状态本体。Manager 的已验证边界见 [`MANAGER_RUNTIME_STATUS.md`](runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md)，Curator 的实现与待验证边界见 [`CURATOR_RUNTIME_STATUS.md`](runtime/dsh-pilot/CURATOR_RUNTIME_STATUS.md)。
 
 ## Starting Point
 

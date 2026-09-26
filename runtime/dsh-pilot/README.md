@@ -1,6 +1,6 @@
-# DSH Manager Pilot
+# DSH Control Plane Pilot
 
-This directory runs the RM AI Project Manager / Navigator through the official DeepSeek Harness headless profile. Repository files remain the state body; DSH sessions are disposable execution contexts.
+This directory runs the RM AI Project Manager / Navigator and Memory Curator through separate role entries on the same official DeepSeek Harness headless profile. Repository files remain the state body; DSH sessions are disposable execution contexts. DSH is not a project task Executor in this architecture.
 
 ## Install
 
@@ -26,13 +26,21 @@ Alternatively copy `.env.example` to the ignored `.env` and fill it locally. Nev
 
 `DSH_MANAGER_PROVIDER` and `DSH_MANAGER_MODEL` are runtime configuration. They are deliberately absent from the Manager Skill.
 
-## Run
+## Run Manager
 
 From the repository root:
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File runtime\dsh-pilot\Invoke-Manager.ps1 -Prompt '当前 Guided Dart 项目处于什么状态？'
 ```
+
+## Run Curator
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File runtime\dsh-pilot\Invoke-Curator.ps1 -Prompt '处理这份已确认的 Returned Artifact。'
+```
+
+Manager and Curator share the pinned runtime configuration but not role authority. The Curator entry follows `MEMORY_CURATOR_CHARTER.md`; its live Runtime validation is still Pending.
 
 The launcher:
 
@@ -44,4 +52,4 @@ The launcher:
 
 The MVP uses one fresh persisted headless session per invocation. It does not install plugins, implement a Backend, create a database, or configure additional Manager agents.
 
-See [`MANAGER_RUNTIME_STATUS.md`](MANAGER_RUNTIME_STATUS.md) for verified behavior and fallback.
+See [`MANAGER_RUNTIME_STATUS.md`](MANAGER_RUNTIME_STATUS.md) for verified Manager behavior and fallback. See [`CURATOR_RUNTIME_STATUS.md`](CURATOR_RUNTIME_STATUS.md) for the implemented but not yet live-validated Curator entry.

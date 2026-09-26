@@ -4,6 +4,8 @@
 >
 > Scope: Minimum DSH + DeepSeek bring-up for the RM AI Project Manager / Navigator. This document does not change Guided Dart or Protocol semantic state.
 
+The same pinned DSH runtime now also has a separate Memory Curator entry. Its implementation and still-pending live validation are recorded in [`CURATOR_RUNTIME_STATUS.md`](CURATOR_RUNTIME_STATUS.md). That addition does not change or extend the verified Manager results below, and DSH is not a project task Executor in this architecture.
+
 ## Runtime Identity
 
 - DeepSeek Harness package: `@deepseek-ai/dsh`

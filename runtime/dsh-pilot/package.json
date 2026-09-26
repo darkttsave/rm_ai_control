@@ -2,9 +2,10 @@
   "name": "rm-ai-manager-dsh-pilot",
   "version": "0.1.0",
   "private": true,
-  "description": "Pinned DeepSeek Harness launcher for the RM AI Manager MVP",
+  "description": "Pinned DeepSeek Harness launchers for the RM AI control-plane roles",
   "scripts": {
-    "manager": "powershell -NoProfile -ExecutionPolicy Bypass -File ./Invoke-Manager.ps1"
+    "manager": "powershell -NoProfile -ExecutionPolicy Bypass -File ./Invoke-Manager.ps1",
+    "curator": "powershell -NoProfile -ExecutionPolicy Bypass -File ./Invoke-Curator.ps1"
   },
   "dependencies": {
     "@deepseek-ai/dsh": "0.1.5-rc.1"

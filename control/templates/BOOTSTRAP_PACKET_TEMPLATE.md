@@ -9,11 +9,12 @@
 ## Target
 
 - Target Role / Conversation Type:
+- Product Mode: `Conversation | Work Cloud | Work Local | Other: ...`
 - Target Execution Surface: `Plain Conversation | Repo-capable Role | Executor with repo write`
 - New / Continue Existing:
 - Suggested Name:
 
-`Target Execution Surface` 只区分上述三类通用环境，不建立更复杂的 Runtime taxonomy。`Repo-capable Role` 必须另行声明实际可读范围；除非明确授权，不得假设其可写。
+`Product Mode` 说明运行位置，`Target Execution Surface` 说明实际能力。二者不能互相替代。Execution Surface 只区分上述三类通用环境，不建立更复杂的 Runtime taxonomy。`Repo-capable Role` 必须另行声明实际可读范围；除非明确授权，不得假设其可写。
 
 ## Persistent Role Authority
 
@@ -52,6 +53,34 @@ Hard rules:
 Plain Conversation 自足性判据：
 
 > 如果移除所有不可访问的仓库 / 本地路径后，下游已无法理解任务或完成主要工作，该 Bootstrap 不合格。
+
+## Template Dependencies
+
+- Role Trigger Profile:
+- Templates Required at Startup:
+- Templates Available by Verified Repository Path:
+- Templates Delivered Inline / Attached / Project Source:
+- On-demand Template Triggers:
+- Missing Dependency Behavior: `Request exact dependency | Continue as clearly marked informal draft | Stop formal output`
+- Informal Fallback Allowed: `Yes | No | Conditional: ...`
+
+解析模板时使用 [`../TEMPLATE_RESOLUTION_CATALOG.md`](../TEMPLATE_RESOLUTION_CATALOG.md)。不要把完整 Catalog 交给下游；只交付当前角色相关的 Trigger Profile 和本次需要的模板。
+
+正式 Artifact、持久化输出或声称符合正式规范的工作开始前，必须确认所需 Template / Authority 实际可读。不可读时，下游应返回：
+
+```text
+Template Dependency Request
+
+Intent:
+Required Template / Rule:
+Why Required:
+Current Product Mode:
+Current Execution Surface:
+Can Continue as Informal Draft: Yes / No
+Requested Delivery: Path / Inline minimum / Attachment / Repo source
+```
+
+普通讨论、临时整理和明确标记的非正式草稿不因“可能有模板”而强制加载完整规则。
 
 ## Goal
 
@@ -121,7 +150,10 @@ Plain Conversation 自足性判据：
 
 目标对话结束后，应该回什么：
 
-- 
+- Return Type / Template:
+- Minimum Required Fields:
+- Next Consumer:
+- Persistence Route: `None | Manager → Curator | Repo-capable writer | Other: ...`
 
 ## Freshness / Confidence
 

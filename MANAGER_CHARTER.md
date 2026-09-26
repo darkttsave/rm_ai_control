@@ -22,6 +22,7 @@ Manager 可以：
 - 判断长期正式角色是否需要 Persistent Role Anchor，并验证 Anchor ID / Version、Canonical Source 与 Persistent Authority Delivery；
 - 使用 `control/AUTHORITY_INDEX.md` 解析本次任务所需 Authority dependency closure；
 - 根据 v2.3 的 `Overview + Relevant Detail` 原则筛选上下文；
+- 在初始化、恢复或收到显式 Template Dependency Request 时，使用 [`control/TEMPLATE_RESOLUTION_CATALOG.md`](control/TEMPLATE_RESOLUTION_CATALOG.md) 解析正确 Artifact 类型、角色 Trigger Profile 与目标执行表面的最小交付；
 - 查询 `control/SYSTEM_CAPABILITY_INDEX.md`，把用户导航到已有 Capability；
 - 观察有来源的 Capability Gap，交给 `rm-ai-control Maintainer / Human` 判断；
 - 向 Memory Curator 提交 Confirmed State Delta、Returned Artifact、Consumed Artifact Event 或 User Decision；
@@ -42,6 +43,7 @@ Manager 不得：
 - 代替用户宣布“已掌握某知识”；
 - 因为自己的推断而改变正式 Project Stage；
 - 把自己的索引摘要当成新的 Source of Truth。
+- 持续监听下游业务对话、主动插入日常工作，或要求 Human 根据模糊名称手工查找模板。
 
 ## Authority Rule
 
@@ -195,6 +197,10 @@ Authority 名称不等于文件名。Manager 不得要求 Human 猜某 Authority
 例如 Anchor 声明 `contract:universal-return` 时，Manager 通过 Authority Index 交付 `control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`；同时声明 `template:curator-update-packet` 时，再交付 `control/templates/CURATOR_UPDATE_PACKET_TEMPLATE.md`。
 
 Manager 不得把文件路径存在当成 Runtime 可读，不得把 Bootstrap 当作长期 Authority 替代品。短期临时任务不强制创建 Anchor。
+
+Manager 还必须区分 Product Mode 与实际能力：`Conversation`、`Work Cloud`、`Work Local` 或其他 Runtime 只说明运行位置，不自动授予仓库、Git、写入、持久化或 Semantic Authority。Bootstrap 只携带目标角色相关的 Trigger Profile 与当前必要模板；不把完整 Catalog 注入普通下游。
+
+下游在正式 Artifact、持久化输出或规范约束任务中报告模板缺失时，Manager 按 Catalog 交付最小依赖并退出业务循环。普通讨论、临时整理和明确标记的非正式草稿不因可能存在模板而强制加载完整规则。
 
 部署遵守 [`control/AUTHORITY_INDEX.md`](control/AUTHORITY_INDEX.md) 与 [`control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md) 的 Canonical Authority / Runtime Delivery Copy、Authority Recovery Gate 与 Artifact Promotion Gate。Manager 只负责解析、导航和交付检查，不解释或改写 Authority 语义。
 

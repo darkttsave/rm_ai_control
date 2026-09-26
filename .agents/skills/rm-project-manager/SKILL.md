@@ -8,7 +8,7 @@ This skill manages **interface and navigation**, not project authority or primar
 
 Read `MANAGER_CHARTER.md` before acting when available.
 
-For capability questions, read `control/SYSTEM_CAPABILITY_INDEX.md`. For persistent-state location and freshness, read `control/MEMORY_INDEX.md`. For repository work, follow `control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md` and `control/ARTIFACT_LIFECYCLE.md`.
+For capability questions, read `control/SYSTEM_CAPABILITY_INDEX.md`. For persistent-state location and freshness, read `control/MEMORY_INDEX.md`. For template discovery, role trigger profiles, and execution-surface delivery, read `control/TEMPLATE_RESOLUTION_CATALOG.md`. For repository work, follow `control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md` and `control/ARTIFACT_LIFECYCLE.md`.
 
 ---
 
@@ -109,26 +109,28 @@ User wants to start or continue a conversation / role.
 Procedure:
 
 1. Determine the target role and goal.
-2. Before assembling context, determine the `Target Execution Surface`: `Plain Conversation`, `Repo-capable Role`, or `Executor with repo write`.
+2. Identify the Product Mode (`Conversation`, `Work Cloud`, `Work Local`, or other), then determine the actual `Target Execution Surface`: `Plain Conversation`, `Repo-capable Role`, or `Executor with repo write`. Product name never substitutes for a capability check.
 3. Determine whether this is a long-lived formal role that requires a Persistent Role Anchor. Short-lived temporary work does not require one by default.
 4. When an Anchor is required, identify its Anchor ID / Version, Canonical Source, `Persistent Authority Delivery`, and whether the target Runtime can actually re-read it. A path is provenance, not readability; Bootstrap is not a substitute for the Anchor.
 5. Resolve each required Authority ID or semantic Authority name through `control/AUTHORITY_INDEX.md` to its Canonical Source, Section / Locator, and Required Runtime Delivery Artifact. Authority names are not filenames; never ask the Human to guess the file.
 6. Build only the Authority dependency closure needed by this task, verify every Runtime Delivery Artifact is readable on the target surface, and record unresolved dependencies. Do not deliver the whole repository.
-7. Declare the actual execution contract: repository / local-file readability, Git access, direct write / persistence permission, user-provided materials, expected return channel, and the role responsible for final persistence. A destination never implies write permission.
-8. Apply `protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Handoff_Protocol.md` when available.
-9. Apply `protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Carry_Forward.md` when available.
-10. Use **Overview + Relevant Detail**:
+7. Read `control/TEMPLATE_RESOLUTION_CATALOG.md`, select only the target role's Trigger Profile, and resolve templates required at startup. Do not deliver the whole Catalog.
+8. Declare which templates are already readable, delivered inline / attached, or available only on demand. Define the exact missing-dependency behavior and whether an informal draft is allowed.
+9. Declare the actual execution contract: repository / local-file readability, Git access, direct write / persistence permission, user-provided materials, expected return channel, and the role responsible for final persistence. A destination never implies write permission.
+10. Apply `protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Handoff_Protocol.md` when available.
+11. Apply `protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/common/Carry_Forward.md` when available.
+12. Use **Overview + Relevant Detail**:
    - global summaries only where necessary;
    - detailed state only for relevant domains.
-11. Adapt delivery to the target surface:
+13. Adapt delivery to the target surface:
    - paths prove provenance, not readability;
    - for `Plain Conversation`, inline the minimum rules and content required to work, or require the user to paste / upload / attach them;
    - default `Plain Conversation` to no repository access, no arbitrary local-file access, no Git, and no direct persistence; require a Return / Checkpoint Artifact for handback.
-12. For Persistent Authority delivery, use the minimum matching deployment: short Plain Chat → inline minimum; long-lived ChatGPT Project / Cloud Work → Project Instructions + Project Sources containing the Role Anchor, task dependency closure, and recovery instructions; Local Work → local Anchor; Repo Executor → startup rule + repo Anchor + Git; Temporary Specialist → attached or otherwise readable Anchor.
-13. Apply the self-sufficiency test: if removing inaccessible paths makes the main task impossible to understand or perform, the packet is incomplete.
-14. Generate a `BOOTSTRAP_PACKET.md` using the template and place it in `outbox/` as `Pending Consumption` when repository persistence is requested.
-15. Mark missing user-owned choices under `User Input Still Needed`; do not invent them.
-16. Include source / freshness notes.
+14. For Persistent Authority delivery, use the minimum matching deployment: short Plain Chat → inline minimum; long-lived ChatGPT Project / Cloud Work → Project Instructions + Project Sources containing the Role Anchor, task dependency closure, and recovery instructions; Local Work → local Anchor; Repo Executor → startup rule + repo Anchor + Git; Temporary Specialist → attached or otherwise readable Anchor.
+15. Apply the self-sufficiency test: if removing inaccessible paths makes the main task impossible to understand or perform, the packet is incomplete.
+16. Generate a `BOOTSTRAP_PACKET.md` using the template and place it in `outbox/` as `Pending Consumption` when repository persistence is requested.
+17. Mark missing user-owned choices under `User Input Still Needed`; do not invent them.
+18. Include source / freshness notes.
 
 Do not dump complete chat histories or the entire protocol into the packet.
 
@@ -171,6 +173,26 @@ Never:
 - infer `Active` from a filename or proposal;
 - modify Core Protocol through the Capability Index;
 - treat `Experimental` as production-verified.
+
+---
+
+### 7. template-dependency
+
+Input is an explicit Template Dependency Request from Human or a downstream role. Manager does not monitor downstream conversations for this request.
+
+Procedure:
+
+1. Read `control/TEMPLATE_RESOLUTION_CATALOG.md`.
+2. Resolve the requested intent to the correct Artifact type and Canonical Source; distinguish similarly named templates before delivery.
+3. Verify the target Product Mode and actual Execution Surface.
+4. Deliver the minimum matching form:
+   - Conversation → inline minimum or user-provided attachment;
+   - Work Cloud → verified repository path from a pushed Branch / Commit, or an explicitly available Project Source;
+   - Work Local → verified local repository path;
+   - other Runtime → self-contained content or verified readable path.
+5. Include Trigger, Template / fixed fields, generation rule, output type, Expected Return, and Next Consumer.
+6. Report unresolved Authority or unavailable source; do not guess a filename or invent a formal format.
+7. End after delivery. Do not enter the downstream business loop.
 
 ---
 

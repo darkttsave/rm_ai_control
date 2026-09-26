@@ -9,17 +9,20 @@
 3. [`control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md)
 4. [`control/ARTIFACT_LIFECYCLE.md`](control/ARTIFACT_LIFECYCLE.md)
 5. [`control/SYSTEM_CAPABILITY_INDEX.md`](control/SYSTEM_CAPABILITY_INDEX.md)
-6. 长期正式角色或 Authority-dependent Artifact 任务读取 [`control/AUTHORITY_INDEX.md`](control/AUTHORITY_INDEX.md)
-7. [`control/PROJECT_CONTROL_INDEX.md`](control/PROJECT_CONTROL_INDEX.md)
-8. [`control/MEMORY_INDEX.md`](control/MEMORY_INDEX.md)
-9. 与当前任务相关的 [`protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/`](protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/) 条目
-10. 操作 DSH Manager 时读取 [`runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md`](runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md)
+6. 需要查找、选择或交付模板时读取 [`control/TEMPLATE_RESOLUTION_CATALOG.md`](control/TEMPLATE_RESOLUTION_CATALOG.md)
+7. 长期正式角色或 Authority-dependent Artifact 任务读取 [`control/AUTHORITY_INDEX.md`](control/AUTHORITY_INDEX.md)
+8. [`control/PROJECT_CONTROL_INDEX.md`](control/PROJECT_CONTROL_INDEX.md)
+9. [`control/MEMORY_INDEX.md`](control/MEMORY_INDEX.md)
+10. 与当前任务相关的 [`protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/`](protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/) 条目
+11. 操作 DSH Manager 时读取 [`runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md`](runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md)；操作 DSH Curator 时读取 [`runtime/dsh-pilot/CURATOR_RUNTIME_STATUS.md`](runtime/dsh-pilot/CURATOR_RUNTIME_STATUS.md)
 
 当被赋予 `rm-ai-control Maintainer` 长期角色时，先读取 [`control/role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md`](control/role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md)，核对 Anchor ID `rm-ai-control-maintainer` 与 Current Version，再按该 Anchor 解析本次任务所需 Authority dependency closure。
 
 如果当前任务被赋予 Persistent Role Anchor，开始正式工作前读取其 Canonical 或当前可访问的 Runtime Delivery Copy，并核对 Anchor ID / Version。首次启动、上下文恢复、长时间中断、权限敏感操作、正式 Artifact 生成前或 Current State 修改前，按 [`control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](control/UNIVERSAL_PROJECT_AI_BEHAVIOR.md) 执行 Authority Recovery Gate。聊天记忆和摘要不能代替 Anchor 原文。
 
 使用 [`.agents/skills/rm-project-manager/SKILL.md`](.agents/skills/rm-project-manager/SKILL.md) 执行 Manager 的 `status`、`route`、`ingest`、`bootstrap`、`protocol-update` 或 `capability` 意图。
+
+正式 Artifact、持久化输出或声称符合正式规范的工作开始前，确认所需 Template / Authority 当前可读。不可读时，按 [`control/TEMPLATE_RESOLUTION_CATALOG.md`](control/TEMPLATE_RESOLUTION_CATALOG.md) 返回准确的 `Template Dependency Request`；普通讨论、临时整理和明确标记的非正式草稿可以继续，不为“可能有用”预加载完整 Catalog 或全部模板。
 
 区分四类对象：Core Protocol 说明系统遵守什么；System Capability Index 说明系统会什么；Project Control Index 说明项目正在做什么；Memory Index 说明当前有哪些持久状态、在哪里、是否新鲜。Authoritative Artifact 才是事实本体。
 
