@@ -1,8 +1,8 @@
 # Curator Runtime Status — DSH Pilot
 
-> Status date: 2026-09-26
+> Status date: 2026-09-27
 > Implementation: Entry and launcher present
-> Runtime validation: Pending
+> Runtime validation: Partial — first bounded live ingest completed; overall validation remains Pending
 
 ## Scope
 
@@ -34,18 +34,32 @@ The launcher uses the same pinned DSH package, Provider, Model, ignored `.env`, 
 - Prohibits Manager, Maintainer, business, Capability and Authority overreach;
 - Escalates repository structure, bulk migration and semantic conflict.
 
-## Not Yet Verified
+## First Bounded Live Ingest — 2026-09-27
 
-No live Provider call was made as part of the template-resolution Stage 3 implementation. Therefore the following are **not yet claimed**:
+With explicit Human authorization for DeepSeek API access, the Curator processed one bounded Human-confirmed update packet:
 
-- Provider / Model health for the Curator Entry;
-- correct classification of representative inputs;
-- safe low-risk persistence and Git behavior;
-- Conflict / Stale Source / Pending Review handling;
-- Receipt output conformance;
-- Manager → Curator end-to-end handoff.
+- verified the packet commit and cited sources;
+- classified and persisted Current navigation and maintenance-priority state;
+- updated the existing Project Control Index, Memory Index and Memory Changelog;
+- archived the consumed packet;
+- produced a Curator Receipt;
+- committed the bounded changes as `451a4da8f18bbf62584137e5a509a8825bdff031`;
+- left the ownership-unknown `inbox/Curator Update Packet.md` unread, unmodified and unstaged.
 
-These require a separate, bounded Runtime validation with disposable or explicitly authorized test inputs. Until then, the Manager pilot remains the only DSH role with recorded live validation evidence.
+This observation covers one successful normal ingest path only. It does **not** promote the runtime to `PASS`.
+
+## Still Not Verified
+
+The following remain unverified or insufficiently repeated:
+
+- `Conflict` and `Stale Source` handling;
+- repeated `Pending Review` behavior across different inputs;
+- repeated Receipt conformance;
+- Manager → Curator handoff initiated directly by Manager;
+- safe behavior across broader low-risk persistence and Git cases;
+- failure and recovery behavior for Provider / Model outages.
+
+Overall Runtime validation therefore remains `Pending` despite the successful bounded observation.
 
 ## Hard Boundary
 
