@@ -42,7 +42,9 @@ Next Consumer: rm-ai-control Maintainer Work Cloud runtime instance
 - DSH Curator completed one explicitly authorized bounded live ingest and produced commit `451a4da8f18bbf62584137e5a509a8825bdff031`; overall Curator runtime validation remains `Pending`.
 - DSH Manager recovered the Curator-persisted state and generated `outbox/BOOTSTRAP_RM_AI_CONTROL_MAINTAINER_WORK_CLOUD.md` without staging, committing or modifying indices.
 - Local branch is `main`; `origin` is `https://github.com/darkttsave/rm_ai_control.git`.
-- The local session has no usable GitHub credentials: `git ls-remote origin` returned `SEC_E_NO_CREDENTIALS`. No upstream or local `origin/main` reference is configured, so pushed state is not verified.
+- Remote `main` contains an independent four-commit test history with no common ancestor with the local repository. It was left unchanged.
+- GitHub authentication succeeded for escalated Git operations. The reviewed migration base `0b1aa75` was pushed without force to the new isolated remote branch `maintainer-cloud-migration`.
+- Remote branch delivery is now verified; Cloud Environment connection and cloud-side checkout / recovery remain unverified.
 - `inbox/Curator Update Packet.md` remains an unrelated, ownership-unknown untracked file and was not read, modified, consumed, archived or staged.
 
 ## 4. Current Understanding / Hypotheses
@@ -65,8 +67,6 @@ Next Consumer: rm-ai-control Maintainer Work Cloud runtime instance
 
 ## 6. Open Questions
 
-- Which pushed branch and final migration commit will be used by the cloud environment?
-- When will GitHub authentication become available on the local or cloud connection path?
 - Which Codex Cloud environment / project will host the continuation instance?
 - Will the first cloud run remain read-only, or will a later concrete task receive write / commit / PR permission?
 - Who will perform the Human acceptance of the returned cloud recovery Checkpoint?
@@ -85,13 +85,13 @@ Next Consumer: rm-ai-control Maintainer Work Cloud runtime instance
 
 ## 8. Next Step
 
-- Complete GitHub authentication, push the final local `main` revision, connect the cloud environment to that pushed revision, and start the cloud Maintainer using the Bootstrap and this Checkpoint.
+- Push this refreshed Checkpoint to `maintainer-cloud-migration`, connect the cloud environment to that branch, and start the cloud Maintainer using the Bootstrap and this Checkpoint.
 
 ## 9. Carry Forward
 
 - Current Goal: activate and verify the Work Cloud continuation instance of the existing Maintainer role.
-- Critical Verified Facts: Anchor ID `rm-ai-control-maintainer`; Version `1.0`; runtime `Local Current; Cloud Activation Pending`; target remote `https://github.com/darkttsave/rm_ai_control.git`; naming work `Deferred`; cloud readability and pushed state not yet verified.
+- Critical Verified Facts: Anchor ID `rm-ai-control-maintainer`; Version `1.0`; runtime `Local Current; Cloud Activation Pending`; target remote `https://github.com/darkttsave/rm_ai_control.git`; isolated remote branch `maintainer-cloud-migration`; migration base `0b1aa75` pushed; naming work `Deferred`; cloud readability not yet verified.
 - Locked Decisions / Boundaries: sibling runtime, not replacement; no second Authority; local Maintainer remains Current; recovery begins read-only; unknown Inbox file remains untouched.
-- Open Questions: authentication, pushed branch / commit, cloud environment, later write permission, acceptance owner.
+- Open Questions: cloud environment, cloud-side checkout / recovery, later write permission, acceptance owner.
 - Required Materials: Bootstrap, this Checkpoint, Role Anchor and the minimum Authority dependency closure in the pushed revision.
-- First Next Step: authenticate and push the reviewed migration revision.
+- First Next Step: connect Codex Work Cloud to `maintainer-cloud-migration` and run the recovery acceptance test.
