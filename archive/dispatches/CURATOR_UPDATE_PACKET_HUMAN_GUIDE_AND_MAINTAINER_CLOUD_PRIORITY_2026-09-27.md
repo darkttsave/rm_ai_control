@@ -5,13 +5,17 @@ Artifact Type: Curator Update Packet
 Scope: Human Template Guide promotion and rm-ai-control Maintainer cloud-migration priority
 Producer: rm-ai-control Maintainer
 Created: 2026-09-27
-Lifecycle: Pending Consumption
+Lifecycle: Archived
 Semantic Authority: Human Confirmed
 Authoritative Source: Human decision recorded in this packet + git commit e5f628be3c810d83c7ea782ad9329fde8d226a03
 Supersedes: None
-Next Consumer: Memory Curator
+Next Consumer: None
 Expected Persistence: Auto
 ```
+
+> **Archive Record**（由 Memory Curator 添加的生命周期 metadata，非正文语义）：本 Packet 已由 Memory Curator 从 `outbox/` `Pending Consumption` 消费并归档到 `archive/dispatches/`，Lifecycle 为 `Consumed → Archived`。消费证据：2026-09-27 的 bounded real ingest 处理请求（生产者 `rm-ai-control Maintainer`，`Semantic Authority: Human Confirmed`）。其 Human Confirmed 导航与维护优先级状态已落盘至 [`../../control/dashboard/PROJECT_CONTROL_INDEX.md`](../../control/dashboard/PROJECT_CONTROL_INDEX.md) 与 [`../../control/memory/MEMORY_INDEX.md`](../../control/memory/MEMORY_INDEX.md)，结果记录于 [`../../control/memory/MEMORY_CHANGELOG.md`](../../control/memory/MEMORY_CHANGELOG.md) 的 2026-09-27 条目。
+>
+> **边界说明**：本 Packet 的 `Unknowns / Conflicts` 第 1 条（DSH Curator live runtime validation）**未**被本 Packet 或本次 ingest 记为已通过；`runtime/dsh-pilot/CURATOR_RUNTIME_STATUS.md` 未被本轮修改，其验证状态保持 `Pending`（`Pending Review`，交 Human / rm-ai-control Maintainer）。未新增 / 修改 Capability、Authority 语义、Role Anchor Version、Frozen Protocol、业务 Project Stage / Milestone 或 Learning State。正文内容未改动。
 
 ## What Happened
 

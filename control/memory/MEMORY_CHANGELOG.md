@@ -2,6 +2,17 @@
 
 > 只记录管理意义上的持久状态变化，不替代 Git log，也不记录 Markdown 排版或普通机械链接修复。
 
+## 2026-09-27 — Human Template Guide Navigation and Maintainer Cloud Priority Ingested
+
+- Ingest Human Confirmed Curator Update Packet `CURATOR_UPDATE_PACKET_HUMAN_GUIDE_AND_MAINTAINER_CLOUD_PRIORITY_2026-09-27.md`（Producer: rm-ai-control Maintainer）：由 `outbox/` `Pending Consumption` 消费并归档至 [`../archive/dispatches/CURATOR_UPDATE_PACKET_HUMAN_GUIDE_AND_MAINTAINER_CLOUD_PRIORITY_2026-09-27.md`](../../archive/dispatches/CURATOR_UPDATE_PACKET_HUMAN_GUIDE_AND_MAINTAINER_CLOUD_PRIORITY_2026-09-27.md)，Lifecycle `Consumed → Archived`。
+- 来源核验：Guide promotion commit `e5f628be3c810d83c7ea782ad9329fde8d226a03` 与 Packet 创建 commit `0f988870520f94c994ef15c3bcb21a07a615cca2` 均实测存在；Guide 入口 [`../dashboard/human-template-guide/START_HERE.md`](../dashboard/human-template-guide/START_HERE.md)、Work Cloud delivery boundary [`../dashboard/human-template-guide/delivery/WORK_CLOUD.md`](../dashboard/human-template-guide/delivery/WORK_CLOUD.md)、Maintainer Anchor（Anchor ID `rm-ai-control-maintainer` / Version `1.0`）以及 root / control README、System Capability Index、Template Resolution Catalog 中的稳定导航链接均已实测存在且一致。
+- 持久化为 Current 的**导航状态**：Human Template Guide 为 Current Human 导航入口（导航，不替代 Canonical Template 或 Authority）；链接的稳定性登记于 [`PROJECT_CONTROL_INDEX.md`](../dashboard/PROJECT_CONTROL_INDEX.md) 与 [`MEMORY_INDEX.md`](MEMORY_INDEX.md)。
+- 持久化为 Current 的**维护优先级状态**（Human Confirmed）：① 从持久仓库状态同步 Curator 与 Manager → ② 准备并激活 Maintainer Work Cloud runtime → ③ 恢复 universal-function inventory / naming；第三项记为 `Deferred`（未取消、未完成）。
+- Maintainer runtime position 记为 `Local Current; Cloud Activation Pending`：Work Cloud 是同一长期角色的 continuation / sibling runtime，不替代本地 Maintainer、不产生第二个语义 Authority；远程可达性 / 认证 / pushed commit / Cloud Environment 连接 / 恢复测试均未验证，**未记为迁移完成**。
+- 未改变：Capability（Added / Changed / Deprecated 均为 None）、Authority 语义、Role Anchor Version（`rm-ai-control-maintainer` 仍为 `1.0`）、`protocol/current/` Frozen 内容、业务 Project Stage / Milestone、Learning State、Knowledge Asset Index 与任何业务技术决定。
+- `Pending Review`：DSH Curator live runtime validation 仍记为 `Pending` —— 本轮为首次 bounded real ingest 的实际执行，但**未宣称 `PASS`**；[`../runtime/dsh-pilot/CURATOR_RUNTIME_STATUS.md`](../../runtime/dsh-pilot/CURATOR_RUNTIME_STATUS.md) 未被修改，其"No live Provider call was made"陈述因本轮执行而 stale，是否落盘 validation-status 属 Human / rm-ai-control Maintainer 的验证判断范围。
+- 范围纪律：`inbox/Curator Update Packet.md` 按要求未被读取、修改、消费、归档或 staged。
+
 ## 2026-09-26 — Control Surface Reorganized; Role-based Loading Applied
 
 - 经 Human 批准，将 `control/` 从平铺根文件重构为 `dashboard/`、`ai/`、`authority/`、`memory/`、`governance/` 五个职责层；`templates/` 与特化 `knowledge/` 保持独立。

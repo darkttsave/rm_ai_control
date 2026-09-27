@@ -6,9 +6,12 @@
 
 ## Metadata
 
-- Last Refreshed: 2026-09-25
+- Last Refreshed: 2026-09-27
 - Manager / Runtime: DSH Manager MVP verified with `@deepseek-ai/dsh@0.1.5-rc.1`; file-based fallback retained
 - Runtime Source: [`../runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md`](../../runtime/dsh-pilot/MANAGER_RUNTIME_STATUS.md)
+- Maintainer Runtime Position: `Local Current; Cloud Activation Pending`（Human Confirmed，2026-09-27）—— Work Cloud 是同一长期 `rm-ai-control Maintainer` 角色的 continuation / sibling runtime，不替代本地 Maintainer，也不产生第二个语义 Authority
+- System Maintenance Work Ordering: （Human Confirmed，2026-09-27）① 从持久仓库状态同步 Curator 与 Manager → ② 准备并激活 Maintainer Work Cloud runtime → ③ 恢复 universal-function inventory / naming（`Deferred`，未取消、未完成）
+- Human Navigation Surface: [`human-template-guide/START_HERE.md`](human-template-guide/START_HERE.md)（Human Confirmed 提升为 Current Human 导航，commit `e5f628be3c810d83c7ea782ad9329fde8d226a03`；导航，不替代 Canonical Template 或 Authority）
 - Project Version: `rm-ai-control_v1.2`（release 2026-09-19；主题 `Persistent Authority + Long-lived Role Continuity`）
 - Current Protocol: `RM_AI_Development_Protocol_v2.3_Frozen`
 - Protocol Source: [`../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/README.md`](../../protocol/current/RM_AI_Development_Protocol_v2.3_Frozen/README.md)
@@ -105,7 +108,7 @@
 | Auto-Aim Environment Configuration Instructor（项目环境配置讲师） | 环境复现：安装 / 构建 / 启动路径与踩坑记录，形成可复现命令；区分 upstream baseline 与本机适配 | Not yet created — Bootstrap `Produced`，`Pending Consumption`；Target Execution Surface `Executor with repo write`（限环境范围，目标面） | [`../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md`](../../outbox/BOOTSTRAP_AUTO_AIM_ENVIRONMENT_INSTRUCTOR.md) | 2026-09-17 Bootstrap（含 upstream baseline 硬规则） | 目标机器事实全缺；实际执行能力未验证 |
 | Guided Dart P0.5 exploration | Same-stage cross-solution foundational learning and note preparation（现为 secondary / historical line） | Unknown | [`../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md`](../../projects/guided-dart/GUIDED_DART_P0_5_CHECKPOINT.md) | 2026-09-14 ingest | Semantic stage is sourced; conversation activity is not registered |
 | Guided Dart Knowledge — PID / Control 接口基础 | Dedicated knowledge conversation for the P0.5 `Control` interface layer, driven by the user's existing PID notes and questions | Not yet created — the earlier 2026-09-15 `Active` entry was a test registration; awaiting the user's first real conversation | None yet — no authoritative artifact; Manager Bootstrap Packet only | 2026-09-15 re-bootstrap | Manager-generated packet remains Pending Consumption and is navigated through [`MEMORY_INDEX.md`](../memory/MEMORY_INDEX.md), not used as semantic authority; user-side PID notes and video material are user-reported and not registered; the conversation that carried the earlier 电控 learning entry was archived by the user and is currently unlocatable (user-reported 2026-09-15) |
-| rm-ai-control Maintainer | Maintain Core Protocol and project-level method from real RM friction without taking the project Main Supervisor role | Active — Canonical Anchor `1.0`; 第1次鲸落 `Completed`; 第1次鲸鸣 `PASS` | [`role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md`](../authority/role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md) + [`../archive/returns/FIRST_WHALE_SONG_MAINTAINER_RECOVERY_REPORT.md`](../../archive/returns/FIRST_WHALE_SONG_MAINTAINER_RECOVERY_REPORT.md) | 2026-09-25 Role Recovery | System methodology only; not the project Main Supervisor. `rm-ai-control Architect` identity relation remains `Pending Review`; real RM long-term validation remains incomplete |
+| rm-ai-control Maintainer | Maintain Core Protocol and project-level method from real RM friction without taking the project Main Supervisor role | Active — Canonical Anchor `1.0`; 第1次鲸落 `Completed`; 第1次鲸鸣 `PASS` | [`role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md`](../authority/role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md) + [`../archive/returns/FIRST_WHALE_SONG_MAINTAINER_RECOVERY_REPORT.md`](../../archive/returns/FIRST_WHALE_SONG_MAINTAINER_RECOVERY_REPORT.md) | 2026-09-25 Role Recovery；2026-09-27 priority update | System methodology only; not the project Main Supervisor. `rm-ai-control Architect` identity relation remains `Pending Review`; real RM long-term validation remains incomplete. Human Confirmed（2026-09-27）：Work Cloud runtime 迁移列为当前系统维护最高优先级；cloud instance 为同一长期角色的 continuation / sibling runtime（`Local Current; Cloud Activation Pending`），不替代本地 Maintainer、不产生第二个语义 Authority；Anchor ID `rm-ai-control-maintainer` / Version `1.0` 未变 |
 | DSH Manager Runtime Validation | Validate the Manager `ingest` capability with a mechanical-only smoke test | Completed | [`../archive/state-updates/STATE_UPDATE_MANAGER_RUNTIME_SMOKE_TEST.md`](../../archive/state-updates/STATE_UPDATE_MANAGER_RUNTIME_SMOKE_TEST.md) | 2026-09-14 ingest | Mechanical-only validation entry; the source asserts no Guided Dart / Protocol semantic change |
 
 ---
@@ -139,6 +142,8 @@ The migration and user-action entries above come from the Initial Manager Baseli
 
 | Item | Waiting For | Why It Matters | Owner / Source | Last Updated |
 |---|---|---|---|---|
+| rm-ai-control Maintainer Work Cloud runtime activation | 远程仓库可达性与认证、目标 commit 已 push、Cloud Environment 连接、云端恢复测试 | 未通过远程交付与恢复测试前，不得记为迁移完成，也不得产生第二个语义 Authority；本地 Maintainer 继续有效 | [`../archive/dispatches/CURATOR_UPDATE_PACKET_HUMAN_GUIDE_AND_MAINTAINER_CLOUD_PRIORITY_2026-09-27.md`](../../archive/dispatches/CURATOR_UPDATE_PACKET_HUMAN_GUIDE_AND_MAINTAINER_CLOUD_PRIORITY_2026-09-27.md)（Human Confirmed） | 2026-09-27 |
+| universal-function inventory 与 naming 工作 | Maintainer Work Cloud 迁移任务完成后恢复 | Human 明确 paused（未取消、未完成）；恢复前不得记为已完成或已放弃 | [`../archive/dispatches/CURATOR_UPDATE_PACKET_HUMAN_GUIDE_AND_MAINTAINER_CLOUD_PRIORITY_2026-09-27.md`](../../archive/dispatches/CURATOR_UPDATE_PACKET_HUMAN_GUIDE_AND_MAINTAINER_CLOUD_PRIORITY_2026-09-27.md)（Human Confirmed） | 2026-09-27 |
 | Auto-Aim `M1` evidence | 仓库身份 / 环境基线 / 可复现 build 与 launch / system map / config 入口 / 至少一条 runtime evidence | `M1` 未成立前无法判定 `P1` 进展，也无法判断进入 `P1 Exit` 的距离 | [`../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md`](../../archive/dispatches/CURATOR_UPDATE_PACKET_AUTO_AIM_P1_STAGE_AND_SUPERVISOR.md) | 2026-09-17 |
 | Tongji 2025 auto-aim repository identity | 地址 / 分支 / revision / 许可证 / 获取方式 | 决定能否开始 `Reproduce`，以及 Code Framework Analyst 能读到什么 | 同上 | 2026-09-17 |
 | Auto-Aim target machine facts | OS / ROS / compiler / 算力 / 相机 / SDK / 网络 | 环境基线与可行性判断的前置；缺此无法确认 `Executor with repo write` 的实际作用域 | 同上 | 2026-09-17 |
@@ -168,6 +173,8 @@ Manager / Memory Curator 不自行解决语义冲突，只标记并请求 / 读�
 ---
 
 # 7. Recent Significant Updates
+
+- 2026-09-27: Ingest Human Confirmed Curator Update Packet（[`../archive/dispatches/CURATOR_UPDATE_PACKET_HUMAN_GUIDE_AND_MAINTAINER_CLOUD_PRIORITY_2026-09-27.md`](../../archive/dispatches/CURATOR_UPDATE_PACKET_HUMAN_GUIDE_AND_MAINTAINER_CLOUD_PRIORITY_2026-09-27.md)，`Consumed → Archived`）：Human Template Guide 提升为 Current Human 导航入口 [`human-template-guide/START_HERE.md`](human-template-guide/START_HERE.md)（commit `e5f628b`）；Maintainer Work Cloud runtime 迁移登记为当前系统维护最高优先级，ordering 为 ①Curator / Manager 同步 → ②Maintainer Work Cloud 激活 → ③恢复 universal-function inventory / naming（`Deferred`）。Maintainer runtime 保持 `Local Current; Cloud Activation Pending`，未记为完成。
 
 - 2026-09-22: Ingest Code Segment Analyst **Thread A** Stage Checkpoint（2026-09-21，`Role Report`）：核验 `auto_aim_test.cpp` 主链、`YOLO` / `Detector` 关系、`Armor` / `Solver` / `Target` 职责、11D whole-car EKF 与 4D 观测、动态观测噪声 `R`、`ekf_x()` 与 Plotter 接口、`cmake --build build --target auto_aim_test -j2` 构建路径。`M1` 的 build 项记为**部分证据**（单 target），**未宣布 `M1` 完成**。
 - 2026-09-22: 依 `Supervisor Confirmed` 证据将 Code Segment Analyst Bootstrap 由 `Pending Consumption` 修正为 `Consumed` 并归档至 [`../archive/dispatches/BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md`](../../archive/dispatches/BOOTSTRAP_AUTO_AIM_CODE_SEGMENT_ANALYST.md)；该角色登记为 `Active`。**两个并行线程（A / B）分别登记**，B 尚未返回。
@@ -199,6 +206,7 @@ Manager / Memory Curator 不自行解决语义冲突，只标记并请求 / 读�
 
 # 8. Recommended Navigation
 
+- If the user asks how to judge the current stage, which specialized material or template to provide, or how to deliver it to a target surface → [`human-template-guide/START_HERE.md`](human-template-guide/START_HERE.md)（Current Human 导航；不替代 Canonical Template 或 Authority）。
 - If the user asks about Auto-Aim current stage, progress, blockers or next task → Auto-Aim Main Supervisor / Human, using the ingested `P1` packet and the role Bootstraps.
 - If the user asks about Auto-Aim code structure / parameters → Auto-Aim Code Framework Analyst; about installation / build / launch → Auto-Aim Environment Configuration Instructor.
 - If the user asks about Guided Dart project direction or transition beyond P0.5 → Main Supervisor / Human, using the current Stage Checkpoint（secondary / historical line）. 引用其阶段语义时标注 `Stage Model: Protocol v2.3 Frozen`。
