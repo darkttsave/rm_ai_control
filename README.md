@@ -55,6 +55,7 @@ Persistent Authority
 - [`control/ai/UNIVERSAL_PROJECT_AI_BEHAVIOR.md`](control/ai/UNIVERSAL_PROJECT_AI_BEHAVIOR.md)：通用 AI 行为、事件驱动自维护与 Git Hygiene。
 - [`control/authority/AUTHORITY_INDEX.md`](control/authority/AUTHORITY_INDEX.md)：把 Authority ID / 语义名称解析到 Canonical Source、Section 与 Runtime Delivery Artifact 的薄索引。
 - [`control/ai/TEMPLATE_RESOLUTION_CATALOG.md`](control/ai/TEMPLATE_RESOLUTION_CATALOG.md)：供 Manager / Maintainer / Curator 使用的模板解析入口；按模糊需求、角色触发和执行表面定位最小交付，不替代 Canonical Template。
+- [`control/dashboard/human-template-guide/START_HERE.md`](control/dashboard/human-template-guide/START_HERE.md)：Human 自助判断阶段、专用工作材料和模板交付方式的 Current 导航入口。
 - [`control/authority/role-anchors/`](control/authority/role-anchors/)：长期正式角色的 Canonical Role Anchor；Runtime Delivery Copy 必须由目标环境实际可读。
 - [`projects/`](projects/)：项目级 Current State 与权威产物；当前启用 `projects/guided-dart/`。
 - [`inbox/`](inbox/)：外部角色 / Conversation → Memory Curator 的 Pending 入站区，不是长期存储。

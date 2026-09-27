@@ -6,6 +6,7 @@
 
 - [`dashboard/PROJECT_CONTROL_INDEX.md`](dashboard/PROJECT_CONTROL_INDEX.md)：当前项目、角色、阻塞与来源指针。
 - [`dashboard/SYSTEM_CAPABILITY_INDEX.md`](dashboard/SYSTEM_CAPABILITY_INDEX.md)：系统已有能力、用途、入口、Owner 与状态。
+- [`dashboard/human-template-guide/START_HERE.md`](dashboard/human-template-guide/START_HERE.md)：供 Human 判断当前阶段、所需专用材料与目标运行表面交付方式；它是导航，不替代 Canonical Template 或 Authority。
 
 ## AI Control Layer
 

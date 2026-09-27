@@ -32,6 +32,7 @@ flowchart LR
 
 ## 按当前意图查找
 
+- **Human 自助判断阶段、模板与交付表面：** [Human Template Guide](human-template-guide/START_HERE.md)。该指南重组已有能力入口，不新增 Capability，也不替代各能力的正式来源。
 - **进入项目、恢复上下文或长期身份：** RM staged operating model、Context health and minimum-sufficient handoff、Persistent Authority / Long-lived Role Continuity。
 - **查看状态、寻找角色或初始化工作：** Project status navigation、Role and conversation routing、Minimum bootstrap assembly、Protocol release intake、Capability navigation and gap observation。
 - **执行、验证或学习：** Verification levels and Human gates、Repository hygiene、Knowledge learning and note lifecycle。

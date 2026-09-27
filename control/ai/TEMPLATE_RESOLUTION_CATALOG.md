@@ -19,6 +19,8 @@
 → Expected Return / Next Consumer
 ```
 
+Human 需要自行判断“现在处于什么阶段、应提供哪类材料、应怎样交给目标运行表面”时，使用 [Human Template Guide](../dashboard/human-template-guide/START_HERE.md)。该指南是 Human-facing 导航；本 Catalog 继续承担 Manager / Maintainer / Curator 的模板解析职责。
+
 它不是：
 
 - Template 正文；
