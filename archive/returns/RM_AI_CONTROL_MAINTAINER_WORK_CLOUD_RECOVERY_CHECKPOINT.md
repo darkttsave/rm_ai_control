@@ -5,7 +5,7 @@ Artifact Type: Role Continuity Checkpoint
 Scope: rm-ai-control Maintainer / ChatGPT Work Cloud discussion and review runtime
 Producer: rm-ai-control Maintainer — Work Cloud Discussion Runtime
 Created: 2026-09-27
-Lifecycle: Pending
+Lifecycle: Archived
 Semantic Authority: Role Report
 Authoritative Source:
   - ChatGPT Work thread 6ab8bf58-e6b8-83e9-bb84-88ac2e937afc
@@ -16,6 +16,11 @@ Supersedes: None
 Next Consumer: Manager
 ```
 
+> Archive Record: inbound Return，经 `Manager → Memory Curator` ingest（2026-09-27）归档至 `archive/returns/`，Lifecycle `Pending → Consumed → Archived`。
+>
+> Ingest 证据：Curator Update Packet [`../dispatches/CURATOR_UPDATE_PACKET_MAINTAINER_WORK_CLOUD_ACTIVATION_2026-09-27.md`](../dispatches/CURATOR_UPDATE_PACKET_MAINTAINER_WORK_CLOUD_ACTIVATION_2026-09-27.md)（Manager verification 表与 `## Artifact Lifecycle Events`）。原入站路径为 `inbox/RM_AI_CONTROL_MAINTAINER_WORK_CLOUD_RECOVERY_CHECKPOINT.md`。
+>
+> 正文语义未改动：内容为 `Semantic Authority: Role Report`，云端验收结果为该角色自报，未被 Curator 独立复现。Curator 实测的 commit：`e242c9d`（本 Return 与 Packet 的创建 commit）、`e27d12c`（Branch `maintainer-cloud-migration` 的固定 commit）。
 ## Role Authority
 
 - Role Anchor ID: `rm-ai-control-maintainer`

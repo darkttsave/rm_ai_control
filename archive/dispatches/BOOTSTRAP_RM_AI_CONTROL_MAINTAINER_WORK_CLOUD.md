@@ -5,7 +5,7 @@ Artifact Type: Bootstrap Packet (Long-lived Role Runtime Activation / Continuati
 Scope: System / Role (rm-ai-control Maintainer) / Runtime (Work Cloud)
 Producer: Manager (rm-ai-control_v1.2 Navigator)
 Created: 2026-09-27
-Lifecycle: Pending
+Lifecycle: Archived（`Pending Consumption → Consumed → Archived`）
 Semantic Authority: Mechanical (assembled from cited stable sources; asserts no new semantic state)
 Authoritative Source:
   - archive/dispatches/CURATOR_UPDATE_PACKET_HUMAN_GUIDE_AND_MAINTAINER_CLOUD_PRIORITY_2026-09-27.md（Human Confirmed；Archived）
@@ -18,8 +18,14 @@ Authoritative Source:
   - control/dashboard/human-template-guide/delivery/WORK_CLOUD.md
   - Git read-only observation at local HEAD 451a4da8f18bbf62584137e5a509a8825bdff031
 Supersedes: None
-Next Consumer: rm-ai-control Maintainer Work Cloud runtime instance（Codex Cloud 仓库执行）
+Next Consumer: rm-ai-control Maintainer Work Cloud runtime instance（当时记为 `Codex Cloud 仓库执行`；目标面此后由 Role Report 澄清为 ChatGPT Work Cloud discussion / review，见上方 Curator Archive Record）
 ```
+
+> Curator Archive Record（机械性；正文未改动）
+>
+> - 本 Bootstrap 已由云端 runtime 消费：Role Report（[`../returns/RM_AI_CONTROL_MAINTAINER_WORK_CLOUD_RECOVERY_CHECKPOINT.md`](../returns/RM_AI_CONTROL_MAINTAINER_WORK_CLOUD_RECOVERY_CHECKPOINT.md)）`## Verified Facts` 与验收项 2 记录该 runtime 从固定 commit `e27d12c7f4bc59755e713f0d81c52fe1c92e2398` 读取并重读本文件。Lifecycle 由 `Pending Consumption` 记为 `Consumed` 并归档至 `archive/dispatches/`。
+> - 本文件按当时语义**原样保留为历史证据**，不重写为当前要求。其 `Codex Cloud 仓库执行` / `Repo-capable Role` 目标面框架此后由 Role Report `## Decisions` 澄清：实际激活的是 **ChatGPT Work Cloud discussion / review runtime + GitHub-connected repository access**；Codex Cloud checkout、build / test environment 与 workspace dirty-state inspection **不是**本次激活的证据要求，也没有 Codex Cloud executor 被登记或推断。
+> - 目标面措辞的 Authority 层调和仍属 Human / `rm-ai-control Maintainer` 范围。
 
 > Producer：Manager（`rm-ai-control_v1.2` Navigator）
 >

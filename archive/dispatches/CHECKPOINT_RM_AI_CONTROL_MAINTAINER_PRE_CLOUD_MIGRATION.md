@@ -5,7 +5,7 @@ Artifact Type: Role Continuity Checkpoint
 Scope: rm-ai-control Maintainer / Work Cloud migration preparation
 Producer: rm-ai-control Maintainer
 Created: 2026-09-27
-Lifecycle: Pending Consumption
+Lifecycle: Archived（`Pending Consumption → Consumed → Archived`）
 Semantic Authority: Role Report
 Authoritative Source:
   - control/authority/role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md
@@ -16,6 +16,11 @@ Authoritative Source:
 Supersedes: None
 Next Consumer: rm-ai-control Maintainer Work Cloud runtime instance
 ```
+
+> Curator Archive Record（机械性；正文未改动）
+>
+> - 本 pre-cloud Checkpoint 已由云端 runtime 消费：Role Report（[`../returns/RM_AI_CONTROL_MAINTAINER_WORK_CLOUD_RECOVERY_CHECKPOINT.md`](../returns/RM_AI_CONTROL_MAINTAINER_WORK_CLOUD_RECOVERY_CHECKPOINT.md)）`## Verified Facts` 与验收项 2 记录该 runtime 从固定 commit `e27d12c7f4bc59755e713f0d81c52fe1c92e2398` 读取并重读本文件。Lifecycle 由 `Pending Consumption` 记为 `Consumed` 并归档至 `archive/dispatches/`。
+> - 正文按当时语义原样保留为历史证据（含当时的 `Local Current; Cloud Activation Pending` 与 `Codex Cloud` 环境表述）；当前 runtime 位置以 [`../../control/memory/MEMORY_INDEX.md`](../../control/memory/MEMORY_INDEX.md) 与 [`../../control/dashboard/PROJECT_CONTROL_INDEX.md`](../../control/dashboard/PROJECT_CONTROL_INDEX.md) 为准。
 
 ## Role Authority
 

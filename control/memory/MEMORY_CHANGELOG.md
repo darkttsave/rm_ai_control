@@ -2,6 +2,18 @@
 
 > 只记录管理意义上的持久状态变化，不替代 Git log，也不记录 Markdown 排版或普通机械链接修复。
 
+## 2026-09-27 — Maintainer Work Cloud Discussion Runtime Activation Ingested
+
+- Ingest `Role Report` 返回件 `RM_AI_CONTROL_MAINTAINER_WORK_CLOUD_RECOVERY_CHECKPOINT.md`（Producer: rm-ai-control Maintainer — Work Cloud Discussion Runtime）：由 `inbox/` 归档至 [`../archive/returns/RM_AI_CONTROL_MAINTAINER_WORK_CLOUD_RECOVERY_CHECKPOINT.md`](../../archive/returns/RM_AI_CONTROL_MAINTAINER_WORK_CLOUD_RECOVERY_CHECKPOINT.md)，Lifecycle `Pending → Consumed → Archived`；配套 Curator Update Packet 归档至 [`../archive/dispatches/CURATOR_UPDATE_PACKET_MAINTAINER_WORK_CLOUD_ACTIVATION_2026-09-27.md`](../../archive/dispatches/CURATOR_UPDATE_PACKET_MAINTAINER_WORK_CLOUD_ACTIVATION_2026-09-27.md)。
+- 来源核验（只读）：commit `e242c9ddc8fff8363934bae4b263b724545319fd` 实测存在，为该 Return 与 Packet 的创建 commit；本地 remote-tracking ref `origin/maintainer-cloud-migration` 解析为 `e27d12c7f4bc59755e713f0d81c52fe1c92e2398`，该 commit object 实测存在，其 tree 中实测包含 `outbox/BOOTSTRAP_RM_AI_CONTROL_MAINTAINER_WORK_CLOUD.md` 与 `outbox/CHECKPOINT_RM_AI_CONTROL_MAINTAINER_PRE_CLOUD_MIGRATION.md`；Canonical Role Anchor 仍为 Anchor ID `rm-ai-control-maintainer` / Version `1.0`。
+- 持久化为 Current 的运行时状态（`Role Report`，Semantic Authority 为云端角色自报，Curator 未独立复现云端行为）：**`Local Current; Cloud Discussion Runtime Activated; Recovery Test Passed; Local Maintainer Retained`** —— 激活目标面是 **ChatGPT Work Cloud discussion / review runtime + GitHub-connected repository access**；本地 Maintainer 保留仓库执行、测试与受控提交；云端与本地是同一长期角色的两个运行位置，共享一个 Canonical Role Anchor 与一个语义 Authority。
+- 边界如实记录：**未**登记、激活或推断 Codex Cloud executor，**未**要求或声称 Git checkout、build / test environment、workspace dirty-state inspection；GitHub Connector 写能力不等于写权限，恢复测试执行契约为只读；DSH Manager / Curator 为 control-plane，不是该 runtime 的消费者以外角色。
+- 生命周期（有消费证据）：`BOOTSTRAP_RM_AI_CONTROL_MAINTAINER_WORK_CLOUD.md` 与 `CHECKPOINT_RM_AI_CONTROL_MAINTAINER_PRE_CLOUD_MIGRATION.md` 由 `Pending Consumption` 记为 `Consumed` 并归档至 [`../archive/dispatches/`](../../archive/dispatches/)；证据为该 Role Report `## Verified Facts` 与验收项 2（runtime 从固定 commit 读取并重读该两文件）。归档仅新增 Archive Record 生命周期 metadata：Bootstrap 按当时语义**原样保留为历史证据**，其初始 `Codex Cloud 仓库执行` 框架**未**被改写为当前要求，也未使其 Codex-checkout 验收项成为本次激活的证据要求。
+- 未改变：`protocol/current/` Frozen 内容、Capability 定义（Added / Changed / Deprecated 均为 None；activation 复用既有 `Persistent Authority / Long-lived Role Continuity`）、Authority 语义、Anchor ID / Version（`rm-ai-control-maintainer` 仍为 `1.0`）、业务 Project Stage / Milestone、Learning State、Knowledge Asset Index、任何业务技术决定。
+- item ③ **universal-function inventory / naming 仍为 `Deferred`**（Human 明确 paused；未取消、未完成，待 Human 明确恢复）；本事件**未**恢复该项工作，也**未**因迁移前置完成而自动重启。
+- `Pending Review`（未变）：`rm-ai-control Architect` 与 `rm-ai-control Maintainer` 的身份关系仍未调和；DSH Curator live runtime validation 仍记为 `Pending`，本 Packet 不得作为该验证证据；稳定 Maintainer runtime status 位置与稳定 control-plane 优先级位置仍不存在（结构裁决属 Repo Operator）。
+- 范围纪律：`inbox/Curator Update Packet.md` 按要求**未被读取、修改、消费、归档或 staged**。
+
 ## 2026-09-27 — Human Template Guide Navigation and Maintainer Cloud Priority Ingested
 
 - Ingest Human Confirmed Curator Update Packet `CURATOR_UPDATE_PACKET_HUMAN_GUIDE_AND_MAINTAINER_CLOUD_PRIORITY_2026-09-27.md`（Producer: rm-ai-control Maintainer）：由 `outbox/` `Pending Consumption` 消费并归档至 [`../archive/dispatches/CURATOR_UPDATE_PACKET_HUMAN_GUIDE_AND_MAINTAINER_CLOUD_PRIORITY_2026-09-27.md`](../../archive/dispatches/CURATOR_UPDATE_PACKET_HUMAN_GUIDE_AND_MAINTAINER_CLOUD_PRIORITY_2026-09-27.md)，Lifecycle `Consumed → Archived`。

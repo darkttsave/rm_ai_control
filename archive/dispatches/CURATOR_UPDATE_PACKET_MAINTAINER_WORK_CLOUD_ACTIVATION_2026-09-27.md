@@ -5,22 +5,28 @@ Artifact Type: Curator Update Packet
 Scope: rm-ai-control Maintainer Work Cloud discussion / review runtime activation and recovery-test result
 Producer: Manager (rm-ai-control_v1.2 Navigator)
 Created: 2026-09-27
-Lifecycle: Pending
+Lifecycle: Archived
 Semantic Authority: Role Report
 Authoritative Source:
-  - inbox/RM_AI_CONTROL_MAINTAINER_WORK_CLOUD_RECOVERY_CHECKPOINT.md（Role Continuity Checkpoint；Semantic Authority: Role Report；Next Consumer: Manager）
+  - archive/returns/RM_AI_CONTROL_MAINTAINER_WORK_CLOUD_RECOVERY_CHECKPOINT.md（Role Continuity Checkpoint；Semantic Authority: Role Report；Next Consumer: Manager；原始入站路径 `inbox/`）
   - ChatGPT Work thread 6ab8bf58-e6b8-83e9-bb84-88ac2e937afc
   - GitHub darkttsave/rm_ai_control, branch maintainer-cloud-migration, commit e27d12c7f4bc59755e713f0d81c52fe1c92e2398
   - control/authority/role-anchors/RM_AI_CONTROL_MAINTAINER_ROLE_ANCHOR.md（Anchor ID rm-ai-control-maintainer / Version 1.0）
   - control/dashboard/PROJECT_CONTROL_INDEX.md
   - control/memory/MEMORY_INDEX.md
   - archive/dispatches/CURATOR_UPDATE_PACKET_HUMAN_GUIDE_AND_MAINTAINER_CLOUD_PRIORITY_2026-09-27.md
-  - outbox/BOOTSTRAP_RM_AI_CONTROL_MAINTAINER_WORK_CLOUD.md（Role Report 声明已消费）
-  - outbox/CHECKPOINT_RM_AI_CONTROL_MAINTAINER_PRE_CLOUD_MIGRATION.md（Role Report 声明已消费）
+  - archive/dispatches/BOOTSTRAP_RM_AI_CONTROL_MAINTAINER_WORK_CLOUD.md（Role Report 声明已消费；原 `outbox/` 路径，2026-09-27 由 Curator 归档）
+  - archive/dispatches/CHECKPOINT_RM_AI_CONTROL_MAINTAINER_PRE_CLOUD_MIGRATION.md（Role Report 声明已消费；原 `outbox/` 路径，2026-09-27 由 Curator 归档）
 Supersedes: None
 Next Consumer: Memory Curator
 Expected Persistence: Auto
 ```
+
+> Curator Archive Record（机械性）
+>
+> - 本 Packet 已由 Memory Curator 消费并归档至 `archive/dispatches/`，Lifecycle `Pending → Consumed → Archived`（2026-09-27）。
+> - 上述两条 `outbox/` 引用为 Producer 记录时的原始 provenance；稳定位置已按 Stable Reference Rule 更新为 archive 路径。
+> - Curator 未独立复现云端 runtime 行为；验收结果为 `Semantic Authority: Role Report`。Curator 实测存在的 commit：`e242c9d`（本 Packet 与 Return 的创建 commit）、`e27d12c`（Branch `maintainer-cloud-migration` 的固定 commit）。
 
 ## What Happened
 
